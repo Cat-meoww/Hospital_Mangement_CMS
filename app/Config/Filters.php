@@ -8,16 +8,17 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\Auth;
+use App\Filters\AuthApi;
+use App\Filters\Is_admin;
+use App\Filters\NoAuth;
+use App\Filters\Is_agent;
 
 class Filters extends BaseConfig
 {
     /**
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
-     *
-     * @var array<string, array<int, string>|string> [filter_name => classname]
-     *                                               or [filter_name => [classname1, classname2, ...]]
-     * @phpstan-var array<string, class-string|list<class-string>>
      */
     public array $aliases = [
         'csrf'          => CSRF::class,
@@ -25,6 +26,11 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'isLoggedIn' => Auth::class,
+        'isApiAuthed' => AuthApi::class,
+        'Is_admin' => Is_admin::class,
+        'redirect_dashboard' => NoAuth::class,
+        'Is_agent' => Is_agent::class,
     ];
 
     /**
@@ -67,5 +73,10 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'isLoggedIn' => ['before' => ['global*', 'general*', 'admin*', 'all-master-save']],
+        'isApiAuthed' => ['before' => ['api/authed*']],
+        'Is_admin' => ['before' => ['admin*', 'api/admin*']],
+        'Is_agent' => ['before' => ['agent*']]
+    ];
 }
