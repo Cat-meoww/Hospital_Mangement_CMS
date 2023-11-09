@@ -6,17 +6,17 @@ if (!function_exists("nav_active")) {
     function nav_active(string $route)
     {
         $uri = service('uri');
-        if ($uri->getPath() == $route) {
+        if ($uri->getPath() == "/" . $route) {
             return "active";
         }
-        return " ";
+        return "";
     }
 }
 if (!function_exists("sub_menu_active")) {
     function sub_menu_active(string $route)
     {
         $uri = service('uri');
-        if ($uri->getPath() == $route) {
+        if ($uri->getPath() == "/" . $route) {
             return 'class="active"';
         }
         return " ";
@@ -27,7 +27,8 @@ if (!function_exists("sub_nav_active")) {
     {
 
         $uri = service('uri');
-        if (str_starts_with($uri->getPath(), $route)) {
+
+        if (str_starts_with($uri->getPath(), "/" . $route)) {
 
             return 'x-init="activeMenu = \'' . $name . '\'"';
         }

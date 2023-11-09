@@ -12,15 +12,15 @@
     <div class="flex justify-end">
         <div x-data="modals">
             <div class="flex items-center ">
-                <button type="button" title="Create Property Type" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black" @click="toggle">
-                    Create Property Type
+                <button type="button" title="Create Location" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black" @click="toggle">
+                    Create Location
                 </button>
             </div>
             <div class="fixed inset-0 bg-black/60 dark:bg-white/10 z-[999] hidden overflow-y-auto" :class="open && '!block'">
                 <div class="flex items-center justify-center min-h-screen px-4" @click.self="open = false">
                     <div x-show="open" x-transition x-transition.duration.300 class="bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
                         <div class="flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                            <h5 class="font-semibold text-lg">Create Property Type</h5>
+                            <h5 class="font-semibold text-lg">Create Location</h5>
                             <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" @click="toggle">
                                 <svg class="w-5 h-5" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor" />
@@ -30,17 +30,23 @@
                         </div>
                         <div class="p-5">
                             <div class="text-sm text-black dark:text-white flex flex-col gap-3">
-                                <form action="<?= base_url("api/admin/all-master/property-type/create") ?>" method="post" id="doc-upload" data-reload="true" class="flex gap-3 flex-col fetch-form" autocomplete="off" enctype="multipart/form-data">
+                                <form action="<?= base_url("api/admin/all-master/locations/create") ?>" method="post" id="doc-upload" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Property Type Name</label>
-                                        <input type="text" value="" required minlength="2" name="property_type" placeholder="Type Name ..." class="form-input">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter City</label>
+                                        <input type="text" value="" required minlength="2" placeholder="...Type city name unqiue " name="city" class="form-input">
                                     </div>
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter Slug</label>
+                                        <input type="text" value="" required minlength="2" placeholder="...Type slug  unqiue " pattern="[A-Za-z0-9\-]+" name="slug" class="form-input">
+                                    </div>
 
-                                        <select name="visiblity" class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
-                                            <option value="Public">Public</option>
-                                            <option value="Private">Private</option>
-                                        </select>
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <?= form_dropdown('state', $Options['state'], '', 'required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
+                                    </div>
+
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <?= form_dropdown('visiblity', $Options['visiblity'], '', 'required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                                     </div>
                                     <div class="msg-block">
 
@@ -51,7 +57,6 @@
                                     </div>
 
                                 </form>
-
                             </div>
 
                         </div>
@@ -59,37 +64,41 @@
                 </div>
             </div>
         </div>
-
+        <!-- <a href="<?= base_url("stream/channel/create") ?>" type="button" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black">Create Faq</a> -->
     </div>
 
 
 
-
-    <?php if (count($properties) == 0) : ?>
+    <include src="/"></include>
+    <?php if (count($Faqs) == 0) : ?>
         <div class="border border-black/10 dark:border-white/10 p-5 flex justify-center items-center rounded-md">
             <div>
-                <p class="text-sm font-semibold">No Property types</p>
+                <p class="text-sm font-semibold">No Locations</p>
             </div>
         </div>
     <?php else : ?>
         <div x-data="basic" class="border bg-lightwhite dark:bg-white/5 dark:border-white/10 border-black/10 p-5 rounded-md">
             <div class="px-2 py-1 mb-4">
-                <h2 class="text-lg font-semibold">Property types</h2>
+                <h2 class="text-lg font-semibold">Locations </h2>
             </div>
             <div class>
                 <table id="dt-table" class="whitespace-nowrap table-hover table-bordered">
                     <thead>
                         <th>ID</th>
-                        <th>Property Type</th>
-                        <th>Status</th>
-                        <th class="text-center">Edit / Delete</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Slug</th>
+                        <th>Visiblity</th>
+                        <th class="text-center">Operations</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($properties as $index => $property) : ?>
+                        <?php foreach ($Faqs as $index => $Faq) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $property->property ?></td>
-                                <?php if ($property->visibility === "Public") : ?>
+                                <td><?= $Faq->city ?></td>
+                                <td><?= $Faq->state ?></td>
+                                <td><?= $Faq->slug ?></td>
+                                <?php if ($Faq->visibility === "Public") : ?>
                                     <td class="flex items-center text-xs text-[#4AA785] py-3">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
@@ -105,7 +114,7 @@
                                     </td>
                                 <?php endif; ?>
                                 <td>
-                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $property->id ?>" data-name="<?= $property->property ?>" data-visiblity="<?= $property->visibility ?>">
+                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $Faq->id ?>" data-city="<?= esc($Faq->city) ?>" data-state="<?= esc($Faq->state) ?>" data-slug="<?= esc($Faq->slug) ?>" data-visiblity="<?= $Faq->visibility ?>">
 
                                         <button type="button" title="Edit" data-bs-toggle="modal" data-bs-target="#edit-modal" class="p-1 text-black dark:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
@@ -136,7 +145,7 @@
     <div class="modal-dialog flex items-center justify-center min-h-screen px-4">
         <div class="modal-content bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
             <div class="modal-header flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                <h5 class="font-semibold text-lg">Edit Property Type</h5>
+                <h5 class="font-semibold text-lg">Edit Location</h5>
                 <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" data-bs-dismiss="modal">
                     <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor"></path>
@@ -145,19 +154,24 @@
                 </button>
             </div>
             <div class="modal-body p-5">
-                <form action="<?= base_url("api/admin/all-master/property-type/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+                <form action="<?= base_url("api/admin/all-master/locations/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Property Type Name</label>
-                        <input type="text" value="" id="form-name" required minlength="2" placeholder="Furnisher ..." name="property_type" class="form-input">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter City</label>
+                        <input type="text" id="form-location-city" value="" required minlength="2" placeholder="...Type city name unqiue " name="city" class="form-input">
                     </div>
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter Slug</label>
+                        <input type="text" id="form-location-slug" value="" required minlength="2" placeholder="...Type slug  unqiue " pattern="[A-Za-z0-9\-]+" name="slug" class="form-input">
+                    </div>
 
-                        <select name="visiblity" id="form-visiblity" class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
-                            <option value="Public">Public</option>
-                            <option value="Private">Private</option>
-                        </select>
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <?= form_dropdown('state', $Options['state'], '', 'id="form-location-state" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                     </div>
-                    <input type="hidden" name="id" id="form-uid">
+
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <?= form_dropdown('visiblity', $Options['visiblity'], '', 'id="form-location-visiblity" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
+                    </div>
+                    <input type="hidden" name="id" id="form-location-id">
                     <div class="msg-block">
 
                     </div>
@@ -178,7 +192,7 @@
     <div class="modal-dialog flex items-center justify-center min-h-screen px-4">
         <div class="modal-content bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
             <div class="modal-header flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                <h5 class="font-semibold text-lg">Delete Property Type</h5>
+                <h5 class="font-semibold text-lg">Delete Location</h5>
                 <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" data-bs-dismiss="modal">
                     <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor"></path>
@@ -187,7 +201,7 @@
                 </button>
             </div>
             <div class="modal-body p-5">
-                <form action="<?= base_url("api/admin/all-master/property-type/delete") ?>" method="post" data-reload="true" class="flex  flex-col fetch-form" enctype="multipart/form-data">
+                <form action="<?= base_url("api/admin/all-master/locations/delete") ?>" method="post" data-reload="true" class="flex  flex-col fetch-form" enctype="multipart/form-data">
                     <div class="flex items-center rounded border border-lightyellow p-3 justify-center text-black dark:text-white">
                         <span class="pr-2">Are you sure do want to delete this ?</span>
                     </div>
@@ -274,7 +288,7 @@
                     </button></div>`;
             },
             html_success: (data) => {
-                return `<div class="rounded bg-lightgreen-100 text-center p-3 mt-3 text-black">${data}</div>`;
+                return `<div class="rounded bg-lightgreen-100 p-3 mt-3 text-black">${data}</div>`;
             }
         }
         forms.__init();
@@ -286,11 +300,22 @@
                 myModalEl.addEventListener('show.bs.modal', event => {
                     const parent = $(event.relatedTarget).parent();
                     const id = parent.data('id');
-                    const name = parent.data('name');
+                    const city = parent.data('city');
+                    const state = parent.data('state');
+                    const slug = parent.data('slug');
                     const visiblity = parent.data('visiblity');
-                    $("#form-uid").val(id);
-                    $("#form-name").val(name);
-                    $("#form-visiblity").val(visiblity);
+
+                    console.log({
+                        id,
+                        city,
+                        state,
+                        slug
+                    })
+                    $("#form-location-id").val(id);
+                    $("#form-location-city").val(city);
+                    $("#form-location-state").val(state);
+                    $("#form-location-slug").val(slug);
+                    $("#form-location-visiblity").val(visiblity);
                 })
             }
         }

@@ -12,15 +12,15 @@
     <div class="flex justify-end">
         <div x-data="modals">
             <div class="flex items-center ">
-                <button type="button" title="Create amenity" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black" @click="toggle">
-                    Create Amenity
+                <button type="button" title="Create service" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black" @click="toggle">
+                    Create Service
                 </button>
             </div>
             <div class="fixed inset-0 bg-black/60 dark:bg-white/10 z-[999] hidden overflow-y-auto" :class="open && '!block'">
                 <div class="flex items-center justify-center min-h-screen px-4" @click.self="open = false">
                     <div x-show="open" x-transition x-transition.duration.300 class="bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
                         <div class="flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                            <h5 class="font-semibold text-lg">Create Amenity</h5>
+                            <h5 class="font-semibold text-lg">Create service</h5>
                             <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" @click="toggle">
                                 <svg class="w-5 h-5" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor" />
@@ -30,17 +30,30 @@
                         </div>
                         <div class="p-5">
                             <div class="text-sm text-black dark:text-white flex flex-col gap-3">
-                                <form action="<?= base_url("api/admin/all-master/amenities/create") ?>" method="post" id="doc-upload" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+                                <form action="<?= base_url("api/admin/all-master/services/create") ?>" method="post" id="doc-upload" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Amenity Name</label>
-                                        <input type="text" value="" required minlength="2" placeholder="Furnisher ..." name="amenity" class="form-input">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Service name</label>
+                                        <input type="text" value="" required minlength="2" placeholder="...Type service name unique " name="name" class="form-input">
+                                    </div>
+                                    <div class="relative">
+                                        <textarea id="floating_filled" name="description" rows="2" class="block rounded-lg px-5 pb-4 pt-[38px] w-full text-black dark:text-white bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 appearance-none focus:outline-none focus:ring-0 focus:border-black/10 dark:focus:border-white/10 peer" placeholder=" "></textarea>
+                                        <label for="floating_filled" class="absolute text-sm text-black/40 dark:text-white/40 duration-300 transform -translate-y-2 scale-90 top-6 z-10 origin-[0] left-5 peer-focus:text-black/40 dark:peer-focus:text-white/40 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-2">
+                                            Description
+                                        </label>
+                                    </div>
+
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter Slug</label>
+                                        <input type="text" value="" required minlength="2" placeholder="...Type slug  unique " pattern="[A-Za-z0-9\-]+" name="slug" class="form-input">
+                                    </div>
+
+
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <?= form_dropdown('dept_id', $Options['department'], '', 'required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                                     </div>
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-
-                                        <select name="visiblity" class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
-                                            <option value="Public">Public</option>
-                                            <option value="Private">Private</option>
-                                        </select>
+                                        <?= form_dropdown('visiblity', $Options['visiblity'], '', 'required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                                     </div>
                                     <div class="msg-block">
 
@@ -58,37 +71,42 @@
                 </div>
             </div>
         </div>
-        <!-- <a href="<?= base_url("stream/channel/create") ?>" type="button" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black">Create amenity</a> -->
+        <!-- <a href="<?= base_url("stream/channel/create") ?>" type="button" class="btn text-black dark:text-white border hover:bg-indigo-300 dark:hover:bg-indigo-300 border-indigo-300 bg-transparent hover:text-black">Create Faq</a> -->
     </div>
 
 
 
-
-    <?php if (count($amenities) == 0) : ?>
+    <include src="/"></include>
+    <?php if (count($Dataset) == 0) : ?>
         <div class="border border-black/10 dark:border-white/10 p-5 flex justify-center items-center rounded-md">
             <div>
-                <p class="text-sm font-semibold">No Amenities</p>
+                <p class="text-sm font-semibold">No Services</p>
             </div>
         </div>
     <?php else : ?>
         <div x-data="basic" class="border bg-lightwhite dark:bg-white/5 dark:border-white/10 border-black/10 p-5 rounded-md">
             <div class="px-2 py-1 mb-4">
-                <h2 class="text-lg font-semibold">Amenities</h2>
+                <h2 class="text-lg font-semibold">Services </h2>
             </div>
             <div class>
                 <table id="dt-table" class="whitespace-nowrap table-hover table-bordered">
                     <thead>
                         <th>ID</th>
-                        <th>Amenity</th>
+
+                        <th>Service Name</th>
+                        <th>Slug</th>
+                        <th>Department</th>
                         <th>Visiblity</th>
                         <th class="text-center">Operations</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($amenities as $index => $amenity) : ?>
+                        <?php foreach ($Dataset as $index => $item) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $amenity->amenity ?></td>
-                                <?php if ($amenity->visibility === "Public") : ?>
+                                <td><?= $item->name ?></td>
+                                <td><?= $item->slug ?></td>
+                                <td><?= $item->dept_name ?></td>
+                                <?php if ($item->visibility === "Public") : ?>
                                     <td class="flex items-center text-xs text-[#4AA785] py-3">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
@@ -104,7 +122,7 @@
                                     </td>
                                 <?php endif; ?>
                                 <td>
-                                    <div class="flex gap-1 flex-row justify-center" data-amenity-id="<?= $amenity->id ?>" data-amenity-name="<?= $amenity->amenity ?>" data-amenity-visiblity="<?= $amenity->visibility ?>">
+                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $item->id ?>" data-name="<?= esc($item->name) ?>" data-description="<?= esc($item->description) ?>" data-slug="<?= esc($item->slug) ?>" data-department="<?= esc($item->dept_id) ?>" data-visiblity="<?= $item->visibility ?>">
 
                                         <button type="button" title="Edit" data-bs-toggle="modal" data-bs-target="#edit-modal" class="p-1 text-black dark:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
@@ -135,7 +153,7 @@
     <div class="modal-dialog flex items-center justify-center min-h-screen px-4">
         <div class="modal-content bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
             <div class="modal-header flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                <h5 class="font-semibold text-lg">Edit Amenity</h5>
+                <h5 class="font-semibold text-lg">Edit Service</h5>
                 <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" data-bs-dismiss="modal">
                     <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor"></path>
@@ -144,19 +162,30 @@
                 </button>
             </div>
             <div class="modal-body p-5">
-                <form action="<?= base_url("api/admin/all-master/amenities/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+                <form action="<?= base_url("api/admin/all-master/services/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Amenity Name</label>
-                        <input type="text" value="" id="form-amenity-name" required minlength="2" placeholder="Furnisher ..." name="amenity" class="form-input">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Service name</label>
+                        <input type="text" id="form-service-name" value="" required minlength="2" placeholder="...Type Service name unique " name="name" class="form-input">
+                    </div>
+                    <div class="relative">
+                        <textarea id="form-service-description" name="description" rows="2" class="block rounded-lg px-5 pb-4 pt-[38px] w-full text-black dark:text-white bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 appearance-none focus:outline-none focus:ring-0 focus:border-black/10 dark:focus:border-white/10 peer" placeholder=" "></textarea>
+                        <label for="form-service-description" class="absolute text-sm text-black/40 dark:text-white/40 duration-300 transform -translate-y-2 scale-90 top-6 z-10 origin-[0] left-5 peer-focus:text-black/40 dark:peer-focus:text-white/40 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-2">
+                            Description
+                        </label>
                     </div>
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Enter Slug</label>
+                        <input type="text" id="form-service-slug" value="" required minlength="2" placeholder="...Type slug  unique " pattern="[A-Za-z0-9\-]+" name="slug" class="form-input">
+                    </div>
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <?= form_dropdown('dept_id', $Options['department'], '', 'id="form-service-department" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
+                    </div>
 
-                        <select name="visiblity" id="form-amenity-visiblity" class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
-                            <option value="Public">Public</option>
-                            <option value="Private">Private</option>
-                        </select>
+
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <?= form_dropdown('visiblity', $Options['visiblity'], '', 'id="form-service-visiblity" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                     </div>
-                    <input type="hidden" name="id" id="form-amenity-id">
+                    <input type="hidden" name="id" id="form-service-id">
                     <div class="msg-block">
 
                     </div>
@@ -177,7 +206,7 @@
     <div class="modal-dialog flex items-center justify-center min-h-screen px-4">
         <div class="modal-content bg-white dark:bg-black relative shadow-3xl border-0 p-0 rounded-lg overflow-hidden w-full max-w-lg my-8">
             <div class="modal-header flex bg-white dark:bg-black border-b border-black/10 dark:border-white/10 items-center justify-between px-5 py-3">
-                <h5 class="font-semibold text-lg">Delete Amenity</h5>
+                <h5 class="font-semibold text-lg">Delete Service</h5>
                 <button type="button" class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white" data-bs-dismiss="modal">
                     <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.2929 6.29289L6.29289 24.2929C6.10536 24.4804 6 24.7348 6 25C6 25.2652 6.10536 25.5196 6.29289 25.7071C6.48043 25.8946 6.73478 26 7 26C7.26522 26 7.51957 25.8946 7.70711 25.7071L25.7071 7.70711C25.8946 7.51957 26 7.26522 26 7C26 6.73478 25.8946 6.48043 25.7071 6.29289C25.5196 6.10536 25.2652 6 25 6C24.7348 6 24.4804 6.10536 24.2929 6.29289Z" fill="currentcolor"></path>
@@ -186,7 +215,7 @@
                 </button>
             </div>
             <div class="modal-body p-5">
-                <form action="<?= base_url("api/admin/all-master/amenities/delete") ?>" method="post" data-reload="true" class="flex  flex-col fetch-form" enctype="multipart/form-data">
+                <form action="<?= base_url("api/admin/all-master/services/delete") ?>" method="post" data-reload="true" class="flex  flex-col fetch-form" enctype="multipart/form-data">
                     <div class="flex items-center rounded border border-lightyellow p-3 justify-center text-black dark:text-white">
                         <span class="pr-2">Are you sure do want to delete this ?</span>
                     </div>
@@ -284,12 +313,21 @@
                 const myModalEl = document.getElementById('edit-modal')
                 myModalEl.addEventListener('show.bs.modal', event => {
                     const parent = $(event.relatedTarget).parent();
-                    const id = parent.data('amenity-id');
-                    const name = parent.data('amenity-name');
-                    const visiblity = parent.data('amenity-visiblity');
-                    $("#form-amenity-id").val(id);
-                    $("#form-amenity-name").val(name);
-                    $("#form-amenity-visiblity").val(visiblity);
+                    const id = parent.data('id');
+                    const name = parent.data('name');
+                    const description = parent.data('description');
+                    const department = parent.data('department');
+                    const slug = parent.data('slug');
+                    const visiblity = parent.data('visiblity');
+
+
+                    $("#form-service-id").val(id);
+
+                    $("#form-service-name").val(name);
+                    $("#form-service-department").val(department);
+                    $("#form-service-description").text(description);
+                    $("#form-service-slug").val(slug);
+                    $("#form-service-visiblity").val(visiblity);
                 })
             }
         }
@@ -300,7 +338,7 @@
                 const myModalEl = document.getElementById('delete-modal')
                 myModalEl.addEventListener('show.bs.modal', event => {
                     const parent = $(event.relatedTarget).parent();
-                    const id = parent.data('amenity-id');
+                    const id = parent.data('id');
                     $("#delete-id").val(id);
 
                 })

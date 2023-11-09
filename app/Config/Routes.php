@@ -61,14 +61,20 @@ $routes->get('redirect-to-dashboard', 'Login::user_dashboard');
 
 $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
     $routes->add('dashboard', 'admin::index');
-    $routes->group('all-master', static function ($routes) {
-        $routes->add('amenities', 'master::amenities');
-        $routes->add('property-types', 'master::property_types');
-        $routes->add('add_property', 'admin::add_property');
+    $routes->group('all-master', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
+        $routes->add('locations', 'location::index');
+        $routes->add('services', 'services::index');
+        $routes->add('departments', 'departments::index');
+        $routes->add('branches', 'branches::index');
     });
     $routes->group('management', static function ($routes) {
         $routes->add('agent_management', 'admin::agent_management');
         $routes->add('client_management', 'admin::client_management');
+    });
+    $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master\management'], static function ($routes) {
+        $routes->add('departments', 'department_management::index');
+        $routes->add('services', 'service_management::index');
+        $routes->add('doctors', 'doctors_management::index');
     });
     $routes->group('cms', static function ($routes) {
         $routes->add('faq', 'cms\faq::index');
@@ -94,13 +100,29 @@ $routes->group('forms', static function ($routes) {
 
 $routes->group('api', static function ($routes) {
     $routes->group('admin', ['namespace' => 'App\Controllers\API\admin'], static function ($routes) {
-        $routes->group('all-master', static function ($routes) {
-            $routes->group('amenities', static function ($routes) {
-                $routes->post('create', 'master::create_amenities');
-                $routes->post('update', 'master::update_amenities');
-                $routes->post('delete', 'master::delete_amenities');
+        $routes->group('all-master', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
+            $routes->group('locations', static function ($routes) {
+                $routes->post('create', 'location::create');
+                $routes->post('update', 'location::update');
+                $routes->post('delete', 'location::delete');
             });
-            
+            $routes->group('services', static function ($routes) {
+                $routes->post('create', 'services::create');
+                $routes->post('update', 'services::update');
+                $routes->post('delete', 'services::delete');
+            });
+            $routes->group('departments', static function ($routes) {
+                $routes->post('create', 'departments::create');
+                $routes->post('update', 'departments::update');
+                $routes->post('delete', 'departments::delete');
+            });
+            $routes->group('branches', static function ($routes) {
+                $routes->post('create', 'branches::create');
+                $routes->post('update', 'branches::update');
+                $routes->post('delete', 'branches::delete');
+            });
+
+
             $routes->group('cms', static function ($routes) {
                 $routes->group('faq', static function ($routes) {
                     $routes->post('create', 'master::create_cms_faq');
@@ -120,7 +142,7 @@ $routes->group('api', static function ($routes) {
             });
         });
     });
-    
+
     $routes->group('geo', ['namespace' => 'App\Controllers\API\Services'], static function ($routes) {
         $routes->group('countries', static function ($routes) {
             $routes->get('/', 'Geoservice::Getcountries');

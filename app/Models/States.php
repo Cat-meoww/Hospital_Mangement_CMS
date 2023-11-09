@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Enquiry_status extends Model
+class States extends Model
 {
-    protected $table      = 'enquiry_status';
+    protected $table      = 'states';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -14,7 +14,7 @@ class Enquiry_status extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['name'];
+    protected $allowedFields = ['name', 'country_id', 'latitude', 'longitude'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
