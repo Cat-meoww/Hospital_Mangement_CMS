@@ -14,7 +14,7 @@ class Branches extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['location_id', 'name', 'description', 'slug', 'address', 'email', 'telephone', 'gmap', 'visibility', 'created_by'];
+    protected $allowedFields = ['location_id', 'name', 'description', 'slug', 'address', 'email', 'telephone', 'gmap', 'departments', 'visibility', 'created_by'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';

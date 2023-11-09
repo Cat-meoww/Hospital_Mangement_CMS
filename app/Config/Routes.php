@@ -71,10 +71,10 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         $routes->add('agent_management', 'admin::agent_management');
         $routes->add('client_management', 'admin::client_management');
     });
-    $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master\management'], static function ($routes) {
-        $routes->add('departments', 'department_management::index');
-        $routes->add('services', 'service_management::index');
-        $routes->add('doctors', 'doctors_management::index');
+    $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
+        $routes->add('departments', 'branch_management::departments');
+        $routes->add('services', 'branch_management::services');
+        $routes->add('doctors', 'branch_management::doctors');
     });
     $routes->group('cms', static function ($routes) {
         $routes->add('faq', 'cms\faq::index');
@@ -120,6 +120,11 @@ $routes->group('api', static function ($routes) {
                 $routes->post('create', 'branches::create');
                 $routes->post('update', 'branches::update');
                 $routes->post('delete', 'branches::delete');
+                $routes->group('management', static function ($routes) {
+                    $routes->post('departments/update', 'branch_management::update_departments');
+                    $routes->post('services/update', 'branch_management::update_services');
+                    $routes->post('doctors/update', 'branch_management::update_doctors');
+                });
             });
 
 
