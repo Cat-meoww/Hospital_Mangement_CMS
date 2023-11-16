@@ -87,6 +87,11 @@ phpunit
 vendor/
 
 #-------------------------
+# public uploads
+#-------------------------
+public/uploads/*
+public/uploads/
+#-------------------------
 # IDE / Development Files
 #-------------------------
 
