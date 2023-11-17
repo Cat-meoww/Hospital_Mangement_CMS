@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Branches extends Model
+class Doctors_roles extends Model
 {
-    protected $table      = 'branches';
+    protected $table      = 'doctors_roles';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -14,7 +14,7 @@ class Branches extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['location_id', 'name', 'description', 'slug', 'address', 'email', 'telephone', 'gmap', 'departments', 'services', 'visibility', 'created_by'];
+    protected $allowedFields = ['name', 'description',  'visibility', 'created_by'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';

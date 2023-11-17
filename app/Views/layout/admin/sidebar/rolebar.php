@@ -39,7 +39,7 @@
         <li class="menu nav-item">
             <a href="<?= base_url("admin/all-master/departments") ?>" class="nav-link group <?= nav_active("admin/all-master/departments") ?>">
                 <div class="flex pl-1 items-center">
-                    
+
                     <svg class="w-5 h-5" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"></path>
                     </svg>
@@ -50,7 +50,7 @@
         <li class="menu nav-item">
             <a href="<?= base_url("admin/all-master/services") ?>" class="nav-link group <?= nav_active("admin/all-master/services") ?>">
                 <div class="flex pl-1 items-center">
-                    
+
                     <svg class="w-5 h-5" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"></path>
                     </svg>
@@ -61,7 +61,7 @@
         <li class="menu nav-item">
             <a href="<?= base_url("admin/all-master/branches") ?>" class="nav-link group <?= nav_active("admin/all-master/branches") ?>">
                 <div class="flex pl-1 items-center">
-                    
+
                     <svg class="w-5 h-5" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="M240,208H224V96a16,16,0,0,0-16-16H144V32a16,16,0,0,0-24.88-13.32L39.12,72A16,16,0,0,0,32,85.34V208H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM208,96V208H144V96ZM48,85.34,128,32V208H48ZM112,112v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm-32,0v16a8,8,0,0,1-16,0V112a8,8,0,1,1,16,0Zm0,56v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Zm32,0v16a8,8,0,0,1-16,0V168a8,8,0,0,1,16,0Z"></path>
                     </svg>
@@ -69,12 +69,35 @@
                 </div>
             </a>
         </li>
+
+        <li class="menu nav-item">
+            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'doctors'}" <?= sub_nav_active("admin/all-master/doctors", 'doctors') ?> @click="activeMenu === 'doctors' ? activeMenu = null : activeMenu = 'doctors'">
+                <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'doctors'}">
+                    <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.659675 9.35355C0.446775 9.15829 0.446775 8.84171 0.659675 8.64645L4.25 5.35355C4.4629 5.15829 4.4629 4.84171 4.25 4.64645L0.659675 1.35355C0.446776 1.15829 0.446776 0.841709 0.659675 0.646446C0.872575 0.451184 1.21775 0.451185 1.43065 0.646446L5.02098 3.93934C5.65967 4.52513 5.65968 5.47487 5.02098 6.06066L1.43065 9.35355C1.21775 9.54882 0.872574 9.54882 0.659675 9.35355Z" fill="currentcolor" />
+                    </svg>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10L16 17L28 10L16 3L4 10Z" fill="black" fill-opacity="0.1" />
+                        <path d="M16.5039 29.8638L28.5039 22.8638C28.733 22.7301 28.8996 22.511 28.9671 22.2545C28.9889 22.1714 29 22.0859 29 22C29 21.988 28.9998 21.976 28.9994 21.964C28.9934 21.7993 28.9468 21.6385 28.8638 21.4961C28.6846 21.1889 28.3557 21 28 21C27.8229 21 27.649 21.047 27.4961 21.1362L16 27.8423L4.50399 21.1363C4.35094 21.047 4.17706 21 4 21C3.98302 21 3.96603 21.0004 3.94907 21.0013C3.61197 21.0185 3.3063 21.2046 3.13622 21.4961C3.04701 21.6491 3 21.8229 3 22C3 22.017 3.00043 22.034 3.0013 22.0509C3.01849 22.388 3.20457 22.6937 3.49613 22.8638L15.4961 29.8638C15.8075 30.0454 16.1925 30.0454 16.5039 29.8638Z" fill="currentcolor" />
+                        <path d="M16.5039 23.8638L28.5039 16.8638C28.733 16.7301 28.8996 16.511 28.9671 16.2545C28.9889 16.1714 29 16.0859 29 16C29 15.988 28.9998 15.976 28.9994 15.964C28.9934 15.7993 28.9468 15.6385 28.8638 15.4961C28.6846 15.1889 28.3557 15 28 15C27.8229 15 27.649 15.047 27.4961 15.1362L16 21.8423L4.50399 15.1363C4.35094 15.047 4.17706 15 4 15C3.98302 15 3.96603 15.0004 3.94907 15.0013C3.61197 15.0185 3.3063 15.2046 3.13622 15.4961C3.04701 15.6491 3 15.8229 3 16C3 16.017 3.00043 16.034 3.0013 16.0509C3.01849 16.388 3.20457 16.6937 3.49613 16.8638L15.4961 23.8638C15.8075 24.0454 16.1925 24.0454 16.5039 23.8638Z" fill="currentcolor" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.496 2.13622C15.8074 1.95459 16.1924 1.95459 16.5038 2.13622L28.5038 9.13622C28.6528 9.22314 28.7768 9.34713 28.8637 9.49613C29.142 9.97318 28.9808 10.5855 28.5038 10.8638L16.5038 17.8638C16.1924 18.0454 15.8074 18.0454 15.496 17.8638L3.49605 10.8638C3.34704 10.7769 3.22306 10.6529 3.13614 10.5039C2.85786 10.0268 3.019 9.4145 3.49605 9.13622L15.496 2.13622ZM5.98455 10L15.9999 4.1577L26.0153 10L15.9999 15.8423L5.98455 10Z" fill="currentcolor" />
+                    </svg>
+                    <span class="pl-1"> Doctors </span>
+                </div>
+            </a>
+            <ul x-cloak x-show="activeMenu === 'doctors'" x-collapse class="sub-menu flex flex-col gap-1 text-black dark:text-white/80">
+                <li><a href="<?= base_url("admin/all-master/doctors/roles") ?>" <?= sub_menu_active("admin/all-master/doctors/roles") ?>>Roles</a></li>
+                <li><a href="<?= base_url("admin/all-master/doctors/list") ?>" <?= sub_menu_active("admin/all-master/doctors/list") ?>>List</a></li>
+            </ul>
+        </li>
         
         <h2 class="pl-3 my-2 text-black/40 dark:text-white/40 text-sm">
             <span>Management</span>
         </h2>
         <li class="menu nav-item">
-            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'branch'}" <?= sub_nav_active("admin/branch-management",'branch') ?> @click="activeMenu === 'branch' ? activeMenu = null : activeMenu = 'branch'">
+            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'branch'}" <?= sub_nav_active("admin/branch-management", 'branch') ?> @click="activeMenu === 'branch' ? activeMenu = null : activeMenu = 'branch'">
                 <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'branch'}">
                     <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.659675 9.35355C0.446775 9.15829 0.446775 8.84171 0.659675 8.64645L4.25 5.35355C4.4629 5.15829 4.4629 4.84171 4.25 4.64645L0.659675 1.35355C0.446776 1.15829 0.446776 0.841709 0.659675 0.646446C0.872575 0.451184 1.21775 0.451185 1.43065 0.646446L5.02098 3.93934C5.65967 4.52513 5.65968 5.47487 5.02098 6.06066L1.43065 9.35355C1.21775 9.54882 0.872574 9.54882 0.659675 9.35355Z" fill="currentcolor" />
@@ -119,7 +142,7 @@
             </ul>
         </li>
         <li class="menu nav-item">
-            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'cms'}" <?= sub_nav_active("admin/cms",'cms') ?> @click="activeMenu === 'cms' ? activeMenu = null : activeMenu = 'cms'">
+            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'cms'}" <?= sub_nav_active("admin/cms", 'cms') ?> @click="activeMenu === 'cms' ? activeMenu = null : activeMenu = 'cms'">
                 <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'cms'}">
                     <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.659675 9.35355C0.446775 9.15829 0.446775 8.84171 0.659675 8.64645L4.25 5.35355C4.4629 5.15829 4.4629 4.84171 4.25 4.64645L0.659675 1.35355C0.446776 1.15829 0.446776 0.841709 0.659675 0.646446C0.872575 0.451184 1.21775 0.451185 1.43065 0.646446L5.02098 3.93934C5.65967 4.52513 5.65968 5.47487 5.02098 6.06066L1.43065 9.35355C1.21775 9.54882 0.872574 9.54882 0.659675 9.35355Z" fill="currentcolor" />
@@ -142,7 +165,7 @@
             </ul>
         </li>
         <li class="menu nav-item">
-            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'enquiries'}" <?= sub_nav_active("admin/enquiries",'enquiries') ?> @click="activeMenu === 'enquiries' ? activeMenu = null : activeMenu = 'enquiries'">
+            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'enquiries'}" <?= sub_nav_active("admin/enquiries", 'enquiries') ?> @click="activeMenu === 'enquiries' ? activeMenu = null : activeMenu = 'enquiries'">
                 <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'enquiries'}">
                     <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.659675 9.35355C0.446775 9.15829 0.446775 8.84171 0.659675 8.64645L4.25 5.35355C4.4629 5.15829 4.4629 4.84171 4.25 4.64645L0.659675 1.35355C0.446776 1.15829 0.446776 0.841709 0.659675 0.646446C0.872575 0.451184 1.21775 0.451185 1.43065 0.646446L5.02098 3.93934C5.65967 4.52513 5.65968 5.47487 5.02098 6.06066L1.43065 9.35355C1.21775 9.54882 0.872574 9.54882 0.659675 9.35355Z" fill="currentcolor" />

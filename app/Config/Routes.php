@@ -66,6 +66,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         $routes->add('services', 'services::index');
         $routes->add('departments', 'departments::index');
         $routes->add('branches', 'branches::index');
+
+        $routes->group('doctors', static function ($routes) {
+            $routes->add('roles', 'doctors_role::index');
+            $routes->add('list', 'doctors::index');
+        });
     });
     $routes->group('management', static function ($routes) {
         $routes->add('agent_management', 'admin::agent_management');
@@ -111,6 +116,17 @@ $routes->group('api', static function ($routes) {
                 $routes->post('update', 'services::update');
                 $routes->post('delete', 'services::delete');
             });
+            $routes->group('doctors-role', static function ($routes) {
+                $routes->post('create', 'doctors_role::create');
+                $routes->post('update', 'doctors_role::update');
+                $routes->post('delete', 'doctors_role::delete');
+            });
+            $routes->group('doctors-list', static function ($routes) {
+                $routes->post('create', 'doctors::create');
+                $routes->post('update', 'doctors::update');
+                $routes->post('delete', 'doctors::delete');
+                $routes->post('generate-services', 'doctors::generate_services_options');
+            });
             $routes->group('departments', static function ($routes) {
                 $routes->post('create', 'departments::create');
                 $routes->post('update', 'departments::update');
@@ -123,6 +139,7 @@ $routes->group('api', static function ($routes) {
                 $routes->group('management', static function ($routes) {
                     $routes->post('departments/update', 'branch_management::update_departments');
                     $routes->post('services/update', 'branch_management::update_services');
+                    $routes->post('services/generate_options', 'branch_management::generate_service_options');
                     $routes->post('doctors/update', 'branch_management::update_doctors');
                 });
             });

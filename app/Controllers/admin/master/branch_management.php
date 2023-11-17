@@ -30,11 +30,12 @@ class branch_management extends General
 
         return view('admin/all-master/management/branch_department', $this->data);
     }
-    public function services()
+    public function services($depts = false)
     {
         helper(['form']);
         $this->data['title'] = "Services Management";
         $Branches = new \App\Models\Branches();
+
         $this->data['Dataset'] = $Branches->orderBy('id', 'DESC')->findAll();
         $this->data['Options'] = [
             'services' => $this->generate_services(),
@@ -74,9 +75,9 @@ class branch_management extends General
     }
     public function generate_services()
     {
-        $Departments = new \App\Models\Services();
+        $Services = new \App\Models\Services();
 
-        $arrayOfObjects = $Departments->select('id,name')->get()->getResult();
+        $arrayOfObjects = $Services->select('id,name')->get()->getResult();
         $associativeArray = [];
 
         foreach ($arrayOfObjects as $object) {
@@ -138,6 +139,53 @@ class branch_management extends General
             return $this->handle_exception($e);
         }
     }
+    public function update_services()
+    {
+
+        try {
+
+            $rules  = [
+                'id' => [
+                    'label' => 'Branch',
+                    'rules' => "trim|required|is_natural|is_not_unique[branches.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'services.*' => [
+                    'label' => 'Service ID ',
+                    'rules' => "trim|required|is_natural|is_not_unique[services.id,visibility,Public]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+
+
+            ];
+            if ($this->validate($rules)) {
+                $Branches = new \App\Models\Branches();
+                $id = $this->request->getPost("id");
+
+
+                $query = $Branches->where('id', $id)->set([
+                    'services' => implode(",", $this->request->getPost('services[]')),
+                ])->update();
+
+
+                if ($query) {
+                    return $this->respond([
+                        'status' => "success",
+                        'msg' => "Updated data successfully."
+                    ]);
+                }
+                throw new \Exception("Unable to store data");
+            } else {
+                throw new \Exception("Invalid data");
+            }
+        } catch (\Exception $e) {
+            return $this->handle_exception($e);
+        }
+    }
 
 
     private function handle_exception(\Exception $e)
@@ -151,5 +199,52 @@ class branch_management extends General
             $data['errors'] = $e->getMessage();
         }
         return $this->respond($data);
+    }
+
+    public function generate_service_options()
+    {
+        try {
+
+            $rules  = [
+                'branchid' => [
+                    'label' => 'Branch',
+                    'rules' => "trim|required|is_natural|is_not_unique[branches.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+            ];
+            if ($this->validate($rules)) {
+                $Branches = new \App\Models\Branches();
+                $Services = new \App\Models\Services();
+                $branchId = $this->request->getPost("branchid");
+
+
+                $query = $Branches->where('id', $branchId)->first();
+
+                $selected_services = explode(',', $query->services);
+
+
+
+                $Dataset = $Services->select('id,name as text')->whereIn('dept_id', explode(',', $query->departments))->where('visibility', 'Public')->get()->getResult();
+
+                foreach ($Dataset as $key => $value) {
+                    if (in_array($value->id, $selected_services)) {
+                        $Dataset[$key]->selected = true;
+                    }
+                }
+                if ($query) {
+                    return $this->respond([
+                        'status' => "success",
+                        'data' => $Dataset
+                    ]);
+                }
+                throw new \Exception("Unable to store data");
+            } else {
+                throw new \Exception("Invalid data");
+            }
+        } catch (\Exception $e) {
+            return $this->handle_exception($e);
+        }
     }
 }

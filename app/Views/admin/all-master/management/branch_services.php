@@ -91,7 +91,7 @@
                 </button>
             </div>
             <div class="modal-body p-5">
-                <form action="<?= base_url("api/admin/all-master/branches/management/departments/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col   fetch-form" enctype="multipart/form-data">
+                <form action="<?= base_url("api/admin/all-master/branches/management/services/update") ?>" method="post" data-reload="true" class="flex gap-3 flex-col   fetch-form" enctype="multipart/form-data">
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Branch name</label>
                         <input type="text" id="form-branch-name" value="" readonly required minlength="2" placeholder="...Type branch name unique " name="name" class="form-input">
@@ -102,8 +102,8 @@
 
 
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
-                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Departments</label>
-                        <?= form_dropdown('departments[]', $Options['services'], [], 'id="form-branch-services" multiple required width="100%" data-placeholder="Select an option" class="select2 form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Services</label>
+                        <?= form_dropdown('services[]', $Options['services'], [], 'id="form-branch-services" multiple required width="100%" data-placeholder="Select an option" class="select2 form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                     </div>
 
 
@@ -204,27 +204,39 @@
 
             __init: () => {
                 const myModalEl = document.getElementById('edit-modal')
-                myModalEl.addEventListener('show.bs.modal', event => {
-                    const parent = $(event.relatedTarget).parent();
-                    const id = parent.data('id');
-                    const name = parent.data('name');
-                    const departments = parent.data('departments');
+                myModalEl.addEventListener('show.bs.modal', async (event) => {
+
+                    try {
+                        const parent = $(event.relatedTarget).parent();
+                        const id = parent.data('id');
+                        const name = parent.data('name');
+                        let departments = parent.data('departments');
+
+                        departments += ",0"
+                        $("#form-branch-services").select2('destroy');
+
+                        $("#form-branch-id").val(id);
+
+                        $("#form-branch-name").val(name);
+                        // $("#form-branch-services option:selected").prop("selected", false);
+                        $("#form-branch-services option").remove();
 
 
-                    $("#form-branch-departments").select2('destroy');
+                        $.each(departments.split(","), function(i, e) {
+                            $("#form-branch-services option[value='" + e + "']").prop("selected", true);
+                        });
 
-                    $("#form-branch-id").val(id);
+                        const branch_options = await fetch_services_options(id);
+                        console.log(branch_options);
+                        $("#form-branch-services").select2({
+                            data: branch_options,
+                            tags: false,
+                        });
+                        // $("#form-branch-services").val(departments);
+                    } catch (e) {
+                        console.log(e)
+                    }
 
-                    $("#form-branch-name").val(name);
-                    $("#form-branch-departments option:selected").prop("selected", false);
-
-                    $.each(departments.split(","), function(i, e) {
-                        $("#form-branch-departments option[value='" + e + "']").prop("selected", true);
-                    });
-                    $("#form-branch-departments").select2({
-                        tags: false
-                    });
-                    // $("#form-branch-departments").val(departments);
                 })
                 $('.select2').select2({
                     tags: false
@@ -234,6 +246,41 @@
         editModal.__init();
 
 
+        async function fetch_services_options(branchId) {
+            try {
+
+
+
+                const url = "<?= base_url('api/admin/all-master/branches/management/services/generate_options') ?>";
+                const formdata = new FormData();
+                formdata.append('branchid', branchId)
+
+                const options = {
+                    method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'same-origin',
+                    body: formdata,
+                }
+                const rawdata = await fetch(url, options);
+                let res = await rawdata.json();
+
+                if (res.status === "success") {
+
+
+                    return Promise.resolve(res.data)
+
+
+                } else if (res.status === "bad") {
+
+                    return Promise.reject(new Error("bad"))
+
+                }
+            } catch (e) {
+                console.log(e);
+                return Promise.reject(new Error("fetch error"))
+            }
+        }
 
 
     });
