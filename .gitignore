@@ -90,6 +90,7 @@ vendor/
 # public uploads
 #-------------------------
 public/uploads/*
+public/html/*
 public/uploads/
 #-------------------------
 # IDE / Development Files
