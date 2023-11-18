@@ -1,4 +1,4 @@
-# CodeIgniter 4 Application Starter
+# CodeIgniter 4 Hospital management
 
 ## What is CodeIgniter?
 
