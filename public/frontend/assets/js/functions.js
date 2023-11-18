@@ -603,14 +603,14 @@
             this.lastOpacity = 0;
         }
     }
-    const cursor = new CursorFx(document.querySelector('.cursor'));
+    // const cursor = new CursorFx(document.querySelector('.cursor'));
 
-    // Custom cursor chnages state when hovering on elements with 'data-hover'.
-    [...document.querySelectorAll('[data-hover]')].forEach((link) => {
-        link.addEventListener('mouseenter', () => cursor.enter());
-        link.addEventListener('mouseleave', () => cursor.leave());
-        link.addEventListener('click', () => cursor.click());
-    });
+    // // Custom cursor chnages state when hovering on elements with 'data-hover'.
+    // [...document.querySelectorAll('[data-hover]')].forEach((link) => {
+    //     link.addEventListener('mouseenter', () => cursor.enter());
+    //     link.addEventListener('mouseleave', () => cursor.leave());
+    //     link.addEventListener('click', () => cursor.click());
+    // });
 
     /* ------------------  NICE SELECT INPUT  ------------------ */
 
