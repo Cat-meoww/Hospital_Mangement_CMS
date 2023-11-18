@@ -1,4 +1,4 @@
-# CodeIgniter 4 Hospital management
+# CodeIgniter 4 
 
 ## What is CodeIgniter?
 
