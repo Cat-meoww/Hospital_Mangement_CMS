@@ -181,7 +181,6 @@ body {
 }
 @media screen and (min-width: 992px) {
   body {
-    
   }
 }
 
@@ -2327,7 +2326,7 @@ form .col-12 {
   color: var(--global--color-body);
   margin-bottom: 0;
   line-height: 1.9;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   cursor: pointer;
   padding-left: 10px;
 }
@@ -10149,7 +10148,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
 }
 .team-member .team-content .team-more a {
   height: 42px;
-  width: 124px;
+  width: min-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18888,7 +18887,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
   .form-newsletter
   .form-group
   .form-control::placeholder {
-  color: white !important;
+  color: gray !important;
 }
 
 .footer

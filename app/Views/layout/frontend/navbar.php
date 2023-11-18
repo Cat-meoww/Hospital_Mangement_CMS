@@ -81,16 +81,28 @@
             </li>
 
             <li class="nav-item has-dropdown" data-hover="">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Media Room</span></a>
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Doctors</span></a>
                 <ul class="dropdown-menu">
                     <li class="nav-item">
-                        <a href="page-magazines.html"><span>Magazines</span></a>
+                        <a href="doctorInfo.html"><span>Coimbatore</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html"><span>blog</span></a>
+                        <a href="doctorInfo.html"><span>Chennai - Perungudi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="press-release.html"><span>press release</span></a>
+                        <a href="doctorInfo.html"><span>Chennai - Aminjikarai</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctorInfo.html"><span>Tiruppur</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctorInfo.html"><span>Pondicherry</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctorInfo.html"><span>Erode</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctorInfo.html"><span>Thrissur</span></a>
                     </li>
                 </ul>
             </li>
