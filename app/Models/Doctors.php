@@ -14,7 +14,7 @@ class Doctors extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['name', 'description', 'slug', 'dept_ids','services', 'education', 'role', 'image', 'visibility', 'created_by'];
+    protected $allowedFields = ['name', 'description', 'slug', 'dept_ids', 'services', 'education', 'experience', 'role', 'image', 'visibility', 'created_by'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';

@@ -109,7 +109,11 @@ class doctors extends General
                 ],
                 'education' => [
                     'label' => 'Education',
-                    'rules' => "trim|required|min_length[2]|max_length[500]|",
+                    'rules' => "trim|required|min_length[2]|max_length[500]",
+                ],
+                'experience' => [
+                    'label' => 'experience',
+                    'rules' => "trim|required|numeric|less_than[100]|greater_than_equal_to[1]",
                 ],
                 'role' => [
                     'label' => 'Role',
@@ -145,6 +149,7 @@ class doctors extends General
                     'services' => implode(",", $this->request->getPost('services[]')),
                     'role' => $this->request->getPost('role'),
                     'education' => $this->request->getPost('education'),
+                    'experience' => $this->request->getPost('experience'),
                     'image' => $imagename,
                     'visibility' => $this->request->getPost('visiblity'),
                     'created_by' => $this->session->user_id
@@ -230,6 +235,10 @@ class doctors extends General
                     'label' => 'Education',
                     'rules' => "trim|required|min_length[2]|max_length[500]|",
                 ],
+                'experience' => [
+                    'label' => 'experience',
+                    'rules' => "trim|required|numeric|less_than[100]|greater_than_equal_to[1]",
+                ],
                 'role' => [
                     'label' => 'Role',
                     'rules' => "trim|required|is_not_unique[doctors_roles.id]",
@@ -256,6 +265,7 @@ class doctors extends General
                     'services' => implode(",", $this->request->getPost('services[]')),
                     'role' => $this->request->getPost('role'),
                     'education' => $this->request->getPost('education'),
+                    'experience' => $this->request->getPost('experience'),
                     'visibility' => $this->request->getPost('visiblity'),
                     'created_by' => $this->session->user_id
                 ];

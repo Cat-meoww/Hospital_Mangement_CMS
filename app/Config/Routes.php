@@ -46,6 +46,12 @@ $routes->get('/property-detail/(:uuid)', 'Home::property_detail/$1');
 $routes->get('/profile/(:num)', 'Home::agent_profile/$1');
 
 
+//Doctors routes
+$routes->get('/branch/(:num)', 'Home::index/$1');
+$routes->get('/doctors-list/(:any)', 'Home::doctors_list/$1');
+$routes->get('/service/(:any)', 'Home::service_detail/$1');
+$routes->get('/services/(:any)', 'Home::location_services/$1');
+
 
 $routes->group('auth', function ($routes) {
     $routes->add('login', 'Login::index', ['filter' => 'redirect_dashboard',]);
@@ -141,6 +147,7 @@ $routes->group('api', static function ($routes) {
                     $routes->post('services/update', 'branch_management::update_services');
                     $routes->post('services/generate_options', 'branch_management::generate_service_options');
                     $routes->post('doctors/update', 'branch_management::update_doctors');
+                    $routes->post('doctors/generate_options', 'branch_management::generate_doctor_options');
                 });
             });
 

@@ -122,3 +122,23 @@ if (!function_exists("b5tooltip")) {
         return " role='button' tabindex='0' data-bs-toggle='tooltip' data-bs-placement='$postion' title='$title' ";
     };
 }
+if (!function_exists("renderDataAttributes")) {
+    function renderDataAttributes($dataObject, $keysArray)
+    {
+        $attributes = [];
+
+        foreach ($keysArray as $key) {
+            // Check if the key exists in the data object
+            if (property_exists($dataObject, $key)) {
+              
+                $value = esc($dataObject->$key);
+                
+                $attributes[] = "data-$key='$value'";
+            }
+        }
+        // Implode the attributes array into a string
+        $renderedAttributes = implode(' ', $attributes);
+        
+        return $renderedAttributes;
+    }
+}

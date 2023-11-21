@@ -58,7 +58,7 @@ class branches extends General
 
             $rules  = [
                 'name' => [
-                    'label' => 'Service Name',
+                    'label' => 'Branch Name',
                     'rules' => "trim|required|min_length[3]|max_length[150]|is_unique[branches.name]",
                 ],
 
@@ -84,7 +84,7 @@ class branches extends General
                 ],
                 'telephone' => [
                     'label' => 'Telephone',
-                    'rules' => "required|max_length[15]|regex_match[/^[0-9]{10}$/]",
+                    'rules' => "required|max_length[15]|regex_match[/^[0-9]{10,11}$/]",
                     'errors' => [
                         'regex_match' => 'The {field} field must be a 10-digit number.'
                     ]
@@ -142,7 +142,7 @@ class branches extends General
                     ],
                 ],
                 'name' => [
-                    'label' => 'Service Name',
+                    'label' => 'Branch Name',
                     'rules' => "trim|required|min_length[3]|max_length[300]|is_unique[branches.name,id,{id}]",
                 ],
                 'description' => [
@@ -164,7 +164,7 @@ class branches extends General
                 ],
                 'telephone' => [
                     'label' => 'Telephone',
-                    'rules' => "required|max_length[15]|regex_match[/^[0-9]{10}$/]",
+                    'rules' => "required|max_length[15]|regex_match[/^[0-9]{10,11}$/]",
                     'errors' => [
                         'regex_match' => 'The {field} field must be a 10-digit number.'
                     ]

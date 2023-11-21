@@ -60,6 +60,10 @@
                                         <?= form_dropdown('services[]', [], [], 'id="create-services" multiple  width="100%" data-placeholder="Select an option" class="select2 form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                                     </div>
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Experience</label>
+                                        <input type="number" value="" required minlength="2" placeholder="...Type Experience in numbers " pattern="[0-9\-]+" name="experience" class="form-input">
+                                    </div>
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Education</label>
                                         <input type="text" value="" required minlength="2" placeholder="... Education eg: MS.(Gen.Surg.).,Mch.(SGE) " name="education" class="form-input">
                                     </div>
@@ -91,7 +95,7 @@
                                         <?= form_dropdown('visiblity', $Options['visiblity'], '', 'required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                                     </div>
 
-                                    <div class="relative col-span-2">
+                                    <div class="relative ">
                                         <textarea id="floating_filled" name="description" rows="2" class="block rounded-lg px-5 pb-4 pt-[38px] w-full text-black dark:text-white bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 appearance-none focus:outline-none focus:ring-0 focus:border-black/10 dark:focus:border-white/10 peer" placeholder=" "></textarea>
                                         <label for="floating_filled" class="absolute text-sm text-black/40 dark:text-white/40 duration-300 transform -translate-y-2 scale-90 top-6 z-10 origin-[0] left-5 peer-focus:text-black/40 dark:peer-focus:text-white/40 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-2">
                                             Description
@@ -177,7 +181,7 @@
                                     </td>
                                 <?php endif; ?>
                                 <td>
-                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $item->id ?>" data-name="<?= esc($item->name) ?>" data-description="<?= esc($item->description) ?>" data-education="<?= esc($item->education) ?>" data-role="<?= esc($item->role) ?>" data-services="<?= esc($item->services) ?>" data-slug="<?= esc($item->slug) ?>" data-departments="<?= esc($item->dept_ids) ?>" data-visiblity="<?= $item->visibility ?>">
+                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $item->id ?>" data-name="<?= esc($item->name) ?>" data-description="<?= esc($item->description) ?>" data-education="<?= esc($item->education) ?>" data-experience="<?= esc($item->experience) ?>" data-role="<?= esc($item->role) ?>" data-services="<?= esc($item->services) ?>" data-slug="<?= esc($item->slug) ?>" data-departments="<?= esc($item->dept_ids) ?>" data-visiblity="<?= $item->visibility ?>">
 
                                         <button type="button" title="Edit" data-bs-toggle="modal" data-bs-target="#edit-modal" class="p-1 text-black dark:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
@@ -235,6 +239,10 @@
                         <?= form_dropdown('services[]', [], [], 'id="form-doctor-services" multiple  width="100%" data-placeholder="Select an option" class="select2 form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                     </div>
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Experience</label>
+                        <input type="number" id="form-doctor-experience" value="" required minlength="2" placeholder="...Type Experience in numbers " pattern="[0-9\-]+" name="experience" class="form-input">
+                    </div>
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Education</label>
                         <input type="text" id="form-doctor-education" value="" required minlength="2" placeholder="... Education eg: MS.(Gen.Surg.).,Mch.(SGE) " name="education" class="form-input">
                     </div>
@@ -270,7 +278,7 @@
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                         <?= form_dropdown('visiblity', $Options['visiblity'], '', 'id="form-doctor-visiblity" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
                     </div>
-                    <div class="relative col-span-2">
+                    <div class="relative ">
                         <textarea id="form-doctor-description" name="description" rows="2" class="block rounded-lg px-5 pb-4 pt-[38px] w-full text-black dark:text-white bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 appearance-none focus:outline-none focus:ring-0 focus:border-black/10 dark:focus:border-white/10 peer" placeholder=" "></textarea>
                         <label for="form-doctor-description" class="absolute text-sm text-black/40 dark:text-white/40 duration-300 transform -translate-y-2 scale-90 top-6 z-10 origin-[0] left-5 peer-focus:text-black/40 dark:peer-focus:text-white/40 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-2">
                             Description
@@ -414,6 +422,7 @@
                         const services = parent.data('services');
                         const slug = parent.data('slug');
                         const education = parent.data('education');
+                        const experience = parent.data('experience');
                         const role = parent.data('role');
                         const visiblity = parent.data('visiblity');
                         editModal.current_id = id;
@@ -429,6 +438,7 @@
                         $("#form-doctor-description").text(description);
                         $("#form-doctor-slug").val(slug);
                         $("#form-doctor-education").val(education);
+                        $("#form-doctor-experience").val(experience);
                         $("#form-doctor-role").val(role);
                         $("#form-doctor-visiblity").val(visiblity);
 
