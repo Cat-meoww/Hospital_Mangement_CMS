@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'StaticPages::index');
 /*
  * --------------------------------------------------------------------
  * Router Setup
@@ -39,11 +39,13 @@ $routes->get('/privacy', 'Home::privacy');
 $routes->get('/logout', 'Home::logout');
 
 
-$routes->get('/properties', 'Home::properties');
-$routes->get('/properties/map', 'Home::properties_map');
-$routes->get('/listing/agents', 'Home::agent_listing');
-$routes->get('/property-detail/(:uuid)', 'Home::property_detail/$1');
-$routes->get('/profile/(:num)', 'Home::agent_profile/$1');
+// Static pages
+$routes->get('/home', 'StaticPages::home');
+$routes->get('/aboutus', 'StaticPages::aboutus');
+$routes->get('/service', 'StaticPages::service');
+$routes->get('/health-package', 'StaticPages::health_package');
+$routes->get('/doctorinfo', 'StaticPages::doctorinfo');
+
 
 
 //Doctors routes
