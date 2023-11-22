@@ -1,0 +1,1 @@
+<label class="error"><?= esc($error) ?></label>

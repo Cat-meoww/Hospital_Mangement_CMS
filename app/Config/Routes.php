@@ -20,7 +20,7 @@ $routes->set404Override();
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
-// $routes->setAutoRoute(false);
+$routes->setAutoRoute(false);
 
 /*
  * --------------------------------------------------------------------
@@ -53,6 +53,12 @@ $routes->get('/branch/(:num)', 'Home::index/$1');
 $routes->get('/doctors-list/(:any)', 'Home::doctors_list/$1');
 $routes->get('/service/(:any)', 'Home::service_detail/$1');
 $routes->get('/services/(:any)', 'Home::location_services/$1');
+
+
+$routes->group('appointment', function ($routes) {
+    $routes->get('book-appointment', 'Home::general_booking');
+    $routes->get('video-consultation', 'Home::general_booking');
+});
 
 
 $routes->group('auth', function ($routes) {
@@ -105,7 +111,7 @@ $routes->group('forms', static function ($routes) {
     $routes->group('public', static function ($routes) {
         $routes->post('contact-us', 'Home::post_contactus');
         $routes->post('faq', 'Home::post_faq');
-        $routes->post('property/add-enquiry', 'Home::post_property_enquiry');
+        $routes->post('book-appointment', 'Home::book_appointment');
     });
 });
 
@@ -172,6 +178,10 @@ $routes->group('api', static function ($routes) {
                 });
             });
         });
+    });
+
+    $routes->group('frontend', ['namespace' => 'App\Controllers\API\frontend'], static function ($routes) {
+        $routes->post('get-services', 'FrontService::get_services');
     });
 
     $routes->group('geo', ['namespace' => 'App\Controllers\API\Services'], static function ($routes) {

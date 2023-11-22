@@ -7,7 +7,7 @@
     <meta name="author" content="Ayman Fikry" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Home Gem Hospital" />
-    <title>Home Gem Hospital</title>
+    <title><?= $title ?> - Gem Hospital</title>
     <link href="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" rel="icon" />
     <!--  Fonts ==
     -->

@@ -119,7 +119,7 @@
                 <li><a href="<?= base_url("admin/branch-management/doctors") ?>" <?= sub_menu_active("admin/branch-management/doctors") ?>>Doctors</a></li>
             </ul>
         </li>
-        <li class="menu nav-item">
+        <!-- <li class="menu nav-item">
             <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'apps'}" <?= sub_nav_active("admin/management") ?> @click="activeMenu === 'apps' ? activeMenu = null : activeMenu = 'apps'">
                 <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'apps'}">
                     <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +185,7 @@
                 <li><a href="<?= base_url("admin/enquiries/faq") ?>" <?= sub_menu_active("admin/enquiries/faq") ?>>Faq</a></li>
                 <li><a href="<?= base_url("admin/enquiries/contact-us") ?>" <?= sub_menu_active("admin/enquiries/contact-us") ?>>Contact Us</a></li>
             </ul>
-        </li>
+        </li> -->
     <?php endif; ?>
 
 

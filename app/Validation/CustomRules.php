@@ -48,4 +48,14 @@ class CustomRules
 
         return true;
     }
+
+    public function from_today($data, &$error)
+    {
+        
+        if ($data < date('Y-m-d')) {
+            $error = "Required valid date from today";
+            return false;
+        }
+        return true;
+    }
 }

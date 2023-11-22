@@ -74,9 +74,10 @@ class Filters extends BaseConfig
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
     public array $filters = [
-        'isLoggedIn' => ['before' => ['global*', 'general*', 'admin*', 'all-master-save']],
+        'isLoggedIn' => ['before' => ['global*', 'admin*', 'all-master-save']],
         'isApiAuthed' => ['before' => ['api/authed*']],
         'Is_admin' => ['before' => ['admin*', 'api/admin*']],
-        'Is_agent' => ['before' => ['agent*']]
+        'Is_agent' => ['before' => ['agent*']],
+        'csrf' => ['before' => ['forms/public/*']]
     ];
 }
