@@ -106,8 +106,9 @@ class Home extends BaseController
             'branches' => $this->generate_branches(),
         ];
 
-        return view('frontend/general-booking', $this->data);
+        return view('frontend/bookings/general-booking', $this->data);
     }
+
     public function book_appointment()
     {
         try {

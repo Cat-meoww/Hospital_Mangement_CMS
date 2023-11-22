@@ -2,6 +2,9 @@
 
 <?= $this->section('header') ?>
 
+
+
+
 <style>
     .owl-item>.slide {
         background-position-y: center !important;
@@ -84,7 +87,7 @@
                         <h5>emergency cases</h5>
                         <p>Please feel welcome to contact our staff with any general or medical enquiry call us
                         </p><a href="tel:04224695100"><span class="fas fa-phone-alt" style="
-                        border: 2px solid black;
+                        
                         color: #118b0f;
                         background-color: #0d3e21;
                       "></span>04224695100</a>
@@ -113,7 +116,7 @@
                         <p>Book an appointment and consult with our expert doctors </p>
                         <a class="btn btn--primary btn-line btn-line-before" href="#">
                             <span class="line"> <span>
-                                </span></span><span>Vist now</span></a>
+                                </span></span><span>Visit now</span></a>
                     </div>
                 </div>
             </div>
@@ -194,8 +197,9 @@
                                 <p>With modern, busy lifestyles, it’s easy to neglect your health as you put
                                     everyone else’s needs first. So, we’re here to care for you and your entire
                                     family.
-                                </p><a class="btn btn-danger btn-line btn-line-before btn-line-inversed btn-home3" href="#"><span class="line"> <span> </span></span><span>find a
-                                        doctor</span></a>
+                                </p><a class="btn btn--primary btn-line btn-line-after "
+                                        href="">
+                                        <span>find a doctor</span><span class="line"> <span></span></span></a>
                             </div>
                             <style>
                                 .btn-home3:hover {
@@ -423,7 +427,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="phone-card">
+            <div class="phone-card" style="padding-bottom: 40px !important;">
                 <div class="card-icon"> <i class="flaticon-022-medical"></i></div>
                 <div class="card-content">
                     <h5>emergency cases</h5>
@@ -549,21 +553,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                       
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/1.jpg') ?>" alt="6 tips to protect your mental health when sick" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">mental health</a><a href="javascript:void(0)">wellness</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>martin king</p>
-                            </div>
-                        </div>
+                        
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">6 tips to protect your mental health when
                                     sick</a></h4>
@@ -582,21 +577,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                        
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/2.jpg') ?>" alt="Unsure About Wearing a Face Mask? How and Why" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">infectious</a><a href="javascript:void(0)">tips</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>John Ezak</p>
-                            </div>
-                        </div>
+                        
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">Unsure About Wearing a Face Mask? How and
                                     Why</a></h4>
@@ -616,21 +602,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                       
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/3.jpg') ?>" alt="Tips for Eating Healthy When Working From Home" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">lifestyle</a><a href="javascript:void(0)">nutrition</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>Saul Wade</p>
-                            </div>
-                        </div>
+                        
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">Tips for Eating Healthy When Working From
                                     Home</a></h4>
@@ -649,21 +626,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                       
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/4.jpg') ?>" alt="Why Coronavirus Cases Among Adults Is Bad News" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">mental health</a><a href="javascript:void(0)">wellness</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>Mark Ezak</p>
-                            </div>
-                        </div>
+                       
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">Why Coronavirus Cases Among Adults Is Bad
                                     News</a></h4>
@@ -682,21 +650,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                        
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/5.jpg') ?>" alt="Why Do People Get Kidney Stones in the Summer?" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">infectious</a><a href="javascript:void(0)">tips</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>Janette Baker</p>
-                            </div>
-                        </div>
+                        
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">Why Do People Get Kidney Stones in the
                                     Summer?</a></h4>
@@ -715,21 +674,12 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
-                        <div class="entry-date">
-                            <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
-                        </div>
+                       
                         <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/6.jpg') ?>" alt="Do Any Drugs Really Work to Treat Coronavirus?" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
-                        <div class="entry-meta">
-                            <div class="entry-category"><a href="javascript:void(0)">lifestyle</a><a href="javascript:void(0)">nutrition</a>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="entry-author">
-                                <p>Marie Black</p>
-                            </div>
-                        </div>
+                        
                         <div class="entry-title">
                             <h4><a href="blog-single-sidebar.html">Do Any Drugs Really Work to Treat
                                     Coronavirus?</a></h4>

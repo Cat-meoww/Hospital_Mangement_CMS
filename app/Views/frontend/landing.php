@@ -7,7 +7,7 @@
     <meta name="author" content="Ayman Fikry" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
-    <title>GEM Hospital</title>
+    <title>GEM Hospital Index</title>
     <link href="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" rel="icon" />
     <!--  Fonts ==
     -->
@@ -257,7 +257,7 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="home.html" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="" href="<?= base_url('home') ?>" title="Coimbatore"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
@@ -303,7 +303,7 @@
                         ">
                                             <span> Contact Now</span>
                                             <span>
-                                                <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                <a class="" href="<?= base_url('home') ?>"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;
@@ -411,7 +411,7 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="home.html" title="Chennai"></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://aminjikarai.gemhospitals.com/" title="Chennai"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
@@ -457,7 +457,7 @@
                         ">
                                             <span> Contact Now</span>
                                             <span>
-                                                <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                <a class="" href="https://aminjikarai.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;
@@ -488,7 +488,7 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="home.html" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://tiruppur.gemhospitals.com/" title="tiruppur"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
@@ -534,7 +534,7 @@
                         ">
                                             <span> Contact Now</span>
                                             <span>
-                                                <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                <a class="" href="https://tiruppur.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;
@@ -565,7 +565,7 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="home.html" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://pondicherry.gemhospitals.com/" title="Coimbatore"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
@@ -611,7 +611,7 @@
                         ">
                                             <span> Contact Now</span>
                                             <span>
-                                                <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                <a class="" href="https://pondicherry.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;
@@ -642,7 +642,7 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="home.html" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://erode.gemhospitals.com/" title=""></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
@@ -688,7 +688,7 @@
                         ">
                                             <span> Contact Now</span>
                                             <span>
-                                                <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                <a class="" href="https://erode.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;
@@ -720,7 +720,7 @@
                                     <div class="team-hover">
                                         <div class="team-action">
                                             <div class="team-zoom">
-                                                <i class="far fa-eye"></i><a class="" href="home.html" title="Coimbatore"></a>
+                                                <i class="far fa-eye"></i><a class="" href="https://gemhospitalthrissur.in/" title=""></a>
                                             </div>
                                         </div>
                                         <!-- End .team-action -->
@@ -766,7 +766,7 @@
                         ">
                                                 <span> Contact Now</span>
                                                 <span>
-                                                    <a class="" href="home.html"><i class="ms-2 fas fa-arrow-right" style="
+                                                    <a class="" href="https://gemhospitalthrissur.in/"><i class="ms-2 fas fa-arrow-right" style="
                         font-size: 16px;
                        
                         color: white;

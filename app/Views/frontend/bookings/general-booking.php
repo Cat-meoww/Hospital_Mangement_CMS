@@ -107,7 +107,7 @@
 
                             <div class="col-12 ">
                                 <div class="date-select">
-                                    <input class="form-control" type="date" onfocus="(this.type='date')" onblur="(this.type='text')" id="booking-date" placeholder="Prefered Date" name="booking-date" value="<?= old('booking-date') ?>" required="" /><i for="booking-date" class="fas fa-calendar-day"></i>
+                                    <input class="form-control" type="date" min="<?= date('Y-m-d') ?>" id="booking-date" placeholder="Prefered Date" name="booking-date" value="<?= old('booking-date') ?>" required="" /><i for="booking-date" class="fas fa-calendar-day"></i>
                                     <?= validation_show_error('booking-date', 'display-error') ?>
                                 </div>
                             </div>
@@ -120,6 +120,16 @@
                                 <div class="col-12 ">
                                     <div class="alert alert-secondary alert-dismissible fade show mb-0 w-100" role="alert">
                                         <?= $session->getFlashdata("error") ?>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            <?php endif ?>
+                            <?php if (session()->getFlashdata('success') !== NULL) : ?>
+                                <div class="col-12 ">
+                                    <div class="alert alert-success alert-dismissible fade show mb-0 w-100" role="alert">
+                                        <?= $session->getFlashdata("success") ?>
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                             <i class="fa fa-times"></i>
                                         </button>

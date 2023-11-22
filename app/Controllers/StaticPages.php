@@ -33,7 +33,7 @@ class StaticPages extends BaseController
     {
         return view('frontend/home', $this->data);
     }
-    
+
     public function aboutus()
     {
         return view('frontend/aboutus', $this->data);
@@ -46,5 +46,44 @@ class StaticPages extends BaseController
     {
         return view('frontend/health-package', $this->data);
     }
-    
+    public function mgr()
+    {
+        return view('frontend/mgr', $this->data);
+    }
+    public function nbe()
+    {
+        return view('frontend/nbe', $this->data);
+    }
+    public function career()
+    {
+        return view('frontend/career', $this->data);
+    }
+    public function contact_us()
+    {
+        return view('frontend/contactus', $this->data);
+    }
+    public function bmw()
+    {
+        return view('frontend/bmw', $this->data);
+    }
+    public function insurance()
+    {
+        return view('frontend/insurance', $this->data);
+    }
+    public function blog()
+    {
+        return view('frontend/blog', $this->data);
+    }
+    public function press_release()
+    {
+        return view('frontend/press-release', $this->data);
+    }
+    public function magazines()
+    {
+        return view('frontend/magazines', $this->data);
+    }
+    public function doctor_info()
+    {
+        return view('frontend/doctorinfo', $this->data);
+    }
 }

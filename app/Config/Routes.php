@@ -34,7 +34,7 @@ $routes->addPlaceholder('uuid', '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
 $routes->get('/faqs', 'Home::faq');
-$routes->get('/contactus', 'Home::contactus');
+
 $routes->get('/privacy', 'Home::privacy');
 $routes->get('/logout', 'Home::logout');
 
@@ -43,8 +43,17 @@ $routes->get('/logout', 'Home::logout');
 $routes->get('/home', 'StaticPages::home');
 $routes->get('/aboutus', 'StaticPages::aboutus');
 $routes->get('/service', 'StaticPages::service');
+$routes->get('/mgr', 'StaticPages::mgr');
+$routes->get('/nbe', 'StaticPages::nbe');
 $routes->get('/health-package', 'StaticPages::health_package');
-$routes->get('/doctorinfo', 'StaticPages::doctorinfo');
+$routes->get('/contactus', 'StaticPages::contact_us');
+$routes->get('/career', 'StaticPages::career');
+$routes->get('/bmw', 'StaticPages::bmw');
+$routes->get('/insurance', 'StaticPages::insurance');
+$routes->get('/blog', 'StaticPages::blog');
+$routes->get('/magazines', 'StaticPages::magazines');
+$routes->get('/press-release', 'StaticPages::press_release');
+$routes->get('/doctorinfo', 'StaticPages::doctor_info');
 
 
 
