@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class VideoBookingDoctors extends Model
 {
-    protected $table      = 'video_bookings_doctors';
+    protected $table      = 'video_booking_doctors';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;

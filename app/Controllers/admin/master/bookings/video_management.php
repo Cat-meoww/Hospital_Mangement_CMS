@@ -66,7 +66,7 @@ class video_management extends General
     {
         $Doctors = new \App\Models\Doctors();
 
-        $arrayOfObjects = $Doctors->select('doctors.id,doctors.name')->join('video_bookings_doctors as vbd', 'doctors.id = vbd.doctor', 'left')->where('vbd.doctor IS NULL')->get()->getResult();
+        $arrayOfObjects = $Doctors->select('doctors.id,doctors.name')->join('video_booking_doctors as vbd', 'doctors.id = vbd.doctor', 'left')->where('vbd.doctor IS NULL')->get()->getResult();
         $associativeArray = [];
         $associativeArray[''] = "Select Option";
         foreach ($arrayOfObjects as $object) {
@@ -89,7 +89,7 @@ class video_management extends General
             $rules  = [
                 'doctor' => [
                     'label' => 'Doctor',
-                    'rules' => "trim|required|is_not_unique[doctors.id]|is_unique[video_bookings_doctors.doctor]",
+                    'rules' => "trim|required|is_not_unique[doctors.id]|is_unique[video_booking_doctors.doctor]",
                     'errors' => [
                         'is_not_unique' => "Related {field} not founded",
                         'is_unique' => "Related {field} already exist"
@@ -134,7 +134,7 @@ class video_management extends General
             $rules  = [
                 'id' => [
                     'label' => 'ID',
-                    'rules' => "trim|required|is_natural|is_not_unique[video_bookings_doctors.id]",
+                    'rules' => "trim|required|is_natural|is_not_unique[video_booking_doctors.id]",
                     'errors' => [
                         'is_not_unique' => "Related Service not founded"
                     ],
@@ -166,7 +166,7 @@ class video_management extends General
             $rules  = [
                 'id' => [
                     'label' => 'Doctor',
-                    'rules' => "trim|required|is_natural|is_not_unique[video_bookings_doctors.id]",
+                    'rules' => "trim|required|is_natural|is_not_unique[video_booking_doctors.id]",
                     'errors' => [
                         'is_not_unique' => "Related {field} not founded"
                     ],
