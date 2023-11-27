@@ -104,6 +104,12 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         $routes->add('services', 'branch_management::services');
         $routes->add('doctors', 'branch_management::doctors');
     });
+    $routes->group('booking-management', static function ($routes) {
+        $routes->group('video', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
+            $routes->add('doctors', 'video_management::doctors');
+            $routes->add('time-slots', 'time_slots::index');
+        });
+    });
     $routes->group('cms', static function ($routes) {
         $routes->add('faq', 'cms\faq::index');
         $routes->add('ads', 'cms\ads::index');
@@ -165,6 +171,18 @@ $routes->group('api', static function ($routes) {
                     $routes->post('services/generate_options', 'branch_management::generate_service_options');
                     $routes->post('doctors/update', 'branch_management::update_doctors');
                     $routes->post('doctors/generate_options', 'branch_management::generate_doctor_options');
+                });
+            });
+            $routes->group('time-slots', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
+                $routes->post('create', 'time_slots::create');
+                $routes->post('update', 'time_slots::update');
+                $routes->post('delete', 'time_slots::delete');
+            });
+            $routes->group('bookings', static function ($routes) {
+                $routes->group('video', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
+                    $routes->add('add-doctor', 'video_management::add_doctor');
+                    $routes->add('delete-doctor', 'video_management::delete_doctor');
+                    $routes->add('update-doctor-slot', 'video_management::update_doctor_timeslot');
                 });
             });
 

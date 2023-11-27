@@ -104,6 +104,14 @@ if (!function_exists("humanizeDateTime")) {
         return $time->humanize();
     }
 }
+if (!function_exists("analogueFormate")) {
+    function analogueFormate($date)
+    {
+
+
+        return date('h:i A', strtotime($date));
+    }
+}
 if (!function_exists("variatedByOffer")) {
     function variatedByOffer($offer)
     {
@@ -130,15 +138,15 @@ if (!function_exists("renderDataAttributes")) {
         foreach ($keysArray as $key) {
             // Check if the key exists in the data object
             if (property_exists($dataObject, $key)) {
-              
+
                 $value = esc($dataObject->$key);
-                
+
                 $attributes[] = "data-$key='$value'";
             }
         }
         // Implode the attributes array into a string
         $renderedAttributes = implode(' ', $attributes);
-        
+
         return $renderedAttributes;
     }
 }
