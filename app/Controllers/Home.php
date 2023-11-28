@@ -185,15 +185,214 @@ class Home extends BaseController
                     'phone' => $this->request->getPost('phone'),
                     'email' => $this->request->getPost('email'),
                     'booking_date' => $this->request->getPost('booking-date'),
-                ]);
+                ], true);
 
                 if ($query) {
-                    return redirect()->back()->with('success', "Successfully added your Booking appointment");
+
+                    $Services = new \App\Models\Services();
+
+                    return redirect()
+                        ->with('booking_id', $query)
+                        ->with('customer', $this->request->getPost('name'))
+                        ->with('service', $Services->select('name')->where('id', $service)->first()->name ?? "miscellaneous")
+                        ->to('appointment/thanks');
                 }
                 throw new Exception("Unable to store data");
             }
         } catch (\Exception $e) {
             return redirect()->back()->withInput()->with('error', $e->getMessage());
         }
+    }
+
+    public function video_booking()
+    {
+        $this->data['title'] = "Video consultation";
+        $this->data['Options'] = [
+            'services' => $this->generate_video_services(),
+        ];
+
+        return view('frontend/bookings/video-booking', $this->data);
+    }
+    private function generate_video_services()
+    {
+
+
+        if (!$associativeArray = cache('generate_video_services')) {
+
+            $VB_Docs = new \App\Models\VideoBookingDoctors();
+
+            $doctors = $VB_Docs->select('doctor')->where('visibility', 'Public')->get()->getResult();
+            $doctors_ids = [];
+            foreach ($doctors as $doc) {
+                $doctors_ids[] = (int) $doc->doctor;
+            }
+            $service_csv = [];
+
+            $Doctors = new \App\Models\Doctors();
+
+            $Doctors_Services = $Doctors->select('services')->whereIn('id', $doctors_ids)->get()->getResult();
+
+
+            foreach ($Doctors_Services as $service) {
+                $service_csv[] = $service->services;
+            }
+            $services_ids = explode(',', implode(',', $service_csv));
+
+            $Services = new \App\Models\Services();
+            $arrayOfObjects = $Services->select('id,name')->whereIn('id', $services_ids)->get()->getResult();
+            $associativeArray = [];
+
+            $associativeArray[''] = "Select ";
+            foreach ($arrayOfObjects as $object) {
+                $associativeArray[$object->id] = $object->name;
+            }
+            // Save into the cache for 5 minutes
+            cache()->save('generate_video_services', $associativeArray, 60);
+        }
+
+        return $associativeArray;
+    }
+
+
+    public function handle_video_form()
+    {
+        try {
+            $rules = [
+                'service' => [
+                    'label' => 'Service',
+                    'rules' => "trim|required|is_natural|is_not_unique[services.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'doctor' => [
+                    'label' => 'doctor',
+                    'rules' => "trim|required|is_natural|is_not_unique[video_booking_doctors.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'booking-date' => [
+                    'label' => 'Booking Date',
+                    'rules' => "trim|required|valid_date[Y-m-d]|from_today",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'time-slot' => [
+                    'label' => 'Time slot',
+                    'rules' => "trim|required|is_natural|is_not_unique[time_slots.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'first-name' => [
+                    'label' => 'First Name',
+                    'rules' => "trim|required|alpha_space|min_length[2]",
+                ],
+                'last-name' => [
+                    'label' => 'Last Name',
+                    'rules' => "trim|required|alpha_space",
+                ],
+                'phone' => [
+                    'label' => 'Phone Number',
+                    'rules' => "trim|required|numeric|exact_length[10]",
+                    'errors' => [
+                        'numeric' => 'Required valid number',
+                        'exact_length' => 'Required 10 digits {field}',
+                    ]
+                ],
+                'email' => [
+                    'label' => 'Email',
+                    'rules' => "trim|required|valid_email|max_length[50]",
+                ],
+                'message' => [
+                    'label' => 'Message',
+                    'rules' => "trim|required",
+                ],
+            ];
+
+            if (!$this->validate($rules)) {
+
+                return redirect()->back()->withInput();
+            } else {
+
+                $service = (int) $this->request->getPost('service');
+                $doctor = (int) $this->request->getPost('doctor');
+                $BookingDate = $this->request->getPost('booking-date');
+                $slot = (int)$this->request->getPost('time-slot');
+
+                $TimeSlots = new \App\Models\TimeSlots();
+                $slotData = $TimeSlots->where('id', $slot)->first();
+                if (!$slotData) {
+                    throw new Exception("Required Valid Slot Data");
+                }
+
+                $VideoBookingDoctors = new \App\Models\VideoBookingDoctors();
+                $foo = $VideoBookingDoctors->select('doctors.id')
+                    ->where('video_booking_doctors.id', $doctor)
+                    ->where("FIND_IN_SET($slot,slots) != FALSE")
+                    ->join('doctors', 'doctors.id=video_booking_doctors.doctor', 'INNER')
+                    ->where("FIND_IN_SET($service,doctors.services) != FALSE")
+                    ->first();
+
+                if (!$foo) {
+                    throw new Exception("Required valid data");
+                }
+
+                $ReservedSlots = new \App\Models\ReservedSlots();
+                $is_reserved = $ReservedSlots->select('id')->where('slot_id', $slot)->where('doctor_id', $doctor)->where('booking_date', $BookingDate)->first();
+
+                if ($is_reserved) {
+                    throw new Exception("The slot is already reserved");
+                }
+
+
+
+
+
+                $VideoBookings = new \App\Models\VideoBookings();
+
+                $insertID = $VideoBookings->insert([
+                    'firstname' => $this->request->getPost('first-name'),
+                    'lastname' => $this->request->getPost('last-name'),
+                    'phone' => $this->request->getPost('phone'),
+                    'email' => $this->request->getPost('email'),
+                    'service' => $service,
+                    'doctor' => $doctor,
+                    'booking_date' => $this->request->getPost('booking-date'),
+                    'slot_id' => $slot,
+                    'start_time' => $slotData->start_time,
+                    'end_time' => $slotData->end_time,
+                    'message' => $this->request->getPost('message'),
+                ], true);
+
+                if ($insertID) {
+
+                    $Services = new \App\Models\Services();
+                    $ReservedSlots->insert([
+                        'doctor_id' => $doctor,
+                        'booking_date' => $BookingDate,
+                        'slot_id' => $slot,
+                        'booking_id' => $insertID,
+                    ]);
+                    return redirect()
+                        ->with('booking_id', $insertID)
+                        ->with('customer', $this->request->getPost('first-name'))
+                        ->with('service', $Services->select('name')->where('id', $service)->first()->name ?? "miscellaneous")
+                        ->to('appointment/thanks');
+                }
+                throw new Exception("Unable to store data");
+            }
+        } catch (\Exception $e) {
+
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
+        }
+    }
+
+    public function thanks()
+    {
+        $this->data['title'] = "Thanks";
+        return view('frontend/general-thank', $this->data);
     }
 }

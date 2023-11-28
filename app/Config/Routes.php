@@ -66,7 +66,9 @@ $routes->get('/services/(:any)', 'Home::location_services/$1');
 
 $routes->group('appointment', function ($routes) {
     $routes->get('book-appointment', 'Home::general_booking');
-    $routes->get('video-consultation', 'Home::general_booking');
+    $routes->get('video-consultation', 'Home::video_booking');
+
+    $routes->get('thanks', 'Home::thanks');
 });
 
 
@@ -127,6 +129,7 @@ $routes->group('forms', static function ($routes) {
         $routes->post('contact-us', 'Home::post_contactus');
         $routes->post('faq', 'Home::post_faq');
         $routes->post('book-appointment', 'Home::book_appointment');
+        $routes->post('video-consultation', 'Home::handle_video_form');
     });
 });
 
@@ -209,6 +212,8 @@ $routes->group('api', static function ($routes) {
 
     $routes->group('frontend', ['namespace' => 'App\Controllers\API\frontend'], static function ($routes) {
         $routes->post('get-services', 'FrontService::get_services');
+        $routes->post('get-video-doctors', 'FrontService::get_video_doctors');
+        $routes->post('get-time-slots', 'FrontService::get_time_slots');
     });
 
     $routes->group('geo', ['namespace' => 'App\Controllers\API\Services'], static function ($routes) {

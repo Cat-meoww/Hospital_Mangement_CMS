@@ -144,7 +144,7 @@
                                 </button>
                             </div>
                             <div class="col-12 pt-3 text-center">
-                                <a href="online-appointment.html" class="text-theme btn-link">
+                                <a href="<?= base_url('appointment/video-consultation')?>" class="text-theme btn-link">
                                     <span>Video Consultation</span>
                                 </a>
                             </div>

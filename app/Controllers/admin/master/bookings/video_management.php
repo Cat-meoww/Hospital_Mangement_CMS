@@ -109,7 +109,7 @@ class video_management extends General
 
                 $query = $VideoBookingDoctors->insert([
                     'doctor' =>  (int) $this->request->getPost('doctor'),
-                    'visibility' =>  (int) $this->request->getPost('visibility'),
+                    'visibility' =>   $this->request->getPost('visiblity'),
                 ]);
 
 

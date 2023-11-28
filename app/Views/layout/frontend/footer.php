@@ -117,7 +117,7 @@
   <!--  End .footer-center-->
   <div class="footer-bottom">
     <div class="container">
-      <div class="row">
+      <div class="row col-12">
         <div class="col-12">
           <div class="footer-copyright">
             <div class="copyright">
