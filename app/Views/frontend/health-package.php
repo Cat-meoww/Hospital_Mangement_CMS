@@ -3,7 +3,6 @@
 <?= $this->section('header') ?>
 
 
-
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
@@ -43,31 +42,28 @@
       <div class="container pt-2">
 
 
-
+<p class="paragraph" style="font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--global--color-primary);
+  margin-top: 10px;">Pricing</p>
 
         <div class="d-flex justify-content-between" style="margin-top: 30px;">
+       
 
-          <h2  style="color:black; letter-spacing: var(--e-global-typography-5d167aa-letter-spacing); word-spacing: var(--e-global-typography-5d167aa-word-spacing); font-size: 35px;  font-family: var(--global--font-heading);">HealthPackages</h2>
+          <h2  style="color: var(--global--color-primary); letter-spacing: var(--e-global-typography-5d167aa-letter-spacing); word-spacing: var(--e-global-typography-5d167aa-word-spacing); font-size: 35px;  font-family: var(--global--font-heading);">HealthPackages</h2>
 		          <div class="container">
             <div class="d-flex justify-content-end" style="display:flex; justify-content:end; ">
                 <!-- Column -->
                 
-                    <a class="btn btn-success col-12 col-md-2" href="#" style="clear:both;">Book Now</a>
-                  <style>
-				  .btn-success{
-				     background-color: var(--global--color-primary);
-				  }
-				  .btn-success:hover{
-				       
-					   background-color:  rgb(13, 62, 33);
-                       border-color: #146c43;
-				  }
-				  </style>
+                    <a class="btn btn-success col-12 col-md-2 bn-book" href="#" style="clear:both;">Book Now</a>
+                  
 
             </div>
         </div>
-          <!---<a class="btn btn-success col-md-1" style="left: 20%; margin-left: 0; padding-left: 0;" id="" href="#">Book Now</a><br>--->
+         
         </div>
+        
 
 
 
@@ -76,12 +72,32 @@
 
   </div>
   </section>
-  <section class="single-service pt-2" id="sample">
+  <style>
+				  .btn-success{
+				     background-color: var(--global--color-primary);
+				  }
+				  .btn-success:hover{
+				       
+					   background-color:  rgb(13, 62, 33);
+                       border-color: #146c43;
+				  }
+          @media screen and (max-width:600px) {
+            .bn-book{
+              position: absolute;
+              right:120px;
+              bottom:20px;
+              
+            }
+
+            
+          }
+				  </style>
+  <section class="single-service pt-2]" id="sample">
     <div class="entry-infos core-values">
      
       <!---<p class="entry-desc">Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research. For over 20 years, our hospital has touched lives of millions of people, and provide care and treatment for the sickest in our community including rehabilitation and aged care.</p>--->
-      <div class="w-100  px-5">
-        <div class="col-12 col-md-6" style="width: 95%;">
+      <div class="">
+        <div class="" style="width: 95%;">
           <div class="entry-value"><i class=""></i>
             <div class="entry-content">
               <!--<h5>medical check ups</h5>-->
@@ -117,12 +133,189 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-12 col-md-1" style="margin-left: 24px;">
-                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F;"><span>Rs.3750</span></p>
+                <div class="col-12 col-md-1" >
+                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F; margin-left:50px"><span class="health-amt">Rs.3750</span></p>
                 </div>
               </div>
              
-    <style>
+    
+
+             
+            </div>
+          </div>
+        </div>
+		  
+        <div class="" style="width: 95%;">
+          <div class="entry-value"><i class=""></i>
+            <div class="entry-content">
+              <!--<h5>medical check ups</h5>-->
+
+              <div class="row align-items-center">
+                <div class="col-12 col-md-3" >
+
+                  <h2 style="font-family:  var(--global--font-heading); font-size: 20px; color: #0D3E21;">Cancer Screening For Male<br> <span style="font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--global--color-primary);
+  "> (Everything in Express <br>Health Checkup plus)</span></h2>
+
+                </div>
+				
+                <div class="col-12 col-md-8 row">
+                 
+                  <div class="col-12 col-md-6">
+                   
+                    <ul class="list-unstyled advantages" style="margin-left:10px;">
+                      <li><span class="content-span1"><i class="fas fa-check check1"></i>Carcinoembryonic Antigen</span></li>
+                      <li><span class="content-span1"><i class="fas fa-check check1"></i>Prostate-Specific Antigen</span></li>
+                      
+                     
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <ul class="list-unstyled advantages" style="margin-left:30px;">
+                      <li><span class="content-span2"><i class="fas fa-check check2"></i>CA 19.9</span></li>
+                      <li><span class="content-span2"><i class="fas fa-check check2"></i>Stool Occult blood</span></li>
+                     
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-md-1">
+                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F; margin-left:85px;"><span class="health-amt1">Rs.7000</span></p>
+                </div>
+              </div>
+             
+    
+
+             
+            </div>
+          </div>
+        </div>
+		  
+        <div class="" style="width: 95%;">
+          <div class="entry-value"><i class=""></i>
+            <div class="entry-content">
+              <!--<h5>medical check ups</h5>-->
+
+              <div class="row align-items-center">
+                <div class="col-12 col-md-3" >
+
+                  <h2 style="font-family:  var(--global--font-heading); font-size: 20px; color: #0D3E21;">Cancer Screening For Female <br> <span style="font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--global--color-primary);
+  "> (Everything in Express <br>Health Checkup plus)</span></h2>
+
+                </div>
+				
+                <div class="col-12 col-md-8 row">
+                  
+                  <div class="col-12 col-md-6">
+                    <ul class="list-unstyled advantages" style="margin-left:20px;">
+                      <li><span class="content-span5"><i class="fas fa-check check5"></i>
+
+                      CA 125</span></li>
+                      <li><span class="content-span5"><i class="fas fa-check check5"></i>
+Papsmear</span></li>
+                      <li><span class="content-span5"><i class="fas fa-check check5"></i>
+USG Breast Screening</span></li>
+                      
+                     
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <ul class="list-unstyled advantages" style="margin-left:40px;">
+                      <li><span class="content-span6"><i class="fas fa-check check6"></i>
+Gynecologist</span></li>
+                      <li><span class="content-span6"><i class="fas fa-check check6"></i>
+Stool Occult blood</span></li>
+                     
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-md-1">
+                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F; margin-left:80px;"><span class="health-amt2">Rs.7000</span></p>
+                </div>
+              </div>
+             
+    
+
+             
+            </div>
+          </div>
+        </div>
+        <div class="" style="width: 95%;">
+          <div class="entry-value"><i class=""></i>
+            <div class="entry-content">
+              <!--<h5>medical check ups</h5>-->
+
+              <div class="row align-items-center">
+                <div class="col-12 col-md-3" >
+
+                  <h2 style="font-family:  var(--global--font-heading); font-size: 20px; color: #0D3E21;">Bottom Care
+checkup</h2>
+
+                </div>
+				
+                <div class="col-12 col-md-8 row">
+                 
+                  <div class="col-12 col-md-6">
+                   
+                    <ul class="list-unstyled advantages" style="margin-left:10px;">
+                      <li><span class="content-span1"><i class="fas fa-check check1"></i>OP Routine</span></li>
+                      <li><span class="content-span1"><i class="fas fa-check check1"></i>
+Proctoscopy</span></li>
+<li><span class="content-span1"><i class="fas fa-check check1"></i>
+Colorectal Specialist Consultation</span></li>
+                      
+                     
+                    </ul>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <ul class="list-unstyled advantages" style="margin-left:30px;">
+                      <li><span class="content-span2"><i class="fas fa-check check2"></i>Dietician Consultation</span></li>
+                      <li><span class="content-span2"><i class="fas fa-check check2"></i>
+Stool Occult blood</span></li>
+                     
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-md-1">
+                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F; margin-left:85px;"><span class="health-amt3">Rs.1500</span></p>
+                </div>
+              </div>
+             
+    
+
+             
+            </div>
+          </div>
+        </div>
+		  
+          <!----<div class="col-12 col-md-6">
+                  <div class="entry-value"><i class=""></i>
+                    <div class="entry-content">
+                      
+                      <p>Best Technique Award, 12th World Congress of Esophageal Diseases, Japan 2010</p>
+                      
+                    </div>
+                  </div>
+                </div>---->
+          <!----<div class="col-12 col-md-6">
+                  <div class="entry-value"><i class=""></i>
+                    <div class="entry-content">
+                      
+                      <p>Cardiomyotomy Surgery done successfully in an 8 months Pregnant Woman</p>
+                      
+                    </div>
+                  </div>
+                </div>--->
+       
+
+        </div>
+      </div>
+  </section>
+  <style>
 	#sample{
 	margin-left: 5%;
 	font-size: 14px;
@@ -142,113 +335,67 @@
     .fa-check,.content-span{
       display: flex;
       flex-direction: row;
-    }
+    }.check1,.content-span1{
+      display: flex;
+      flex-direction: row;
+      margin-left:-5px;
     
+    }.check2,.content-span2{
+      display: flex;
+      flex-direction: row;
+      margin-left:-15px;
+    
+    }.check3,.content-span3{
+      display: flex;
+      flex-direction: row;
+      margin-left:5px;
+
+    
+    }.check4,.content-span4{
+      display: flex;
+      flex-direction: row;
+      margin-left:0px;
+     
+    
+    }
+    .check5,.content-span5{
+      display: flex;
+      flex-direction: row;
+      margin-left:-5px;
+     
+    
+    } .check6,.content-span6{
+      display: flex;
+      flex-direction: row;
+      margin-left:-15px;
+     
+    
+    }p .health-amt{
+      display:flex;
+      flex-direction:row;
+      margin-left: 15%;
+      
+    }
+    p .health-amt1{
+      display:flex;
+      flex-direction:row;
+      margin-left: 1%;
+      
+    }
+    p .health-amt2{
+      display:flex;
+      flex-direction:row;
+      margin-left: 5%;
+      
+    }
+    p .health-amt3{
+      display:flex;
+      flex-direction:row;
+      margin-left: 3%;
+      
+    }
   }
 	</style>
-
-              </div>
-            </div>
-          </div>
-		  
-		   <div class="col-12 col-md-6" style="width: 95%;">
-          <div class="entry-value"><i class=""></i>
-            <div class="entry-content">
-              <!--<h5>medical check ups</h5>-->
-
-              <div class="row align-items-center">
-                <div class="col-12 col-md-3" >
-
-                  <h2 style="font-family:  var(--global--font-heading); font-size: 20px; color: #0D3E21;">Cancer Screening for Male</h2>
-
-                </div>
-                <div class="col-12 col-md-8 row">
-                  <div class="col-12 col-md-6">
-                    <ul class="list-unstyled advantages">
-                      <li><span class="content-span"><i class="fas fa-check"></i>Carcinoembryonic Antigen</span></li>
-                <li><span class="content-span"><i class="fas fa-check"></i>CA 19.9</span></li>
-                
-                    </ul>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <ul class="list-unstyled advantages">
-                     <li><span class="content-span"><i class="fas fa-check"></i>Prostate-Specific Antigen</span></li>
-                <li><span class="content-span"><i class="fas fa-check"></i>Stool Occult blood</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-12 col-md-1" style="margin-left: 24px;">
-                  <p style="font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F;"><span>Rs.7000</span></p>
-                </div>
-              </div>
-             
-    
-
-              </div>
-            </div>
-          </div>
-		  
-		   <div class="col-12 col-md-6" style="width: 95%;">
-          <div class="entry-value"><i class=""></i>
-            <div class="entry-content">
-              <!--<h5>medical check ups</h5>-->
-
-              <div class="row align-items-center">
-                <div class="col-12 col-md-3" >
-
-                  <h2 style="font-family:  var(--global--font-heading); font-size: 20px; color: #0D3E21;">Cancer Screening for Female</h2>
-
-                </div>
-                <div class="col-12 col-md-8 row">
-                  <div class="col-12 col-md-6">
-                    <ul class="list-unstyled advantages">
-                      <li><span class="content-span"><i class="fas fa-check"></i>CA 125</span></li>
-                      <li><span class="content-span"><i class="fas fa-check"></i>Papsmear</span></li>
-                      <li><span class="content-span"><i class="fas fa-check"></i>USG Breast Screening</span></li>
-                    </ul>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <ul class="list-unstyled advantages">
-                      <li><span class="content-span"><i class="fas fa-check"></i>Gynecologist</span></li>
-                <li><span class="content-span"><i class="fas fa-check"></i>Stool Occult blood</span></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-12 col-md-1" style="margin-left: 24px;">
-                  <p style=" font-family:  var(--global--font-heading); font-size: 30px; color: #118B0F;"><span>Rs.7000</span></p>
-                </div>
-              </div>
-             
-    
-
-              </div>
-            </div>
-          </div>
-          <!----<div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      
-                      <p>Best Technique Award, 12th World Congress of Esophageal Diseases, Japan 2010</p>
-                      
-                    </div>
-                  </div>
-                </div>---->
-          <!----<div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      
-                      <p>Cardiomyotomy Surgery done successfully in an 8 months Pregnant Woman</p>
-                      
-                    </div>
-                  </div>
-                </div>--->
-       <style>
-	   
-        </style>
-
-        </div>
-      </div>
-  </section>
   <!----<section class="pricing" id="pricing-1">
     <div class="container">
       <div class="pricing-holder">
@@ -348,8 +495,8 @@
       <div class="heading heading-4">
         <div class="row">
           <div class="col-12 col-lg-5">
-
-            <h2 class="heading-title">FAQ<br>Frequently Asked Question</h2>
+            <p class="paragraph">FAQ</p>
+            <h2 class="heading-title">Frequently Asked Question</h2>
             <!---<div class="img-hotspot">
               <div class="img-hotspot-wrap">
                 <div class="img-hotspot-bg"> <img src="assets/images/background/world-map.png" alt="image" /></div>

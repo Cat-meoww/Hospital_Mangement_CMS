@@ -43,24 +43,35 @@
               <div class="heading heading-2">
                 <div class="row"> 
                   <div class="col-12 col-lg-10">
-                     <h2 class="heading-title" style="color:green;">About Us</h2>
+                     <p class="paragraph" style="color:green;">About Us</p>
                   </div>
                   <div class="col-12 col-lg-10">
                     <h2 class="heading-title">Institute of Gastrointestinal Endo-Surgery</h2>
                     <p class="heading-desc" style="color: black;">We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type you require. We treat all enquiries in confidence.</p>
                     <div class="signature-block"> <div class="signature-body"> 
-                      <h6>32+</h6>
-                      <p>Years Experienced</h1>
+                    <h6 style="font-size:70px; color:green;" class="heading-title">32+</h6>
+                        <p class="heading-subtitle"style="color:black; font-weight:bold; margin-top:20px; font-size:16px;" >Years Experienced</h1>
                     </div>
-                      <div class="signature-body" style="margin-left: 130px;"> 
-                        <h6>211+</h6>
-                        <p>Specialist Doctor</h1>
+                      <div class="signature-body about-cls1" style="margin-left: 130px; "> 
+                        <h6 style="font-size:70px; color:green;" class="heading-title">211+</h6>
+                        <p class="heading-subtitle"style="color:black; font-weight:bold; margin-top:20px; font-size:16px;" >Specialist Doctor</h1>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <style>
+              @media screen and (max-width:600px) {
+                .signature-block{
+                  display:flex;
+                  flex-direction:column;
+                }.about-cls1{
+                  margin-top:8%;
+                  margin-right:30%;
+                }
+              }
+            </style>
             <!-- End .col-lg-6-->
             <div class="col-12 col-lg-5 offset-lg-1">
               <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/about/doctor.png') ?>" alt="about Image"/><!----<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-----></div>
@@ -80,7 +91,12 @@
       ============================
       -->
       <section class="features bg-overlay bg-overlay-theme" id="features-1">
-      <div class="bg-section"> <img  src="<?= base_url('frontend/assets/images/background/1.jpg') ?>" alt="Background" /></div>
+      <div class="bg-section"> <img  src="<?= base_url('frontend/assets/images/about/APJ.jpg') ?>" alt="Background" /></div>
+      <style>
+        .bg-overlay-theme:before{
+          background-image:linear-gradient(-90deg, #89e98894 18%, #89e98894 70%) !important;
+        }
+        </style>
       <div class="container">
         <div class="heading heading-3 heading-light">
           <div class="row">
@@ -245,14 +261,14 @@
       </section>---->
 	  <section class="cta cta-3" id="cta-3">
 	          <div class="processes"> 
-          <div class="row g-0"> 
-		  <h6 class="heading-desc" style="text-align: center;">Our Values</h6>
+          <div class="row g-0 heading"> 
+		  <p class="paragraph" style="text-align: center;">Our Values</p>
 		  <h5 class="heading-title" style="text-align: center; font-size: 40px;">Quality, safety, and security</h5>
             <div class="col-md-4 my-2">
               <div class="process-panel" data-hover="">
                 <p class="process-number">01.</p>
                 <div class="process-body"> 
-                  <div class="process-icon"> <i class="flaticon-023-medical-history"></i></div>
+                  <div class="process-icon"> <i class="flaticon-023-medical-history" style="color:#0d3e21 !important;"></i></div>
                   <div class="process-content"> 
                     <h5>Vision</h5>
                     <p style="color: black;">To emerge as global health care facilitator providing world-class facilities in tune with evolving technology and promoting health endeavors with quality service.</p>
@@ -473,7 +489,7 @@
                   <div class="signature-block">
                     <div class="signature-body">
                       <img class="signature-img" src= " <?=base_url('frontend/assets/images/signature/3.png')?>" alt="signature" /> <br><br><br>
-                      <h6>Palanivelu</h6>
+                     
                       <p>Chairman , GEM Hospitals</p>
                     </div>
                   </div>

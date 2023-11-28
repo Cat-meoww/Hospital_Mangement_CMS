@@ -6,8 +6,10 @@
 
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
+
+
 <section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
+      <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
@@ -15,16 +17,15 @@
               <div class="title-card"  style="margin-top: -180px ;">
                 <div class="title-heading">
                   <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Esophago Gastric Surgery</h1>
+                  <h1>Liver & Pancreas</h1>
                 </div>
                 <div class="title-sub-heading">
                   <!---<p>All cardiologists study the disorders of the heart, but the study of adult and child heart disorders are trained to take care of small children.</p>--->
-                  <p>The Gem Hospital is One of the Most Advanced Centers for Upper GI Diseases, Gastro-Intestinal
-                    Surgery, And Minimal Access Surgery in India.</p>
+                  <p>Our department provides comprehensive treatment for diseases related to the liver, pancreas, and biliary system. Our team has performed one of the largest numbers of laparoscopic Whipple’s procedures in the world.</p>
                 </div>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="<?= base_url('index')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Esophago Gastric Surgery</li>
+                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Liver & Pancreas</li>
                 </ol>
               </div>
             </div>
@@ -70,7 +71,7 @@
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/5.jpg') ?>" alt="background" /></div>
+                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/7.png') ?>" alt="background" /></div>
                     <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
                     <!-- End .popup-video-->
                   </div>
@@ -79,25 +80,22 @@
                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                   </h6>
                   <p class="desc">
-                    The Centre carries out all major Upper GI procedures by</p>
+                   It is the first exclusive department in India to provide both Robotic & Laparoscopic surgeries for various diseases like</p>
                  
-                    <p class="desc">&bull; Laparoscopic</p>
-                    <p class="desc">&bull; Robotic</p>
-                    <p class="desc">&bull; Open approach including cancer surgery.</p>
+                    <p class="desc">&bull; Gall stones</p>
+                    <p class="desc">&bull; Bile duct stones</p>
+                    <p class="desc">&bull; Choledochal cyst</p>
+					<p class="desc">&bull; Hydatid cysts</p>
+                    <p class="desc">&bull; Acute & Chronic pancreatitis</p>
+                    <p class="desc">&bull; Pseudocyst including cancers of the liver, pancreas, and gall bladder.</p>
                   
                   <!--We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type of practitioner you require. We treat all enquiries in the strictest confidence.-->
                   
-                  <p class="desc">Our department is headed by one of the most renowned surgeons in the field of Upper GI
-                    and Laparoscopic surgery who is not only a leading surgeon in the country but is also an
-                    international faculty in the field of upper GI and laparoscopic surgery. Our hospital has performed
-                    more than 2000 esophagus and stomach cancer surgeries successfully.
+                  <p class="desc">This centre has the distinction of being the first in the world to perform Totally Laparoscopic Whipple’s operation, also called pancreaticoduodenectomy for pancreatic cancer.With liver transplantation emerging to be standard care for chronic liver disease, GEM hospital, the Best Pancreas cancer surgery in Coimbatore is currently the only centre to offer Laparoscopic Donor Hepatectomy in the country. This reduces the risk associated with the donor surgery, the live person who donates a part of the liver enabling early recovery.
 
                     <!--Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research.-->
                   </p>
-                  <p class="desc">Ours is the first center to perform thoraco laparoscopic esophagectomy in a prone
-                    position in the world and our technique is now being followed in some of the major centers in the
-                    world.
-                  </p>
+                  
                 </div>
                 <div class="col-12 col-lg-4">
 
@@ -119,9 +117,9 @@
                       </div>
                       <div class="widget-content">
                         <ul class="list-unstyled">
-                          <li><a href=""> <span class="line"> <span></span></span><span>Video
+                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href=""> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -134,24 +132,51 @@
 
                 <div class="row">
                   <!--"col-12 col-lg-4"-->
+				  <h3 class="desc">Conditions Treated</h3>
                   <div class="col-12 col-lg-6">
-
-                    <h5 class="desc">Conditions Treated</h5>
+                    
+                    <h5 class="desc">Liver</h5>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Benign Esophageal diseases</li>
-                      <li><i class="fas fa-check"></i> Malignant Esophageal diseases</li>
-                      <li><i class="fas fa-check"></i> Benign stomach disorders</li>
-                      <li><i class="fas fa-check"></i> Malignant stomach disorders</li><br><br>
+					  <li><i class="fas fa-check"></i>Hepatitis</li>
+                      <li><i class="fas fa-check"></i> Portal Hypertension</li>
+                      <li><i class="fas fa-check"></i> Cirrhosis</li>
+                      <li><i class="fas fa-check"></i> Hydatid cyst Liver</li>
+                      <li><i class="fas fa-check"></i>Amoebic Liver abscess</li><br><br>
                     </ul>
                   </div>
                   <div class="col-12 col-lg-6">
 
-                    <h5 class="desc">Tests and Treatments Offered</h5>
+                    <h5 class="desc">Pancreas</h5>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Antireflux Procedures, Redo Antireflux Surgery</li>
-                      <li><i class="fas fa-check"></i> Hiatal / Paraesophageal Hernia Repair</li>
-                      <li><i class="fas fa-check"></i> Achalasia Cardia, Redo- Heller’s Myotomy</li>
-                      <li><i class="fas fa-check"></i> Trucal Vagotomy & Gastrojejunostomy (TVGJ)</li>
+                      <li><i class="fas fa-check"></i> Pancreatitis</li>
+                      <li><i class="fas fa-check"></i> Pseudocyst Pancreas</li>
+                      <li><i class="fas fa-check"></i> Chronic Pancreatitis</li>
+                      <li><i class="fas fa-check"></i> Cancer of Pancreas</li>
+                    </ul>
+
+                  </div>
+
+                </div>
+				 <div class="row">
+                  <!--"col-12 col-lg-4"-->
+                  <div class="col-12 col-lg-6">
+
+                    <h5 class="desc">Gall bladder</h5>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Gall bladder stones</li>
+                      <li><i class="fas fa-check"></i> Cancer of Gall bladder</li>
+                      <li><i class="fas fa-check"></i> Cholecystitis</li>
+                      <li><i class="fas fa-check"></i> Infection of Gall bladder</li><br><br>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-lg-6">
+
+                    <h5 class="desc">Biliary System</h5>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Bile duct stones</li>
+                      <li><i class="fas fa-check"></i> Cholangitis</li>
+                      <li><i class="fas fa-check"></i> Cancers of bile duct</li>
+                      <li><i class="fas fa-check"></i> Choledochal cyst</li>
                     </ul>
 
                   </div>
@@ -202,7 +227,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!--<h5>medical check ups</h5>-->
-                      <p>Best Paper Award, “viii International Congress On Endoscopic Surgery, Peru 2012.</p>
+                      <p>“International Olympic silver medal" for Laparoscopic Whipple's procedure</p>
                       <!--<p>Recognised as a world renowned institution. consult our doctors by visiting us.</p>-->
                     </div>
                   </div>
@@ -211,7 +236,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>medical treatment</h5>--->
-                      <p>Best Technique Award, 12th World Congress of Esophageal Diseases, Japan 2010</p>
+                      <p>6000+ Surgeries performed for Pancreatic Cancer</p>
                       <!---<p>Free or low cost coverage adults with limited income recognised.</p>--->
                     </div>
                   </div>
@@ -220,7 +245,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>Cardiomyotomy Surgery done successfully in an 8 months Pregnant Woman</p>
+                      <p>Total Laparoscopic Whipple's WCES, Atlanta , USA -2000</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -229,7 +254,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Research Pros</h5>--->
-                      <p>Presented in Society of American Gastrointestinal Endo Surgeons (SAGES), USA, 2005</p>
+                      <p>Robotic Whipple's procedure on the youngest patient (14 yrs) in the world</p>
                       <!---<p>All medical aspects practice for family, our reception staff with any medical enquiry.</p>---->
                     </div>
                   </div>
@@ -238,7 +263,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>First in the world to develop a newer technique for removal of cancer of esophagus, 2010</p>
+                      <p>In 1998 First Totally Laparoscopic Whipples for Pancreatic Cancer in the world done by GEM</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -247,8 +272,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>Best EAES Video Award & First Prize, Congress of European Association of Endoscopic Surgery,
-                        Sweden 2008</p>
+                      <p>Largest series of Laparoscopic Whipple's Surgery for Pancreatic cancer in the world</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -257,8 +281,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>Conducted International Conference on Diseases of Esophagus and Stomach (ISESCON) successfully
-                        in 2017 & 2018</p>
+                      <p>50+ transplants have been done successfully by GEM Medenta Centre of Liver Transplantation team</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -267,7 +290,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>Presented in Society of American Gastrointestinal Endo Surgeons (SAGES), USA, 2005</p>
+                      <p>India's 1st Totally Laparoscopic surgery for Liver Donor removal was conducted by Prof.C. Palanivelu and team</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -290,14 +313,14 @@
             </div>
           </div>
           <div class="row">
-              <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="2" data-autoplay="true"
-                  data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
+               <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="2" data-autoplay="true"
+                  data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more"> 
             <div class=" col-12 col-md-12 col-lg-12">
               <div class="department-panel" data-hover="">
                 <div class="department-panel-holder">
                   <div class="department-content"> 
                     <div class="department-title">
-                          <ul>
+                           <ul>
 							<li><a><i class="fa fa-star checked" ></i></a>
 							<a><i class="fa fa-star checked" ></i></a>
 							<a><i class="fa fa-star checked" ></i></a>
@@ -306,9 +329,9 @@
 					</ul>
                     </div>
                     <div class="department-desc">
-                      <p>Dr. Parthasarathy Operated on me for Hernia. He did a Marvelous Job of Treating me. Best hospital with Great Staff for all Gastrointestinal Treatment.</p>
+                      <p>I visited today Dr.Nalankilli the experience was awesome... Excellent guidence and hospitality... A big salute to the opd team...</p>
                     </div>
-                    <div class="department-more" style="color: black;font-size:16px;"><strong>Ismail Mohamed</strong></a></div>
+                    <div class="department-more" style="color: black;font-size:16px;"><strong>C Samuvel Prabahar</strong></a></div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -337,9 +360,9 @@
                     </style>
 					
                     <div class="department-desc">
-                      <p>At Gem hospital, Coimbatore the Team Under The Head of Doctor Saravanakumar Treated well and gave us Good Treatment to my Spouse. Especially the ward Nurses took Care Much and moved very Friendly to my Spouse.</p>
+                      <p>I am really thankful to Dr.Shankar as he explained the problem clearly. And he also suggested multiple ways that works for the patient.</p>
                     </div>
-                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Subramanian Ramasamy</strong></div>
+                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Bhuvaneshwari Saravanakumar</strong></div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -366,7 +389,7 @@
                   <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
 
-                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More About Endogynecology</h6>
+                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More about Liver and Pancreas</h6>
                     </div>
                   </div>
                 </div>
@@ -376,17 +399,17 @@
                   data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
                   <div class="col-12 col-lg-8">
                    
-                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/16.jpg') ?>" style="position: relative;"
+                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/13.jpg') ?>" style="position: relative;"
                         alt="about Image" /><br><a class=""
-                        href="https://www.youtube.com/watch?v=nrJtHemSPW4">  <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
+                        href="https://www.youtube.com/watch?v=nrJtHemSPW4">   <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
                        
                         </a></div>
                        
                   </div>
                   <div class="col-12 col-lg-8">
-                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/17.jpg') ?>"
+                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/14.jpg') ?>"
                         alt="about Image" /><br><a class=""
-                        href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
+                        href="https://www.youtube.com/watch?v=nrJtHemSPW4">   <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
                         </a></div>
                   </div>
                   <div>
@@ -394,7 +417,7 @@
                       <div class="about-img"><img class="img-fluid"
                            src="<?= base_url('frontend/assets/images/blog/grid/18.jpg') ?>" alt="about Image" /><br><a
                           class=""
-                          href="https://www.youtube.com/watch?v=nrJtHemSPW4">  <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
+                          href="https://www.youtube.com/watch?v=nrJtHemSPW4">   <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
                           </a></div>
                     </div>
                     <!-- End .entry-content-->
@@ -418,42 +441,39 @@
           </style>
 
             <div class="entry-infos tips-info">
-              <h2 class="desc" style=" text-align: center;  font-weight: 700;
+              <h2 class="desc" style=" font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  color: var(--global--color-secondary);">FAQ</h2>
+  color: var(--global--color-secondary); text-align: center; ">FAQ</h2>
               <h1 class="entry-heading" style="font-size: 37px; text-align: center; color:#118B0F;">Frequently Ask Questions</h1>
               <!---<p class="entry-desc">We help create a care plan that addresses your specific condition and we are here to answer all of your questions & acknowledge your concerns. Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes.</p>---->
               <div class="accordion accordion-3" id="accordion03">
                 <div class="card">
                   <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">What are
-                      some common upper GI conditions?</a></div>
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">What are the risk factors for liver disease?</a></div>
                   <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                    <div class="card-body">Common upper GI conditions include gastroesophageal reflux disease (GERD),
-                      peptic ulcers, gastritis, esophagitis, Barrett's esophagus, hiatal hernia, dyspepsia
-                      (indigestion), and upper GI cancers such as esophageal and stomach cancer.</div>
+                    <div class="card-body">Several factors can increase the risk of liver disease. These include chronic alcohol abuse, viral hepatitis infections (such as hepatitis B and C), obesity, diabetes, certain genetic conditions, exposure to toxins or certain medications, and autoimmune diseases affecting the liver.</div>
                   </div>
                 </div>
                 <div class="card">
                   <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">What are the
-                      symptoms of upper GI disorders? </a></div>
+                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">Will I need long-term medication after liver or pancreas surgery? </a></div>
                   <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                    <div class="card-body">Symptoms can vary depending on the specific condition, but common symptoms
-                      include heartburn, regurgitation, chest pain, difficulty swallowing, bloating, nausea, vomiting,
-                      abdominal pain, indigestion, and changes in bowel movements.</div>
+                    <div class="card-body">The need for long-term medication after liver or pancreas surgery will depend on the specific condition and surgery performed. For example, liver transplant recipients will require lifelong immunosuppressant medications to prevent organ rejection. Other individuals may require medications to manage pain, control blood sugar levels, or address specific underlying conditions.</div>
                   </div>
                 </div>
                 <div class="card">
                   <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
-                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">How can I manage symptoms
-                      of GERD? </a></div>
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Is pancreatitis reversible? </a></div>
                   <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                    <div class="card-body">Lifestyle changes can help manage GERD symptoms. These may include avoiding
-                      trigger foods (spicy or acidic foods, caffeine, alcohol), eating smaller meals, maintaining a
-                      healthy weight, elevating the head of the bed, and not lying down immediately after eating.
-                      Medications, such as proton pump inhibitors or antacids, can also be prescribed.</div>
+                    <div class="card-body">Acute pancreatitis can often be reversible with prompt medical intervention and appropriate treatment, including supportive care, pain management, intravenous fluids, and temporary avoidance of oral food and drink.</div>
+                  </div>
+                </div>
+				<div class="card">
+                  <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">What is the recovery process after liver transplantation?</a></div>
+                  <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
+                    <div class="card-body">Recovery after liver transplantation involves a hospital stay of about one to two weeks, followed by a period of close monitoring and follow-up care. The patient will need to take immunosuppressant medications for life to prevent organ rejection and will require ongoing medical care and regular check-ups.</div>
                   </div>
                 </div>
               </div>
@@ -465,6 +485,7 @@
         </div>
       </div>
     </section>
+
 
 
 <?= $this->endSection() ?>

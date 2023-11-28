@@ -86,7 +86,7 @@
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
-                                <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="<?= base_url("doctor/" . $doctor->slug) ?>"> <span class="line"> <span></span></span><span>read more</span></a></div>
+                                <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before text-truncate" href="<?= base_url("doctor/" . $doctor->slug) ?>"> <span class="line"> <span></span></span><span>read more</span></a></div>
                             </div>
                             <!-- End .team-content -->
                         </div>

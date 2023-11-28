@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             <div class="slide-content">
-                                <h1 class="slide-headline">we accept all insurance medical plans</h1>
+                                <h1 class="slide-headline">30 years of expertise</h1>
                                 <p class="slide-desc">The health and well-being of our patients and their health
                                     care team will always be our priority, so we follow the best practices. </p>
                                 <div class="slide-action"><a class="btn btn--primary btn-line btn-line-after btn-line-inversed home-btn1" href="page-about.html"> <span>more about us</span><span class="line">
@@ -85,8 +85,8 @@
                 <div class="feature-panel feature-reservation h-100">
                     <div class="feature-content"><i class="flaticon-022-medical"></i>
                         <h5>emergency cases</h5>
-                        <p>Please feel welcome to contact our staff with any general or medical enquiry call us
-                        </p><a href="tel:04224695100"><span class="fas fa-phone-alt" style="
+                        <p>Please feel free to contact our team for any general or medical enquiry </p>
+                       <a href="tel:04224695100"><span class="fas fa-phone-alt" style="
                         
                         color: #118b0f;
                         background-color: #0d3e21;
@@ -97,7 +97,7 @@
             <div class="col-12 col-lg-4">
                 <!-- Start .widget-timetable-->
                 <div class="feature-panel feature-timetable h-100">
-                    <div class="feature-content"><i class="flaticon-028-book"></i>
+                    <div class="feature-content"><img  src="<?= base_url('frontend/assets/images/icons/Video.svg') ?>" alt="background" style=" width:25%;" />
                         <h5>Video Consultation</h5>
                         <p>Book an appointment have a hassle-free discussion with our doctors from your home</p>
                         <a class="btn btn--primary btn-line btn-line-before btn-home2" href="#">
@@ -127,9 +127,10 @@
                     <div class="clients-img"> <img   style="width:100%; aspect-ratio: 1/1; object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/doctor.png') ?>" alt="image"></div>
                 </div>
                 <div class="col-12 col-lg-6 offset-lg-1">
-                    <p class="paragraph">GEM Hospital Was Initially Started As Coimbatore Institute Of
+                <h6 class="heading-title" style="font-size: 16px; color:#118B0F;">About Us</h6>
+                    <h6 class="heading-title" >GEM Hospital Was Initially Started As Coimbatore Institute Of
                         Gastrointestinal Endo-Surgery (CIGES) In The Year 1991 By Its Founder Dr.C.Palanivelu
-                    </p>
+</h6>
                     <p class="heading-desc">Over the next 10 years, the institute grew in stature to become the
                         sought-after destination for laparoscopic surgery and gastroenterology. Sensing the
                         importance of providing comprehensive gastro care, Dr.Palanivelu established Asia’s
@@ -139,8 +140,26 @@
                             and is true to its name.</b> <br>
                         The hospital provides world-class gastro care under one roof
                     </p>
-                    <div class="actions-holder"><a class="btn btn--primary btn-line btn-line-after " href="doctors-grid.html">
-                            <span>find a doctor</span><span class="line"> <span></span></span></a><a class="btn btn--primary" href="page-about.html">more about us</a></div>
+                    
+                    <div class="actions-holder"><div class="heading heading-7 text--center">
+                        
+                   
+                    <h2 class="heading-title" style=" font-size : 70px; color:green " >211+</h2>
+					<p class="heading-subtitle" style="color:black;">Specialist Doctors</p>
+                </div><div class="heading heading-7 text--center year" style="margin-left:100px;">
+               
+                    <h2 class="heading-title" style=" font-size : 70px; color:green " >32+</h2>
+					<p class="heading-subtitle" style="color:black;">Years Experienced</p>
+                </div></div>
+                <style>
+                    @media screen and (max-width:600px) {
+                        .year{
+                            margin-right:100px;
+                        }
+
+                        
+                    }
+                    </style>
                 </div>
 
             </div>
@@ -154,62 +173,117 @@
       About #4 Section
       ============================
       -->
-<section class="about about-4" id="about-4">
+
+      <section class="team team-grid team-grid-2" id="teamGrid-1">
     <div class="container">
-        <div class="heading heading-18">
+        <div class="heading heading-9">
             <div class="row">
                 <div class="col-12 col-lg-5">
-                    <p class="heading-subtitle">211 Specialist Doctor</p>
+                    <h2 class="heading-title">What We Do</h2>
+                    <p class="heading-desc">After COVID Pandemic, We GEM Hospital started Gem at Home which
+                        offers you ICU from Home, Pharmacy door delivery, Online Consultation & Lab & Blood
+                        Tests from home (100% Accuracy, No Extra Cost)</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="team-member" data-hover="">
+                    <div class="team-member-holder">
+
+                        <!-- End .team-img-->
+                        <div class="team-content">
+                            <div class="team-title">
+                                <h4><a href="doctors-grid.html">iCCOT Service</a></h4>
+                            </div>
+                            <div class="team-cat"><a href="javascript:void(0)">INTELLIGENT CRITICAL CARE
+                                    OUTREACH TEAM</a></div>
+                            <div class="team-desc">
+                                <p>There is no place like home when it comes to Patient care and comfort. At
+                                    iCCOT we commit to put patient care as top priority always!.</p>
+                            </div>
+                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>
+                                        Book Now </span></a>
+                            </div>
+                        </div>
+                        <!-- End .team-content -->
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-lg-5">
-                    <h2 class="heading-title">
-                        30+ Years Experienced</h2>
-                </div>
-                <div class="col-12 col-lg-6 offset-lg-1">
-                    <p class="paragraph">We provide all aspects of medical practice for your whole family,
-                        including general check-ups or assisting you with specific injuries.</p>
-                    <p class="heading-desc">We will work with you to develop individualised care plans,
-                        including management of chronic diseases. If we cannot assist, we can provide referrals
-                        or advice about the type of practitioner you require. We treat all enquiries sensitively
-                        and in the strictest confidence.
-                        In fact, the name GEM Hospital was derived from Gastroenterology and Medical Centre and
-                        is true to its name. The hospital provides world-class gastro care under one roof.
-                    </p>
-                    <div class="signature-block">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="team-member" data-hover="">
+                    <div class="team-member-holder">
 
+                        <!-- End .team-img-->
+                        <div class="team-content">
+                            <div class="team-title">
+                                <h4><a href="doctors-grid.html">
+                                        Pharmacy Door Delivery </a></h4>
+                            </div>
+                            <div class="team-cat"><a href="javascript:void(0)">Get Superfast Medicine Delivery
+                                    to your home at GEM PHARMACY</a></div>
+                            <div class="team-desc">
+                                <p> Upload your Prescription our expert medical team will call you and fulfill
+                                    your Medical needs </p>
+                            </div>
+                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>
+                                        Upload </span></a>
+                            </div>
+                        </div>
+                        <!-- End .team-content -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="team-member" data-hover="">
+                    <div class="team-member-holder">
+
+                        <!-- End .team-img-->
+                        <div class="team-content">
+                            <div class="team-title">
+                                <h4><a href="doctors-grid.html">
+                                        Lab & Blood Bank </a></h4>
+                            </div>
+                            <div class="team-cat"><a href="javascript:void(0)">
+                                    Quick Lab Tests, Accurate Results from GEM Experts Team </a></div>
+                            <div class="team-desc">
+                                <p>The packages have been specially curated by doctors to include exactly the
+                                    tests you need for a proper analysis of your health—no more & no less.</p>
+                            </div>
+                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>Book now</span></a>
+                            </div>
+                        </div>
+                        <!-- End .team-content -->
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End .row-->
+    </div>
+    <!-- End .container-->
+</section>
+<section class="about about-4" id="about-4">
+    <div class="container">
+       
         <div class="avatars-holder">
             <div class="block-top">
                 <div class="row">
                     <div class="col-12 col-lg-2 wow fadeInDown">
-                        <div class="avatar avatar-1"><img   src="<?= base_url('frontend/assets/images/sliders/hope-thumb-gem-hospital-q77yfa44b0ecpr4yfoq6x7jb6ub79cglk0o5937l7m.jpg') ?>" alt="image" /></div>
+                        <div class="avatar avatar-1"><img   src="<?= base_url('frontend/assets/images/sliders/Rob5.jpg') ?>" alt="image" /></div>
                     </div>
                     <div class="col-12 col-lg-5 wow fadeIn">
-                        <div class="avatar avatar-2 bg-overlay bg-overlay-theme">
-                            <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/about/avatars/2.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-2  " >
+                            <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/about/avatars/Rob1.jpg') ?>" alt="image" />
                             </div>
                             <div class="avatar-content">
-                                <p>With modern, busy lifestyles, it’s easy to neglect your health as you put
-                                    everyone else’s needs first. So, we’re here to care for you and your entire
-                                    family.
-                                </p><a class="btn btn--primary btn-line btn-line-after "
-                                        href="">
-                                        <span>find a doctor</span><span class="line"> <span></span></span></a>
+                               
                             </div>
-                            <style>
-                                .btn-home3:hover {
-                                    background-color: blue;
-                                }
-                            </style>
+                           
                         </div>
                     </div>
                     <div class="col-12 col-lg-2 wow slideInDown">
-                        <div class="avatar avatar-3"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/coimbatore-gem-hospital-elevation.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-3"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/Rob2.jpg') ?>" alt="image" />
                         </div>
                     </div>
                     <div class="col-12 -col-lg-3"></div>
@@ -218,14 +292,14 @@
             <div class="block-bottom">
                 <div class="row">
                     <div class="col-12 offset-lg-1 col-lg-3 wow fadeInLeft">
-                        <div class="avatar avatar-5"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-q77yfjiiibgbucsqij0955vie12s29aue9cal7fyho.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-5"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/Rob4.jpg') ?>" alt="image" />
                         </div>
                     </div>
                     <div class="col-12 col-lg-5 wow slideInUp">
-                        <div class="avatar avatar-6"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-hope-gem-hospital.jpg') ?>" alt="image" /></div>
+                        <div class="avatar avatar-6"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/Rob3.jpg') ?>" alt="image" /></div>
                     </div>
                     <div class="col-12 col-lg-3 wow slideInRight">
-                        <div class="avatar avatar-4"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/davinc-robotic-gem-hospital.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-4"><img   style="object-fit: cover; width:90%;" src="<?= base_url('frontend/assets/images/sliders/Rob6.jpg') ?>" alt="image" />
                         </div>
                     </div>
                 </div>
@@ -389,11 +463,135 @@
                     <!-- End .team-member-holder-->
                 </div>
             </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-010-ophtalmology"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Endogynaecology</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>We are happy to share that over 15000 total laparoscopic hysterectomies performed</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-046-blood-pressure"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Obesity & Diabetes</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>With over 4000 cases of obesity surgeries, the department has crossed a lot of impressive milestones</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-044-caduceus"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Hernia Care</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>Hernia repairs are so common to have been under-rated as simple procedures which lacks specialisation</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-037-kidney"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Cardiology</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>At GEM hospitals, a team of expert is available to provide comprehensive care for patients with cardiovascular diseases</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-027-medical-report"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Urology</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
+            <div>
+                <div class="service-panel h-100" style="height: 440px !important;" data-hover="">
+                    <div class="service-panel-holder py-4">
+                        <div class="service-content">
+                            <div class="service-icon"> <i class="flaticon-046-blood-pressure"></i></div>
+                            <div class="service-title">
+                                <h4><a href="#">Nephrology</a></h4>
+                            </div>
+                            <div class="service-desc">
+                                <p>specialty of adult internal medicine and pediatric medicine that concerns the study of the kidneys</p>
+                            </div>
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="page-our-services.html"> <span class="line">
+                                        <span></span></span><span>read more</span></a></div>
+                        </div>
+
+                        <!-- End .team-img-->
+                        <!-- End .team-content -->
+                    </div>
+                    <!-- End .team-member-holder-->
+                </div>
+            </div>
         </div>
         <!-- End .carousel-->
-        <div class="more-services">
-            <p>Delivering tomorrow’s health care for your family.</p>
-        </div>
+       
     </div>
     <!-- End .container-->
 </section>
@@ -427,15 +625,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="phone-card" style="padding-bottom: 40px !important;">
-                <div class="card-icon"> <i class="flaticon-022-medical"></i></div>
-                <div class="card-content">
-                    <h5>emergency cases</h5>
-                    <p>Please feel welcome to contact our friendly reception staff with any general or medical
-                        enquiry call us</p><a href="tel:04224695100"><i class="fas fa-phone-alt"></i>
-                        <span>04224695100</span></a>
-                </div>
-            </div>
+            
         </div>
         <div class="col-12 col-lg-5 offset-lg-1 pt-5">
             <div class="about-img"><img   class="img-fluid" src="<?= base_url('frontend/assets/images/about/a4.jpg') ?>" alt="about Image" style="border-radius: 32px 32px 0px 32px;" /></div>
@@ -449,91 +639,10 @@
       Doctors #01 Section
       ============================
       -->
-<section class="team team-grid team-grid-2" id="teamGrid-1">
+<section class="team team-grid team-grid-2" id="teamGrid-1" >
     <div class="container">
-        <div class="heading heading-9">
-            <div class="row">
-                <div class="col-12 col-lg-5">
-                    <h2 class="heading-title">What We Do</h2>
-                    <p class="heading-desc">After COVID Pandemic, We GEM Hospital started Gem at Home which
-                        offers you ICU from Home, Pharmacy door delivery, Online Consultation & Lab & Blood
-                        Tests from home (100% Accuracy, No Extra Cost)</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="team-member" data-hover="">
-                    <div class="team-member-holder">
-
-                        <!-- End .team-img-->
-                        <div class="team-content">
-                            <div class="team-title">
-                                <h4><a href="doctors-grid.html">iCCOT Service</a></h4>
-                            </div>
-                            <div class="team-cat"><a href="javascript:void(0)">INTELLIGENT CRITICAL CARE
-                                    OUTREACH TEAM</a></div>
-                            <div class="team-desc">
-                                <p>There is no place like home when it comes to Patient care and comfort. At
-                                    iCCOT we commit to put patient care as top priority always!.</p>
-                            </div>
-                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>
-                                        Book Now </span></a>
-                            </div>
-                        </div>
-                        <!-- End .team-content -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="team-member" data-hover="">
-                    <div class="team-member-holder">
-
-                        <!-- End .team-img-->
-                        <div class="team-content">
-                            <div class="team-title">
-                                <h4><a href="doctors-grid.html">
-                                        Pharmacy Door Delivery </a></h4>
-                            </div>
-                            <div class="team-cat"><a href="javascript:void(0)">Get Superfast Medicine Delivery
-                                    to your home at GEM PHARMACY</a></div>
-                            <div class="team-desc">
-                                <p> Upload your Prescription our expert medical team will call you and fulfill
-                                    your Medical needs </p>
-                            </div>
-                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>
-                                        Upload </span></a>
-                            </div>
-                        </div>
-                        <!-- End .team-content -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="team-member" data-hover="">
-                    <div class="team-member-holder">
-
-                        <!-- End .team-img-->
-                        <div class="team-content">
-                            <div class="team-title">
-                                <h4><a href="doctors-grid.html">
-                                        Lab & Blood Bank </a></h4>
-                            </div>
-                            <div class="team-cat"><a href="javascript:void(0)">
-                                    Quick Lab Tests, Accurate Results from GEM Experts Team </a></div>
-                            <div class="team-desc">
-                                <p>The packages have been specially curated by doctors to include exactly the
-                                    tests you need for a proper analysis of your health—no more & no less.</p>
-                            </div>
-                            <div class="team-more"><a class="btn-line btn-line-inversed btn-line-before" href="#"> <span class="line"> <span></span></span><span>Book now</span></a>
-                            </div>
-                        </div>
-                        <!-- End .team-content -->
-                    </div>
-                </div>
-            </div>
-        </div>
+       
+        
         <!-- End .row-->
     </div>
     <!-- End .container-->
@@ -553,19 +662,20 @@
             <div>
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
+                    <a href="blog-single-sidebar.html"><img
+                                      src="<?= base_url('frontend/assets/images/sliders/banner.jpg') ?>"  style="height: 210px; width: 500px;"
+                                        alt="6 tips to protect your mental health when sick" /></a>
                        
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/1.jpg') ?>" alt="6 tips to protect your mental health when sick" /></a>
+             
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
                         
                         <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">6 tips to protect your mental health when
-                                    sick</a></h4>
+                            <h4><a href="blog-single-sidebar.html">Is Gastroesophageal Reflux A Disease?</a></h4>
                         </div>
                         <div class="entry-bio">
-                            <p>It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a
-                                condition that’s certainly true if you test positive for COVID-19, or...</p>
+                            <p>இரைப்பை உணவுக்குழாய் ரிஃப்ளக்ஸ் இது ஒரு நோயா? உடல் எடைக்குறைப்பு என்றவுடன் நம் நினைவுக்கு வருவது டயட்டிங். பொதுவாக டயட்டிங் என்றால் சாப்பிடும் அளவைக் குறைப்பது, எண்ணெய்ப் பலகாரங்களைத் தவிர்ப்பது, அரிசி உணவுகளைத் தவிர்த்து ...</p>
                         </div>
                         <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
                                 <div class="line"> <span> </span></div><span>read more</span>
@@ -578,20 +688,20 @@
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
                         
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/2.jpg') ?>" alt="Unsure About Wearing a Face Mask? How and Why" /></a>
+                    <a href="blog-single-sidebar.html"><img
+                                         src="<?= base_url('frontend/assets/images/sliders/acid-reflux.jpg') ?>"
+                                        alt="Unsure About Wearing a Face Mask? How and Why" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
                         
-                        <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">Unsure About Wearing a Face Mask? How and
-                                    Why</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>That means that you should still be following any shelter-in-place orders in your
-                                community. But when you’re venturing out to the grocery store, pharmacy or...
-                            </p>
-                        </div>
+                    <div class="entry-title">
+                                    <h4><a href="blog-single-sidebar.html">Is Gastroesophageal Reflux A Disease?</a></h4>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>அறிந்துகொள்ளுங்கள் ஆரோக்கிய சக்கரத்தை ஆரோக்கிய சக்கரத்தின் அம்சங்கள் அறிவுசார்ந்தவை சமூகம் சார்ந்தவை உடல் சார்ந்தவை ஆன்மிகம் | தியானம் சார்ந்தவை தொழில் சார்ந்தவை உணர்வுகள் சார்ந்தவை சுற்றுச்சூழல் சார்ந்தவை ஆரோக்கிய சக்கரம் ஏன்....
+                                    </p>
+                                </div>
                         <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
                                 <div class="line"> <span> </span></div><span>read more</span>
                             </a></div>
@@ -603,19 +713,19 @@
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
                        
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/3.jpg') ?>" alt="Tips for Eating Healthy When Working From Home" /></a>
+                    <a href="blog-single-sidebar.html"><img  src="<?= base_url('frontend/assets/images/sliders/diet.jpg') ?>"
+                                     style="height: 210px; width: 500px;"
+                                        alt="Tips for Eating Healthy When Working From Home" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
                         
-                        <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">Tips for Eating Healthy When Working From
-                                    Home</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>You’re on a conference call and somehow wandered into the kitchen. Next thing
-                                know you’re eating crackers and dry cereal out of the box. Or...</p>
-                        </div>
+                    <div class="entry-title">
+                                    <h4><a href="blog-single-sidebar.html">Diet Fails</a></h4>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>டயட் பல தோல்விகள் சில பாடங்கள்! உடல் எடைக்குறைப்பு என்றவுடன் நம் நினைவுக்கு வருவது டயட்டிங். பொதுவாக டயட்டிங் என்றால் சாப்பிடும் அளவைக் குறைப்பது, எண்ணெய்ப் பலகாரங்களைத் தவிர்ப்பது, அரிசி உணவுகளைத் தவிர்த்து சப்பாத்தி போன்ற உணவுக்கு மாறுவது… டயட் ஃபெயில்டு....</p>
+                                </div>
                         <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
                                 <div class="line"> <span> </span></div><span>read more</span>
                             </a></div>
@@ -627,19 +737,19 @@
                 <div class="blog-entry" data-hover="">
                     <div class="entry-img">
                        
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/4.jpg') ?>" alt="Why Coronavirus Cases Among Adults Is Bad News" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img
+                                        src="<?= base_url('frontend/assets/images/sliders/high-fiber.webp') ?>"
+                                        alt="Tips for Eating Healthy When Working From Home" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
                        
-                        <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">Why Coronavirus Cases Among Adults Is Bad
-                                    News</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>A new surge of coronavirus cases has spread across the country and while there’s
-                                still so much to learn about the virus, how it’s transmitted...</p>
-                        </div>
+                    <div class="entry-title">
+                                    <h4><a href="blog-single-sidebar.html">Uses and Benefits of Fibre-rich food</a></h4>
+                                </div>
+                                <div class="entry-bio">
+                                    <p>Uses and Benefits of Fibre-rich food நார்ச்சத்து என்றால் என்ன? நார்ச்சத்து என்பது நமது உடலால் ஜீரணிக்க முடியாத கார்போஹைட்ரேட் அல்லது ஸ்டார்ச் ஆகும். உங்கள் செரிமான மண்டலத்தின் கழிவுகளை வெளியேற்றும் கருவியாக....</p>
+                                </div>
                         <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
                                 <div class="line"> <span> </span></div><span>read more</span>
                             </a></div>
@@ -647,54 +757,8 @@
                 </div>
                 <!-- End .entry-content-->
             </div>
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-                        
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/5.jpg') ?>" alt="Why Do People Get Kidney Stones in the Summer?" /></a>
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-                        
-                        <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">Why Do People Get Kidney Stones in the
-                                    Summer?</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>Summer may have just officially started, but kidney stone season began a couple
-                                of weeks ago. Doctors see an increase in kidney stone cases when...</p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-                       
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/6.jpg') ?>" alt="Do Any Drugs Really Work to Treat Coronavirus?" /></a>
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-                        
-                        <div class="entry-title">
-                            <h4><a href="blog-single-sidebar.html">Do Any Drugs Really Work to Treat
-                                    Coronavirus?</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>While most people who get COVID-19 are able to recover at home, the rush is on to
-                                find a treatment that’s safe and effective against...</p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="blog-single-sidebar.html">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
+         
+            
         </div>
         <!-- End .carousel-->
     </div>

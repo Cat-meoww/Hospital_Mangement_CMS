@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-xl navbar-sticky" id="primary-menu">
-    <a class="navbar-brand border-0" href="index.html"><img class="logo logo-dark" src="<?= base_url('frontend/assets/images/favicon/Desktop_GEM_logo.svg') ?>" alt="Medisch Logo" /><img class="logo logo-mobile" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="Medisch Logo" /></a>
+    <a class="navbar-brand border-0" href="<?= base_url('') ?>"><img class="logo logo-dark" src="<?= base_url('frontend/assets/images/favicon/Desktop_GEM_logo.svg') ?>" alt="" /><img class="logo logo-mobile" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="Medisch Logo" /></a>
     <div class="module-holder module-holder-phone">
         <!--  Start Module Search  -->
         <div class="module module-search float-left">
@@ -17,30 +17,42 @@
             <li class="nav-item" data-hover="" id="contact">
                 <a href="<?= base_url('home') ?>"><span>Home</span></a>
             </li>
-            <li class="nav-item" data-hover="" id="contact">
-                <a href="<?= base_url('aboutus') ?>"><span class="text-truncate">about us</span></a>
+            <li class="nav-item has-dropdown" data-hover="">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>About</span></a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="<?= base_url('aboutus') ?>"><span>About Us</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url('chairman') ?>"><span>About Founder</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url('') ?>"><span>About Management</span></a>
+                    </li>
+                </ul>
             </li>
+
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>specialities</span></a>
-                <ul class="dropdown-menu" style="display: flex; flex-direction:row; gap:2px; width:600px">
-                    <ul class="col-6">
+                <ul class="dropdown-menu nav-ser" style="display: flex; flex-direction:row; gap:2px; width:600px; " >
+                    <ul class="col-6 ">
                         <li class="nav-item ">
-                            <a href="<?= base_url('service') ?>"><span>Esophago Gastric Surgery</span></a>
+                            <a href="<?= base_url('services/esophago-gastric-surgery') ?>"><span>Esophago Gastric Surgery</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="<?= base_url('service') ?>"><span>colorectal surgery</span></a>
+                            <a href="<?= base_url('services/colorectal-surgery') ?>"><span>colorectal surgery</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="<?= base_url('service') ?>"><span>liver & pancreas</span></a>
+                            <a href="<?= base_url('services/liver-pancreas') ?>"><span>liver & pancreas</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="<?= base_url('service') ?>"><span>Medical Gastroenterology</span></a>
+                            <a href="<?= base_url('services/medical-gastroenterology') ?>"><span>Medical Gastroenterology</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="<?= base_url('service') ?>"><span>endogynecology</span></a>
+                            <a href="<?= base_url('services/endogynecology') ?>"><span>endogynecology</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>obesity & diabetes</span></a>
+                            <a href="<?= base_url('services/obesity-diabetes') ?>"><span>obesity & diabetes</span></a>
                         </li>
                     </ul>
                     <ul class="col-6">
@@ -48,23 +60,33 @@
                             <a href="#"><span>hernia care</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>digestive cancer care</span></a>
+                            <a href="<?= base_url('services/digestive-cancer-care') ?>"><span>digestive cancer care</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>multi organ transplant</span></a>
+                            <a href="<?= base_url('services/multi-organ-transplant') ?>"><span>multi organ transplant</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>cardiology</span></a>
+                            <a href="<?= base_url('services/cardiology') ?>"><span>cardiology</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>nephrology</span></a>
+                            <a href="<?= base_url('services/nephrology') ?>"><span>nephrology</span></a>
                         </li>
                         <li class="nav-item ">
-                            <a href="#"><span>urology</span></a>
+                            <a href="<?= base_url('services/urology') ?>"><span>urology</span></a>
                         </li>
                     </ul>
                 </ul>
             </li>
+            <style>
+                @media screen and (max-width:600px) {
+                    .nav-ser{
+                        display:flex ; flex-direction:column;  width:200px;
+
+                    }
+
+                    
+                }
+            </style>
             <li class="nav-item" data-hover="" id="contact">
                 <a href="<?= base_url('health-package') ?>"><span class="text-truncate">health package</span></a>
             </li>

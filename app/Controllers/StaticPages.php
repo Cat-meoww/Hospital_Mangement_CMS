@@ -38,9 +38,58 @@ class StaticPages extends BaseController
     {
         return view('frontend/aboutus', $this->data);
     }
-    public function service()
+    public function esophago_gastric_surgery()
     {
         return view('frontend/esophago-gastric-surgery', $this->data);
+    }
+    public function chairman()
+    {
+        return view('frontend/chairman', $this->data);
+    }
+    
+    public function colorectal_surgery()
+    {
+        return view('frontend/colorectal-surgery', $this->data);
+    }
+    public function liver_pancreas()
+    {
+        return view('frontend/liver-pancreas', $this->data);
+    }
+    public function medical_gastroenterology()
+    {
+        return view('frontend/medical-gastroenterology', $this->data);
+    }
+    public function endogynecology()
+    {
+        return view('frontend/endogynecology', $this->data);
+    }
+    public function obesity_diabetes()
+    {
+        return view('frontend/obesity-diabetes', $this->data);
+    }
+    public function hernia_care()
+    {
+        return view('frontend/hernia-care', $this->data);
+    }
+    public function digestive_cancer_care()
+    {
+        return view('frontend/digestive-cancer-care', $this->data);
+    }
+    public function multi_organ_transplant()
+    {
+        return view('frontend/multi-organ-transplant', $this->data);
+    }
+    public function cardiology()
+    {
+        return view('frontend/cardiology', $this->data);
+    }
+    public function nephrology()
+    {
+        return view('frontend/nephrology', $this->data);
+    }
+    public function urology()
+    {
+        return view('frontend/urology', $this->data);
     }
     public function health_package()
     {
@@ -85,5 +134,9 @@ class StaticPages extends BaseController
     public function doctor_info()
     {
         return view('frontend/doctorinfo', $this->data);
+    }
+    public function privacy()
+    {
+        return view('frontend/privacy', $this->data);
     }
 }

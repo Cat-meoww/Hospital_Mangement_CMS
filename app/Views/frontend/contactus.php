@@ -114,7 +114,10 @@
                   </div>
                   <div class="single-service" >
                     <div class="health-plans">
-                      <h5 class="entry-heading">Visit Us</h5>
+                      <h5 class="entry-heading" style=" font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--global--color-secondary);">Visit Us</h5>
                       <h2
                         class="entry-desc"
                         style="font-weight: bold; font-size: 32px"
@@ -124,9 +127,16 @@
                      
                       <div class="advantages-box">
                         
-                        <ul class="advantages-list">
-                          <i class="fa fa-envelope" style=" font-size: 24px; color: #0d3e21;"> Email</i>
-                          <p style="font-size: 18px; margin-top: 10px;">info@geminstitute.in</p>
+                         <ul class="advantages-list">
+                          <h3 style="font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+ 
+  
+  font-weight: 500;
+  color: black;"><i class="fa fa-envelope" style="color:#0d3e21;"></i>Email</h3>
+                          
+                          <p style="font-size: 16px; color:green ">info@geminstitute.in</p>
                         </ul>
                       </div>
                       
@@ -135,16 +145,13 @@
                 <div class="col-12 col-lg-5 offset-lg-1">
                   <div class="img-card img-card-2 bg-overlay bg-overlay-theme">
                     <div class="bg-section">
-                      <img src="assets/images/contact/2.jpg" alt="image" />
+                   
                     </div>
                     <div class="card-content">
                       <h3>How We Can Help You?</h3>
                       <div>
                           <div class="widget widget-reservation widget-reservation-2">
-                  <img
-                    src="assets/images/blog/sidebar/reservation.jpg"
-                    alt="img"
-                  />
+                  
                   <div class="widget-content">
                     <i class="flaticon-022-medical"></i>
                     <h5>emergency cases</h5>

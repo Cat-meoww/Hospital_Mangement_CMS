@@ -42,7 +42,23 @@ $routes->get('/logout', 'Home::logout');
 // Static pages
 $routes->get('/home', 'StaticPages::home');
 $routes->get('/aboutus', 'StaticPages::aboutus');
-$routes->get('/service', 'StaticPages::service');
+$routes->get('/chairman', 'StaticPages::chairman');
+
+$routes->group('services', function ($routes) {
+    $routes->get('esophago-gastric-surgery', 'StaticPages::esophago_gastric_surgery');
+    $routes->get('colorectal-surgery', 'StaticPages::colorectal_surgery');
+    $routes->get('liver-pancreas', 'StaticPages::liver_pancreas');
+    $routes->get('medical-gastroenterology', 'StaticPages::medical_gastroenterology');
+    $routes->get('endogynecology', 'StaticPages::endogynecology');
+    $routes->get('obesity-diabetes', 'StaticPages::obesity_diabetes');
+    $routes->get('hernia-care', 'StaticPages::hernia_care');
+    $routes->get('digestive-cancer-care', 'StaticPages::digestive_cancer_care');
+    $routes->get('multi-organ-transplant', 'StaticPages::multi_organ_transplant');
+    $routes->get('cardiology', 'StaticPages::cardiology');
+    $routes->get('nephrology', 'StaticPages::nephrology');
+    $routes->get('urology', 'StaticPages::urology');
+});
+
 $routes->get('/mgr', 'StaticPages::mgr');
 $routes->get('/nbe', 'StaticPages::nbe');
 $routes->get('/health-package', 'StaticPages::health_package');
@@ -54,14 +70,15 @@ $routes->get('/blog', 'StaticPages::blog');
 $routes->get('/magazines', 'StaticPages::magazines');
 $routes->get('/press-release', 'StaticPages::press_release');
 $routes->get('/doctorinfo', 'StaticPages::doctor_info');
+$routes->get('/privacy-policy', 'StaticPages::privacy');
 
 
 
 //Doctors routes
 $routes->get('/branch/(:num)', 'Home::index/$1');
 $routes->get('/doctors-list/(:any)', 'Home::doctors_list/$1');
-$routes->get('/service/(:any)', 'Home::service_detail/$1');
-$routes->get('/services/(:any)', 'Home::location_services/$1');
+// $routes->get('/service/(:any)', 'Home::service_detail/$1');
+// $routes->get('/services/(:any)', 'Home::location_services/$1');
 
 
 $routes->group('appointment', function ($routes) {

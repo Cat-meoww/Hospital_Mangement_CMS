@@ -39,26 +39,26 @@
 
 
 
-        @media screen and (max-width:600px) {
+       @media screen and (max-width:600px) {
             .slide-content #img1 {
                 font-size: 20px !important;
-                margin-top: 20px !important;
-                margin-right: 150px !important;
+                margin-top: -20% !important;
+                margin-right: 45% !important;
 
             }
 
             .slide-content #img2 {
                 font-size: 20px !important;
-                margin-top: 20px !important;
-                margin-right: 150px !important;
+                margin-top: -20% !important;
+                margin-right: 40% !important;
 
             }
 
             .slide-content #img3 {
                 font-size: 20px !important;
-                margin-top: 20px !important;
+                margin-top: -15% !important;
 
-                margin-right: 150px !important;
+                margin-right: 40% !important;
 
             }
 
@@ -67,7 +67,7 @@
             }
 
             .bg-section {
-                height: 25vh !important;
+                height: 40vh !important;
             }
 
             #gem1 {

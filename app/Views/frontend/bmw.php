@@ -9,7 +9,6 @@
   </style>
 
 
-
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
@@ -19,7 +18,7 @@
           <div class="hero-content" style="padding-bottom: 115px !important;"> 
             <div class="row"> 
               <div class="col-12 col-lg-5">
-                <h2 class="hero-title" style="margin-top: 60px;">BMW Report</h2>
+                <h2 class="hero-title" style="margin-top: 60px;" align="left">BMW Report</h2>
                 <p class="hero-desc"></p>
                <!----<div class="hero-action"> <a class="btn btn--white btn-line btn-line-after btn-line-inversed" href="#"> <span>find a doctor</span><span class="line"><span></span></span></a><a class="btn btn--transparent btn-line btn-line-after" href="#"> <span>our core values</span><span class="line"><span></span></span></a></div>--->
               </div>
@@ -43,7 +42,7 @@
         <div class="bg-section"><img src="assets/images/background/pattern.png" alt="background"/></div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="">
               <div class="heading heading-7">
                 <p class="heading-subtitle" style="text-align: left; color: #118B0F;">Monthly</p>
                 <h2 class="heading-title" style="text-align: left; color: #0D3E21;">BMW Report</h2>

@@ -17,29 +17,7 @@
           </div>
           <!--  End .col-lg-3-->
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-2 offset-lg-0">
-          <div class="footer-widget widget-links">
-            <div class="footer-widget-title">
-              <h5>Our Centers</h5>
-            </div>
-            <div class="widget-content">
-              <ul>
-                <li><a href="#">Coimbatore</a></li>
-                <li><a href="https://chennai.gemhospitals.com/">Chennai-Perungudi</a></li>
-                <li>
-                  <a href="#">Chennai-Aminjikarai </a>
-                </li>
-                <li><a href="#">Tiruppur</a></li>
-                <li><a href="#">Pondicherry</a></li>
-                <li><a href="#">Erode</a></li>
-                <li><a href="#">Thrissur</a></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--  End .col-lg-2-->
-        <div class="col-sm-6 col-md-3 col-lg-2">
+        <div class="col-sm-9 col-md-6 col-lg-3">
           <div class="footer-widget widget-links">
             <div class="footer-widget-title">
               <h5>links</h5>
@@ -52,6 +30,30 @@
                 <li><a href="<?= base_url('magazines') ?>">magazines</a></li>
                 <li><a href="<?= base_url('bmw') ?>">BMW Report</a></li>
                 <li><a href="<?= base_url('blog') ?>">blog</a></li>
+                <li><a href="<?= base_url('press-release') ?>">Press Release</a></li>
+                <li><a href="<?= base_url('privacy-policy') ?>">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--  End .col-lg-2-->
+         <div class="col-sm-9 col-md-6 col-lg-3 offset-lg-0">
+          <div class="footer-widget widget-links">
+            <div class="footer-widget-title">
+              <h5>Services</h5>
+            </div>
+            <div class="widget-content">
+              <ul>
+                <li><a href="<?= base_url('services/esophago-gastric-surgery') ?>">Esophago Gastric Surgery</a></li>
+                <li><a href="<?= base_url('services/colorectal-surgery') ?>">Colorectal Surgery</a></li>
+                <li>
+                  <a href="<?= base_url('services/liver-pancreas') ?>">Liver & Pancreas </a>
+                </li>
+                <li><a href="<?= base_url('services/medical-gastroenterology') ?>">Medical Gastroenterology</a></li>
+                <li><a href="<?= base_url('services/endogynecology') ?>">Endogynecology</a></li>
+                <li><a href="<?= base_url('services/obesity-diabetes') ?>">Obesity & Diabetes</a></li>
+                
+
               </ul>
             </div>
           </div>
@@ -60,55 +62,22 @@
         <div class="col-sm-6 col-md-4 col-lg-2 offset-lg-0">
           <div class="footer-widget widget-links">
             <div class="footer-widget-title">
-              <h5>help</h5>
+              <h5></h5>
             </div>
-            <div class="widget-content">
+            <div class="widget-content" style="margin-top:50px;">
               <ul>
-                <li><a href="<?= base_url('contactus') ?>">contact</a></li>
-                <li><a href="<?= base_url('career') ?>">career</a></li>
-                <li><a href="<?= base_url('mgr') ?>">MGR University</a></li>
-                <li><a href="<?= base_url('nbe') ?>">NBE</a></li>
-                <li><a href="<?= base_url('press-release') ?>">Press Release</a></li>
+               <li><a href="#">Hernia Care</a></li>
+                <li><a href="<?= base_url('services/digestive-cancer-care') ?>">Digestive Cancer Care</a></li>
+                <li><a href="<?= base_url('services/multi-organ-transplant') ?>">Multi Organ Transplant</a></li>
+                <li><a href="<?= base_url('services/cardiology') ?>">Cardiology</a></li>
+                <li><a href="<?= base_url('services/nephrology') ?>">Nephrology</a></li>
+                <li><a href="<?= base_url('services/urology') ?>">Urology</a></li>
               </ul>
             </div>
           </div>
         </div>
         <!--  End .col-lg-2-->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="footer-widget widget-newsletter">
-            <div class="footer-widget-title">
-              <h5 style="margin-left: 20px;">newsletter</h5>
-            </div>
-            <div class="widget-content">
-              <form class="form-newsletter mailchimp">
-                <div class="form-group">
-                  <input class="form-control" type="email" name="email" placeholder="Enter Your Email" required="required" style="background-color: white;" />
-
-
-
-                </div>
-                <div class="custom-radio-group">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" id="customRadioInline2" name="customRadioInline2" required="required" />
-                    <label for="customRadioInline2">I Accept The Privacy And Terms</label>
-
-                  </div>
-
-                </div>
-                <div class="">
-                  <input type="submit" value="Submit" class="btn-footer1" style="width: 120px;
-                  height: 50px;
-                  border-radius: 10px;
-                  color: white;
-                  font-weight: bold;
-                  background-color: #118b0f;
-                  border: 1px solid #0d3e21;" />
-                </div>
-              </form>
-
-            </div>
-          </div>
-        </div>
+       
       </div>
       <div class="clearfix"></div>
     </div>
@@ -117,7 +86,7 @@
   <!--  End .footer-center-->
   <div class="footer-bottom">
     <div class="container">
-      <div class="row col-12">
+      <div class="row">
         <div class="col-12">
           <div class="footer-copyright">
             <div class="copyright">

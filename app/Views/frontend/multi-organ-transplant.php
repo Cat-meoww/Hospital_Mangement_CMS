@@ -6,25 +6,26 @@
 
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
+
 <section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
+      <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>"   alt="Background" /></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
+            
             <div class="title">
               <div class="title-card"  style="margin-top: -180px ;">
                 <div class="title-heading">
                   <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Esophago Gastric Surgery</h1>
+                  <h1>Multi Organ Transplant</h1>
                 </div>
                 <div class="title-sub-heading">
                   <!---<p>All cardiologists study the disorders of the heart, but the study of adult and child heart disorders are trained to take care of small children.</p>--->
-                  <p>The Gem Hospital is One of the Most Advanced Centers for Upper GI Diseases, Gastro-Intestinal
-                    Surgery, And Minimal Access Surgery in India.</p>
+                  <p>With the laparoscopic expertise, Gem Hospital & Research Centre is proud to be India’s only Laparoscopic living donor Multi organ transplant centre.</p>
                 </div>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="<?= base_url('index')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Esophago Gastric Surgery</li>
+                  <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Multi Organ Transplant</li>
                 </ol>
               </div>
             </div>
@@ -70,7 +71,7 @@
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/5.jpg') ?>" alt="background" /></div>
+                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/15.png') ?>"   alt="background" /></div>
                     <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
                     <!-- End .popup-video-->
                   </div>
@@ -79,25 +80,16 @@
                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                   </h6>
                   <p class="desc">
-                    The Centre carries out all major Upper GI procedures by</p>
-                 
-                    <p class="desc">&bull; Laparoscopic</p>
-                    <p class="desc">&bull; Robotic</p>
-                    <p class="desc">&bull; Open approach including cancer surgery.</p>
-                  
+                  The living donor (one who donates his/her organ) would have the surgery performed using laparoscopy technique. This would give all the advantages of laparoscopy to this patient enabling fast and safe recovery. </p>
+				   <p class="desc">Gem Hospital, the best liver transplant hospital in Coimbatore, is equipped with the latest imaging technologies like the 3D, 4K, etc., which enable these surgeries to be performed with utmost precision. We have now introduced the da Vinci robotic technology, using which the same could also be done.
+				   </p>
                   <!--We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type of practitioner you require. We treat all enquiries in the strictest confidence.-->
                   
-                  <p class="desc">Our department is headed by one of the most renowned surgeons in the field of Upper GI
-                    and Laparoscopic surgery who is not only a leading surgeon in the country but is also an
-                    international faculty in the field of upper GI and laparoscopic surgery. Our hospital has performed
-                    more than 2000 esophagus and stomach cancer surgeries successfully.
+                 
 
                     <!--Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research.-->
-                  </p>
-                  <p class="desc">Ours is the first center to perform thoraco laparoscopic esophagectomy in a prone
-                    position in the world and our technique is now being followed in some of the major centers in the
-                    world.
-                  </p>
+                 
+                 
                 </div>
                 <div class="col-12 col-lg-4">
 
@@ -119,9 +111,9 @@
                       </div>
                       <div class="widget-content">
                         <ul class="list-unstyled">
-                          <li><a href=""> <span class="line"> <span></span></span><span>Video
+                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href=""> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -138,20 +130,23 @@
 
                     <h5 class="desc">Conditions Treated</h5>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Benign Esophageal diseases</li>
-                      <li><i class="fas fa-check"></i> Malignant Esophageal diseases</li>
-                      <li><i class="fas fa-check"></i> Benign stomach disorders</li>
-                      <li><i class="fas fa-check"></i> Malignant stomach disorders</li><br><br>
+                      <li><i class="fas fa-check"></i> Deceased Donor kidney transplant</li>
+                      <li><i class="fas fa-check"></i> Living Donor kidney transplant</li>
+                      <li><i class="fas fa-check"></i> Pancreas Transplant</li>
+                      <br><br>
                     </ul>
                   </div>
                   <div class="col-12 col-lg-6">
 
                     <h5 class="desc">Tests and Treatments Offered</h5>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Antireflux Procedures, Redo Antireflux Surgery</li>
-                      <li><i class="fas fa-check"></i> Hiatal / Paraesophageal Hernia Repair</li>
-                      <li><i class="fas fa-check"></i> Achalasia Cardia, Redo- Heller’s Myotomy</li>
-                      <li><i class="fas fa-check"></i> Trucal Vagotomy & Gastrojejunostomy (TVGJ)</li>
+                      <li><i class="fas fa-check"></i> ABO incompatible transplants</li>
+                      <li><i class="fas fa-check"></i> Dual kidney transplants</li>
+                      <li><i class="fas fa-check"></i> Auxillary liver transplantation</li>
+                      <li><i class="fas fa-check"></i> Pediatric Liver and kidney transplants</li>
+					  <li><i class="fas fa-check"></i> Liver Transplantation for Acute liver failure</li>
+                      <li><i class="fas fa-check"></i> Domino liver transplantation</li>
+					  
                     </ul>
 
                   </div>
@@ -202,7 +197,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!--<h5>medical check ups</h5>-->
-                      <p>Best Paper Award, “viii International Congress On Endoscopic Surgery, Peru 2012.</p>
+                      <p>First to perform successful Laparoscopic Living Donor Liver retrieval for transplantation in India</p>
                       <!--<p>Recognised as a world renowned institution. consult our doctors by visiting us.</p>-->
                     </div>
                   </div>
@@ -211,7 +206,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>medical treatment</h5>--->
-                      <p>Best Technique Award, 12th World Congress of Esophageal Diseases, Japan 2010</p>
+                      <p>First to perform Laparoscopic Donor Hepatectomy by Prof. C Palanivelu successfully</p>
                       <!---<p>Free or low cost coverage adults with limited income recognised.</p>--->
                     </div>
                   </div>
@@ -220,7 +215,7 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Emergency 24/7</h5>---->
-                      <p>Cardiomyotomy Surgery done successfully in an 8 months Pregnant Woman</p>
+                      <p>GEM Transplant team has successfully completed 100+ cases of Liver Transplant</p>
                       <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
@@ -229,46 +224,8 @@
                   <div class="entry-value"><i class=""></i>
                     <div class="entry-content">
                       <!---<h5>Research Pros</h5>--->
-                      <p>Presented in Society of American Gastrointestinal Endo Surgeons (SAGES), USA, 2005</p>
+                      <p>GEM Hospital performs rare living donor liver transplant on 67 year old (First ever Domino Living Donor)</p>
                       <!---<p>All medical aspects practice for family, our reception staff with any medical enquiry.</p>---->
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      <!---<h5>Emergency 24/7</h5>---->
-                      <p>First in the world to develop a newer technique for removal of cancer of esophagus, 2010</p>
-                      <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      <!---<h5>Emergency 24/7</h5>---->
-                      <p>Best EAES Video Award & First Prize, Congress of European Association of Endoscopic Surgery,
-                        Sweden 2008</p>
-                      <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      <!---<h5>Emergency 24/7</h5>---->
-                      <p>Conducted International Conference on Diseases of Esophagus and Stomach (ISESCON) successfully
-                        in 2017 & 2018</p>
-                      <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="entry-value"><i class=""></i>
-                    <div class="entry-content">
-                      <!---<h5>Emergency 24/7</h5>---->
-                      <p>Presented in Society of American Gastrointestinal Endo Surgeons (SAGES), USA, 2005</p>
-                      <!---<p>Contact our reception with any medical enquiry for low cost coverage adults.</p>--->
                     </div>
                   </div>
                 </div>
@@ -291,13 +248,13 @@
           </div>
           <div class="row">
               <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="2" data-autoplay="true"
-                  data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
+                  data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">  
             <div class=" col-12 col-md-12 col-lg-12">
               <div class="department-panel" data-hover="">
                 <div class="department-panel-holder">
                   <div class="department-content"> 
                     <div class="department-title">
-                          <ul>
+                           <ul>
 							<li><a><i class="fa fa-star checked" ></i></a>
 							<a><i class="fa fa-star checked" ></i></a>
 							<a><i class="fa fa-star checked" ></i></a>
@@ -306,9 +263,9 @@
 					</ul>
                     </div>
                     <div class="department-desc">
-                      <p>Dr. Parthasarathy Operated on me for Hernia. He did a Marvelous Job of Treating me. Best hospital with Great Staff for all Gastrointestinal Treatment.</p>
+                      <p>Good experience doctor.They are tread the patients very gently manner.Nurses and staffs are tread the patients very carefully.</p>
                     </div>
-                    <div class="department-more" style="color: black;font-size:16px;"><strong>Ismail Mohamed</strong></a></div>
+                    <div class="department-more" style="color: black;font-size:16px;"><strong>Dharshini Raja</strong></a></div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -330,16 +287,17 @@
 							<a><i class="fa fa-star checked" ></i></a></li>
 					</ul>
                     </div>
-                    <style>
+                    
+                     <style>
                       .checked{
                         color: gold;
                       }
                     </style>
 					
                     <div class="department-desc">
-                      <p>At Gem hospital, Coimbatore the Team Under The Head of Doctor Saravanakumar Treated well and gave us Good Treatment to my Spouse. Especially the ward Nurses took Care Much and moved very Friendly to my Spouse.</p>
+                      <p>The Best in laproscopic & Castro related treatment with clean and hygienic,Good Service with adoptable price. Thanks to all doctors and nurses and the whole Gem Team .. Really felt all are Gem of person's.</p>
                     </div>
-                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Subramanian Ramasamy</strong></div>
+                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Sudhandrakumar M</strong></div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -366,7 +324,7 @@
                   <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
 
-                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More About Endogynecology</h6>
+                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More about Multi OrganTransplant</h6>
                     </div>
                   </div>
                 </div>
@@ -376,23 +334,18 @@
                   data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
                   <div class="col-12 col-lg-8">
                    
-                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/16.jpg') ?>" style="position: relative;"
+                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/t1.jpg') ?>"   style="position: relative;"
                         alt="about Image" /><br><a class=""
                         href="https://www.youtube.com/watch?v=nrJtHemSPW4">  <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
                        
                         </a></div>
                        
                   </div>
-                  <div class="col-12 col-lg-8">
-                    <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/blog/grid/17.jpg') ?>"
-                        alt="about Image" /><br><a class=""
-                        href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
-                        </a></div>
-                  </div>
+                  
                   <div>
                     <div class="col-12 col-lg-8">
                       <div class="about-img"><img class="img-fluid"
-                           src="<?= base_url('frontend/assets/images/blog/grid/18.jpg') ?>" alt="about Image" /><br><a
+                           src="<?= base_url('frontend/assets/images/blog/grid/t2.jpg') ?>"  alt="about Image" /><br><a
                           class=""
                           href="https://www.youtube.com/watch?v=nrJtHemSPW4">  <img src="<?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" style=" width: 20% !important;  position: absolute; left: 25%; bottom: 35%;" class="bn-1"/>
                           </a></div>
@@ -404,7 +357,7 @@
               </div>
             </section>
             
-             <style>
+            <style>
               
               @media screen and (max-width:600px) {
                 .bn-1{
@@ -418,44 +371,45 @@
           </style>
 
             <div class="entry-infos tips-info">
-              <h2 class="desc" style=" text-align: center;  font-weight: 700;
+              <h2 class="desc" style=" font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  color: var(--global--color-secondary);">FAQ</h2>
+  color: var(--global--color-secondary); text-align: center; ">FAQ</h2>
               <h1 class="entry-heading" style="font-size: 37px; text-align: center; color:#118B0F;">Frequently Ask Questions</h1>
               <!---<p class="entry-desc">We help create a care plan that addresses your specific condition and we are here to answer all of your questions & acknowledge your concerns. Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes.</p>---->
               <div class="accordion accordion-3" id="accordion03">
                 <div class="card">
                   <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">What are
-                      some common upper GI conditions?</a></div>
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Who can donate and how?</a></div>
                   <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                    <div class="card-body">Common upper GI conditions include gastroesophageal reflux disease (GERD),
-                      peptic ulcers, gastritis, esophagitis, Barrett's esophagus, hiatal hernia, dyspepsia
-                      (indigestion), and upper GI cancers such as esophageal and stomach cancer.</div>
+                    <div class="card-body">Anyone can become an organ donor, no matter your age. Your medical condition at the time of death will determine what organs and tissue can be donated.</div>
                   </div>
                 </div>
                 <div class="card">
                   <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">What are the
-                      symptoms of upper GI disorders? </a></div>
+                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">Which organs can be transplanted? </a></div>
                   <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                    <div class="card-body">Symptoms can vary depending on the specific condition, but common symptoms
-                      include heartburn, regurgitation, chest pain, difficulty swallowing, bloating, nausea, vomiting,
-                      abdominal pain, indigestion, and changes in bowel movements.</div>
+                    <div class="card-body">The organs that can be transplanted are Liver,Kidney,Pancreas,Heart,Lung,Intestine</div>
                   </div>
                 </div>
                 <div class="card">
                   <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
-                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">How can I manage symptoms
-                      of GERD? </a></div>
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Will both organ transplant procedures happen at the same time?</a></div>
                   <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                    <div class="card-body">Lifestyle changes can help manage GERD symptoms. These may include avoiding
-                      trigger foods (spicy or acidic foods, caffeine, alcohol), eating smaller meals, maintaining a
-                      healthy weight, elevating the head of the bed, and not lying down immediately after eating.
-                      Medications, such as proton pump inhibitors or antacids, can also be prescribed.</div>
+                    <div class="card-body">Occasionally, you’ll receive more than one organ during the same surgical procedure. However, this is more common for heart-liver transplants than heart-kidney. Sometimes, your new heart will be transplanted first. Then, we’ll monitor you for eight to 12 hours. Once the heart is stabilized, you’ll return to the operating room to receive your new kidney or liver.<br>
+					Multi-organ transplant recipients with a living donor for the kidney or liver may have additional time between the two procedures to optimize care.
+					</div>
                   </div>
                 </div>
+				<div class="card">
+                  <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Can a person lead a normal life after liver transplantation?</a></div>
+                  <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
+                    <div class="card-body">The majority of transplant recipients will eventually be able to resume most of their typical activities and enjoy a high quality of life. It can take up to one year to recover fully, but you'll typically be able to gradually increase your activity level after a few weeks.
+					</div>
+                  </div>
+                </div>
+				
               </div>
 
             </div>
