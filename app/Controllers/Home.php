@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\UserModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
+use CodeIgniter\HTTP\Message;
 use Exception;
 
 class Home extends BaseController
@@ -176,6 +177,7 @@ class Home extends BaseController
                     throw new Exception("unable to locate branch or service");
                 }
 
+
                 $query = $GeneralBookings->insert([
                     'branch' => $branch,
                     'service' => $service,
@@ -190,11 +192,23 @@ class Home extends BaseController
                 if ($query) {
 
                     $Services = new \App\Models\Services();
+                    $ServiceName = $Services->select('name')->where('id', $service)->first()->name ?? "miscellaneous";
+                    $populate = [
+                        'booking_id' => $query,
+                        'name' => $this->request->getPost('name'),
+                        'phno' => $this->request->getPost('phone'),
+                        'branch' => $foo->name,
+                        'service' => $ServiceName,
+                        'booking_date' => $this->request->getPost('booking-date'),
+                    ];
+
+                    $this->send_mail($this->request->getPost('email'), "Booking Appointment", view('layout/templates/email_general_booking', $populate));
+
 
                     return redirect()
                         ->with('booking_id', $query)
                         ->with('customer', $this->request->getPost('name'))
-                        ->with('service', $Services->select('name')->where('id', $service)->first()->name ?? "miscellaneous")
+                        ->with('service', $ServiceName)
                         ->to('appointment/thanks');
                 }
                 throw new Exception("Unable to store data");
@@ -376,6 +390,7 @@ class Home extends BaseController
                         'slot_id' => $slot,
                         'booking_id' => $insertID,
                     ]);
+                    
                     return redirect()
                         ->with('booking_id', $insertID)
                         ->with('customer', $this->request->getPost('first-name'))
@@ -394,5 +409,49 @@ class Home extends BaseController
     {
         $this->data['title'] = "Thanks";
         return view('frontend/general-thank', $this->data);
+    }
+
+    private function send_mail($To, $Subject, $Message)
+    {
+        try {
+            $email = \Config\Services::email();
+            $config = [
+                'protocol' => 'smtp',
+                'charset' => 'utf-8',
+                'wordWrap' => false,
+                'mailType' => 'html',
+                'priority' => 1,
+                'SMTPHost' => env('app.smtp.host'),
+                'SMTPPort' => (int) env('app.smtp.port'),
+                'SMTPUser' => env('app.smtp.user'),
+                'SMTPPass' => env('app.smtp.password'),
+                'SMTPKeepAlive' => true,
+                'validate' => true,
+                'SMTPCrypto' => 'ssl',
+            ];
+
+            $email->initialize($config);
+
+
+            $email->setTo($To);
+            $email->setFrom(env('app.smtp.user'), 'GEM MAILER');
+            //$email->setCC('naveen@insakal.in');
+
+
+            $email->setSubject($Subject);
+            $email->setMessage($Message);
+
+
+            if ($email->send(false)) {
+                return true;
+            } else {
+                echo "Something went wrong !";
+                d($email);
+                dd($email->printDebugger(['headers']));
+            }
+        } catch (\Throwable $th) {
+
+            return false;
+        }
     }
 }

@@ -138,6 +138,10 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         $routes->add('faq', 'enquiries::faq');
         $routes->add('contact-us', 'enquiries::contact_us');
     });
+    $routes->group('bookings', static function ($routes) {
+        $routes->add('general', 'bookings::general_bookings');
+        $routes->add('video', 'bookings::video_bookings');
+    });
 });
 
 
