@@ -45,7 +45,7 @@
                         </div>
                         <div class="p-5">
                             <div class="text-sm text-black dark:text-white flex flex-col gap-3">
-                                <form action="<?= base_url("api/admin/all-master/branches/create") ?>" method="post" id="doc-upload" data-reload="true" class="flex gap-3 flex-col fetch-form" enctype="multipart/form-data">
+                                <div class="flex gap-3 flex-col fetch-form">
 
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Date Type</label>
@@ -62,10 +62,10 @@
 
 
                                     <div class="flex justify-end items-center mt-4 gap-4 col-span-2">
-                                        <button type="submit" class="btn text-black dark:text-white border hover:bg-lightgreen-100 dark:hover:bg-lightgreen-100 border-lightgreen-100 bg-transparent hover:text-black">Submit</button>
+                                        <button @click="toggle"  class="reload-datatable btn text-black dark:text-white border hover:bg-lightgreen-100 dark:hover:bg-lightgreen-100 border-lightgreen-100 bg-transparent hover:text-black">Submit</button>
                                     </div>
 
-                                </form>
+                                </div>
                             </div>
 
                         </div>
@@ -198,6 +198,8 @@
             });
         }
         call_datatable();
+
+        $('.reload-datatable').click(call_datatable);
     });
 </script>
 

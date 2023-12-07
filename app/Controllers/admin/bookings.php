@@ -48,9 +48,9 @@ class bookings extends General
         $this->data['Options'] = [
             'services' => $this->generate_services(),
             'doctors' => $this->generate_doctors(),
-            'date_types'=>[
-                'ENTRY'=>"Entry Date Wise",
-                'BOOKING'=>"Booking Date Wise"
+            'date_types' => [
+                'ENTRY' => "Entry Date Wise",
+                'BOOKING' => "Booking Date Wise"
             ]
         ];
         return view('admin/bookings/video_bookings', $this->data);
@@ -116,8 +116,38 @@ class bookings extends General
             $ordercol = ['id', 'firstname', 'lastname', 'phone', 'email', 'id', 'id', 'booking_date', 'start_time'];
             $VideoBookings = new \App\Models\VideoBookings();
             $sql = $VideoBookings->select();
-            
+
             $recordsTotal = $sql->countAllResults(false);
+
+            $PostData = [
+                'datetype' => $this->request->getVar('datetype'),
+                'from_date' =>  $this->request->getVar('from_date'),
+                'to_date' => $this->request->getVar('to_date'),
+            ];
+            $rules  = [
+                'datetype' => 'in_list[BOOKING,ENTRY]',
+                'from_date' => 'required|valid_date[Y-m-d]',
+                'to_date' => 'required|valid_date[Y-m-d]',
+            ];
+
+            if ($this->validateData($PostData, $rules)) {
+                $datetype = $this->request->getVar('datetype');
+                $from_date = $this->request->getVar('from_date');
+                $to_date = $this->request->getVar('to_date');
+
+                switch ($datetype) {
+                    case 'ENTRY':
+                        $sql = $sql->where('created_on >=', $from_date)->where('created_on <=', $to_date);
+                        break;
+                    case 'BOOKING':
+                        $sql = $sql->where('booking_date >=', $from_date)->where('booking_date <=', $to_date);
+                        break;
+
+                    default:
+
+                        break;
+                }
+            }
 
 
             if ($this->request->getVar('search[value]')) {
