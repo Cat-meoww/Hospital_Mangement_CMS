@@ -91,6 +91,7 @@
                         <th>ID</th>
 
                         <th class="white-space-normal">Doctors</th>
+                        <th>Visiblity</th>
                         <th class="text-center">Operations</th>
                     </thead>
                     <tbody>
@@ -101,6 +102,21 @@
                                 <td class="tab-md-normal">
                                     <?= $Options['doctors'][$item->doctor] ?? "unknown"  ?>
                                 </td>
+                                <?php if ($item->visibility === "Public") : ?>
+                                    <td class="flex items-center text-xs text-[#4AA785] py-3">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                        </svg>
+                                        <p>Public</p>
+                                    </td>
+                                <?php else : ?>
+                                    <td class="flex items-center text-xs text-black/40 dark:text-white/40 py-3">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                        </svg>
+                                        <p>Private</p>
+                                    </td>
+                                <?php endif; ?>
 
                                 <td>
                                     <div class="flex gap-1 flex-row justify-center" data-id="<?= $item->id ?>" data-slots="<?= esc($item->slots) ?>">
@@ -145,7 +161,7 @@
             </div>
             <div class="modal-body p-5">
                 <form action="<?= base_url("api/admin/all-master/bookings/video/update-doctor-slot") ?>" method="post" data-reload="true" class="flex gap-3 flex-col   fetch-form" enctype="multipart/form-data">
-                    
+
 
 
 
@@ -312,7 +328,7 @@
                         });
 
 
-                        
+
                         $("#form-branch-doctors").select2({
                             tags: false,
                         });

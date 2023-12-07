@@ -229,6 +229,11 @@ $routes->group('api', static function ($routes) {
                 });
             });
         });
+        $routes->group('datatables', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
+            $routes->group('bookings', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
+                $routes->post('video', 'bookings::video_datatable');
+            });
+        });
     });
 
     $routes->group('frontend', ['namespace' => 'App\Controllers\API\frontend'], static function ($routes) {
