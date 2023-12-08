@@ -34,12 +34,12 @@ $uri = service('uri');
     <?= $this->renderSection('head') ?>
 </head>
 
-<body x-data="main" class="antialiased relative font-inter bg-white dark:bg-black text-black dark:text-white text-sm font-normal overflow-x-hidden vertical" :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.rightsidebar ? 'right-sidebar' : '', $store.app.menu, $store.app.layout]">
+<body x-data="main" class="antialiased relative font-inter bg-white dark:bg-black text-black dark:text-white text-sm font-normal overflow-x-hidden vertical right-sidebar" :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.menu, $store.app.layout]">
 
     <div x-cloak class="fixed inset-0 bg-[black]/60 z-40 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
 
 
-    <div x-cloak class="fixed inset-0 bg-[black]/60 z-50 2xl:hidden" :class="{'hidden' : !$store.app.rightsidebar}" @click="$store.app.rightSidebar()"></div>
+    <div x-cloak class="fixed inset-0 bg-[black]/60 z-50 " :class="{'hidden' : !$store.app.rightsidebar}" @click="$store.app.rightSidebar()"></div>
 
 
     <div class="main-container navbar-sticky flex" :class="[$store.app.navbar]">
@@ -229,7 +229,7 @@ $uri = service('uri');
         </div>
 
 
-        <div class="right-sidebar fixed right-0 bg-white dark:bg-black bottom-0 z-50 w-[280px] border-l border-black/10 dark:border-white/10 transition-all duration-300">
+        <div class="right-sidebar fixed right-0 bg-white dark:bg-black bottom-0 z-50 w-[280px] border-l border-black/10 dark:border-white/10 transition-all duration-300" :class="{'hidden' : !$store.app.rightsidebar}">
             <div class="flex flex-col gap-9 px-6 py-[22px] h-screen overflow-y-auto overflow-x-hidden">
                 <div>
                     <h4 class="font-semibold text-black dark:text-white mb-5">Notifications</h4>
