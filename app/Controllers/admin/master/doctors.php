@@ -229,11 +229,11 @@ class doctors extends General
                 ],
                 'description' => [
                     'label' => 'Description',
-                    'rules' => "trim|required|min_length[3]|max_length[500]|",
+                    'rules' => "trim|required|min_length[3]|max_length[500]",
                 ],
                 'education' => [
                     'label' => 'Education',
-                    'rules' => "trim|required|min_length[2]|max_length[500]|",
+                    'rules' => "trim|required|min_length[2]|max_length[500]",
                 ],
                 'experience' => [
                     'label' => 'experience',
@@ -251,7 +251,7 @@ class doctors extends General
                     'label' => " Visiblity",
                     'rules' => "required|in_list[Public,Private]",
                 ],
-                
+
             ];
             if ($this->validate($rules)) {
                 $Doctors = new \App\Models\Doctors();

@@ -114,6 +114,10 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
             $routes->add('list', 'doctors::index');
         });
     });
+
+    $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
+        $routes->add('doctor/(:num)', 'pages::doctor/$1');
+    });
     $routes->group('management', static function ($routes) {
         $routes->add('agent_management', 'admin::agent_management');
         $routes->add('client_management', 'admin::client_management');
@@ -232,6 +236,13 @@ $routes->group('api', static function ($routes) {
         $routes->group('datatables', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
             $routes->group('bookings', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
                 $routes->post('video', 'bookings::video_datatable');
+            });
+        });
+        $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
+
+            $routes->group('doctor', static function ($routes) {
+                $routes->add('upsert', 'pages::upsert_doctor');
+                $routes->add('delete', 'pages::upsert_doctor');
             });
         });
     });
