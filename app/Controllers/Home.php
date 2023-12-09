@@ -88,7 +88,7 @@ class Home extends BaseController
             $this->data['title'] = $Doctor->name;
             $this->data['doctor'] = $Doctor;
             $this->data['doctor_role'] = $Doctor_roles->select('name')->find($Doctor->role)->name ?? "";
-            $this->data['cms'] = $CmsPages->where('slug', $slug)->where('type', 'doctor')->first() ;
+            $this->data['cms'] = $CmsPages->where('slug', $slug)->where('type', 'doctor')->first();
 
 
             return view('frontend/doctor-info', $this->data);
@@ -388,6 +388,8 @@ class Home extends BaseController
 
                 $VideoBookings = new \App\Models\VideoBookings();
 
+                $transaction_id = \Ramsey\Uuid\Uuid::uuid4();
+
                 $insertID = $VideoBookings->insert([
                     'firstname' => $this->request->getPost('first-name'),
                     'lastname' => $this->request->getPost('last-name'),
@@ -400,29 +402,176 @@ class Home extends BaseController
                     'start_time' => $slotData->start_time,
                     'end_time' => $slotData->end_time,
                     'message' => $this->request->getPost('message'),
+                    'transaction_id' => $transaction_id
                 ], true);
 
                 if ($insertID) {
+                    $payment_init = $this->payment_handler(1000, $transaction_id, $insertID);
 
-                    $Services = new \App\Models\Services();
-                    $ReservedSlots->insert([
-                        'doctor_id' => $doctor,
-                        'booking_date' => $BookingDate,
-                        'slot_id' => $slot,
-                        'booking_id' => $insertID,
-                    ]);
 
-                    return redirect()
-                        ->with('booking_id', $insertID)
-                        ->with('customer', $this->request->getPost('first-name'))
-                        ->with('service', $Services->select('name')->where('id', $service)->first()->name ?? "miscellaneous")
-                        ->to('appointment/thanks');
+                    //Need to make readlock of 8 mintues
+                    return redirect()->to("payment/checkout/$transaction_id");
+
+                    //
+                    // $ReservedSlots->insert([
+                    //     'doctor_id' => $doctor,
+                    //     'booking_date' => $BookingDate,
+                    //     'slot_id' => $slot,
+                    //     'booking_id' => $insertID,
+                    // ]);
+
+
                 }
                 throw new Exception("Unable to store data");
             }
         } catch (\Exception $e) {
 
             return redirect()->back()->withInput()->with('error', $e->getMessage());
+        }
+    }
+
+    private function payment_handler(int $amount, $transaction_id, $resource_id)
+    {
+
+        try {
+
+            $Payments = new \App\Models\Payments();
+            $api = new \Razorpay\Api\Api(env('RAZORPAY_API_KEY'), env('RAZORPAY_API_SECRET'));
+            $order = $api->order->create([
+                'amount' => $amount * 100, // Amount in paisa
+                'currency' => 'INR',
+                'receipt' => $transaction_id,
+                'notes' => [
+                    'resource_id' => $resource_id,
+                    'resource_type' => "video booking",
+                    'transaction_id' => $transaction_id
+                ]
+            ]);
+
+            if (!$order->id ?? false) {
+                throw new \Exception('Unable to create an order');
+            }
+
+
+            $Payments->insert([
+                'booking_id' => $resource_id,
+                'transaction_id' => $transaction_id,
+                'status' => "INIT",
+                'order_id' => $order->id,
+            ]);
+
+            return true;
+        } catch (\Exception $th) {
+            return false;
+        }
+    }
+
+    public function payment_checkout($transaction_id)
+    {
+        try {
+            $Payments = new \App\Models\Payments();
+            $VideoBookings = new \App\Models\VideoBookings();
+
+
+            if (!$payment = $Payments->where('transaction_id', $transaction_id)->where('status', 'INIT')->first()) {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+            $customer = $VideoBookings->find($payment->booking_id);
+
+            $this->data['title'] = "PAYMENT CHECKOUT";
+            $this->data['customer'] = $customer;
+            $this->data['rpc_payload'] = json_encode([
+                "key" => env('RAZORPAY_API_KEY'),
+                "amount" =>  $payment->amount * 100,
+                "currency" => "INR",
+                "name" => env('app.name'),
+                "description" => env('app.name'),
+                "image" => base_url('frontend/assets/images/logo/gem.png'),
+                "order_id" => $payment->order_id,
+                "callback_url" => base_url('payment/verify'),
+                "prefill" => [
+                    "name" => "$customer->firstname  $customer->lastname",
+                    "email" => $customer->email,
+                    "contact" => $customer->phone
+                ],
+                "theme" => [
+                    "color" => "#0d3e21"
+                ]
+            ]);
+
+            return view('frontend/bookings/checkout', $this->data);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function payment_verify()
+    {
+        try {
+            $rules = [
+                'razorpay_payment_id' => "trim|required",
+                'razorpay_order_id' =>  "trim|required|is_not_unique[payments.order_id]",
+                'razorpay_signature' =>  "trim|required"
+            ];
+
+            if (!$this->validate($rules)) {
+
+                throw new \Exception('Payment verification failed');
+            } else {
+                $Payments = new \App\Models\Payments();
+                $api = new \Razorpay\Api\Api(env('RAZORPAY_API_KEY'), env('RAZORPAY_API_SECRET'));
+                $razorpay_payment_id = $this->request->getPost('razorpay_payment_id');
+                $razorpay_order_id = $this->request->getPost('razorpay_order_id');
+                $razorpay_signature = $this->request->getPost('razorpay_signature');
+
+                $attributes = [
+                    'razorpay_order_id' => $razorpay_order_id,
+                    'razorpay_payment_id' => $razorpay_payment_id,
+                    'razorpay_signature' => $razorpay_signature,
+                ];
+
+                $api->utility->verifyPaymentSignature($attributes);
+                $query = $Payments->set(
+                    [
+                        'status' => 'SUCCESS',
+                        'payment_id' => $razorpay_payment_id,
+                        'verify_signature' => $razorpay_signature
+                    ]
+                )->where('order_id', $razorpay_order_id)->update();
+                $payment = $Payments->select('booking_id')->where('order_id', $razorpay_order_id)->first();
+                if ($query) {
+                    $VideoBookings = new \App\Models\VideoBookings();
+                    $ReservedSlots = new \App\Models\ReservedSlots();
+                    $booking = $VideoBookings->find($payment->booking_id);
+                    $Services = new \App\Models\Services();
+                    $ServiceName = $Services->select('name')->where('id', $booking->firstname)->first()->name ?? "miscellaneous";
+
+                    $ReservedSlots->insert([
+                        'doctor_id' => $booking->doctor,
+                        'booking_date' => $booking->booking_date,
+                        'slot_id' => $booking->slot_id,
+                        'booking_id' => $booking->id,
+                    ]);
+
+                    $populate = [
+                        'booking_id' =>  $booking->id,
+                        'name' =>  $booking->firstname,
+                        'phno' =>  $booking->phone,
+                        'branch' => "Branch name",
+                        'service' => $ServiceName,
+                        'booking_date' => $booking->booking_date,
+                    ];
+                    $this->send_mail($booking->email, "Video Appointment", view('layout/templates/email_general_booking', $populate));
+
+                    return redirect()
+                        ->with('booking_id', $booking->id)
+                        ->with('customer', $booking->firstname)
+                        ->with('service', $ServiceName)
+                        ->to('appointment/thanks');
+                }
+            }
+        } catch (\Exception $e) {
+            throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
         }
     }
 

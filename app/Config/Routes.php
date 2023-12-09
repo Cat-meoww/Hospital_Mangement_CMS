@@ -81,6 +81,10 @@ $routes->get('/doctor/(:any)', 'Home::doctor_info/$1');
 // $routes->get('/service/(:any)', 'Home::service_detail/$1');
 // $routes->get('/services/(:any)', 'Home::location_services/$1');
 
+$routes->group('payment', function ($routes) {
+    $routes->get('checkout/(:uuid)', 'Home::payment_checkout/$1');
+    $routes->post('verify', 'Home::payment_verify');
+});
 
 $routes->group('appointment', function ($routes) {
     $routes->get('book-appointment', 'Home::general_booking');
