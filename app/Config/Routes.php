@@ -77,6 +77,7 @@ $routes->get('/privacy-policy', 'StaticPages::privacy');
 //Doctors routes
 $routes->get('/branch/(:num)', 'Home::index/$1');
 $routes->get('/doctors-list/(:any)', 'Home::doctors_list/$1');
+$routes->get('/doctor/(:any)', 'Home::doctor_info/$1');
 // $routes->get('/service/(:any)', 'Home::service_detail/$1');
 // $routes->get('/services/(:any)', 'Home::location_services/$1');
 

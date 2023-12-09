@@ -75,6 +75,27 @@ class Home extends BaseController
             throw $e;
         }
     }
+    public function doctor_info($slug)
+    {
+        try {
+            $Doctors = new \App\Models\Doctors();
+            $Doctor_roles = new \App\Models\Doctors_roles();
+            $CmsPages = new \App\Models\CmsPages();
+
+            if (!$Doctor = $Doctors->where('slug', $slug)->where('visibility', 'Public')->first()) {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+            $this->data['title'] = $Doctor->name;
+            $this->data['doctor'] = $Doctor;
+            $this->data['doctor_role'] = $Doctor_roles->select('name')->find($Doctor->role)->name ?? "";
+            $this->data['cms'] = $CmsPages->where('slug', $slug)->where('type', 'doctor')->first() ;
+
+
+            return view('frontend/doctor-info', $this->data);
+        } catch (\Exception $e) {
+            throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
+        }
+    }
     private function generate_services()
     {
         $Services = new \App\Models\Services();
@@ -390,7 +411,7 @@ class Home extends BaseController
                         'slot_id' => $slot,
                         'booking_id' => $insertID,
                     ]);
-                    
+
                     return redirect()
                         ->with('booking_id', $insertID)
                         ->with('customer', $this->request->getPost('first-name'))

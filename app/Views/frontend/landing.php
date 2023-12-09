@@ -39,7 +39,7 @@
 
 
 
-       @media screen and (max-width:600px) {
+        @media screen and (max-width:600px) {
             .slide-content #img1 {
                 font-size: 20px !important;
                 margin-top: -20% !important;
@@ -251,72 +251,46 @@
                     <div class="col-12 col-md-6 col-lg-4 team-member">
                         <div class="team-member-holder" data-hover="">
                             <div class="team-img no-radius">
-                                <img src="<?= base_url('frontend/assets/images/team/grid/gem-cbe.png') ?>" class="square-img" alt="Coimbatore" class="img-coim1" />
+                                <img src="<?= base_url('frontend/assets/images/branches/coimbathore.webp') ?>" class="square-img" alt="Coimbatore" class="img-coim1" />
 
 
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="<?= base_url('home') ?>" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="strech-link" href="<?= base_url('coimbatore') ?>" title="Coimbatore"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Coimbatore
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            RAMANATHAPURAM
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="<?= base_url('coimbatore') ?>" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Coimbatore
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="<?= base_url('home') ?>"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span> RAMANATHAPURAM
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
+                                </a>
 
 
 
@@ -328,7 +302,7 @@
                     <div class="col-12 col-md-6 col-lg-4 team-member">
                         <div class="team-member-holder" data-hover="">
                             <div class="team-img no-radius">
-                                <img src="<?= base_url('frontend/assets/images/team/grid/gem-perungudi.png') ?>" class="square-img" alt="Chennai" class="img-coim1" />
+                                <img src="<?= base_url('frontend/assets/images/team/grid/hospital.webp') ?>" class="square-img" alt="Chennai" class="img-coim1" />
 
 
                                 <div class="team-hover">
@@ -341,67 +315,47 @@
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Chennai
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            PERUNGUDI
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://chennai.gemhospitals.com/" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Chennai
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="https://chennai.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
+                                                PERUNGUDI
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
-
-
-
+                                </a>
                             </div>
-                            <!-- End .team-img-->
+
+
+
+
+
+
+
                         </div>
-                        <!-- End .team-member-holder-->
+                        <!-- End .team-img-->
                     </div>
+                    <!-- End .team-member-holder-->
+
                     <div class="col-12 col-md-6 col-lg-4 team-member">
                         <div class="team-member-holder" data-hover="">
                             <div class="team-img no-radius">
@@ -418,63 +372,43 @@
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Chennai
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            AMINJIKARAI
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://aminjikarai.gemhospitals.com/" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Chennai
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="https://aminjikarai.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
+                                                AMINJIKARAI
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
-
-
-
+                                </a>
                             </div>
+
+
+
+
+
+
+
+
                             <!-- End .team-img-->
                         </div>
                         <!-- End .team-member-holder-->
@@ -482,7 +416,7 @@
                     <div class="col-12 col-md-6 col-lg-4 team-member">
                         <div class="team-member-holder" data-hover="">
                             <div class="team-img no-radius">
-                                <img src="<?= base_url('frontend/assets/images/team/grid/gem-tiruppur.png') ?>" class="square-img" alt="Tiruppur" class="img-coim1" />
+                                <img src="<?= base_url('frontend/assets/images/branches/tiruppur.webp') ?>" class="square-img" alt="Tiruppur" class="img-coim1" />
 
 
                                 <div class="team-hover">
@@ -495,62 +429,34 @@
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Tiruppur
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            VEERAPANDI
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://tiruppur.gemhospitals.com/" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Tiruppur
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="https://tiruppur.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
+                                                VEERAPANDI
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
-
-
-
+                                </a>
                             </div>
                             <!-- End .team-img-->
                         </div>
@@ -565,69 +471,41 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="https://pondicherry.gemhospitals.com/" title="Coimbatore"></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://pondicherry.gemhospitals.com/" title="Pondicherry"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Pondicherry
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            NEAR KOKKU PARK
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://pondicherry.gemhospitals.com/" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Pondicherry
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="https://pondicherry.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
+                                                NEAR KOKKU PARK
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
-
-
-
+                                </a>
                             </div>
                             <!-- End .team-img-->
                         </div>
@@ -642,92 +520,65 @@
                                 <div class="team-hover">
                                     <div class="team-action">
                                         <div class="team-zoom">
-                                            <i class="far fa-eye"></i><a class="" href="https://erode.gemhospitals.com/" title=""></a>
+                                            <i class="far fa-eye"></i><a class="" href="https://erode.gemhospitals.com/" title="Erode"></a>
                                         </div>
                                     </div>
                                     <!-- End .team-action -->
                                 </div>
                                 <!-- End .team-hover-->
                             </div>
-                            <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
-                                <div class="col-12 mb-2">
-                                    <h2 class="mb-0" style=" font-size: 28px; color: white;">
-                                        Erode
-                                    </h2>
-                                </div>
-                                <div class="col-12 d-flex flex-row justify-content-between">
-                                    <div class=" flex-fill">
-
-                                        <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                            <span>
-                                                <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                            </span>
-                                            GANDHI NAGAR
-                                        </p>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://erode.gemhospitals.com/" class=" py-4">
+                                    <div class="col-12 mb-2">
+                                        <h2 class="mb-0" style=" font-size: 28px; color: white;">
+                                            Erode
+                                        </h2>
                                     </div>
-                                    <div class="">
-                                        <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
-                                            <span> Contact Now</span>
-                                            <span>
-                                                <a class="" href="https://erode.gemhospitals.com/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
-                                            </span>
-                                        </p>
+                                    <div class="col-12 d-flex flex-row justify-content-between">
+                                        <div class=" flex-fill">
 
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
+                                                GANDHI NAGAR
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
+                                                <span> Contact Now</span>
+                                                <span>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
+                                                </span>
+                                            </p>
+
+                                        </div>
                                     </div>
-                                </div>
 
 
-
-
-
-
+                                </a>
                             </div>
                             <!-- End .team-img-->
                         </div>
                         <!-- End .team-member-holder-->
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-4 team-member">
-                            <div class="team-member-holder" data-hover="">
-                                <div class="team-img no-radius">
-                                    <img src="<?= base_url('frontend/assets/images/team/grid/gem-thrissur.jpg') ?>" class="square-img" alt="Thrissur" class="img-coim1" />
+
+                    <div class="col-12 col-md-6 col-lg-4 team-member">
+                        <div class="team-member-holder" data-hover="">
+                            <div class="team-img no-radius">
+                                <img src="<?= base_url('frontend/assets/images/team/grid/gem-thrissur.jpg') ?>" class="square-img" alt="Thrissur" class="img-coim1" />
 
 
-                                    <div class="team-hover">
-                                        <div class="team-action">
-                                            <div class="team-zoom">
-                                                <i class="far fa-eye"></i><a class="" href="https://gemhospitalthrissur.in/" title=""></a>
-                                            </div>
+                                <div class="team-hover">
+                                    <div class="team-action">
+                                        <div class="team-zoom">
+                                            <i class="far fa-eye"></i><a class="" href="https://gemhospitalthrissur.in/" title="Thrissur"></a>
                                         </div>
-                                        <!-- End .team-action -->
                                     </div>
-                                    <!-- End .team-hover-->
+                                    <!-- End .team-action -->
                                 </div>
-                                <div class="row px-3 py-4" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <!-- End .team-hover-->
+                            </div>
+                            <div class="row px-3" style=" background-color: #0d3e21; width: -webkit-fill-available; position: relative; border-color: #0d3e21;" class="div-ex">
+                                <a href="https://gemhospitalthrissur.in/" class=" py-4">
                                     <div class="col-12 mb-2">
                                         <h2 class="mb-0" style=" font-size: 28px; color: white;">
                                             Thrissur
@@ -736,42 +587,16 @@
                                     <div class="col-12 d-flex flex-row justify-content-between">
                                         <div class=" flex-fill">
 
-                                            <p class="m-0 text-truncate" style="
-                         
-                        
-                         color: white;
-                         font-size: 16px;
-                       
-                         font-weight: lighter;
-                       ">
-                                                <span>
-                                                    <i class="fas fa-map-marker me-2" style="
-                        font-size: 18px;
-                       
-                        color: #118b0f;
-                        
-                      "></i>
-                                                </span>
+                                            <p class="m-0 text-truncate" style="color: white;font-size: 16px;font-weight: lighter;">
+                                                <span> <i class="fas fa-map-marker me-2" style="font-size: 18px;color: #118b0f;"></i> </span>
                                                 PARAVATHANI
                                             </p>
                                         </div>
                                         <div class="">
-                                            <p class="d-flex flex-row m-0   text-truncate" style="
-                          
-                          color: white;
-                          font-size: 16px;
-                          
-                          font-weight: lighter;
-                          text-align: end;
-                        ">
+                                            <p class="d-flex flex-row m-0   text-truncate" style="  color: white; font-size: 16px;  font-weight: lighter; text-align: end;">
                                                 <span> Contact Now</span>
                                                 <span>
-                                                    <a class="" href="https://gemhospitalthrissur.in/"><i class="ms-2 fas fa-arrow-right" style="
-                        font-size: 16px;
-                       
-                        color: white;
-                        
-                      "></i></a>
+                                                    <i class="ms-2 fas fa-arrow-right" style="font-size: 16px;color: white;"></i>
                                                 </span>
                                             </p>
 
@@ -779,17 +604,15 @@
                                     </div>
 
 
-
-
-
-
-                                </div>
-                                <!-- End .team-img-->
+                                </a>
                             </div>
-                            <!-- End .team-member-holder-->
-                        </div>
 
+                            <!-- End .team-img-->
+                        </div>
+                        <!-- End .team-member-holder-->
                     </div>
+
+
                     <style>
                         @media screen and (max-width: 600px) {
                             .fa-arrow-right {
