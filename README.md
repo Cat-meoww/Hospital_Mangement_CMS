@@ -65,3 +65,18 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+##  MYSQL EVENTS
+
+```SQL
+CREATE DEFINER=`root`@`localhost` EVENT `delete_expired_bookings` ON SCHEDULE EVERY 5 MINUTE STARTS '2023-12-12 16:00:00' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+    DELETE FROM video_bookings
+    WHERE id IN (
+        SELECT booking_id
+        FROM payments
+        WHERE expired_on <= CURRENT_TIMESTAMP AND status != 'SUCCESS'
+    );
+
+    INSERT INTO events_log (`event_name`) VALUES ('delete_expired_bookings');
+END
+```

@@ -13,7 +13,7 @@ class VideoBookings extends Model
 
     protected $returnType     = 'object';
 
-    protected $allowedFields = ['firstname', 'lastname', 'phone', 'email', 'service', 'doctor', 'booking_date', 'slot_id', 'start_time', 'end_time', 'message'];
+    protected $allowedFields = ['firstname', 'lastname', 'phone', 'email', 'service', 'doctor', 'booking_date', 'slot_id', 'start_time', 'transaction_id' ,'end_time', 'message'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';

@@ -150,3 +150,11 @@ if (!function_exists("renderDataAttributes")) {
         return $renderedAttributes;
     }
 }
+
+if (!function_exists("addDateTime")) {
+    function addDateTime(int $minutes)
+    {
+        $time = Time::now('Asia/Kolkata');
+        return $time->addMinutes($minutes)->toDateTimeString();
+    }
+}

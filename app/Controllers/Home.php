@@ -458,6 +458,8 @@ class Home extends BaseController
                 'transaction_id' => $transaction_id,
                 'status' => "INIT",
                 'order_id' => $order->id,
+                'amount' => $amount,
+                'expired_on' => addDateTime(10),
             ]);
 
             return true;
@@ -473,7 +475,7 @@ class Home extends BaseController
             $VideoBookings = new \App\Models\VideoBookings();
 
 
-            if (!$payment = $Payments->where('transaction_id', $transaction_id)->where('status', 'INIT')->first()) {
+            if (!$payment = $Payments->where('transaction_id', $transaction_id)->where('expired_on >',$this->date)->whereIn('status', ['INIT', 'FAILED'])->first()) {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
             }
             $customer = $VideoBookings->find($payment->booking_id);

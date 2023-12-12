@@ -84,6 +84,7 @@ $routes->get('/doctor/(:any)', 'Home::doctor_info/$1');
 $routes->group('payment', function ($routes) {
     $routes->get('checkout/(:uuid)', 'Home::payment_checkout/$1');
     $routes->post('verify', 'Home::payment_verify');
+    $routes->post('webhook', 'Payments::webhook_handler');
 });
 
 $routes->group('appointment', function ($routes) {

@@ -14,7 +14,7 @@ class Payments extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['booking_id', 'transaction_id', 'status', 'order_id', 'payment_id', 'verify_signature'];
+    protected $allowedFields = ['booking_id', 'transaction_id', 'amount', 'status', 'order_id', 'payment_id', 'verify_signature','method','expired_on'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';
