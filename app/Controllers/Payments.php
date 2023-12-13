@@ -63,11 +63,7 @@ class Payments extends BaseController
                     break;
             }
             
-           
-
-
-
-
+        
             return $this->respond([
                 'status' => 'ok',
             ]);
