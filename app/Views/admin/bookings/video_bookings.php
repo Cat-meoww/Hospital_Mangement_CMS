@@ -18,10 +18,7 @@
 <div class="grid grid-cols-1 gap-3">
 
     <div class="flex gap-3 justify-end">
-
-
-
-
+        
         <div x-data="modals">
             <div class="flex items-center ">
 
@@ -59,10 +56,14 @@
                                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">To Date</label>
                                         <input type="date" value="<?= date('Y-m-d') ?>" required="" class="form-input" id="ss-to">
                                     </div>
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Payment Status</label>
+                                        <?= form_dropdown('pay-status', $Options['payment_status'], '', 'id="ss-pay-status"   width="100%" data-placeholder="Select an option" class="select2 form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"'); ?>
+                                    </div>
 
 
                                     <div class="flex justify-end items-center mt-4 gap-4 col-span-2">
-                                        <button @click="toggle"  class="reload-datatable btn text-black dark:text-white border hover:bg-lightgreen-100 dark:hover:bg-lightgreen-100 border-lightgreen-100 bg-transparent hover:text-black">Submit</button>
+                                        <button @click="toggle" class="reload-datatable btn text-black dark:text-white border hover:bg-lightgreen-100 dark:hover:bg-lightgreen-100 border-lightgreen-100 bg-transparent hover:text-black">Submit</button>
                                     </div>
 
                                 </div>
@@ -80,49 +81,45 @@
 
 
     <include src="/"></include>
-    <?php if (count($Dataset) == 0) : ?>
-        <div class="border border-black/10 dark:border-white/10 p-5 flex justify-center items-center rounded-md">
-            <div>
-                <p class="text-sm font-semibold">No Enquiries</p>
-            </div>
-        </div>
-    <?php else : ?>
-        <div class="border bg-lightwhite dark:bg-white/5 dark:border-white/10 border-black/10 p-5 rounded-md">
-            <div class="px-2 py-1 mb-4">
-                <h2 class="text-lg font-semibold">Video Booking Enquiries</h2>
-            </div>
 
-
-
-
-
-            <div class>
-                <table id="ss-datatable" class="whitespace-nowrap table-hover table-bordered" role="grid" aria-describedby="user-list-page-info">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">FirstName</th>
-                            <th scope="col">LastName</th>
-                            <th scope="col">Phone Number</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Doctor</th>
-                            <th scope="col">Service</th>
-                            <th scope="col">Booking Date</th>
-                            <th scope="col">Time Slot</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-
-
-                    </tbody>
-                </table>
-            </div>
-
-
+    <div class="border bg-lightwhite dark:bg-white/5 dark:border-white/10 border-black/10 p-5 rounded-md">
+        <div class="px-2 py-1 mb-4 flex items-center justify-between">
+            <h2 class="text-lg font-semibold">Video Booking Enquiries </h2>
+            <span id="display-date" class="flex items-center text-xs text-black/40 dark:text-white/40"></span>
         </div>
 
-    <?php endif ?>
+
+
+
+
+        <div class>
+            <table id="ss-datatable" class="whitespace-nowrap table-hover table-bordered" role="grid" aria-describedby="user-list-page-info">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Doctor</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Booking Date</th>
+                        <th scope="col">Time Slot</th>
+                        <th scope="col">Payment Status</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
 
 </div>
 
@@ -146,12 +143,21 @@
                 $('#ss-datatable').dataTable().fnDestroy()
             }
 
-            var dbtable = $('#ss-datatable').DataTable({
+            let dbtable = $('#ss-datatable').DataTable({
+                "initComplete": function(settings, json) {
 
+                    const from = $('#ss-from').val();
+                    const to = $('#ss-to').val();
+                    if (from == to) {
+                        $("#display-date").html(new Date(from).toLocaleDateString('en-GB'))
+                        return
+                    }
+                    $("#display-date").html(new Date(from).toLocaleDateString('en-GB') + " <=> " + new Date(to).toLocaleDateString('en-GB'))
+                },
                 search: {
                     return: true,
                 },
-                perPageSelect: [10, 20, 30, 40, 50],
+
 
                 "processing": true,
                 "serverSide": true,
@@ -164,6 +170,7 @@
                         datetype: $('#ss-datetype').val(),
                         from_date: $('#ss-from').val(),
                         to_date: $('#ss-to').val(),
+                        pay_status: $('#ss-pay-status').val(),
                     }
                 },
 
@@ -193,7 +200,28 @@
                     {
                         targets: '_all',
                         orderable: false
-                    } // Disable sorting for all other columns
+                    }, // Disable sorting for all other columns
+                    {
+                        "targets": 9,
+                        "render": function(data) {
+                            if (data == "SUCCESS") {
+                                return `<div class="flex items-center text-xs text-[#4AA785] ">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                                    </svg>
+                                                    <p>${data}</p>
+                                        </div>`;
+                            } else {
+                                return `<div class="flex items-center text-xs text-black/40 dark:text-white/40">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                                    </svg>
+                                                    <p>${data}</p>
+                                        </div>`;
+                            }
+
+                        }
+                    }
                 ]
             });
         }

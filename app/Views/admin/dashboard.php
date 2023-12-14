@@ -15,7 +15,7 @@
                 </svg>
             </div>
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl leading-9 font-semibold text-black">1000</h2>
+                <h2 class="text-2xl leading-9 font-semibold text-black"><?= $dataset['bookings']['total'] ?></h2>
             </div>
         </div>
         <div class="bg-lightpurple-100 rounded-2xl p-6">
@@ -31,7 +31,7 @@
                 </svg>
             </div>
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl leading-9 font-semibold text-black">715</h2>
+                <h2 class="text-2xl leading-9 font-semibold text-black"><?= $dataset['bookings']['general'] ?></h2>
             </div>
         </div>
         <div class="bg-lightblue-100 rounded-2xl p-6">
@@ -47,7 +47,7 @@
                 </svg>
             </div>
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl leading-9 font-semibold text-black">31</h2>
+                <h2 class="text-2xl leading-9 font-semibold text-black"><?= $dataset['bookings']['video'] ?></h2>
             </div>
         </div>
 
@@ -65,7 +65,7 @@
                 </svg>
             </div>
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl leading-9 font-semibold text-black">29</h2>
+                <h2 class="text-2xl leading-9 font-semibold text-black"><?= $dataset['bookings']['today']['general'] ?></h2>
             </div>
         </div>
         <div class="bg-lightpurple-100 rounded-2xl p-6">
@@ -81,18 +81,18 @@
                 </svg>
             </div>
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl leading-9 font-semibold text-black">715</h2>
+                <h2 class="text-2xl leading-9 font-semibold text-black"><?= $dataset['bookings']['today']['video'] ?></h2>
             </div>
         </div>
 
 
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-7">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
         <div class="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
-            <h2 class="text-sm font-semibold text-black dark:text-white mb-4">General Bookings based on location</h2>
+            <h2 class="text-sm font-semibold text-black dark:text-white mb-4">General Bookings - <?= $dataset['piechart']['date'] ?></h2>
             <div id="projectstatus"></div>
         </div>
-        <div class="lg:col-span-3 bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
+        <div class="lg:col-span-2 bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
             <h2 class="text-sm font-semibold text-black dark:text-white mb-4">Recent Video Bookings</h2>
             <div class="table-responsive">
                 <table class="table-hover min-w-[640px]">
@@ -170,6 +170,45 @@
                             </td>
 
                         </tr>
+                        <tr>
+                            <td class="whitespace-nowrap">Gowri</td>
+
+                            <td>Upper GI Surgery</td>
+                            <td>2023-11-30</td>
+                            <td class="flex items-center text-xs text-[#FFC555] py-3">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                </svg>
+                                <p>Failed</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap">Gowri</td>
+
+                            <td>Upper GI Surgery</td>
+                            <td>2023-11-30</td>
+                            <td class="flex items-center text-xs text-[#FFC555] py-3">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                </svg>
+                                <p>Failed</p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap">Gowri</td>
+
+                            <td>Upper GI Surgery</td>
+                            <td>2023-11-30</td>
+                            <td class="flex items-center text-xs text-[#FFC555] py-3">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
+                                </svg>
+                                <p>Failed</p>
+                            </td>
+
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -188,10 +227,10 @@
 <script src="<?= base_url('admin/assets/js/apexcharts.js') ?>"></script>
 <script>
     var projectstatus = {
-        series: [100, 200, 100],
+        series: JSON.parse(`<?= json_encode($dataset['piechart']['dataset']) ?>`),
         chart: {
             type: "donut",
-            height: 250,
+            height: 320,
             fontFamily: "Nunito, sans-serif",
         },
         dataLabels: {
@@ -206,7 +245,7 @@
                 height: 6,
                 offsetX: -5,
             },
-            height: 30,
+
             offsetY: 16,
         },
         plotOptions: {
@@ -228,7 +267,7 @@
                             color: "#1c1c1c",
                             offsetY: 5,
                             formatter: (val) => {
-                                return val + "%";
+                                return val;
                             },
                         },
                         total: {
@@ -237,16 +276,19 @@
                             color: "#1c1c1c",
                             fontSize: "16px",
                             formatter: (val) => {
-                                return 100 + "%";
+                                return val.globals.seriesTotals.reduce((a, b) => {
+                                    return a + b
+                                }, 0)
                             },
                         },
                     },
                 },
             },
         },
-        colors: ["#1C1C1C", "#BAEDBD", "#C6C7F8"],
-        labels: ["Video bookings", "General", "Behind"],
+        colors: ['#59A8D4', "#1C1C1C", "#BAEDBD", "#C6C7F8", '#FFC555'],
+        labels: JSON.parse(`<?= json_encode($dataset['piechart']['label']) ?>`),
         states: {
+            
             hover: {
                 filter: {
                     type: "none",

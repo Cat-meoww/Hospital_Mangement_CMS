@@ -42,7 +42,7 @@ class bookings extends General
 
         $VideoBookings = new \App\Models\VideoBookings();
         $this->data['title'] = "Video Booking Enquires";
-        $this->data['Dataset'] = $VideoBookings->orderBy('created_on', 'DESC')->findAll();
+        
 
 
         $this->data['Options'] = [
@@ -51,6 +51,12 @@ class bookings extends General
             'date_types' => [
                 'ENTRY' => "Entry Date Wise",
                 'BOOKING' => "Booking Date Wise"
+            ],
+            'payment_status' => [
+                'ALL' => "All",
+                'INIT' => "Init",
+                'SUCCESS' => "Success",
+                'FAILED' => "Failed",
             ]
         ];
         return view('admin/bookings/video_bookings', $this->data);
@@ -113,31 +119,38 @@ class bookings extends General
     {
         try {
             // sleep(10);
-            $ordercol = ['id', 'firstname', 'lastname', 'phone', 'email', 'id', 'id', 'booking_date', 'start_time'];
+            $ordercol = ['video_bookings.id', 'video_bookings.firstname', 'video_bookings.lastname', 'video_bookings.phone', 'video_bookings.email', 'video_bookings.id', 'video_bookings.id', 'video_bookings.booking_date', 'video_bookings.start_time'];
             $VideoBookings = new \App\Models\VideoBookings();
             $sql = $VideoBookings->select();
 
             $recordsTotal = $sql->countAllResults(false);
 
+
+            $sql->select('video_bookings.*,payments.status');
+            $sql->join('payments', 'payments.booking_id = video_bookings.id', 'inner');
+
             $PostData = [
                 'datetype' => $this->request->getVar('datetype'),
                 'from_date' =>  $this->request->getVar('from_date'),
                 'to_date' => $this->request->getVar('to_date'),
+                'pay_status' => $this->request->getVar('pay_status'),
             ];
             $rules  = [
                 'datetype' => 'in_list[BOOKING,ENTRY]',
                 'from_date' => 'required|valid_date[Y-m-d]',
                 'to_date' => 'required|valid_date[Y-m-d]',
+                'pay_status' => 'in_list[ALL,INIT,SUCCESS,FAILED]',
             ];
 
             if ($this->validateData($PostData, $rules)) {
                 $datetype = $this->request->getVar('datetype');
                 $from_date = $this->request->getVar('from_date');
                 $to_date = $this->request->getVar('to_date');
+                $pay_status = $this->request->getVar('pay_status');
 
                 switch ($datetype) {
                     case 'ENTRY':
-                        $sql = $sql->where('created_on >=', $from_date)->where('created_on <=', $to_date);
+                        $sql = $sql->where('date(video_bookings.created_on) >=', $from_date)->where('date(video_bookings.created_on) <=', $to_date);
                         break;
                     case 'BOOKING':
                         $sql = $sql->where('booking_date >=', $from_date)->where('booking_date <=', $to_date);
@@ -147,18 +160,22 @@ class bookings extends General
 
                         break;
                 }
+
+                if ($pay_status != "ALL") {
+                    $sql = $sql->where('payments.status', $pay_status);
+                }
             }
 
 
             if ($this->request->getVar('search[value]')) {
                 $filterval = $this->request->getPost('search[value]');
                 $sql =  $sql->groupStart()
-                    ->like('id', $filterval)
-                    ->orLike('firstname', $filterval)
-                    ->orLike('lastname', $filterval)
-                    ->orLike('phone', $filterval)
-                    ->orLike('email', $filterval)
-                    ->orLike('booking_date', $filterval)
+                    ->like('video_bookings.id', $filterval)
+                    ->orLike('video_bookings.firstname', $filterval)
+                    ->orLike('video_bookings.lastname', $filterval)
+                    ->orLike('video_bookings.phone', $filterval)
+                    ->orLike('video_bookings.email', $filterval)
+                    ->orLike('video_bookings.booking_date', $filterval)
                     ->groupEnd();
             }
 
@@ -170,7 +187,7 @@ class bookings extends General
                 $sql = $sql->orderBy($columnname, $coldir);
             } else {
                 //default
-                $sql = $sql->orderBy('id', "DESC");
+                $sql = $sql->orderBy('video_bookings.id', "DESC");
             }
             $recordsFiltered = $sql->countAllResults(false);
             if ($this->request->getPost('length') != -1) {
@@ -193,6 +210,7 @@ class bookings extends General
                 $subarray[] = $services[$row->service] ?? "unknown";
                 $subarray[] = $row->booking_date;
                 $subarray[] = analogueFormate($row->start_time)  . " - " . analogueFormate($row->end_time);
+                $subarray[] = $row->status;
 
                 $data[] = $subarray;
             }
