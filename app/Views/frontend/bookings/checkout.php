@@ -13,7 +13,7 @@
         <img src="<?= base_url("frontend/assets/images/page-titles/s1.png") ?>" alt="background" />
     </div>
     <div class="container">
-        <div class="hero-content" style="padding-bottom: 120px !important">
+        <div class="hero-content pb-5" >
             <div class="row">
                 <div class="col-12 col-lg-5">
                     <h2 class="hero-title" style="margin-top: 60px">
@@ -25,6 +25,7 @@
                 <div class="col-12" style="margin-top: 30px">
                     <ol class="breadcrumb d-flex justify-content-center">
                         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <li class=""><a href="">Payment</a></li>
                         <li class=""><a href="">Checkout</a></li>
 
                     </ol>
@@ -70,7 +71,7 @@
             <div class="col-12 col-lg-6">
                 <div class="checkout-widget">
                     <div class="widget-title">
-                        <h5>Place Order</h5>
+                        <h5>Checkout </h5>
                     </div>
                     <div class="checkout-body">
                         <div class="row">
@@ -82,7 +83,7 @@
                                             <div class="row no-gutters">
                                                 <p> Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
                                                 <div class="col-12 d-flex justify-content-start">
-                                                    <input class="btn btn--primary" id="checkout-btn" type="submit" value="Place Order">
+                                                    <input class="btn btn--primary" id="checkout-btn" type="submit" value="Pay Now">
                                                 </div>
                                             </div>
                                         </form>

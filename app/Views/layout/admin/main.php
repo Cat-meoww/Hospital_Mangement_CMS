@@ -49,8 +49,8 @@ $uri = service('uri');
 
                 <div class="flex p-4">
                     <a href="<?= base_url('/') ?>" class="main-logo flex-1 w-full">
-                        <img src="<?= base_url() ?>admin/assets/images/logo.svg" alt="logo" class="block dark:hidden" />
-                        <img src="<?= base_url() ?>admin/assets/images/dark-logo.svg" alt="logo" class="hidden dark:block" />
+                        <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/logo.svg" alt="logo" class="block dark:hidden" />
+                        <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/dark-logo.svg" alt="logo" class="hidden dark:block" />
                     </a>
                 </div>
 
@@ -310,7 +310,7 @@ $uri = service('uri');
                     <div class="flex flex-col gap-4">
                         <div class="flex gap-2">
                             <div class="h-6 w-6 flex-none rounded-full overflow-hidden">
-                                <img src="<?= base_url() ?>admin/assets/images/avatar-1.png" class="object-cover" alt="avatar" />
+                                <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-1.png" class="object-cover" alt="avatar" />
                             </div>
                             <div class="flex-1">
                                 <p class="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-black dark:text-white">
@@ -320,7 +320,7 @@ $uri = service('uri');
                         </div>
                         <div class="flex gap-2">
                             <div class="h-6 w-6 flex-none rounded-full overflow-hidden">
-                                <img src="<?= base_url() ?>admin/assets/images/avatar-2.png" class="object-cover" alt="avatar" />
+                                <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-2.png" class="object-cover" alt="avatar" />
                             </div>
                             <div class="flex-1">
                                 <p class="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-black dark:text-white">
@@ -330,7 +330,7 @@ $uri = service('uri');
                         </div>
                         <div class="flex gap-2">
                             <div class="h-6 w-6 flex-none rounded-full overflow-hidden">
-                                <img src="<?= base_url() ?>admin/assets/images/avatar-3.png" class="object-cover" alt="avatar" />
+                                <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-3.png" class="object-cover" alt="avatar" />
                             </div>
                             <div class="flex-1">
                                 <p class="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-black dark:text-white">
@@ -340,7 +340,7 @@ $uri = service('uri');
                         </div>
                         <div class="flex gap-2">
                             <div class="h-6 w-6 flex-none rounded-full overflow-hidden">
-                                <img src="<?= base_url() ?>admin/assets/images/avatar-4.png" class="object-cover" alt="avatar" />
+                                <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-4.png" class="object-cover" alt="avatar" />
                             </div>
                             <div class="flex-1">
                                 <p class="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-black dark:text-white">
@@ -350,7 +350,7 @@ $uri = service('uri');
                         </div>
                         <div class="flex gap-2">
                             <div class="h-6 w-6 flex-none rounded-full overflow-hidden">
-                                <img src="<?= base_url() ?>admin/assets/images/avatar-5.png" class="object-cover" alt="avatar" />
+                                <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-5.png" class="object-cover" alt="avatar" />
                             </div>
                             <div class="flex-1">
                                 <p class="whitespace-nowrap overflow-hidden text-ellipsis w-[200px] text-black dark:text-white">
@@ -364,27 +364,27 @@ $uri = service('uri');
                     <h4 class="font-semibold text-black dark:text-white mb-5">Contacts</h4>
                     <div class="flex flex-col gap-4">
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-6.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low"  src="<?= base_url() ?>admin/assets/images/avatar-6.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Natali Craig</p>
                         </div>
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-7.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-7.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Drew Cano</p>
                         </div>
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-8.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-8.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Orlando Diggs</p>
                         </div>
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-9.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-9.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Andi Lane</p>
                         </div>
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-10.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-10.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Kate Morrison</p>
                         </div>
                         <div class="flex gap-2 items-center">
-                            <img src="<?= base_url() ?>admin/assets/images/avatar-11.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
+                            <img loading="lazy" fetchpriority="low" src="<?= base_url() ?>admin/assets/images/avatar-11.png" class="h-6 w-6 flex-none rounded-full object-cover" alt="avatar" />
                             <p class="text-black dark:text-white">Koray Okumus</p>
                         </div>
                     </div>

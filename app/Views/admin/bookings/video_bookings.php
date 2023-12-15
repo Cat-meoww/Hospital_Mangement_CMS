@@ -18,7 +18,7 @@
 <div class="grid grid-cols-1 gap-3">
 
     <div class="flex gap-3 justify-end">
-        
+
         <div x-data="modals">
             <div class="flex items-center ">
 
@@ -131,6 +131,10 @@
 <script src="<?= base_url('admin/assets/js/jquery.dataTables.min.js') ?>"></script>
 <script src="<?= base_url('admin/assets/js/dataTables.bootstrap4.min.js') ?>"></script>
 
+<!-- ExcelButton -->
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src=" https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 
 
 <script>
@@ -179,7 +183,16 @@
                 orderClasses: true,
                 searchable: true,
                 perPage: 10,
-                lengthMenu: [10, 20, 30, 40, 50],
+                lengthMenu: [
+                    [10, 20, 30, 40, 50, -1],
+                    [10, 20, 30, 40, 50, "All"]
+                ],
+                dom: "<'dataTable-top'<'dataTable-dropdown'l><'dataTable-export'B><'dataTable-search'f>><'dataTable-container'<'col-sm-12'tr>><'dataTable-bottom'<'dataTable-info'i><'dataTable-pagination'p>>",
+                buttons: [{
+                    extend: 'excel',
+                    className: 'btn py-1 px-3 text-[11.5px] text-black dark:text-white border hover:bg-lightgreen-100 dark:hover:bg-lightgreen-100 border-lightgreen-100 bg-transparent hover:text-black ',
+                    text: 'Excel'
+                }],
 
                 language: {
                     paginate: {

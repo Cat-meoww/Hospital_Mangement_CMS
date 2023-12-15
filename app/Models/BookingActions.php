@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class GeneralBookings extends Model
+class BookingActions extends Model
 {
-    protected $table      = 'general_bookings';
+    protected $table      = 'booking_actions';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
@@ -14,7 +14,7 @@ class GeneralBookings extends Model
     protected $returnType     = 'object';
 
 
-    protected $allowedFields = ['branch', 'service', 'name', 'age', 'message', 'phone', 'email', 'booking_date', 'follow_date', 'revenue', 'status'];
+    protected $allowedFields = ['booking_id', 'action', 'comments', 'created_by'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';

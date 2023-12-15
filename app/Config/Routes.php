@@ -242,6 +242,8 @@ $routes->group('api', static function ($routes) {
         $routes->group('datatables', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
             $routes->group('bookings', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
                 $routes->post('video', 'bookings::video_datatable');
+                $routes->post('general', 'bookings::general_datatable');
+                $routes->post('general/update_status', 'bookings::general_update_status');
             });
         });
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
