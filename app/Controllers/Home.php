@@ -23,7 +23,7 @@ class Home extends BaseController
         $this->data['uri']  = service('uri');
         helper(['url', 'session', 'custom', 'number', 'form']);
         $this->data['title'] = "";
-        $this->date = date("Y-m-d h:i:s");
+        $this->date = date("Y-m-d H:i:s");
         $this->db = db_connect();
     }
     public function index()

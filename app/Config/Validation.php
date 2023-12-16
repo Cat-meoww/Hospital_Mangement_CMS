@@ -44,6 +44,7 @@ class Validation extends BaseConfig
         'display-error' => 'App\Views\layout\frontend\components\alert-single',
         'alert-info-list' => 'App\Views\layout\admin\components\alert-list',
         'alert-row' => 'App\Views\layout\admin\components\alert-row',
+        'alert-label' => 'App\Views\layout\admin\components\alert-label',
 
     ];
 

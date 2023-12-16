@@ -101,6 +101,11 @@ $routes->group('auth', function ($routes) {
     $routes->add('register', 'Login::index');
     $routes->post('login/check', 'Login::auth_check');
     $routes->post('login/register', 'Login::register');
+
+    $routes->add('password_reset', 'Login::forgot_pwd');
+    $routes->post('password_reset/check', 'Login::forgot_pwd_check');
+    $routes->add('password_reset/(:uuid)', 'Login::password_reset_view/$1');
+    $routes->add('password_verify/(:uuid)', 'Login::password_verify/$1');
     // Redirect to a named route
     $routes->addRedirect('/', 'login');
 });
@@ -109,6 +114,7 @@ $routes->get('redirect-to-dashboard', 'Login::user_dashboard');
 
 $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
     $routes->add('dashboard', 'admin::index');
+    $routes->add('profile', 'admin::profile');
     $routes->group('all-master', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->add('locations', 'location::index');
         $routes->add('services', 'services::index');
@@ -255,14 +261,18 @@ $routes->group('api', static function ($routes) {
                 $routes->post('monthly', 'dashboard::video_monthly');
             });
         });
+        $routes->group('profile', static function ($routes) {
+            $routes->group('update', static function ($routes) {
+                $routes->post('info', 'users::update_info');
+                $routes->post('pwd', 'users::update_pwd');
+            });
+        });
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
 
             $routes->group('doctor', static function ($routes) {
                 $routes->add('upsert', 'pages::upsert_doctor');
                 $routes->add('delete', 'pages::upsert_doctor');
             });
-
-            
         });
     });
 

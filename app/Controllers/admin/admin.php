@@ -86,9 +86,9 @@ class admin extends General
     public function profile()
     {
         $userModel = new UserModel();
-        $allUserData = $userModel->where('user_role', 3)->findAll();
-        $this->data['title'] = "Client Management";
+        $allUserData = $userModel->select('users.*,user_role.role_name')->join('user_role', 'user_role.id=users.user_role', 'inner')->find($this->session->user_id);
+        $this->data['title'] = "Profile";
         $this->data['user'] = $allUserData;
-        return view('admin/users/client_management', $this->data);
+        return view('admin/profile', $this->data);
     }
 }

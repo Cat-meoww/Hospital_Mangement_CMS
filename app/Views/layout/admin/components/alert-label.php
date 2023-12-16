@@ -1,0 +1,1 @@
+<p class="text-lightred mt-2"><?= esc($error) ?></p>

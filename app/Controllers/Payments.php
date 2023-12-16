@@ -19,7 +19,7 @@ class Payments extends BaseController
 
     public function __construct()
     {
-        $this->date = date("Y-m-d h:i:s");
+        $this->date = date("Y-m-d H:i:s");
         $this->razorpay_key = env('RAZORPAY_API_KEY');
         $this->razorpay_secret = env('RAZORPAY_API_SECRET');
         $this->razorpay_webhook_secret = env('RAZORPAY_WEBHOOK_SECRET');
