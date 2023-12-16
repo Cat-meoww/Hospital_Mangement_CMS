@@ -89,8 +89,19 @@
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
         <div class="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
-            <h2 class="text-sm font-semibold text-black dark:text-white mb-4">General Bookings - <?= $dataset['piechart']['date'] ?></h2>
-            <div id="projectstatus"></div>
+            <div class="flex gap-3">
+                <h2 class="text-sm font-semibold text-black dark:text-white mb-4 flex-1">General Bookings - <?= $dataset['piechart']['date'] ?></h2>
+                <div>
+                    <select id="general-branch-wise-date" class="form-select py-1 px-3 text-[11.5px] w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
+                        <option value="entry">Entry Date</option>
+                        <option value="booking">Booking Date</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="btn py-1 px-3 text-[11.5px]" id="general-branch-wise-reload">&#8635;</button>
+                </div>
+            </div>
+            <div id="general-branch-wise"></div>
         </div>
         <div class="lg:col-span-2 bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
             <h2 class="text-sm font-semibold text-black dark:text-white mb-4">Recent Video Bookings</h2>
@@ -216,8 +227,40 @@
     </div>
     <div class="grid grid-cols-1">
         <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
-            <h2 class="text-sm font-semibold text-black dark:text-white mb-4">Monthly Video bookings</h2>
-            <div id="taskoverview"></div>
+            <div class="flex gap-3">
+                <h2 class="text-sm font-semibold text-black dark:text-white mb-4 flex-1">Monthly General bookings</h2>
+                <div>
+                    <select id="monthly-general-date" class="form-select py-1 px-3 text-[11.5px] w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
+                        <option value="entry">Entry Date</option>
+                        <option value="booking">Booking Date</option>
+
+                    </select>
+                </div>
+                <div>
+                    <button class="btn py-1 px-3 text-[11.5px]" id="monthly-general-bookings-reload">&#8635;</button>
+                </div>
+            </div>
+
+            <div id="monthly-general-bookings"></div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1">
+        <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
+            <div class="flex gap-3">
+                <h2 class="text-sm font-semibold text-black dark:text-white mb-4 flex-1">Monthly Video bookings</h2>
+                <div>
+                    <select id="monthly-video-date" class="form-select py-1 px-3 text-[11.5px] w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;">
+                        <option value="entry">Entry Date</option>
+                        <option value="booking">Booking Date</option>
+
+                    </select>
+                </div>
+                <div>
+                    <button class="btn py-1 px-3 text-[11.5px]" id="monthly-video-bookings-reload">&#8635;</button>
+                </div>
+            </div>
+
+            <div id="monthly-video-bookings"></div>
         </div>
     </div>
 </div>
@@ -226,135 +269,247 @@
 <?= $this->section('footer') ?>
 <script src="<?= base_url('admin/assets/js/apexcharts.js') ?>"></script>
 <script>
-    var projectstatus = {
-        series: JSON.parse(`<?= json_encode($dataset['piechart']['dataset']) ?>`),
-        chart: {
-            type: "donut",
-            height: 320,
-            fontFamily: "Nunito, sans-serif",
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        legend: {
-            position: "bottom",
-            horizontalAlign: "center",
-            fontSize: "12px",
-            markers: {
-                width: 6,
-                height: 6,
-                offsetX: -5,
+    const chartConfig = {
+        bar: {
+            chart: {
+                height: 236,
+                type: "bar",
+                events: {
+                    click: function(chart, w, e) {},
+                },
+                toolbar: {
+                    show: false,
+                },
             },
-
-            offsetY: 16,
+            colors: ["#A8C5DA"],
+            plotOptions: {
+                bar: {
+                    columnWidth: "30%",
+                    distributed: true,
+                },
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            legend: {
+                show: false,
+            },
+            yaxis: {
+                tickAmount: 5,
+                labels: {
+                    offsetX: -10,
+                    offsetY: 0,
+                    style: {
+                        fontSize: "12px",
+                    },
+                },
+                opposite: false,
+            },
+            series: [{
+                name: "This Year",
+                data: [],
+            }, ],
+            xaxis: {
+                categories: [],
+                labels: {
+                    style: {
+                        fontSize: "12px",
+                        color: "rgb(55, 61, 63)",
+                    },
+                },
+            },
+            noData: {
+                text: 'Loading...'
+            }
         },
-        plotOptions: {
-            pie: {
-                donut: {
-                    size: "65%",
-                    background: "transparent",
-                    labels: {
-                        show: true,
-                        name: {
+        donut: {
+            series: [],
+            chart: {
+                type: "donut",
+                height: 320,
+                fontFamily: "Nunito, sans-serif",
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            legend: {
+                position: "bottom",
+                horizontalAlign: "center",
+                fontSize: "12px",
+                markers: {
+                    width: 6,
+                    height: 6,
+                    offsetX: -5,
+                },
+
+                offsetY: 16,
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: "65%",
+                        background: "transparent",
+                        labels: {
                             show: true,
-                            fontSize: "16px",
-                            offsetY: 0,
-                            color: "#1c1c1c",
-                        },
-                        value: {
-                            show: true,
-                            fontSize: "14px",
-                            color: "#1c1c1c",
-                            offsetY: 5,
-                            formatter: (val) => {
-                                return val;
+                            name: {
+                                show: true,
+                                fontSize: "16px",
+                                offsetY: 0,
+                                color: "#1c1c1c",
                             },
-                        },
-                        total: {
-                            show: true,
-                            label: "Total",
-                            color: "#1c1c1c",
-                            fontSize: "16px",
-                            formatter: (val) => {
-                                return val.globals.seriesTotals.reduce((a, b) => {
-                                    return a + b
-                                }, 0)
+                            value: {
+                                show: true,
+                                fontSize: "14px",
+                                color: "#1c1c1c",
+                                offsetY: 5,
+                                formatter: (val) => {
+                                    return val;
+                                },
+                            },
+                            total: {
+                                show: true,
+                                label: "Total",
+                                color: "#1c1c1c",
+                                fontSize: "16px",
+                                formatter: (val) => {
+                                    return val.globals.seriesTotals.reduce((a, b) => {
+                                        return a + b
+                                    }, 0)
+                                },
                             },
                         },
                     },
                 },
             },
-        },
-        colors: ['#59A8D4', "#1C1C1C", "#BAEDBD", "#C6C7F8", '#FFC555'],
-        labels: JSON.parse(`<?= json_encode($dataset['piechart']['label']) ?>`),
-        states: {
-            
-            hover: {
-                filter: {
-                    type: "none",
-                    value: 0.15,
+            colors: ['#59A8D4', "#1C1C1C", "#BAEDBD", "#C6C7F8", '#FFC555'],
+            labels: [],
+            states: {
+
+                hover: {
+                    filter: {
+                        type: "none",
+                        value: 0.15,
+                    },
+                },
+                active: {
+                    filter: {
+                        type: "none",
+                        value: 0.15,
+                    },
                 },
             },
-            active: {
-                filter: {
-                    type: "none",
-                    value: 0.15,
-                },
-            },
+        }
+    }
+
+    const ProChart = {
+        charts: new Map(),
+        __init: function(containerId, {
+            chartType,
+            url,
+            payload,
+            reloadButtonId
+        }) {
+            const uuid = crypto.randomUUID();
+            let config = null;
+            switch (chartType) {
+                case 'bar':
+                    config = chartConfig.bar
+                    break;
+                case 'donut':
+                    config = chartConfig.donut
+                    break;
+
+                default:
+                    config = chartConfig.bar
+                    break;
+            }
+            const chart = new ApexCharts(document.querySelector(containerId), config);
+            chart.render();
+            this.charts.set(uuid, {
+                chartType,
+                chart,
+                url,
+                payload,
+            });
+            this.populate(uuid)
+
+
+            $(containerId).parent().find('select').data('uuid', uuid).change(this.reload)
+            $(reloadButtonId).data('uuid', uuid).click(this.reload)
+
         },
-    };
-    var chart4 = new ApexCharts(document.querySelector("#projectstatus"), projectstatus);
-    chart4.render();
-    var taskoverview = {
-        series: [{
-            name: "This Year",
-            data: [25, 38, 35, 29, 32, 28, 25, 32, 11, 18, 27, 30],
-        }, ],
-        chart: {
-            height: 236,
-            type: "bar",
-            events: {
-                click: function(chart, w, e) {},
-            },
-            toolbar: {
-                show: false,
-            },
+        populate: async function(uuid) {
+
+            try {
+                if (!this.charts.has(uuid)) return;
+
+                const data = this.charts.get(uuid)
+                const payload = data.payload
+                const formdata = new FormData();
+                for (const key in payload) {
+                    formdata.append(key, payload[key].val());
+                }
+                const url = data.url;
+                const options = {
+                    method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'same-origin',
+                    body: formdata,
+                }
+                const rawdata = await fetch(url, options);
+                const res = await rawdata.json();
+
+                if (res.status === "success") {
+
+                    if (data.chartType == "donut") {
+                        console.log(uuid)
+
+                        console.log(data.chart)
+                        await data.chart.updateSeries(res.data.series);
+                        data.chart.updateOptions({
+                            labels: res.data.labels
+                        })
+
+                    } else {
+                        data.chart.updateSeries([{
+                            data: res.data
+                        }])
+                    }
+
+                    return;
+                }
+            } catch (e) {
+                console.error(e)
+            }
         },
-        colors: ["#A8C5DA"],
-        plotOptions: {
-            bar: {
-                columnWidth: "30%",
-                distributed: true,
-            },
+        reload: function(e) {
+            ProChart.populate($(this).data('uuid'))
+        }
+    }
+    ProChart.__init('#general-branch-wise', {
+        chartType: 'donut',
+        reloadButtonId: "#general-branch-wise-reload",
+        url: '<?= base_url('api/admin/dashboard/general/branch-wise') ?>',
+        payload: {
+            date_type: $('#general-branch-wise-date')
         },
-        dataLabels: {
-            enabled: false,
+    })
+    ProChart.__init('#monthly-general-bookings', {
+        chartType: 'bar',
+        reloadButtonId: "#monthly-general-bookings-reload",
+        url: '<?= base_url('api/admin/dashboard/general/monthly') ?>',
+        payload: {
+            date_type: $('#monthly-general-date')
         },
-        legend: {
-            show: false,
+    })
+    ProChart.__init('#monthly-video-bookings', {
+        chartType: 'bar',
+        reloadButtonId: "#monthly-video-bookings-reload",
+        url: '<?= base_url('api/admin/dashboard/video/monthly') ?>',
+        payload: {
+            date_type: $('#monthly-video-date')
         },
-        yaxis: {
-            tickAmount: 5,
-            labels: {
-                offsetX: -10,
-                offsetY: 0,
-                style: {
-                    fontSize: "12px",
-                },
-            },
-            opposite: false,
-        },
-        xaxis: {
-            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            labels: {
-                style: {
-                    fontSize: "12px",
-                    color: "rgb(55, 61, 63)",
-                },
-            },
-        },
-    };
-    var chart5 = new ApexCharts(document.querySelector("#taskoverview"), taskoverview);
-    chart5.render();
+    })
 </script>
 <?= $this->endSection() ?>

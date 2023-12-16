@@ -246,12 +246,23 @@ $routes->group('api', static function ($routes) {
                 $routes->post('general/update_status', 'bookings::general_update_status');
             });
         });
+        $routes->group('dashboard', static function ($routes) {
+            $routes->group('general', static function ($routes) {
+                $routes->post('monthly', 'dashboard::general_monthly');
+                $routes->post('branch-wise', 'dashboard::general_branch_wise');
+            });
+            $routes->group('video', static function ($routes) {
+                $routes->post('monthly', 'dashboard::video_monthly');
+            });
+        });
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
 
             $routes->group('doctor', static function ($routes) {
                 $routes->add('upsert', 'pages::upsert_doctor');
                 $routes->add('delete', 'pages::upsert_doctor');
             });
+
+            
         });
     });
 
