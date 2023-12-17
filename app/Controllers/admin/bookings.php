@@ -117,11 +117,13 @@ class bookings extends General
     {
 
 
-        $arrayOfObjects = $this->db->table('general_booking_status')->select('id,status')->get()->getResult();
+        $arrayOfObjects = $this->db->table('general_booking_status')->select('id,status,alias')->get()->getResult();
         $associativeArray = [];
         $associativeArray[''] = "All";
+
         foreach ($arrayOfObjects as $object) {
-            $associativeArray[$object->id] = $object->status;
+            $associativeArray[$object->id] = $object->alias;
+            $this->data['booking_status'][$object->id] = $object->status;
         }
         return $associativeArray;
     }
@@ -367,7 +369,7 @@ class bookings extends General
                 $subarray[] = $Booking_status[$row->status] ?? "Unknown";
                 $subarray[] = '1';
                 $subarray['id'] = $row->id;
-                $subarray['status'] = $Booking_status[$row->status] ?? "Unknown";
+                $subarray['status'] = $this->data['booking_status'][$row->status] ?? "Unknown";
 
                 $data[] = $subarray;
             }
