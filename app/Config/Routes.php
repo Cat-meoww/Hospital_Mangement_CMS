@@ -96,16 +96,16 @@ $routes->group('appointment', function ($routes) {
 
 
 $routes->group('auth', function ($routes) {
-    $routes->add('login', 'Login::index', ['filter' => 'redirect_dashboard',]);
-    $routes->add('logout', 'Login::logout');
-    $routes->add('register', 'Login::index');
+    $routes->get('login', 'Login::index', ['filter' => 'redirect_dashboard',]);
+    $routes->get('logout', 'Login::logout');
+    $routes->get('register', 'Login::index');
     $routes->post('login/check', 'Login::auth_check');
     $routes->post('login/register', 'Login::register');
 
-    $routes->add('password_reset', 'Login::forgot_pwd');
+    $routes->get('password_reset', 'Login::forgot_pwd');
     $routes->post('password_reset/check', 'Login::forgot_pwd_check');
-    $routes->add('password_reset/(:uuid)', 'Login::password_reset_view/$1');
-    $routes->add('password_verify/(:uuid)', 'Login::password_verify/$1');
+    $routes->get('password_reset/(:uuid)', 'Login::password_reset_view/$1');
+    $routes->get('password_verify/(:uuid)', 'Login::password_verify/$1');
     // Redirect to a named route
     $routes->addRedirect('/', 'login');
 });
@@ -113,50 +113,50 @@ $routes->group('auth', function ($routes) {
 $routes->get('redirect-to-dashboard', 'Login::user_dashboard');
 
 $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
-    $routes->add('dashboard', 'admin::index');
-    $routes->add('profile', 'admin::profile');
+    $routes->get('dashboard', 'admin::index');
+    $routes->get('profile', 'admin::profile');
     $routes->group('all-master', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
-        $routes->add('locations', 'location::index');
-        $routes->add('services', 'services::index');
-        $routes->add('departments', 'departments::index');
-        $routes->add('branches', 'branches::index');
+        $routes->get('locations', 'location::index');
+        $routes->get('services', 'services::index');
+        $routes->get('departments', 'departments::index');
+        $routes->get('branches', 'branches::index');
 
         $routes->group('doctors', static function ($routes) {
-            $routes->add('roles', 'doctors_role::index');
-            $routes->add('list', 'doctors::index');
+            $routes->get('roles', 'doctors_role::index');
+            $routes->get('list', 'doctors::index',['as'=>"doctor.list"]);
         });
     });
 
     $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
-        $routes->add('doctor/(:num)', 'pages::doctor/$1');
+        $routes->get('doctor/(:num)', 'pages::doctor/$1');
     });
     $routes->group('management', static function ($routes) {
-        $routes->add('agent_management', 'admin::agent_management');
-        $routes->add('client_management', 'admin::client_management');
+        $routes->get('agent_management', 'admin::agent_management');
+        $routes->get('client_management', 'admin::client_management');
     });
     $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
-        $routes->add('departments', 'branch_management::departments');
-        $routes->add('services', 'branch_management::services');
-        $routes->add('doctors', 'branch_management::doctors');
+        $routes->get('departments', 'branch_management::departments');
+        $routes->get('services', 'branch_management::services');
+        $routes->get('doctors', 'branch_management::doctors');
     });
     $routes->group('booking-management', static function ($routes) {
         $routes->group('video', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
-            $routes->add('doctors', 'video_management::doctors');
-            $routes->add('time-slots', 'time_slots::index');
+            $routes->get('doctors', 'video_management::doctors');
+            $routes->get('time-slots', 'time_slots::index');
         });
     });
     $routes->group('cms', static function ($routes) {
-        $routes->add('faq', 'cms\faq::index');
-        $routes->add('ads', 'cms\ads::index');
-        $routes->add('best-deals', 'cms\best_deals::index');
+        $routes->get('faq', 'cms\faq::index');
+        $routes->get('ads', 'cms\ads::index');
+        $routes->get('best-deals', 'cms\best_deals::index');
     });
     $routes->group('enquiries', static function ($routes) {
-        $routes->add('faq', 'enquiries::faq');
-        $routes->add('contact-us', 'enquiries::contact_us');
+        $routes->get('faq', 'enquiries::faq');
+        $routes->get('contact-us', 'enquiries::contact_us');
     });
     $routes->group('bookings', static function ($routes) {
-        $routes->add('general', 'bookings::general_bookings');
-        $routes->add('video', 'bookings::video_bookings');
+        $routes->get('general', 'bookings::general_bookings');
+        $routes->get('video', 'bookings::video_bookings');
     });
 });
 
@@ -220,9 +220,9 @@ $routes->group('api', static function ($routes) {
             });
             $routes->group('bookings', static function ($routes) {
                 $routes->group('video', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
-                    $routes->add('add-doctor', 'video_management::add_doctor');
-                    $routes->add('delete-doctor', 'video_management::delete_doctor');
-                    $routes->add('update-doctor-slot', 'video_management::update_doctor_timeslot');
+                    $routes->get('add-doctor', 'video_management::add_doctor');
+                    $routes->get('delete-doctor', 'video_management::delete_doctor');
+                    $routes->get('update-doctor-slot', 'video_management::update_doctor_timeslot');
                 });
             });
 
@@ -270,8 +270,8 @@ $routes->group('api', static function ($routes) {
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
 
             $routes->group('doctor', static function ($routes) {
-                $routes->add('upsert', 'pages::upsert_doctor');
-                $routes->add('delete', 'pages::upsert_doctor');
+                $routes->get('upsert', 'pages::upsert_doctor');
+                $routes->get('delete', 'pages::upsert_doctor');
             });
         });
     });

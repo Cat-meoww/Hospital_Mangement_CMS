@@ -11,6 +11,14 @@ class Is_admin implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Do something here
+        // $router = \CodeIgniter\Config\Services::router();
+        // $current_route = $router->getMatchedRoute();
+        // d($router,$current_route);
+       
+        // // d($request);
+        // // d(service('routes'));
+        // // d(service('routes')->getMatchedRoute()->getName());
+        // dd(service('routes')->getRoutes('get'));
 
         if (!session()->has('user_role') || session()->user_role != 1) {
             
