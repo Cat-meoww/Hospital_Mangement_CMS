@@ -546,7 +546,7 @@ class Home extends BaseController
                     $ReservedSlots = new \App\Models\ReservedSlots();
                     $booking = $VideoBookings->find($payment->booking_id);
                     $Services = new \App\Models\Services();
-                    $ServiceName = $Services->select('name')->where('id', $booking->firstname)->first()->name ?? "miscellaneous";
+                    $ServiceName = $Services->select('name')->where('id', $booking->service)->first()->name ?? "miscellaneous";
 
                     $ReservedSlots->insert([
                         'doctor_id' => $booking->doctor,
