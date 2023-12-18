@@ -35,29 +35,43 @@ class admin extends General
         // General data query
         $SQL = "SELECT 
         count(id) as total ,
-        count(CASE WHEN date(created_on) = '$current_date'  THEN 1 ELSE NULL END) as today_total
+        count(CASE WHEN date(created_on) = '$current_date'  THEN 1 ELSE NULL END) as today_total,
+        SUM(CASE WHEN status='3' THEN revenue ELSE NULL END) as total_revenue
         FROM general_bookings";
         $query = $this->db->query($SQL);
         $result = $query->getRow();
 
         $DATASET['bookings']['general'] = $result->total;
         $DATASET['bookings']['today']['general'] = $result->today_total;
+        $DATASET['bookings']['revenue']['general'] = $result->total_revenue;
 
 
         //dd($SQL);
 
         // Video data query
         $SQL = "SELECT 
-         count(id) as total ,
-         count(CASE WHEN date(created_on) = '$current_date'  THEN 1 ELSE NULL END) as today_total
-         FROM video_bookings";
+         count(*) as total ,
+         count(CASE WHEN date(v.created_on) = '$current_date'  THEN 1 ELSE NULL END) as today_total,
+         SUM(CASE WHEN p.status='SUCCESS'  THEN p.amount ELSE NULL END) as total_revenue
+         FROM video_bookings as v
+         INNER JOIN payments as p ON p.booking_id= v.id
+         ";
         $query = $this->db->query($SQL);
         $result = $query->getRow();
 
 
+        $DATASET['bookings']['revenue']['video'] = $result->total_revenue;
         $DATASET['bookings']['video'] = $result->total;
         $DATASET['bookings']['today']['video'] = $result->today_total;
         $DATASET['bookings']['total'] = $DATASET['bookings']['video'] + $DATASET['bookings']['general'];
+
+        // Recent video bookings
+        $VideoBookings = new \App\Models\VideoBookings();
+        $bookings = $VideoBookings->select('video_bookings.id,video_bookings.firstname,video_bookings.booking_date,payments.status,services.name as service')
+            ->join('payments', 'payments.booking_id = video_bookings.id', 'inner')
+            ->join('services', 'services.id = video_bookings.service', 'inner')
+            ->orderBy('video_bookings.id', "DESC")->limit(7)->get()->getResult();
+        $DATASET['videobookings'] = $bookings;
 
 
         $DATASET['piechart']['date'] = date("M Y");
