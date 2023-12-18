@@ -220,9 +220,9 @@ $routes->group('api', static function ($routes) {
             });
             $routes->group('bookings', static function ($routes) {
                 $routes->group('video', ['namespace' => 'App\Controllers\admin\master\bookings'], static function ($routes) {
-                    $routes->get('add-doctor', 'video_management::add_doctor');
-                    $routes->get('delete-doctor', 'video_management::delete_doctor');
-                    $routes->get('update-doctor-slot', 'video_management::update_doctor_timeslot');
+                    $routes->post('add-doctor', 'video_management::add_doctor');
+                    $routes->post('delete-doctor', 'video_management::delete_doctor');
+                    $routes->post('update-doctor-slot', 'video_management::update_doctor_timeslot');
                 });
             });
 
@@ -270,8 +270,8 @@ $routes->group('api', static function ($routes) {
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
 
             $routes->group('doctor', static function ($routes) {
-                $routes->get('upsert', 'pages::upsert_doctor');
-                $routes->get('delete', 'pages::upsert_doctor');
+                $routes->post('upsert', 'pages::upsert_doctor');
+                $routes->post('delete', 'pages::upsert_doctor');
             });
         });
     });
