@@ -113,7 +113,7 @@ $routes->group('auth', function ($routes) {
 $routes->get('redirect-to-dashboard', 'Login::user_dashboard');
 
 $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static function ($routes) {
-    $routes->get('dashboard', 'admin::index');
+    $routes->get('dashboard', 'admin::index', ['as' => 'admin.dashboard']);
     $routes->get('profile', 'admin::profile');
     $routes->group('all-master', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->get('locations', 'location::index');
@@ -123,7 +123,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
 
         $routes->group('doctors', static function ($routes) {
             $routes->get('roles', 'doctors_role::index');
-            $routes->get('list', 'doctors::index',['as'=>"doctor.list"]);
+            $routes->get('list', 'doctors::index', ['as' => "doctor.list"]);
         });
     });
 
