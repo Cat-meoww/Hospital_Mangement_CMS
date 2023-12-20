@@ -129,6 +129,11 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
 
     $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
         $routes->get('doctor/(:num)', 'pages::doctor/$1');
+        $routes->group('blog', static function ($routes) {
+            $routes->get('/', 'blog::index', ['as' => 'blog.index']);
+            $routes->get('create', 'blog::create', ['as' => 'blog.create']);
+            $routes->get('update/(:num)', 'blog::update/$1', ['as' => 'blog.update']);
+        });
     });
     $routes->group('management', static function ($routes) {
         $routes->get('agent_management', 'admin::agent_management');
@@ -268,10 +273,16 @@ $routes->group('api', static function ($routes) {
             });
         });
         $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
-
             $routes->group('doctor', static function ($routes) {
                 $routes->post('upsert', 'pages::upsert_doctor');
                 $routes->post('delete', 'pages::upsert_doctor');
+            });
+        });
+        $routes->group('cms', ['namespace' => 'App\Controllers\API\admin\cms'], static function ($routes) {
+            $routes->group('blog', static function ($routes) {
+                $routes->post('create', 'blog::create');
+                $routes->post('update', 'blog::update');
+                $routes->post('delete', 'blog::delete');
             });
         });
     });
