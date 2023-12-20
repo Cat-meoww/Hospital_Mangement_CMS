@@ -2,6 +2,64 @@
 
 <?= $this->section('header') ?>
 
+<style>
+  .hero-content{
+    padding-bottom: 75px !important;
+  }.about-div1{
+    margin-top:50px !important;
+
+  }.about-para1{
+    color: green !important;
+  }.about-para2{
+    color: black !important;
+  }.about-head1{
+    font-size:70px !important; color:green !important;
+
+  }.about-para3{
+    color:black !important; font-weight:bold !important; margin-top:20px !important; font-size:16px !important; 
+
+  }.about-cls1{
+    margin-left: 130px;
+
+  }.about-image-bottom{
+    margin-top: 80px !important;
+
+  }.fa-circle{
+    color: black; font-size: 8px;
+  }
+  .bg-overlay-theme:before{
+          
+          background: #419341;
+          
+    }
+    .about-head2{
+          color: black; font-size:24px;
+    }
+    .about-head3{
+      color: black !important;
+    }
+    .about-para4{
+      color: white !important;
+    }.about-para5{
+      text-align: center;
+    }.about-head4{
+      text-align: center; font-size: 40px;
+    }.about-div2{
+      font-size: 16px;
+    }
+  @media screen and (max-width:600px) {
+                .signature-block{
+                  display:flex;
+                  flex-direction:column;
+                }.about-cls1{
+                  margin-top:8%;
+                  margin-right:30%;
+                }
+              }
+
+
+</style>
+
 
 
 <?= $this->endSection() ?>
@@ -14,16 +72,16 @@
       <section class="hero hero-5 bg-overlay bg-overlay-dark">
         <div class="bg-section"> <img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="background"/></div>
         <div class="container"> 
-          <div class="hero-content" style="padding-bottom: 75px !important;"> 
+          <div class="hero-content"> 
             <div class="row"> 
-              <div class="col-12 col-lg-5" style="margin-top:50px;">
+              <div class="col-12 col-lg-5 about-div1" >
                 <h2 class="hero-title" >About us</h2>
                 <p class="hero-desc">The name GEM Hospital was derived from Gastroenterology and Medical Centre and true to its name.</p>
                <!----<div class="hero-action"> <a class="btn btn--white btn-line btn-line-after btn-line-inversed" href="#"> <span>find a doctor</span><span class="line"><span></span></span></a><a class="btn btn--transparent btn-line btn-line-after" href="#"> <span>our core values</span><span class="line"><span></span></span></a></div>--->
               </div>
               <div class="col-12"> 
                 <ol class="breadcrumb d-flex justify-content-center">
-                  <li class="breadcrumb-item"><a href="<?= base_url('index')?>">Home</a></li>
+                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
                   <li class=""><a href="<?= base_url('aboutus')?>">About us</a></li>
                 </ol>
               </div>
@@ -43,42 +101,32 @@
               <div class="heading heading-2">
                 <div class="row"> 
                   <div class="col-12 col-lg-10">
-                     <p class="paragraph" style="color:green;">About Us</p>
+                     <p class="paragraph about-para1" >About Us</p>
                   </div>
                   <div class="col-12 col-lg-10">
                     <h2 class="heading-title">Institute of Gastrointestinal Endo-Surgery</h2>
-                    <p class="heading-desc" style="color: black;">We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type you require. We treat all enquiries in confidence.</p>
+                    <p class="heading-desc about-para2">We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type you require. We treat all enquiries in confidence.</p>
                     <div class="signature-block"> <div class="signature-body"> 
-                    <h6 style="font-size:70px; color:green;" class="heading-title">32+</h6>
-                        <p class="heading-subtitle"style="color:black; font-weight:bold; margin-top:20px; font-size:16px;" >Years Experienced</h1>
+                    <h6  class="heading-title about-head1">32+</h6>
+                        <p class="heading-subtitle about-para3" >Years Experienced</h1>
                     </div>
-                      <div class="signature-body about-cls1" style="margin-left: 130px; "> 
-                        <h6 style="font-size:70px; color:green;" class="heading-title">211+</h6>
-                        <p class="heading-subtitle"style="color:black; font-weight:bold; margin-top:20px; font-size:16px;" >Specialist Doctor</h1>
+                      <div class="signature-body about-cls1"> 
+                        <h6 class="heading-title about-head1">211+</h6>
+                        <p class="heading-subtitle about-para3">Specialist Doctor</h1>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <style>
-              @media screen and (max-width:600px) {
-                .signature-block{
-                  display:flex;
-                  flex-direction:column;
-                }.about-cls1{
-                  margin-top:8%;
-                  margin-right:30%;
-                }
-              }
-            </style>
+          
             <!-- End .col-lg-6-->
             <div class="col-12 col-lg-5 offset-lg-1">
               <div class="about-img"><img class="img-fluid"  src="<?= base_url('frontend/assets/images/about/doctor.png') ?>" alt="about Image"/><!----<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-----></div>
             </div>
             <!-- End .col-lg-5-->
             <div class="col-12"> 
-              <div class="about-image-bottom" style="margin-top: 80px;"> <img  src="<?= base_url('frontend/assets/images/about/APJ.jpg') ?>" alt="image" /></div>
+              <div class="about-image-bottom"> <img  src="<?= base_url('frontend/assets/images/about/APJ.jpg') ?>" alt="image" /></div>
             </div>
           </div>
           <!-- End .row-->
@@ -90,39 +138,35 @@
       Features #1 Section
       ============================
       -->
-      <section class="features bg-overlay bg-overlay-theme" id="features-1">
-      <div class="bg-section"> <img  src="<?= base_url('frontend/assets/images/about/APJ.jpg') ?>" alt="Background" /></div>
-      <style>
-        .bg-overlay-theme:before{
-          background-image:linear-gradient(-90deg, #89e98894 18%, #89e98894 70%) !important;
-        }
-        </style>
+      <section class="features pb-0 bg-overlay bg-overlay-theme"  id="features-1">
+      <div class="bg-section" > <img  src="<?= base_url('frontend/assets/images/about/APJ.jpg') ?>"  alt="Background" /></div>
+      
       <div class="container">
         <div class="heading heading-3 heading-light">
           <div class="row">
-            <div class="col-12 col-lg-5">
-              <h3 class="" style="color: black; font-size:24px;">“Health does not always come from medicine, Most of the time it comes from peace
+            <div class="col-12 ">
+              <h3 class="about-head2" >“Health does not always come from medicine, Most of the time it comes from peace
                 of mind, peace in the heart, and peace of soul. It comes from laughter and love”
                 – Apj Abdul Kalam</h3>
             </div>
-            <div class="col-12 col-lg-6 offset-lg-1">
-              <h3 class="heading-title" style="color: black;">About Prof C Palanivelu</h3>
-              <p class="desc" style="color: white;">Chairman - GEM Hospitals</p>
-              <h4 class="heading-title" style="color: black;">Development of Laparoscopic Surgery in India</h4>
-              <p class="paragraph" style="color: white;">Dr Palanivelu was first to introduce Iaparoscopic surgery in south India. He was
+            <div class="col-12  mt-5">
+              <h3 class="heading-title about-head3" >About Prof C Palanivelu</h3>
+              <p class="desc about-para4">Chairman - GEM Hospitals</p>
+              <h4 class="heading-title about-head3" >Development of Laparoscopic Surgery in India</h4>
+              <p class="paragraph about-para4">Dr Palanivelu was first to introduce Iaparoscopic surgery in south India. He was
                 instrumental in popularizing this new branch of medicine in India. He applied Iaparoscopic technique to
                 all types of surgery including cancer surgery.</p>
-              <h3 class="heading-subtitle" style="color: black;">Humble Background :</h3>
-              <p class="heading-desc" style="color: white;">Born in a poor family of agricultural workers, he completed primary education
+              <h3 class="heading-subtitle about-head3" >Humble Background :</h3>
+              <p class="heading-desc about-para4">Born in a poor family of agricultural workers, he completed primary education
                 overcoming great difficulties. But this motivated him to do service to the poor through free medical
                 camps and treating thousands of poor patients. He also trained hundreds of rural surgeons.</p>
-              <h3 class="heading-subtitle" style="color: black;">Laparoscopic Revolution – A must for India</h3>
-              <p class="heading-desc" style="color: white;">Laparoscopic surgery is beneficial to all sections of society as they recover
+              <h3 class="heading-subtitle about-head3" >Laparoscopic Revolution – A must for India</h3>
+              <p class="heading-desc about-para4">Laparoscopic surgery is beneficial to all sections of society as they recover
                 quickly from surgery without pain and go back to work early. Making it possible to provide Laparoscopic
                 surgery at affordable cost through his innovations has been the essence of his contribution to Medicine.
               </p>
-              <h3 class="heading-subtitle" style="color: black;">Held in High esteem by peers</h3>
-              <p class="heading-desc" style="color: white;">He has been a great teacher and guiding force to all Laparoscopic surgeons and was
+              <h3 class="heading-subtitle about-head3" >Held in High esteem by peers</h3>
+              <p class="heading-desc about-para4" >He has been a great teacher and guiding force to all Laparoscopic surgeons and was
                 accorded the title of “Beeshmacharya
               </p>
               <!---<div class="actions-holder"><a class="btn btn--transparent btn--inversed btn-line btn-line-after" href="page-faqs.html"> <span>our core values</span><span class="line"> <span></span></span></a><a class="btn btn--white" href="page-about.html">more about us</a></div>---->
@@ -262,16 +306,16 @@
 	  <section class="cta cta-3" id="cta-3">
 	          <div class="processes"> 
           <div class="row g-0 heading"> 
-		  <p class="paragraph" style="text-align: center;">Our Values</p>
-		  <h5 class="heading-title" style="text-align: center; font-size: 40px;">Quality, safety, and security</h5>
+		  <p class="paragraph about-para5">Our Values</p>
+		  <h5 class="heading-title about-head4">Quality, safety, and security</h5>
             <div class="col-md-4 my-2">
               <div class="process-panel" data-hover="">
                 <p class="process-number">01.</p>
                 <div class="process-body"> 
-                  <div class="process-icon"> <i class="flaticon-023-medical-history" style="color:#0d3e21 !important;"></i></div>
+                  <div class="process-icon"> <i class="flaticon-023-medical-history"></i></div>
                   <div class="process-content"> 
                     <h5>Vision</h5>
-                    <p style="color: black;">To emerge as global health care facilitator providing world-class facilities in tune with evolving technology and promoting health endeavors with quality service.</p>
+                    <p  class="about-para2">To emerge as global health care facilitator providing world-class facilities in tune with evolving technology and promoting health endeavors with quality service.</p>
 					<!----<a class="btn-line btn-line-before btn-line-inversed" href="doctors-timetable.html"><span class="line"> <span> </span></span><span>doctors timetable</span></a>---->
                   </div>
                 </div>
@@ -284,7 +328,7 @@
                   <div class="process-icon"> <i class="flaticon-043-cardiogram"></i></div>
                   <div class="process-content"> 
                     <h5>Mission</h5>
-                    <p style="color: black;">To provide comprehensive health care by the dedicated efforts in bringing the wellness of the society to fore through the harmonious blend of technology expertise & compassion.</p><!--<a class="btn-line btn-line-before btn-line-inversed" href="javascript:void(0)"><span class="line"> <span> </span></span><span>Start A Check Up</span></a>--->
+                    <p class="about-para2">To provide comprehensive health care by the dedicated efforts in bringing the wellness of the society to fore through the harmonious blend of technology expertise & compassion.</p><!--<a class="btn-line btn-line-before btn-line-inversed" href="javascript:void(0)"><span class="line"> <span> </span></span><span>Start A Check Up</span></a>--->
                   </div>
                 </div>
               </div>
@@ -296,7 +340,7 @@
                   <div class="process-icon"> <i class="flaticon-027-medical-report"></i></div>
                   <div class="process-content"> 
                     <h5>Quality Policy</h5>
-                    <p style="color: black;">GEM Hospital is committed to providing value-added, innovative, and continually improving quality health care services interfaced with futuristic technology.</p><!---<a class="btn-line btn-line-before btn-line-inversed" href="javascript:void(0)"><span class="line"> <span> </span></span><span>explore programs</span></a>---->
+                    <p class="about-para2">GEM Hospital is committed to providing value-added, innovative, and continually improving quality health care services interfaced with futuristic technology.</p><!---<a class="btn-line btn-line-before btn-line-inversed" href="javascript:void(0)"><span class="line"> <span> </span></span><span>explore programs</span></a>---->
                   </div>
                 </div>
               </div>
@@ -304,18 +348,18 @@
           </div>
         </div>
 		</section>
-		<br><br>
+		
       <!--
       ============================
       Team Carousel #1 Section
       ============================
       -->
-     <section class="team team-modern team-carousel" id="teamCarousel-1">
+     <!--<section class="team team-modern team-carousel" id="teamCarousel-1">
       <div class="container">
         <div class="row">
           <div class="col-12 ">
             <div class="heading heading-5">
-              <h2 class="heading-title">Bed strength at Coimbatore</h2>
+              <h2 class="heading-title">Bed strength</h2>
               <p class="heading-desc" style="color: black; display: block;">The initial bed strength at Coimbatore was
                 100 and in 2008, another block of 100 beds were added to cater to the ever-increasing demand. Various
                 facilities were being added one after the other keeping pace with this rapidly expanding field. As a
@@ -334,13 +378,13 @@
                   <div class="team-member-holder">
                     <div class="team-img"><a class="link" href="<?=base_url('doctorinfo')?>"></a><img  src="<?= base_url('frontend/assets/images/team/grid/27.jpg') ?>"
                          alt="team member" /></div>
-                    <!-- End .team-img-->
+                  
                     <div class="team-content-holder">
                       <div class="team-content">
                         <div class="team-title">
                           <h4><a href="<?= base_url('doctorinfo')?>">Prof C Palanivelu</a></h4>
                         </div>
-                        <!---<div class="team-cat"><a href="#">Cardiology Specialist</a></div>--->
+                  
                         <div class="team-desc">
                           <p>MS, MCh, DNB, FACS, FRCS(Hon) Ed.,Chairman – GEM Hospital and Research Centre</p>
                         </div>
@@ -348,7 +392,7 @@
                             More</span><span class="line"><span></span></span></a>
                       </div>
 
-                      <!-- End .team-content-->
+                      
                     </div>
                   </div>
                 </div>
@@ -358,13 +402,13 @@
                   <div class="team-member-holder">
                     <div class="team-img"><a class="link" href="<?= base_url('doctorinfo')?>"></a><img src="<?= base_url('frontend/assets/images/team/grid/22.jpg') ?>"
                          alt="team member" /></div>
-                    <!-- End .team-img-->
+                    
                     <div class="team-content-holder">
                       <div class="team-content">
                         <div class="team-title">
                           <h4><a href="<?= base_url('doctorinfo')?>">Dr P Praveen Raj</a></h4>
                         </div>
-                        <!---<div class="team-cat"><a href="#">Dermatologists</a></div>--->
+                        
                         <div class="team-desc">
                           <p>MS, DNB, Fellowship in Bariatric Surgery, Ph.D., FACS, FALS, FMAS, FICS, FIBC,Chief
                             Executive Officer– GEM Hospital and Research Centre</p>
@@ -372,7 +416,7 @@
                         <a class="btn btn--primary btn-line btn-line-after" href="<?= base_url('doctorinfo')?>"><span>Know
                             More</span><span class="line"><span></span></span></a>
                       </div>
-                      <!-- End .team-content-->
+                     
                     </div>
                   </div>
                 </div>
@@ -382,13 +426,13 @@
                   <div class="team-member-holder">
                     <div class="team-img"><a class="link" href=""></a><img
                         src= "<?=base_url('frontend/assets/images/team/grid/8.jpg')?>" alt="team member" /></div>
-                    <!-- End .team-img-->
+                   
                     <div class="team-content-holder">
                       <div class="team-content">
                         <div class="team-title">
                           <h4><a href="<?=base_url('doctorinfo')?>">Dr R Parthasarathi</a></h4>
                         </div>
-                        <!----<div class="team-cat"><a href="#">Pediatrician</a></div>---->
+                        
                         <div class="team-desc">
                           <p>MS., FAMS., Ph.D.,,
                             Chief Operative Officer– GEM Hospital and Research Centre</p>
@@ -396,7 +440,7 @@
                         <a class="btn btn--primary btn-line btn-line-after" href="<?=base_url('doctorinfo')?>"><span>Know
                             More</span><span class="line"><span></span></span></a>
                       </div>
-                      <!-- End .team-content-->
+                     
                     </div>
                   </div>
                 </div>
@@ -405,23 +449,19 @@
 
             </div>
           </div>
-          <!---<div class="col-12"> 
-              <div class="action-bar">
-                <p class="note"><span><i class="fas fa-calendar-day"></i> on monday, </span> Doctors will be available from 8 am : 12 am , kindly call to confirm your Appointment </p><a class="btn btn--primary btn-line btn-line-after" href="page-appointments.html"><span>make appointment</span><span class="line"><span></span></span></a>
-              </div>
-            </div>---->
+          
         </div>
-        <!-- .row-->
+        
       </div>
-      <!-- .container-->
-    </section>
+     
+    </section>-->
       <!--
       ============================
       Cta #3 Section
       ============================
       -->
       
-<section class="about about-1" id="about-1" style="font-family: var(--e-global-typography-d3dae9a-font-family), Sans-serif;">
+<section class="about about-1" id="about-1">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-6">
@@ -438,46 +478,46 @@
                   <div class="col-12 col-lg-12">
                     <div class="entry-infos entry-introduction">
                       <div class="row">
-                        <div class="col-12 col-lg-6" style="font-size: 16px;">
+                        <div class="col-12 col-lg-6 about-div2" >
                           <ul class="list-unstyled advantages mb-0">
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> Award by <b>House of
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i> Award by <b>House of
                                 Commons,</b> UK Parliament 2018 for contribution to the development of Laparoscopic
                               surgery.
                             </li><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> <b>First Indian to win
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i> <b>First Indian to win
                                 Silver Medal</b> in International Olympic Minimal Access Surgery competition.
                             </li><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i><b> Best Technique Award
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i><b> Best Technique Award
                                 for Cancer Esophagus,</b> 10th International Society of Disease of Esophagus, Japan,
                               2010
 
                             </li><br><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> Innovated over <b>20
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i> Innovated over <b>20
                                 new operative techniques</b>
                             </li>
                           </ul>
                         </div>
-                        <div class="col-12 col-lg-6" style="font-size: 16px;">
+                        <div class="col-12 col-lg-6 about-div2" >
                           <ul class="list-unstyled advantages">
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> Authored many books in
+                            <li class="about-para2">
+                              <i class="fa fa-circle" ></i> Authored many books in
                               surgery which are of<b> International repute</b>
                             </li><br><br><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> <b>Life Time
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i> <b>Life Time
                                 Achievement Award</b> of District Rotary Coimbatore, 2012
                             </li><br><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i> First Indian surgeon
+                            <li class="about-para2">
+                              <i class="fa fa-circle" ></i> First Indian surgeon
                               who was accorded the privilege to operate and teach in various countries including UK,
                               USA, Hong Kong, Argentina etc
                             </li><br>
-                            <li style="color: black;">
-                              <i class="fa fa-circle" style="color: black; font-size: 8px;"></i><b> “Living Legend of
+                            <li class="about-para2">
+                              <i class="fa fa-circle"></i><b> “Living Legend of
                                 Laproscopy Award”</b> by New York City Council & New York Tamil Sangam 2012
                             </li><br>
                           </ul>

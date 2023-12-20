@@ -8,8 +8,9 @@
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
+
 <section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
+      <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
@@ -17,14 +18,14 @@
               <div class="title-card"  style="margin-top: -180px ;">
                 <div class="title-heading">
                   <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Hernia</h1>
+                  <h1>Upper GI Surgery</h1>
                 </div>
                 <div class="title-sub-heading">
-                  <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
+                  <p>GEM Hospitals offers comprehensive Upper Gastrointestinal surgery care, delivered by a team of experienced specialists.</p>
                 </div>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Hernia</li>
+                  <li class="breadcrumb-item active" aria-current="page">Upper GI Surgery</li>
                 </ol>
               </div>
             </div>
@@ -70,7 +71,7 @@
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/hernia.jpg') ?>" alt="background" /></div>
+                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/UPPER_GI.jpg') ?>" alt="background" /></div>
                     <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
                     <!-- End .popup-video-->
                   </div>
@@ -78,15 +79,17 @@
                    Descriptions
                   </h6>
                   <p class="desc">
-                    A hernia is a condition of abnormal protrusion of an organ or the covering of an organ through the wall of the cavity that normally contains it.
+                    The Division of Esophago-Gastric Surgery is one of the most advanced centres for Upper G.I diseases in India. The department carries out all major Esophago-gastric procedures by Laparoscopic & Robotic approaches, including ‘CANCER’ surgery.
                   </p>
-				  <p class="desc">Consistent pressure and muscle weakening in a particular area of the body contributes its formation.</p>
+				  <p class="desc">Our division is headed by one of the most renowned and dynamic surgeons in the field of Esophago-gastric surgery – Dr.C.Palanivelu, who has performed more than 1000 laparoscopic esophagus and stomach cancer surgeries successfully.</p>
+				  <p class="desc">GEM Hospital is the first in the world to perform Thoraco-Laparoscopic Esophagectomy in ‘prone position’ for esophageal cancer and our technique is now being followed in most of the major centers across the globe.</p>
+				  <p class="desc">At GEM Hospital, our skilled surgeons ensure not only life-saving interventions for conditions like esophageal, stomach, or pancreatic cancer but also an enhanced quality of life for those dealing with GERD or peptic ulcer disease. Beyond expertise, our hospital is a beacon of precision and attentive care, navigating the intricacies of the upper GI tract with proficiency, dedication, and advanced knowledge. Experience healthcare redefined at GEM Hospital, where your well-being is our paramount priority.</p>
                 </div>
                 <div class="col-12 col-lg-4">
 
                   <div class="sidebar sidebar-service">
 
-                
+                    
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -96,7 +99,7 @@
                         <ul class="list-unstyled">
                           <li><a href="<?= base_url('appointment/video-consultation')?>"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href="<?= base_url('appointment/book-appointment')?>"> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="<?= base_url('appointment/video-consultation')?>"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -107,45 +110,85 @@
 
                 </div>
 
-               <div class="row">
+                <div class="row">
                   <!--"col-12 col-lg-4"-->
                   <div class="col-12 col-lg-12">
 
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Symptoms</h4>
+                    <h4 class="desc" style="font-size: 22px; line-height: initial;">Upper GI surgery may be necessary to treat a variety of conditions, including</h4>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> pain at the site of hernia, swelling on the site which may reduce on lying down or increase on activity, difficulty in passing stools or urine, swelling or pain in the previously operated scars.</li>
-                      <li><i class="fas fa-check"></i> There are different types of hernias, each requiring a medical / surgical intervention to prevent complications Providing the best treatment depends on the condition of the patient. Some surgeries involved are Open Surgery, Laparoscopic Hernia Surgery (Keyhole), Transabdominal preperitoneal or TAPP, Totally Extraperitoneal or TEP</li>
-                      <br><br>
+                      <li><i class="fas fa-check"></i> Cancer of the esophagus, stomach, small intestine, or pancreas</li>
+                      <li><i class="fas fa-check"></i> Gastroesophageal reflux disease (GERD)</li>
+                      <li><i class="fas fa-check"></i> Hiatal hernia</li>
+                      <li><i class="fas fa-check"></i> Peptic ulcer disease</li>
+					  <li><i class="fas fa-check"></i> Gallbladder disease</li>
+                      <li><i class="fas fa-check"></i>Pancreatitis</li>
+					 <br><br>
                     </ul>
-                  </div>
-                  <div class="col-12 col-lg-12">
-
-                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Hernia Treatment</h4>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Management of an umbilical or an inguinal hernia is always surgical.</li>
-                      <li><i class="fas fa-check"></i> As a hernia is an anatomical defect, medicines will not help. That's the absolute truth!!</li>
-                      <li><i class="fas fa-check"></i> Open surgery and keyhole surgery have been advocated for umbilical and inguinal hernia repair.</li>
-                      <li><i class="fas fa-check"></i> In keyhole surgery, the adhesions are released and the defect is repaired either with intra corporeal suturing or with mesh and tacks.</li>
-                    </ul>
-					<br><br>
-
                   </div>
 				   <div class="col-12 col-lg-12">
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Types Of Hernia</h4>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Inguinal Hernias</h4>
-                    <p class="desc">Inguinal hernias are the most common type, accounting for 75% of all hernias. They mostly affect men or people assigned male at birth (AMAB). They happen when part of your bowel protrudes into your inguinal canal, a passage way that runs down your inner thigh.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Incisional Hernia</h4>
-                    <p class="desc">An incisional hernia occurs when tissue protrudes through a former incision in your abdominal wall that weakened over time. It's a common side effect of abdominal surgery.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Umbilical Hernia</h4>
-                    <p class="desc">An umbilical hernia occurs when part of your intestine pokes through an opening in your abdominal wall near your belly button. Most umbilical hernias are congenital (present from birth).</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Spigelain Hernia</h4>
-                    <p class="desc">A spigelian hernia is a rare, abnormal protrusion of abdominal contents or peritoneum through a defect (spigelian fascia), which is comprised of the transversus abdominis and the internal oblique aponeuroses.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Epigastric Hernia</h4>
-                    <p class="desc">An epigastric hernia is a lump in the midline between your belly button and sternum (breastbone) which can cause pain. Your abdominal cavity contains your intestines and other structures. These are protected by your abdominal wall, which is made up of four layers.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Femoral Hernia</h4>
-                    <p class="desc">A femoral hernia is a less-common type of groin hernia that occurs in the femoral canal, which runs underneath the inguinal canal. Fatty tissue may poke through.</p>
-                  </div>
 
+                    <h4 class="desc" style="font-size: 22px; line-height: initial;">The benefits of upper GI surgery at GEM Hospital</h4>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> GEM Hospital has some of the most advanced facilities for upper GI surgery.</li>
+                      <li><i class="fas fa-check"></i> We work with each patient to develop a personalized treatment plan that meets their individual needs.</li>
+                      <li><i class="fas fa-check"></i> We are committed to providing our patients with the safest possible care.</li>
+                    </ul>
+					<br><br>
+					<p class="desc">If you are considering upper GI surgery, it is important to talk to your doctor about the risks and benefits of the procedure. Upper GI surgery is a complex procedure, but it can offer life-saving benefits to patients with certain conditions. Our team of experts at GEM hospital are here to answer your questions and help you decide if upper GI surgery is the right option for you.</p>
+                  </div>
+				  <div class="row">
+				  <div class="col-12 col-lg-6">
+
+                    <h4 class="desc" style="font-size: 22px; line-height: initial;">Diagnostic Modalities</h4>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Upper G.I Endoscopy (OGD)</li>
+                      <li><i class="fas fa-check"></i> Rapid Urease test for H.Pylori</li>
+                      <li><i class="fas fa-check"></i> Narrow Band Imaging (NBI) – for early cancer detection</li>
+					  <li><i class="fas fa-check"></i> High Resolution Esophageal Manometry with Impedence</li>
+                      <li><i class="fas fa-check"></i> 24 hour pH study</li>
+                      <li><i class="fas fa-check"></i> Endoscopic Ultrasound (EUS)</li>
+					  <li><i class="fas fa-check"></i> Barium/Gastrograffin Swallow & Follow-through Studies</li>
+					  <li><i class="fas fa-check"></i> Ultrasound of Abdomen (USG)</li>
+					  <li><i class="fas fa-check"></i> Multidetector Computerized CT Scan with Cancer Specific Protocols</li>
+                    </ul>
+					<br><br>
+                  </div>
+				   <div class="col-12 col-lg-6">
+
+                    <h4 class="desc" style="font-size: 22px; line-height: initial;">Diseases Treated</h4>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Gastroesophageal Reflux Disease (GERD)</li>
+                      <li><i class="fas fa-check"></i> Hiatus hernia</li>
+                      <li><i class="fas fa-check"></i> Achalasia Cardia & other motility disorders of the esophagus</li>
+					  <li><i class="fas fa-check"></i> Corrosive esophago-gastric injuries (acid / alkali ingestion)</li>
+                      <li><i class="fas fa-check"></i> Stomach / Gastric cancers, GISTs, NETs</li>
+                      <li><i class="fas fa-check"></i> Esophageal Cancers</li>
+					  <li><i class="fas fa-check"></i> GE Junction tumors</li>
+                    </ul>
+					
+                  </div>
+				  </div>
+				  <div class="col-12 col-lg-12">
+
+                    <h4 class="desc" style="font-size: 22px; line-height: initial;">Surgeries Performed</h4>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Laparoscopic Antireflux Procedures, Redo Antireflux Surgery – eg. Nissen’s fundoplication</li>
+                      <li><i class="fas fa-check"></i> Laparoscopic Hiatal / Paraesophageal Hernia Repair</li>
+                      <li><i class="fas fa-check"></i> Laparoscopic Surgery for Achalasia Cardia, Redo- Heller’s Myotomy</li>
+                      <li><i class="fas fa-check"></i> Laparoscopic surgeries for corrosive esophago-gastric injuries</li>
+					  <li><i class="fas fa-check"></i> Laparoscopic Trucal Vagotomy & Gastrojejunostomy (TVGJ)</li>
+                      <li><i class="fas fa-check"></i> Laparoscopic Surgery for benign diseases like leiomyoma, diverticulum & duplication cysts of esophagus</li>
+					  <li><i class="fas fa-check"></i> Robotic/Laparoscopic surgery for Esophageal &Stomach Cancers</li>
+                      <li><i class="fas fa-check"></i> Robotic/Laparoscopic Resection of Gastrointestinal Stromal Tumours (GIST) & Neuroendocrine Tumours(NET)</li>
+					 <br><br>
+                    </ul>
+                  </div>
+				   <div class="col-12 col-lg-12">
+                    <h4 class="desc" style="font-size: 22px; line-height: initial; color: #0D3E21;">Dr. PALANIVELU’S TECHNIQUE of Esophagectomy</h4>
+                    <p class="desc">Open esophagectomy is associated with considerable morbidity in terms of respiratory complications and prolonged hospital stay.
+					Dr. C. Palanivelu innovated a ‘prone position technique’ of Thoraco-laparoscopic esophagectomy, which reduced overall morbidity and encouraged early discharge from hospital.
+					This is the most popular approach currently and is being followed as a standard of care globally.</p>
+                  </div>
                 </div>
 
 

@@ -24,7 +24,7 @@
                   <p>CHIEF Dr C Palanivelu, had first brought the First Flexible Colonoscopic and endoscopic unit to the City in 1994.The department was established in 2002 at GEM Hospital, Coimbatore.</p>
                 </div>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="">Home</a></li>
+                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Medical Gastroenterology</li>
                 </ol>
               </div>
@@ -99,15 +99,7 @@
 
                   <div class="sidebar sidebar-service">
 
-                    <div class="widget widget-reservation widget-reservation-2">
-                      <div class="widget-content"><i class="flaticon-022-medical"></i>
-                        <h5>emergency ?</h5>
-                        <p>24 Hour Ready Call Us for Emergency</p><a href="tel:04224695100"><span
-                            class="fas fa-phone-alt"></span>0422-4695100</a><br>
-                            <a href="tel:9003932323"><span
-                              class="fas fa-mobile-alt"></span>90039 32323</a>
-                      </div>
-                    </div>
+                   
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -115,9 +107,9 @@
                       </div>
                       <div class="widget-content">
                         <ul class="list-unstyled">
-                          <li><a href=""> <span class="line"> <span></span></span><span>Video
+                          <li><a href="<?= base_url('appointment/video-consultation') ?>"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href=""> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="<?= base_url('appointment/book-appointment') ?>"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -230,7 +222,12 @@
   font-size: 16px;
   line-height: 27px;
   color: var(--global--color-secondary);">Our Department</h6>
-              <h5 class="entry-heading" style="text-align: center; font-size: 37px; color:#118B0F;">Publications</h5>
+              <h5 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Publications</h5>
               <!---<p class="entry-desc">Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research. For over 20 years, our hospital has touched lives of millions of people, and provide care and treatment for the sickest in our community including rehabilitation and aged care.</p>--->
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -314,11 +311,16 @@
           <div class="row"> 
             <div class="col-12 col-lg-6 offset-lg-3">
               <div class="heading heading-12 heading-13 text-center">
-                <p class="heading-subtitle" style=" font-weight: 700;
+                <h6 class="" style=" font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  color: var(--global--color-secondary);">Patients Story</p>
-                <h2 class="heading-title" style="color:#118B0F;">Loved by our Patients</h2>
+  color: var(--global--color-secondary);">Patients Story</h6>
+                <h2 class="heading-title" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Loved by our Patients</h2>
               </div>
             </div>
           </div>
@@ -346,7 +348,13 @@
                     <div class="department-desc">
                       <p>Expert and experienced doctors at GEM hospital are quick to diagnose and resolve the issues. Good patient care!</p>
                     </div>
-                    <div class="department-more" style="color: black;font-size:16px;"><strong>Vijaya Rani</strong></a></div>
+                 
+                    <div class="department-more">
+                    <p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Vijaya Rani</p>
+                    </div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -377,7 +385,13 @@
                     <div class="department-desc">
                       <p>Best hospital super treatment. Thank you, GEM Hospital management and staff, and doctors.</p>
                     </div>
-                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Varshinie keerthi</strong></div>
+                    
+                    <div class="department-more">
+                    <p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Varshinie keerthi</p>
+                    </div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -404,7 +418,12 @@
                   <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
 
-                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More about Medical Gastroenterology</h6>
+                      <h6 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Know More about Medical Gastroenterology</h6>
                     </div>
                   </div>
                 </div>

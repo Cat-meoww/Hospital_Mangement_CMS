@@ -24,7 +24,7 @@
                   <p>With the laparoscopic expertise, Gem Hospital & Research Centre is proud to be India’s only Laparoscopic living donor Multi organ transplant centre.</p>
                 </div>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Multi Organ Transplant</li>
                 </ol>
               </div>
@@ -95,15 +95,7 @@
 
                   <div class="sidebar sidebar-service">
 
-                    <div class="widget widget-reservation widget-reservation-2">
-                      <div class="widget-content"><i class="flaticon-022-medical"></i>
-                        <h5>emergency ?</h5>
-                        <p>24 Hour Ready Call Us for Emergency</p><a href="tel:04224695100"><span
-                            class="fas fa-phone-alt"></span>0422-4695100</a><br>
-                            <a href="tel:9003932323"><span
-                              class="fas fa-mobile-alt"></span>90039 32323</a>
-                      </div>
-                    </div>
+                    
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -111,9 +103,9 @@
                       </div>
                       <div class="widget-content">
                         <ul class="list-unstyled">
-                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Video
+                          <li><a href="<?= base_url('appointment/video-consultation') ?>"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href="single-service.html"> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="<?= base_url('appointment/book-appointment') ?>"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -190,7 +182,12 @@
   font-size: 16px;
   line-height: 27px;
   color: var(--global--color-secondary);">Our Department</h6>
-              <h5 class="entry-heading" style="text-align: center; font-size: 37px; color:#118B0F;">Awards and Achievement</h5>
+              <h5 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Awards and Achievement</h5>
               <!---<p class="entry-desc">Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research. For over 20 years, our hospital has touched lives of millions of people, and provide care and treatment for the sickest in our community including rehabilitation and aged care.</p>--->
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -238,11 +235,16 @@
           <div class="row"> 
             <div class="col-12 col-lg-6 offset-lg-3">
               <div class="heading heading-12 heading-13 text-center">
-                <p class="heading-subtitle" style=" font-weight: 700;
+                <h6 class="" style=" font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  color: var(--global--color-secondary);">Patients Story</p>
-                <h2 class="heading-title" style="color:#118B0F;">Loved by our Patients</h2>
+  color: var(--global--color-secondary);">Patients Story</h6>
+                <h2 class="heading-title" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Loved by our Patients</h2>
               </div>
             </div>
           </div>
@@ -265,7 +267,13 @@
                     <div class="department-desc">
                       <p>Good experience doctor.They are tread the patients very gently manner.Nurses and staffs are tread the patients very carefully.</p>
                     </div>
-                    <div class="department-more" style="color: black;font-size:16px;"><strong>Dharshini Raja</strong></a></div>
+                 
+                    <div class="department-more">
+                    <p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Dharshini Raja</p>
+                    </div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -297,7 +305,13 @@
                     <div class="department-desc">
                       <p>The Best in laproscopic & Castro related treatment with clean and hygienic,Good Service with adoptable price. Thanks to all doctors and nurses and the whole Gem Team .. Really felt all are Gem of person's.</p>
                     </div>
-                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Sudhandrakumar M</strong></div>
+                   
+                    <div class="department-more">
+                    <p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Sudhandrakumar M</p>
+                    </div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -324,7 +338,12 @@
                   <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
 
-                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More about Multi OrganTransplant</h6>
+                      <h6 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Know More about Multi OrganTransplant</h6>
                     </div>
                   </div>
                 </div>
@@ -375,7 +394,12 @@
   font-size: 16px;
   line-height: 27px;
   color: var(--global--color-secondary); text-align: center; ">FAQ</h2>
-              <h1 class="entry-heading" style="font-size: 37px; text-align: center; color:#118B0F;">Frequently Ask Questions</h1>
+              <h1 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;">Frequently Ask Questions</h1>
               <!---<p class="entry-desc">We help create a care plan that addresses your specific condition and we are here to answer all of your questions & acknowledge your concerns. Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes.</p>---->
               <div class="accordion accordion-3" id="accordion03">
                 <div class="card">

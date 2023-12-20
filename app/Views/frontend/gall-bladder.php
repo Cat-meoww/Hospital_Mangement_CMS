@@ -17,14 +17,14 @@
               <div class="title-card"  style="margin-top: -180px ;">
                 <div class="title-heading">
                   <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Hernia</h1>
+                  <h1>Gall Bladder</h1>
                 </div>
                 <div class="title-sub-heading">
                   <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
                 </div>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Hernia</li>
+                  <li class="breadcrumb-item active" aria-current="page">Gall Bladder</li>
                 </ol>
               </div>
             </div>
@@ -70,7 +70,7 @@
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/hernia.jpg') ?>" alt="background" /></div>
+                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/hernia.jpg') ?>"  alt="background" /></div>
                     <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
                     <!-- End .popup-video-->
                   </div>
@@ -78,15 +78,14 @@
                    Descriptions
                   </h6>
                   <p class="desc">
-                    A hernia is a condition of abnormal protrusion of an organ or the covering of an organ through the wall of the cavity that normally contains it.
+                   The Gallbladder is a pear shaped organ located close to the Liver
                   </p>
-				  <p class="desc">Consistent pressure and muscle weakening in a particular area of the body contributes its formation.</p>
                 </div>
                 <div class="col-12 col-lg-4">
 
                   <div class="sidebar sidebar-service">
 
-                
+                    
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -111,39 +110,48 @@
                   <!--"col-12 col-lg-4"-->
                   <div class="col-12 col-lg-12">
 
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Symptoms</h4>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> pain at the site of hernia, swelling on the site which may reduce on lying down or increase on activity, difficulty in passing stools or urine, swelling or pain in the previously operated scars.</li>
-                      <li><i class="fas fa-check"></i> There are different types of hernias, each requiring a medical / surgical intervention to prevent complications Providing the best treatment depends on the condition of the patient. Some surgeries involved are Open Surgery, Laparoscopic Hernia Surgery (Keyhole), Transabdominal preperitoneal or TAPP, Totally Extraperitoneal or TEP</li>
-                      <br><br>
-                    </ul>
+                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Function of the Gall Bladder</h4>
+                    <p class="desc">its function is to store and concentrate bile juice produced by the liver. Bile is a liquid produced by the liver which helps the body to digest fat.</p>
                   </div>
                   <div class="col-12 col-lg-12">
 
-                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Hernia Treatment</h4>
+                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">complications are caused by Gall Stones</h4>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Management of an umbilical or an inguinal hernia is always surgical.</li>
-                      <li><i class="fas fa-check"></i> As a hernia is an anatomical defect, medicines will not help. That's the absolute truth!!</li>
-                      <li><i class="fas fa-check"></i> Open surgery and keyhole surgery have been advocated for umbilical and inguinal hernia repair.</li>
-                      <li><i class="fas fa-check"></i> In keyhole surgery, the adhesions are released and the defect is repaired either with intra corporeal suturing or with mesh and tacks.</li>
+                      <li><i class="fas fa-check"></i>  Recurrent severe abdominal pain or vomiting.</li>
+                      <li><i class="fas fa-check"></i> Pus formation in the gall bladder (Empyema), Cholangitis</li>
+                      <li><i class="fas fa-check"></i> Gangrene and perforation of the gall bladder.</li>
+                      <li><i class="fas fa-check"></i> Acute pancreatitis due to stone sipping</li>
+					  <li><i class="fas fa-check"></i> Jaundice associated with cancer of gall bladder in the long term.</li>
                     </ul>
 					<br><br>
-
                   </div>
 				   <div class="col-12 col-lg-12">
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Types Of Hernia</h4>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Inguinal Hernias</h4>
-                    <p class="desc">Inguinal hernias are the most common type, accounting for 75% of all hernias. They mostly affect men or people assigned male at birth (AMAB). They happen when part of your bowel protrudes into your inguinal canal, a passage way that runs down your inner thigh.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Incisional Hernia</h4>
-                    <p class="desc">An incisional hernia occurs when tissue protrudes through a former incision in your abdominal wall that weakened over time. It's a common side effect of abdominal surgery.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Umbilical Hernia</h4>
-                    <p class="desc">An umbilical hernia occurs when part of your intestine pokes through an opening in your abdominal wall near your belly button. Most umbilical hernias are congenital (present from birth).</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Spigelain Hernia</h4>
-                    <p class="desc">A spigelian hernia is a rare, abnormal protrusion of abdominal contents or peritoneum through a defect (spigelian fascia), which is comprised of the transversus abdominis and the internal oblique aponeuroses.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Epigastric Hernia</h4>
-                    <p class="desc">An epigastric hernia is a lump in the midline between your belly button and sternum (breastbone) which can cause pain. Your abdominal cavity contains your intestines and other structures. These are protected by your abdominal wall, which is made up of four layers.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Femoral Hernia</h4>
-                    <p class="desc">A femoral hernia is a less-common type of groin hernia that occurs in the femoral canal, which runs underneath the inguinal canal. Fatty tissue may poke through.</p>
+                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Treatments for Gall Bladder Problems And Gall Stones</h4>
+                    <p class="desc">Medical Treatment of symptoms of pain with injectable) or orat painkillers. There is no medical therapy available for gallstones which can cure the disease, though. injectable or oral antibiotics and supportive medications- are available for treating the infection. Surgery to remove the gall bladder (tholecystectomy is the only way to treat Gall Stones-Open method or laparoscopic method. Laparoscopic method which is now the 'Gold Standard'.</p>
+					
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Gall Stone slips into the Common Bile Duct (CBD)</h4>
+                    <p class="desc">Slippage of stone(s) in CBD may cause pain or jaundice. ERCP is performed to remove the stone(s). This should preferably be done before surgery. However it may also be done after the Operation.</p>
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Stone is in the CBD</h4>
+                    <p class="desc">Astone in the CBD may not show up in an Ultrasound, though the patient may have symptoms which are indicative of this problem. In such a case the patient requires MRCH (Magnetic Resonance Cholangiopancreatography) or Endoscopic Ultrasound</p>
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">ERCP</h4>
+                    <p class="desc">The surgeon may use endoscopy for removing CBD stones before gallbladder surgery. Once the endoscope is in the small intestine, the surgeon locates the affected bile duct. An instrument on the endoscope is used to cut the duct and the stone is captured in a tiny basket and removed with the endoscope. This two-step procedure is called ERCP and EPT.</p>
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Non Surgical Treatment available for Gall Stone removal</h4>
+                    <p class="desc">&bull; Non surgical approaches are used only in special situations such as when a patients condition is not fit for anaesthesia and surgery.<br>
+					&bull; However, this does not cure the patient, as it only a provides symptomatic relief.</p>
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Gall Bladder an essential ORGAN</h4>
+                    <p class="desc">Fortunately, the gall bladder is an organ that people can live without. Losing it won't even require a change in diet. Once the gall bladder is removed, bile flows out of the liver through the hepatic ducts into the common bile duct and goes directly into the small intestine instead of being stored in the gall bladder.</p>
+					
+					<h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Gall Stone facts to remember.</h4>
+                    <ul class="list-unstyled advantages">
+                      <li><i class="fas fa-check"></i> Gall stones form when substances in the bile juice get precipitated</li>
+                      <li><i class="fas fa-check"></i> Gall stones are common among women and people who are over weight</li>
+                      <li><i class="fas fa-check"></i> Gall stone attacks often occur after eating fatty meals, Accurate diagnosis is important because symptoms can point towards other problems, including heart attack</li>
+                      <li><i class="fas fa-check"></i> Diagnosis can be made in a majority of the patients by simple Ultrasound conducted in a fasting state.</li>
+					  <li><i class="fas fa-check"></i> If trapped in the bile ducts, gall stones can cause serious problems such as jaundice and pancreatitis.</li>
+					  <li><i class="fas fa-check"></i> Laparoscopic surgery to remove the gall bladder is now the Gold Standard for treating gall stones.</li>
+                      <li><i class="fas fa-check"></i> Surgery is recommended for the removal of Gall Bladder to alleviate risk of further complications in the case of gall stones.</li>
+                      <li><i class="fas fa-check"></i> This procedure can be carried out in most patients, including those who have undergone previous abdominal surgeries, those with a history of cardiac disease, asthma, diabetes,etc</li>
+                    </ul>
                   </div>
 
                 </div>

@@ -20,18 +20,22 @@ class StaticPages extends BaseController
         $this->usermodel = new UserModel();
         $this->data['session'] = $this->session;
         $this->data['uri']  = service('uri');
-        helper(['url', 'session', 'custom', 'number']);
+        helper(['url', 'session', 'custom', 'number', 'form']);
         $this->data['title'] = "";
-        $this->date = date("Y-m-d H:i:s");
+        $this->date = date("Y-m-d h:i:s");
         $this->db = db_connect();
     }
     public function index()
     {
         return view('frontend/landing', $this->data);
     }
+    public function coimbatore()
+    {
+        return view('frontend/coimbatore', $this->data);
+    }
     public function home()
     {
-        return view('frontend/home', $this->data);
+        return view('frontend/coimbatore', $this->data);
     }
 
     public function aboutus()
@@ -46,7 +50,7 @@ class StaticPages extends BaseController
     {
         return view('frontend/chairman', $this->data);
     }
-    
+
     public function colorectal_surgery()
     {
         return view('frontend/colorectal-surgery', $this->data);
@@ -66,6 +70,26 @@ class StaticPages extends BaseController
     public function obesity_diabetes()
     {
         return view('frontend/obesity-diabetes', $this->data);
+    }
+    public function endoscopy()
+    {
+        return view('frontend/endoscopy', $this->data);
+    }
+    public function jaundice()
+    {
+        return view('frontend/jaundice', $this->data);
+    }
+    public function piles()
+    {
+        return view('frontend/piles', $this->data);
+    }
+    public function upper_gi()
+    {
+        return view('frontend/up-gi', $this->data);
+    }
+    public function gall_bladder()
+    {
+        return view('frontend/gall-bladder', $this->data);
     }
     public function hernia_care()
     {
@@ -138,5 +162,49 @@ class StaticPages extends BaseController
     public function privacy()
     {
         return view('frontend/privacy', $this->data);
+    }
+    public function blog_single()
+    {
+        return view('frontend/blog-single', $this->data);
+    }
+    public function magazine_single()
+    {
+        return view('frontend/magazine-single', $this->data);
+    }
+    public function board_director()
+    {
+        return view('frontend/board-director', $this->data);
+    }
+    public function doctor_publication()
+    {
+        return view('frontend/doctor-publication', $this->data);
+    }
+    public function doctor_senthil()
+    {
+        return view('frontend/doctor-senthil', $this->data);
+    }
+    public function doctor_anand()
+    {
+        return view('frontend/doctor-anand', $this->data);
+    }
+    public function doctor_harish()
+    {
+        return view('frontend/doctor-harish', $this->data);
+    }
+    public function doctor_nalan()
+    {
+        return view('frontend/doctor-nalan', $this->data);
+    }
+    public function doctor_rajapandian()
+    {
+        return view('frontend/doctor-rajapandian', $this->data);
+    }
+    public function doctor_saravanakumar()
+    {
+        return view('frontend/doctor-saravanakumar', $this->data);
+    }
+    public function doctor_ramesh()
+    {
+        return view('frontend/doctor-ramesh', $this->data);
     }
 }

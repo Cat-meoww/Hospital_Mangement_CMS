@@ -41,8 +41,19 @@ $routes->get('/logout', 'Home::logout');
 
 // Static pages
 $routes->get('/home', 'StaticPages::home');
+// Static pages
+$routes->get('/coimbatore', 'StaticPages::coimbatore');
 $routes->get('/aboutus', 'StaticPages::aboutus');
 $routes->get('/chairman', 'StaticPages::chairman');
+$routes->get('/board-director', 'StaticPages::board_director');
+$routes->get('/doctor-publication', 'StaticPages::doctor_publication');
+$routes->get('/doctor-senthil', 'StaticPages::doctor_senthil');
+$routes->get('/doctor-anand', 'StaticPages::doctor_anand');
+$routes->get('/doctor-harish', 'StaticPages::doctor_harish');
+$routes->get('/doctor-nalan', 'StaticPages::doctor_nalan');
+$routes->get('/doctor-rajapandian', 'StaticPages::doctor_rajapandian');
+$routes->get('/doctor-saravanakumar', 'StaticPages::doctor_saravanakumar');
+$routes->get('/doctor-ramesh', 'StaticPages::doctor_ramesh');
 
 $routes->group('services', function ($routes) {
     $routes->get('esophago-gastric-surgery', 'StaticPages::esophago_gastric_surgery');
@@ -51,7 +62,12 @@ $routes->group('services', function ($routes) {
     $routes->get('medical-gastroenterology', 'StaticPages::medical_gastroenterology');
     $routes->get('endogynecology', 'StaticPages::endogynecology');
     $routes->get('obesity-diabetes', 'StaticPages::obesity_diabetes');
+    $routes->get('endoscopy', 'StaticPages::endoscopy');
+    $routes->get('gall-bladder', 'StaticPages::gall_bladder');
     $routes->get('hernia-care', 'StaticPages::hernia_care');
+    $routes->get('jaundice', 'StaticPages::jaundice');
+    $routes->get('piles', 'StaticPages::piles');
+    $routes->get('up-gi', 'StaticPages::upper_gi');
     $routes->get('digestive-cancer-care', 'StaticPages::digestive_cancer_care');
     $routes->get('multi-organ-transplant', 'StaticPages::multi_organ_transplant');
     $routes->get('cardiology', 'StaticPages::cardiology');
@@ -67,7 +83,9 @@ $routes->get('/career', 'StaticPages::career');
 $routes->get('/bmw', 'StaticPages::bmw');
 $routes->get('/insurance', 'StaticPages::insurance');
 $routes->get('/blog', 'StaticPages::blog');
+$routes->get('/blog-single', 'StaticPages::blog_single');
 $routes->get('/magazines', 'StaticPages::magazines');
+$routes->get('/magazine-single', 'StaticPages::magazine_single');
 $routes->get('/press-release', 'StaticPages::press_release');
 $routes->get('/doctorinfo', 'StaticPages::doctor_info');
 $routes->get('/privacy-policy', 'StaticPages::privacy');

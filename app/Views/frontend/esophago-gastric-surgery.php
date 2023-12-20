@@ -23,7 +23,7 @@
                     Surgery, And Minimal Access Surgery in India.</p>
                 </div>
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="<?= base_url('index')?>">Home</a></li>
+                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Esophago Gastric Surgery</li>
                 </ol>
               </div>
@@ -103,15 +103,7 @@
 
                   <div class="sidebar sidebar-service">
 
-                    <div class="widget widget-reservation widget-reservation-2">
-                      <div class="widget-content"><i class="flaticon-022-medical"></i>
-                        <h5>emergency ?</h5>
-                        <p>24 Hour Ready Call Us for Emergency</p><a href="tel:04224695100"><span
-                            class="fas fa-phone-alt"></span>0422-4695100</a><br>
-                            <a href="tel:9003932323"><span
-                              class="fas fa-mobile-alt"></span>90039 32323</a>
-                      </div>
-                    </div>
+                    
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -119,9 +111,9 @@
                       </div>
                       <div class="widget-content">
                         <ul class="list-unstyled">
-                          <li><a href=""> <span class="line"> <span></span></span><span>Video
+                          <li><a href="<?= base_url('appointment/video-consultation') ?>"> <span class="line"> <span></span></span><span>Video
                                 Consultation</span></a></li>
-                          <li><a href=""> <span class="line"> <span></span></span><span>Visit to
+                          <li><a href="<?= base_url('appointment/book-appointment') ?>"> <span class="line"> <span></span></span><span>Visit to
                                 Hospital</span></a></li>
 
                         </ul>
@@ -195,7 +187,13 @@
   font-size: 16px;
   line-height: 27px;
   color: var(--global--color-secondary);">Our Department</h6>
-              <h5 class="entry-heading" style="text-align: center; font-size: 37px; color:#118B0F;">Awards and Achievement</h5>
+              <h5 class="entry-heading" style="text-align: center; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;
+   color:#118B0F;">Awards and Achievement</h5>
               <!---<p class="entry-desc">Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research. For over 20 years, our hospital has touched lives of millions of people, and provide care and treatment for the sickest in our community including rehabilitation and aged care.</p>--->
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -281,11 +279,17 @@
           <div class="row"> 
             <div class="col-12 col-lg-6 offset-lg-3">
               <div class="heading heading-12 heading-13 text-center">
-                <p class="heading-subtitle" style=" font-weight: 700;
+                <h6 class="" style=" font-weight: 700;
   font-size: 16px;
   line-height: 27px;
-  color: var(--global--color-secondary);">Patients Story</p>
-                <h2 class="heading-title" style="color:#118B0F;">Loved by our Patients</h2>
+  color: black;">Patients Story</h6>
+                <h2 class="heading-title" style="color:#118B0F; font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  ">Loved by our Patients</h2>
               </div>
             </div>
           </div>
@@ -308,7 +312,12 @@
                     <div class="department-desc">
                       <p>Dr. Parthasarathy Operated on me for Hernia. He did a Marvelous Job of Treating me. Best hospital with Great Staff for all Gastrointestinal Treatment.</p>
                     </div>
-                    <div class="department-more" style="color: black;font-size:16px;"><strong>Ismail Mohamed</strong></a></div>
+                   <div class="department-more">
+                    <p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Ismail Mohamed</p>
+                    </div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -339,7 +348,10 @@
                     <div class="department-desc">
                       <p>At Gem hospital, Coimbatore the Team Under The Head of Doctor Saravanakumar Treated well and gave us Good Treatment to my Spouse. Especially the ward Nurses took Care Much and moved very Friendly to my Spouse.</p>
                     </div>
-                    <div class="department-more"  style="color: black;font-size:16px;"><strong>Subramanian Ramasamy</strong></div>
+                    <div class="department-more"><p style="color: black;font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: black;">Subramanian Ramasamy</p></div>
                   </div>
                   <!-- End .team-img-->
                   <!-- End .team-content -->
@@ -366,7 +378,13 @@
                   <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="heading heading-7 text-center">
 
-                      <h6 class="entry-heading" style="font-size: 37px; color:#118B0F;">Know More About Endogynecology</h6>
+                      <h6 class="entry-heading" style="font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;
+   color:#118B0F;">Know More About Endogynecology</h6>
                     </div>
                   </div>
                 </div>
@@ -422,7 +440,13 @@
   font-size: 16px;
   line-height: 27px;
   color: var(--global--color-secondary);">FAQ</h2>
-              <h1 class="entry-heading" style="font-size: 37px; text-align: center; color:#118B0F;">Frequently Ask Questions</h1>
+              <h1 class="entry-heading" style="font-family: var(--global--font-heading);
+  text-transform: capitalize;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 25px;
+  font-weight: 500;
+   text-align: center; color:#118B0F;">Frequently Ask Questions</h1>
               <!---<p class="entry-desc">We help create a care plan that addresses your specific condition and we are here to answer all of your questions & acknowledge your concerns. Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes.</p>---->
               <div class="accordion accordion-3" id="accordion03">
                 <div class="card">

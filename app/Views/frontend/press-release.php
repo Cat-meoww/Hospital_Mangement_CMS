@@ -1,6 +1,17 @@
 <?= $this->extend('layout/frontend/main') ?>
 
 <?= $this->section('header') ?>
+<style>
+  .hero-content{
+    padding-bottom: 120px !important;
+  }.hero-title{
+    margin-top: 60px;
+  }.press-div1{
+    margin-top:30px;
+
+  }
+
+  </style>
 
 
 
@@ -10,17 +21,17 @@
 <section class="hero hero-5 bg-overlay bg-overlay-dark">
         <div class="bg-section"> <img src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="background" /></div>
         <div class="container">
-          <div class="hero-content" style="padding-bottom: 120px !important;">
+          <div class="hero-content" >
             <div class="row">
               <div class="col-12 col-lg-5">
-                <h2 class="hero-title" style="margin-top: 60px;">Press Release</h2>
+                <h2 class="hero-title" >Press Release</h2>
                
                 <!----<div class="hero-action"> <a class="btn btn--white btn-line btn-line-after btn-line-inversed" href="#"> <span>find a doctor</span><span class="line"><span></span></span></a><a class="btn btn--transparent btn-line btn-line-after" href="#"> <span>our core values</span><span class="line"><span></span></span></a></div>--->
               </div>
-              <div class="col-12" style="margin-top: 30px;">
+              <div class="col-12 press-div1" >
                 <ol class="breadcrumb d-flex justify-content-center">
-                  <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                  <li class=""><a href="press-release.html">Press Release</a></li>
+                  <li class="breadcrumb-item"><a href="<?= base_url('') ?>">Home</a></li>
+                  <li class=""><a href="<?= base_url('press-release') ?>">Press Release</a></li>
                 </ol>
               </div>
             </div>

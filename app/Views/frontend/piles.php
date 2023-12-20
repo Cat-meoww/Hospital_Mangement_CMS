@@ -9,7 +9,7 @@
 <?= $this->section('content') ?>
 
 <section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
+      <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
@@ -17,14 +17,14 @@
               <div class="title-card"  style="margin-top: -180px ;">
                 <div class="title-heading">
                   <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Hernia</h1>
+                  <h1>Piles</h1>
                 </div>
                 <div class="title-sub-heading">
                   <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
                 </div>
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Hernia</li>
+                  <li class="breadcrumb-item active" aria-current="page">Piles</li>
                 </ol>
               </div>
             </div>
@@ -78,15 +78,15 @@
                    Descriptions
                   </h6>
                   <p class="desc">
-                    A hernia is a condition of abnormal protrusion of an organ or the covering of an organ through the wall of the cavity that normally contains it.
+                    Piles are swollen and inflamed veins in the rectum and anus that cause discomfort and bleeding. They are usually caused by straining during bowel movements, obesity or pregnancy.
                   </p>
-				  <p class="desc">Consistent pressure and muscle weakening in a particular area of the body contributes its formation.</p>
+				  
                 </div>
                 <div class="col-12 col-lg-4">
 
                   <div class="sidebar sidebar-service">
 
-                
+                    
 
                     <div class="widget widget-services">
                       <div class="widget-title">
@@ -111,40 +111,65 @@
                   <!--"col-12 col-lg-4"-->
                   <div class="col-12 col-lg-12">
 
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Symptoms</h4>
+                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #118B0F;">Symptoms of Piles</h4>
+					
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> pain at the site of hernia, swelling on the site which may reduce on lying down or increase on activity, difficulty in passing stools or urine, swelling or pain in the previously operated scars.</li>
-                      <li><i class="fas fa-check"></i> There are different types of hernias, each requiring a medical / surgical intervention to prevent complications Providing the best treatment depends on the condition of the patient. Some surgeries involved are Open Surgery, Laparoscopic Hernia Surgery (Keyhole), Transabdominal preperitoneal or TAPP, Totally Extraperitoneal or TEP</li>
+                      <li><i class="fas fa-check"></i> Bright red blood in stools</li>
+                      <li><i class="fas fa-check"></i> Increased itch and pain around anus</li>
+                      <li><i class="fas fa-check"></i> Multiple Swellings around anus</li>
                       <br><br>
                     </ul>
                   </div>
                   <div class="col-12 col-lg-12">
 
-                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Hernia Treatment</h4>
+                   <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F;">Advanced Treatment</h4>
                     <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Management of an umbilical or an inguinal hernia is always surgical.</li>
-                      <li><i class="fas fa-check"></i> As a hernia is an anatomical defect, medicines will not help. That's the absolute truth!!</li>
-                      <li><i class="fas fa-check"></i> Open surgery and keyhole surgery have been advocated for umbilical and inguinal hernia repair.</li>
-                      <li><i class="fas fa-check"></i> In keyhole surgery, the adhesions are released and the defect is repaired either with intra corporeal suturing or with mesh and tacks.</li>
+                      <li><i class="fas fa-check"></i> Laser Treatment</li>
+                      <li><i class="fas fa-check"></i> Ligasure and Ultrasonic Method</li>
+                      <li><i class="fas fa-check"></i> Stapler Piles Surgery Banding</li>
                     </ul>
+					<br>
+					<p class="desc">"Avail benefits of Minimally Invasive Laser Surgery"</p>
 					<br><br>
 
                   </div>
 				   <div class="col-12 col-lg-12">
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Types Of Hernia</h4>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Inguinal Hernias</h4>
-                    <p class="desc">Inguinal hernias are the most common type, accounting for 75% of all hernias. They mostly affect men or people assigned male at birth (AMAB). They happen when part of your bowel protrudes into your inguinal canal, a passage way that runs down your inner thigh.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Incisional Hernia</h4>
-                    <p class="desc">An incisional hernia occurs when tissue protrudes through a former incision in your abdominal wall that weakened over time. It's a common side effect of abdominal surgery.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Umbilical Hernia</h4>
-                    <p class="desc">An umbilical hernia occurs when part of your intestine pokes through an opening in your abdominal wall near your belly button. Most umbilical hernias are congenital (present from birth).</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Spigelain Hernia</h4>
-                    <p class="desc">A spigelian hernia is a rare, abnormal protrusion of abdominal contents or peritoneum through a defect (spigelian fascia), which is comprised of the transversus abdominis and the internal oblique aponeuroses.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Epigastric Hernia</h4>
-                    <p class="desc">An epigastric hernia is a lump in the midline between your belly button and sternum (breastbone) which can cause pain. Your abdominal cavity contains your intestines and other structures. These are protected by your abdominal wall, which is made up of four layers.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Femoral Hernia</h4>
-                    <p class="desc">A femoral hernia is a less-common type of groin hernia that occurs in the femoral canal, which runs underneath the inguinal canal. Fatty tissue may poke through.</p>
+
+                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Anal Fistula</h4>
+				   <p class="desc">An anal fistula is a small channel can develop between the end of the bowel and the skin near the anus.
+                                   It is common among those who earlier had anal abscess.</p>
+                    <ul class="list-unstyled advantages">
+					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F;">Advanced Treatment</h4>
+                      <li><i class="fas fa-check"></i> VAFT</li>
+                      <li><i class="fas fa-check"></i> Laser Surgery Of Anal Fistula</li>
+                      <li><i class="fas fa-check"></i> LIFT</li>
+                    </ul>
+					<br><br>
                   </div>
+				  
+				   <div class="col-12 col-lg-12">
+
+                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Anal Fissure</h4>
+				   <p class="desc">An anal fissure is a tear in the lining of the anus or anal canal (the opening through which stool passes out of the body).The fissure can be extremely painful and may bleed.</p>
+                    <ul class="list-unstyled advantages">
+					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F;">Advanced Treatment</h4>
+                      <li><i class="fas fa-check"></i> LAS</li>
+                      <li><i class="fas fa-check"></i> Laser Sphincterotomy</li>
+                      <li><i class="fas fa-check"></i> Botox Injection</li>
+                    </ul>
+					<br><br>
+                  </div>
+				  <div class="col-12 col-lg-12">
+
+                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Pilonidal Sinus Disease (PNS)</h4>
+				   <p class="desc">A pilonidal sinus (PNS) is a small hole or tunnel in the skin.</p>
+                    <ul class="list-unstyled advantages">
+					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F;">Advanced Treatment</h4>
+                    <p class="desc">Minimally Invasive Treatment Laser for PILONIDAL SINUS</p>
+                    </ul>
+					<br><br>
+                  </div>
+				   
 
                 </div>
 
