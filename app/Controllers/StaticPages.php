@@ -22,6 +22,7 @@ class StaticPages extends BaseController
         $this->data['uri']  = service('uri');
         helper(['url', 'session', 'custom', 'number', 'form']);
         $this->data['title'] = "";
+        $this->data['description'] = "";
         $this->date = date("Y-m-d h:i:s");
         $this->db = db_connect();
     }

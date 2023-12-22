@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Ayman Fikry" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Home Gem Hospital" />
+    <meta name="description" content="<?= $description ?>" />
     <title><?= $title ?> - Gem Hospital</title>
     <link href="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" rel="icon" />
     <!--  Fonts ==
@@ -22,12 +22,12 @@
 </head>
 
 <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="spinner">
             <div class="dot1"></div>
             <div class="dot2"></div>
         </div>
-    </div>
+    </div> -->
     <!--<div class="cursor">
     <div class="cursor__inner cursor__inner--circle"></div>
     <div class="cursor__inner cursor__inner--dot"></div>
@@ -88,7 +88,7 @@
     </div>
     <!--  Footer Scripts==
     -->
-    <script  src="<?= base_url('frontend/assets/js/vendor/jquery-3.6.0.min.js') ?>"></script>
+    <script src="<?= base_url('frontend/assets/js/vendor/jquery-3.6.0.min.js') ?>"></script>
     <script src="<?= base_url('frontend/assets/js/vendor.min.js') ?>"></script>
     <script src="<?= base_url('frontend/assets/js/functions.js') ?>"></script>
 

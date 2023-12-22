@@ -270,12 +270,12 @@ class doctors extends General
                     'created_by' => $this->session->user_id
                 ];
 
-                $olddata = $Doctors->select('image')->where('id', $id)->first();
+                $olddata = $Doctors->select('image,slug')->where('id', $id)->first();
                 $newimg = $this->request->getFile('imagefile');
-                
+
                 if ($newimg->getSize() > 0) {
                     $newimagename = $this->uploadImage('imagefile', $olddata->image);
-                   
+
                     if ($newimagename) {
                         $update['image'] = $newimagename;
                     }
@@ -284,6 +284,10 @@ class doctors extends General
                 $query = $Doctors->where('id', $id)->set($update)->update();
 
                 if ($query) {
+                    //CMS pages slug relation ship updated
+                    $CmsPages = new  \App\Models\CmsPages();
+                    $CmsPages->where('type', 'doctor')->where('slug', $olddata->slug)->set('slug', $this->request->getPost('slug'))->update();
+
                     return $this->respond([
                         'status' => "success",
                         'msg' => "Updated data successfully."

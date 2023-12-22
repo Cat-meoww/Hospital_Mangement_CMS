@@ -23,6 +23,7 @@ class Home extends BaseController
         $this->data['uri']  = service('uri');
         helper(['url', 'session', 'custom', 'number', 'form']);
         $this->data['title'] = "";
+        $this->data['description'] = "";
         $this->date = date("Y-m-d H:i:s");
         $this->db = db_connect();
     }
@@ -475,7 +476,7 @@ class Home extends BaseController
             $VideoBookings = new \App\Models\VideoBookings();
 
 
-            if (!$payment = $Payments->where('transaction_id', $transaction_id)->where('expired_on >',$this->date)->whereIn('status', ['INIT', 'FAILED'])->first()) {
+            if (!$payment = $Payments->where('transaction_id', $transaction_id)->where('expired_on >', $this->date)->whereIn('status', ['INIT', 'FAILED'])->first()) {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
             }
             $customer = $VideoBookings->find($payment->booking_id);
@@ -624,6 +625,54 @@ class Home extends BaseController
         } catch (\Throwable $th) {
 
             return false;
+        }
+    }
+
+    public function blogs()
+    {
+        helper('form');
+        $perPage = 6;
+        $current_page    = (int) ($this->request->getGet('page') ?? 1);
+        $this->data['title'] = "All Properties";
+
+
+        $Blogs = new \App\Models\Blogs();
+
+        $listings = $Blogs
+            ->select('*')
+            ->where('visibility', 'Public')->orderBy('id','DESC');
+
+
+        $this->data['listings'] =  $listings->paginate($perPage);
+        $pager = $listings->pager;
+
+
+        $total   = $pager->getTotal('default');
+        $this->data['total_result'] = $total;
+
+        $this->data['pager_links'] = $pager->makeLinks($current_page, $perPage, $total, 'custom_view');
+
+
+
+        return view('frontend/blog/blogs', $this->data);
+    }
+    public function single_blog($slug)
+    {
+        try {
+            $Blogs = new \App\Models\Blogs();
+
+
+
+            if (!$Blog = $Blogs->where('slug', $slug)->where('visibility', 'Public')->first()) {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+            $this->data['title'] = $Blog->meta_title;
+            $this->data['description'] = $Blog->meta_description;
+            $this->data['blog'] = $Blog;
+
+            return view('frontend/blog/single-blog', $this->data);
+        } catch (\Exception $e) {
+            throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
         }
     }
 }

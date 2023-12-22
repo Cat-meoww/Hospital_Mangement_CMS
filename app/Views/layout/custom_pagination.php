@@ -8,9 +8,9 @@
         <ul class="pagination mt-3">
 
 
-            <li class="page-item me-auto <?= !$pager->hasPreviousPage() ? 'disabled' : '' ?>">
+            <li class="page-item  <?= !$pager->hasPreviousPage() ? 'disabled' : '' ?>">
                 <a class="page-link" href="<?= $pager->getPreviousPage() ?>" aria-label="<?= lang('Pager.previous') ?>">
-                    <span aria-hidden="true">Prev</span>
+                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
                 </a>
             </li>
 
@@ -23,9 +23,9 @@
                 </li>
             <?php endforeach ?>
 
-            <li class="page-item ms-auto <?= !$pager->hasNextPage() ? 'disabled' : '' ?>">
+            <li class="page-item  <?= !$pager->hasNextPage() ? 'disabled' : '' ?>">
                 <a class="page-link" href="<?= $pager->getNextPage() ?>" aria-label="<?= lang('Pager.previous') ?>">
-                    <span aria-hidden="true"><?= lang('Pager.next') ?></span>
+                    <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
                 </a>
             </li>
             

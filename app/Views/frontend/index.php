@@ -21,7 +21,7 @@
         <div class="slider-carousel owl-carousel carousel-navs carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0" data-loop="true" data-speed="800" data-slider-id="#custom-carousel">
             <!--  Start .slide-->
             <div class="slide bg-overlay bg-overlay-dark-slider">
-                <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/sliders/coimbatore-gem-hospital-elevation.jpg') ?>" alt="Background" /></div>
+                <div class="bg-section"><img src="<?= base_url('frontend/assets/images/sliders/coimbatore-gem-hospital-elevation.jpg') ?>" alt="Background" /></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-6">
@@ -43,7 +43,7 @@
             <!--  End .slide-->
             <!--  Start .slide-->
             <div class="slide bg-overlay bg-overlay-dark-slider">
-                <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-header.jpg') ?>" alt="Background" />
+                <div class="bg-section"><img src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-header.jpg') ?>" alt="Background" />
                 </div>
                 <div class="container">
                     <div class="row">
@@ -74,7 +74,7 @@
       ============================
       -->
 <section class="features-bar pb-2" id="featuresBar-1">
-    <div class="bg-section"> <img   src="<?= base_url('frontend/assets/images/background/pattern-2.jpg') ?>" alt="background" /></div>
+    <div class="bg-section"> <img src="<?= base_url('frontend/assets/images/background/pattern-2.jpg') ?>" alt="background" /></div>
     <div class="container">
         <div class="row g-0 features-holder">
             <div class="col-12 col-lg-4">
@@ -121,7 +121,7 @@
         <div class="heading heading-15">
             <div class="row">
                 <div class="col-12 col-lg-5">
-                    <div class="clients-img"> <img   style="width:100%; aspect-ratio: 1/1; object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/doctor.png') ?>" alt="image"></div>
+                    <div class="clients-img"> <img style="width:100%; aspect-ratio: 1/1; object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/doctor.png') ?>" alt="image"></div>
                 </div>
                 <div class="col-12 col-lg-6 offset-lg-1">
                     <p class="paragraph">GEM Hospital Was Initially Started As Coimbatore Institute Of
@@ -184,11 +184,11 @@
             <div class="block-top">
                 <div class="row">
                     <div class="col-12 col-lg-2 wow fadeInDown">
-                        <div class="avatar avatar-1"><img   src="<?= base_url('frontend/assets/images/sliders/hope-thumb-gem-hospital-q77yfa44b0ecpr4yfoq6x7jb6ub79cglk0o5937l7m.jpg') ?>" alt="image" /></div>
+                        <div class="avatar avatar-1"><img src="<?= base_url('frontend/assets/images/sliders/hope-thumb-gem-hospital-q77yfa44b0ecpr4yfoq6x7jb6ub79cglk0o5937l7m.jpg') ?>" alt="image" /></div>
                     </div>
                     <div class="col-12 col-lg-5 wow fadeIn">
                         <div class="avatar avatar-2 bg-overlay bg-overlay-theme">
-                            <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/about/avatars/2.jpg') ?>" alt="image" />
+                            <div class="bg-section"><img src="<?= base_url('frontend/assets/images/about/avatars/2.jpg') ?>" alt="image" />
                             </div>
                             <div class="avatar-content">
                                 <p>With modern, busy lifestyles, it’s easy to neglect your health as you put
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-2 wow slideInDown">
-                        <div class="avatar avatar-3"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/coimbatore-gem-hospital-elevation.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-3"><img style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/coimbatore-gem-hospital-elevation.jpg') ?>" alt="image" />
                         </div>
                     </div>
                     <div class="col-12 -col-lg-3"></div>
@@ -214,14 +214,14 @@
             <div class="block-bottom">
                 <div class="row">
                     <div class="col-12 offset-lg-1 col-lg-3 wow fadeInLeft">
-                        <div class="avatar avatar-5"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-q77yfjiiibgbucsqij0955vie12s29aue9cal7fyho.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-5"><img style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-q77yfjiiibgbucsqij0955vie12s29aue9cal7fyho.jpg') ?>" alt="image" />
                         </div>
                     </div>
                     <div class="col-12 col-lg-5 wow slideInUp">
-                        <div class="avatar avatar-6"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-hope-gem-hospital.jpg') ?>" alt="image" /></div>
+                        <div class="avatar avatar-6"><img style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/cancer-hope-gem-hospital.jpg') ?>" alt="image" /></div>
                     </div>
                     <div class="col-12 col-lg-3 wow slideInRight">
-                        <div class="avatar avatar-4"><img   style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/davinc-robotic-gem-hospital.jpg') ?>" alt="image" />
+                        <div class="avatar avatar-4"><img style="object-fit: cover;" src="<?= base_url('frontend/assets/images/sliders/davinc-robotic-gem-hospital.jpg') ?>" alt="image" />
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
       ============================
       -->
 <section class="services services-4" id="services-4">
-    <div class="bg-section"><img   src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-header.jpg') ?>" alt="background" />
+    <div class="bg-section"><img src="<?= base_url('frontend/assets/images/sliders/cancer-gem-hospital-header.jpg') ?>" alt="background" />
     </div>
     <div class="container">
         <div class="row">
@@ -399,7 +399,7 @@
       ============================
       -->
 <section class="cta cta-5" id="cta-5">
-    <div class="bg-section"> <img   src="<?= base_url('frontend/assets/images/background/wavy-pattern.png') ?>" alt="background" /></div>
+    <div class="bg-section"> <img src="<?= base_url('frontend/assets/images/background/wavy-pattern.png') ?>" alt="background" /></div>
     <div class="row">
         <div class="col-12 col-lg-5">
             <div class="heading heading-8 heading-light">
@@ -434,7 +434,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-5 offset-lg-1 pt-5">
-            <div class="about-img"><img   class="img-fluid" src="<?= base_url('frontend/assets/images/about/a4.jpg') ?>" alt="about Image" style="border-radius: 32px 32px 0px 32px;" /></div>
+            <div class="about-img"><img class="img-fluid" src="<?= base_url('frontend/assets/images/about/a4.jpg') ?>" alt="about Image" style="border-radius: 32px 32px 0px 32px;" /></div>
         </div>
 
     </div>
@@ -552,7 +552,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/1.jpg') ?>" alt="6 tips to protect your mental health when sick" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/1.jpg') ?>" alt="6 tips to protect your mental health when sick" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
@@ -585,7 +585,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/2.jpg') ?>" alt="Unsure About Wearing a Face Mask? How and Why" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/2.jpg') ?>" alt="Unsure About Wearing a Face Mask? How and Why" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
@@ -619,7 +619,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/3.jpg') ?>" alt="Tips for Eating Healthy When Working From Home" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/3.jpg') ?>" alt="Tips for Eating Healthy When Working From Home" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
@@ -652,7 +652,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/4.jpg') ?>" alt="Why Coronavirus Cases Among Adults Is Bad News" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/4.jpg') ?>" alt="Why Coronavirus Cases Among Adults Is Bad News" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
@@ -685,7 +685,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/5.jpg') ?>" alt="Why Do People Get Kidney Stones in the Summer?" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/5.jpg') ?>" alt="Why Do People Get Kidney Stones in the Summer?" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">
@@ -718,7 +718,7 @@
                         <div class="entry-date">
                             <div class="entry-content"><span class="day">20</span><span class="month">jan</span><span class="year">2021</span></div>
                         </div>
-                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img   src="<?= base_url('frontend/assets/images/blog/grid/6.jpg') ?>" alt="Do Any Drugs Really Work to Treat Coronavirus?" /></a>
+                        <!-- End .entry-date--><a href="blog-single-sidebar.html"><img src="<?= base_url('frontend/assets/images/blog/grid/6.jpg') ?>" alt="Do Any Drugs Really Work to Treat Coronavirus?" /></a>
                     </div>
                     <!-- End .entry-img-->
                     <div class="entry-content">

@@ -193,6 +193,7 @@
     margin-bottom: 8px;
 
 }
+
 .ck-content ol li {
     list-style: auto;
     margin-bottom: 8px;
@@ -614,4 +615,25 @@
 
 .ck-content [hidden] {
     display: none !important;
+}
+
+.ck-content .text-big {
+    font-size: 1.4em !important;
+}
+
+.ck-content .text-huge {
+    font-size: 1.8em !important;
+}
+
+.ck-content .image img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 100%;
+}
+.ck-content .image-style-side{
+    float: right;
+    margin-left: 1.5em;
+    max-width: 50%;
 }

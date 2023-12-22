@@ -34,59 +34,54 @@
 
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>specialities</span></a>
-                <ul class="dropdown-menu nav-ser" style="display: flex; flex-direction:row; gap:2px; width:600px; " >
-                    <ul class="col-6 ">
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/esophago-gastric-surgery') ?>"><span>Esophago Gastric Surgery</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/colorectal-surgery') ?>"><span>colorectal surgery</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/liver-pancreas') ?>"><span>liver & pancreas</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/medical-gastroenterology') ?>"><span>Medical Gastroenterology</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/endogynecology') ?>"><span>endogynecology</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/obesity-diabetes') ?>"><span>obesity & diabetes</span></a>
-                        </li>
-                    </ul>
-                    <ul class="col-6">
-                        <li class="nav-item ">
-                            <a href="#"><span>hernia care</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/digestive-cancer-care') ?>"><span>digestive cancer care</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/multi-organ-transplant') ?>"><span>multi organ transplant</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/cardiology') ?>"><span>cardiology</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/nephrology') ?>"><span>nephrology</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/urology') ?>"><span>urology</span></a>
-                        </li>
-                    </ul>
+                <ul class="dropdown-menu " style="width:600px;">
+
+                    <div class="nav-ser" style="display: flex; flex-direction:row; gap:2px;  ">
+                        <ul class="col-6 ">
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/esophago-gastric-surgery') ?>"><span>Esophago Gastric Surgery</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/colorectal-surgery') ?>"><span>colorectal surgery</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/liver-pancreas') ?>"><span>liver & pancreas</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/medical-gastroenterology') ?>"><span>Medical Gastroenterology</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/endogynecology') ?>"><span>endogynecology</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/obesity-diabetes') ?>"><span>obesity & diabetes</span></a>
+                            </li>
+                        </ul>
+                        <ul class="col-6">
+                            <li class="nav-item ">
+                                <a href="#"><span>hernia care</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/digestive-cancer-care') ?>"><span>digestive cancer care</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/multi-organ-transplant') ?>"><span>multi organ transplant</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/cardiology') ?>"><span>cardiology</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/nephrology') ?>"><span>nephrology</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="<?= base_url('services/urology') ?>"><span>urology</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </ul>
             </li>
-            <style>
-                @media screen and (max-width:600px) {
-                    .nav-ser{
-                        display:flex ; flex-direction:column;  width:200px;
-
-                    }
-
-                    
-                }
-            </style>
+           
             <li class="nav-item" data-hover="" id="contact">
                 <a href="<?= base_url('health-package') ?>"><span class="text-truncate">health package</span></a>
             </li>

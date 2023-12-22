@@ -74,6 +74,10 @@ $routes->group('services', function ($routes) {
     $routes->get('nephrology', 'StaticPages::nephrology');
     $routes->get('urology', 'StaticPages::urology');
 });
+$routes->group('blog', function ($routes) {
+    $routes->get('/', 'Home::blogs');
+    $routes->get('(:any)', 'Home::single_blog/$1');
+});
 
 $routes->get('/mgr', 'StaticPages::mgr');
 $routes->get('/nbe', 'StaticPages::nbe');
@@ -82,7 +86,7 @@ $routes->get('/contactus', 'StaticPages::contact_us');
 $routes->get('/career', 'StaticPages::career');
 $routes->get('/bmw', 'StaticPages::bmw');
 $routes->get('/insurance', 'StaticPages::insurance');
-$routes->get('/blog', 'StaticPages::blog');
+
 $routes->get('/blog-single', 'StaticPages::blog_single');
 $routes->get('/magazines', 'StaticPages::magazines');
 $routes->get('/magazine-single', 'StaticPages::magazine_single');

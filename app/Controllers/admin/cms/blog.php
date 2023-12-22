@@ -19,7 +19,7 @@ class blog extends General
 
     public function index()
     {
-
+        helper('text');
 
         $this->data['title'] = "Blog";
         $Blogs = new \App\Models\Blogs();

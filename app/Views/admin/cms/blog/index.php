@@ -10,6 +10,12 @@
         overflow: hidden;
         max-width: 600px !important;
     }
+
+    .line-400 {
+        max-width: 300px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 </style>
 
 <link rel="stylesheet" type="text/css" media="screen" href=" <?= base_url("admin/assets/css/select2.css") ?>" />
@@ -65,8 +71,8 @@
                 <table id="dt-table" class="whitespace-nowrap table-hover table-bordered">
                     <thead>
                         <th>ID</th>
-                        <th>Meta Title </th>
                         <th>Slug</th>
+                        <th>Meta Title </th>
                         <th>Meta Description</th>
                         <th>Heading</th>
                         <th>Visiblity</th>
@@ -76,12 +82,12 @@
                         <?php foreach ($Dataset as $index => $item) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $item->slug ?></td>
-                                <td><?= $item->meta_title ?></td>
-                                <td><?= $item->meta_description ?></td>
+                                <td class="line-400"><?= character_limiter($item->slug, 10) ?></td>
+                                <td><?= character_limiter($item->meta_title, 30) ?></td>
+                                <td><?= character_limiter($item->meta_description, 20) ?></td>
 
-                                <td class="tab-md-normal">
-                                    <?= $item->heading ?>
+                                <td>
+                                    <?= character_limiter($item->heading, 30) ?>
                                 </td>
 
                                 <?php if ($item->visibility === "Public") : ?>
