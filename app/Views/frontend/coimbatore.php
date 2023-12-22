@@ -9,96 +9,155 @@
     .owl-item>.slide {
         background-position-y: center !important;
     }
-    .sec-slide {
-  position: relative;
-  bottom: 190px !important;
-}
-    .phone-covai{
-  color: #118b0f !important;
-  background-color: #0d3e21 !important;
-}.video-covai{
-  width: 25%;
-}.doctor-covai1{
-  width:100%; aspect-ratio: 1/1; object-fit: cover;
-}
-.home-abt1{
-    font-size: 16px !important; color:#118B0F !important;
-}
-.head-covai1{
-    font-size : 70px !important; color:green !important;
-}
-.para-covai1{
-    color:black !important;
-}.year{
-    margin-left: 100px;
-}.para-covai2{
-    text-align:center;font-weight:bold; color:white;
-}.head-covai2{
-    text-align:center; color:white;
-}.section-covai1{
-    position:relative;bottom:300px; margin-bottom:-200px;
-}.box-covai1{
-    background-color:white !important;
-}.box-img1{
-    width:30%;margin-left:35%;
-}.head-covai3{
-    color:black;  margin-top:10px;
-}.covai-img1{
-    object-fit: cover;
-}
-.covai-img2{
-    object-fit: cover;
-    width: 90%;
-}
-.pahe-covai1{
-    color:black;
-}
-.service-covai1{
-    height: 440px !important;
-}
-.para-covai3{
-    color:white !important;
-}
-.img-fluid{
-    border-radius: 32px 32px 0px 32px;
-}.coblog-box1{
-    height: 210px !important; width: 500px !important;
-}
-.iccot-popicon1{
-    font-size: 14px;
-}
-.iccot-poph1{
-    text-align: center; font-weight: 500;
-}
-.iccot-popp1{
-    text-align: center;
-}.pop-z{
-    z-index:9999;
-}
-@media screen and (max-width:600px) {
-  .lab {
-      float: left;
-  }.year {
-    margin-right: 100px;
-}
-.home-abt1 {
-    margin-top: 50px;
- } .mobile {
-    width: 100px !important;
-} .cv {
-    margin-right: 190px;
-}
-.cv1 {
-margin-right: 50px;
- }
 
-}
-@media screen and (max-width: 991.98px) {
+    .sec-slide {
+        position: relative;
+        bottom: 190px !important;
+    }
+
+    .phone-covai {
+        color: #118b0f !important;
+        background-color: #0d3e21 !important;
+    }
+
+    .video-covai {
+        width: 25%;
+    }
+
+    .doctor-covai1 {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .home-abt1 {
+        font-size: 16px !important;
+        color: #118B0F !important;
+    }
+
+    .head-covai1 {
+        font-size: 70px !important;
+        color: green !important;
+    }
+
+    .para-covai1 {
+        color: black !important;
+    }
+
+    .year {
+        margin-left: 100px;
+    }
+
+    .para-covai2 {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+
+    .head-covai2 {
+        text-align: center;
+        color: white;
+    }
+
+    .section-covai1 {
+        position: relative;
+        bottom: 300px;
+        margin-bottom: -200px;
+    }
+
+    .box-covai1 {
+        background-color: white !important;
+    }
+
+    .box-img1 {
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    .head-covai3 {
+        color: black;
+        margin-top: 10px;
+    }
+
+    .covai-img1 {
+        object-fit: cover;
+    }
+
+    .covai-img2 {
+        object-fit: cover;
+        width: 90%;
+    }
+
+    .pahe-covai1 {
+        color: black;
+    }
+
+    .service-covai1 {
+        height: 440px !important;
+    }
+
+    .para-covai3 {
+        color: white !important;
+    }
+
+    .img-fluid {
+        border-radius: 32px 32px 0px 32px;
+    }
+
+    .coblog-box1 {
+        height: 210px !important;
+        width: 500px !important;
+    }
+
+    .iccot-popicon1 {
+        font-size: 14px;
+    }
+
+    .iccot-poph1 {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .iccot-popp1 {
+        text-align: center;
+    }
+
+    .pop-z {
+        z-index: 9999;
+    }
+
+    @media screen and (max-width:600px) {
+        .lab {
+            float: left;
+        }
+
+        .year {
+            margin-right: 100px;
+        }
+
+        .home-abt1 {
+            margin-top: 50px;
+        }
+
+        .mobile {
+            width: 100px !important;
+        }
+
+        .cv {
+            margin-right: 190px;
+        }
+
+        .cv1 {
+            margin-right: 50px;
+        }
+
+    }
+
+    @media screen and (max-width: 991.98px) {
         .about.about-4 {
             padding-top: 0px;
         }
     }
-    
 </style>
 
 <?= $this->endSection() ?>
@@ -176,14 +235,14 @@ margin-right: 50px;
                     <div class="feature-content"><i class="flaticon-022-medical"></i>
                         <h5>emergency cases</h5>
                         <p>Please feel free to contact our team for any general or medical enquiry </p>
-                        <a href="tel:04224695100"><span class="fas fa-phone-alt phone-covai" ></span>04224695100</a>
+                        <a href="tel:04224695100"><span class="fas fa-phone-alt phone-covai"></span>04224695100</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-4">
                 <!-- Start .widget-timetable-->
                 <div class="feature-panel feature-timetable h-100">
-                    <div class="feature-content"><img src="<?= base_url('frontend/assets/images/icons/Video.svg') ?>" alt="background"  class="video-covai" />
+                    <div class="feature-content"><img src="<?= base_url('frontend/assets/images/icons/Video.svg') ?>" alt="background" class="video-covai" />
                         <h5>Video Consultation</h5>
                         <p>Book an appointment have a hassle-free discussion with our doctors from your home</p>
                         <a class="btn btn--primary btn-line btn-line-before btn-home2" href="<?= base_url('appointment/video-consultation') ?>">
@@ -213,7 +272,7 @@ margin-right: 50px;
                     <div class="clients-img"> <img src="<?= base_url('frontend/assets/images/sliders/doctor.png')  ?>" alt="image" class="doctor-covai1"></div>
                 </div>
                 <div class="col-12 col-lg-6 offset-lg-1">
-                    <h6 class="heading-title home-abt1" >About Us</h6>
+                    <h6 class="heading-title home-abt1">About Us</h6>
                     <h6 class="heading-title">GEM Hospital Was Initially Started As Coimbatore Institute Of
                         Gastrointestinal Endo-Surgery (CIGES) In The Year 1991 By Its Founder Dr.C.Palanivelu
                     </h6>
@@ -236,11 +295,11 @@ margin-right: 50px;
                         </div>
                         <div class="heading heading-7 text--center year">
 
-                            <h2 class="heading-title head-covai1" >32+</h2>
+                            <h2 class="heading-title head-covai1">32+</h2>
                             <p class="heading-subtitle para-covai1">Years Experienced</p>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -269,7 +328,7 @@ margin-right: 50px;
                     <div class="col-12 col-lg-12">
                         <div class="slide-content">
                             <p class="paragraph para-covai2">What We Do</p>
-                            <h1 class="slide-headline head-covai2" >GEM @ Home</h1>
+                            <h1 class="slide-headline head-covai2">GEM @ Home</h1>
                             <p class="slide-desc para-covai2 ">After COVID Pandemic, We GEM Hospital started Gem at Home which offers you ICU from Home,<br> Pharmacy door delivery, Online Consultation & Lab & Blood Tests<br> from home (100% Accuracy, No Extra Cost) </p>
 
                         </div>
@@ -324,13 +383,13 @@ margin-right: 50px;
             </div>
             <div class="col-12 col-lg-4">
                 <!-- Start .widget-timetable-->
-                <div class="feature-panel feature-timetable h-100 box-covai1" >
+                <div class="feature-panel feature-timetable h-100 box-covai1">
                     <div class="team-content">
                         <img src="<?= base_url('frontend/assets/images/icons/Frame2.svg') ?>" alt="background" class="box-img1" />
 
                         <div class="team-title">
 
-                            <h4  class="head-covai3"><a>
+                            <h4 class="head-covai3"><a>
                                     Pharmacy Door Delivery </a></h4>
                         </div>
                         <div class="team-cat"><a href="javascript:void(0)">Get Superfast Medicine Delivery
@@ -357,7 +416,7 @@ margin-right: 50px;
                     <div class="team-content">
                         <div class="team-title">
                             <img src="<?= base_url('frontend/assets/images/icons/frame3.svg') ?>" alt="background" class="box-img1" />
-                            <h4  class="head-covai3"><a>
+                            <h4 class="head-covai3"><a>
                                     Lab & Blood Bank </a></h4>
                         </div>
                         <div class="team-cat"><a href="javascript:void(0)">
@@ -403,7 +462,7 @@ margin-right: 50px;
                         </div>
                     </div>
                     <div class="col-12 col-lg-2 wow slideInDown">
-                        <div class="avatar avatar-3"><img  src="<?= base_url('frontend/assets/images/sliders/Rob2.jpg') ?>" alt="image" class="covai-img1" />
+                        <div class="avatar avatar-3"><img src="<?= base_url('frontend/assets/images/sliders/Rob2.jpg') ?>" alt="image" class="covai-img1" />
                         </div>
                     </div>
                     <div class="col-12 -col-lg-3"></div>
@@ -412,14 +471,14 @@ margin-right: 50px;
             <div class="block-bottom">
                 <div class="row">
                     <div class="col-12 offset-lg-1 col-lg-3 wow fadeInLeft">
-                        <div class="avatar avatar-5"><img  src="<?= base_url('frontend/assets/images/sliders/Rob4.jpg') ?>" alt="image" class="covai-img1" />
+                        <div class="avatar avatar-5"><img src="<?= base_url('frontend/assets/images/sliders/Rob4.jpg') ?>" alt="image" class="covai-img1" />
                         </div>
                     </div>
                     <div class="col-12 col-lg-5 wow slideInUp">
-                        <div class="avatar avatar-6"><img  src="<?= base_url('frontend/assets/images/sliders/Rob3.jpg') ?>" alt="image" class="covai-img1" /></div>
+                        <div class="avatar avatar-6"><img src="<?= base_url('frontend/assets/images/sliders/Rob3.jpg') ?>" alt="image" class="covai-img1" /></div>
                     </div>
                     <div class="col-12 col-lg-3 wow slideInRight">
-                        <div class="avatar avatar-4"><img  src="<?= base_url('frontend/assets/images/sliders/Rob6.jpg') ?>" alt="image" class="covai-img2" />
+                        <div class="avatar avatar-4"><img src="<?= base_url('frontend/assets/images/sliders/Rob6.jpg') ?>" alt="image" class="covai-img2" />
                         </div>
                     </div>
                 </div>
@@ -442,7 +501,7 @@ margin-right: 50px;
             <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
                 <div class="heading heading-7 text--center">
                     <p class="heading-subtitle" class="pahe-covai1">What We Offer</p>
-                    <h2 class="heading-title"  class="pahe-covai1">Our Services</h2>
+                    <h2 class="heading-title" class="pahe-covai1">Our Services</h2>
                 </div>
             </div>
             <!-- End .col-lg-6-->
@@ -451,7 +510,7 @@ margin-right: 50px;
 
         <div class="carousel owl-carousel carousel-dots " data-slide="3" data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200">
             <div>
-                <div class="service-panel h-100 service-covai1" data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/nep.png') ?>" alt="background" /></div>
@@ -474,7 +533,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/nep.png') ?>" alt="background" /></div>
@@ -496,7 +555,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1" data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"><img src="<?= base_url('frontend/assets/images/logo/gastro.png') ?>" alt="background" /> </div>
@@ -518,7 +577,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/Digi.png') ?>" alt="background" /></div>
@@ -540,7 +599,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/colo.png') ?>" alt="background" /></div>
@@ -562,7 +621,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/liver.png') ?>" alt="background" /></div>
@@ -584,7 +643,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/nep.png') ?>" alt="background" /></div>
@@ -605,7 +664,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/nep.png') ?>" alt="background" /></div>
@@ -626,7 +685,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1" data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/hernia.png') ?>" alt="background" /></div>
@@ -647,7 +706,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1"  data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/heart.png') ?>" alt="background" /></div>
@@ -668,7 +727,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1" data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/NEP1.png') ?>" alt="background" /></div>
@@ -689,7 +748,7 @@ margin-right: 50px;
                 </div>
             </div>
             <div>
-                <div class="service-panel h-100 service-covai1" data-hover="" >
+                <div class="service-panel h-100 service-covai1" data-hover="">
                     <div class="service-panel-holder py-4">
                         <div class="service-content">
                             <div class="service-icon"><img src="<?= base_url('frontend/assets/images/logo/NEP1.png') ?>" alt="background" /> </div>
@@ -729,7 +788,7 @@ margin-right: 50px;
                 <p class="paragraph">We are on the side of humanity.</p>
             </div>
             <div class="prief-set prief-set-2">
-                <p  class="para-covai3">Only centre in India with subspecialties in Bariatric, Hepatobiliary, Colorectal,
+                <p class="para-covai3">Only centre in India with subspecialties in Bariatric, Hepatobiliary, Colorectal,
                     Upper GI,
                     Gastrointestinal cancer surgery, Endogynaecology, Scarless Surgery, Liver Transplantation,
                     Nephrology , Urology etc..</p>
@@ -748,7 +807,7 @@ margin-right: 50px;
 
         </div>
         <div class="col-12 col-lg-5 offset-lg-1 pt-5">
-            <div class="about-img"><img class="img-fluid" src="<?= base_url('frontend/assets/images/about/a4.jpg') ?>" alt="about Image"  /></div>
+            <div class="about-img"><img class="img-fluid" src="<?= base_url('frontend/assets/images/about/a4.jpg') ?>" alt="about Image" /></div>
         </div>
 
     </div>
@@ -767,125 +826,19 @@ margin-right: 50px;
     </div>
     <!-- End .container-->
 </section>
+<?= $recent_blogs ?>
 
-<section class="blog blog-grid blog-grid-4" id="blog-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3">
-                <div class="heading heading-7 text-center">
-                    <h2 class="heading-title">Blogs & Article</h2>
-                </div>
-            </div>
-        </div>
-        <!-- End .row-->
-        <div class="carousel owl-carousel carousel-dots" data-slide="3" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200">
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-                        <a href="<?= base_url('blog') ?>"><img src="<?= base_url('frontend/assets/images/sliders/banner.jpg') ?>"  alt="6 tips to protect your mental health when sick" class="coblog-box1" /></a>
-
-
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-
-                        <div class="entry-title">
-                            <h4><a href="<?= base_url('blog') ?>">Is Gastroesophageal Reflux A Disease?</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>இரைப்பை உணவுக்குழாய் ரிஃப்ளக்ஸ் இது ஒரு நோயா? உடல் எடைக்குறைப்பு என்றவுடன் நம் நினைவுக்கு வருவது டயட்டிங். பொதுவாக டயட்டிங் என்றால் சாப்பிடும் அளவைக் குறைப்பது, எண்ணெய்ப் பலகாரங்களைத் தவிர்ப்பது, அரிசி உணவுகளைத் தவிர்த்து ...</p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('blog') ?>">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-
-                        <a href="<?= base_url('blog') ?>"><img src="<?= base_url('frontend/assets/images/sliders/acid-reflux.jpg') ?>" alt="Unsure About Wearing a Face Mask? How and Why" /></a>
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-
-                        <div class="entry-title">
-                            <h4><a href="<?= base_url('blog') ?>">Is Gastroesophageal Reflux A Disease?</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>அறிந்துகொள்ளுங்கள் ஆரோக்கிய சக்கரத்தை ஆரோக்கிய சக்கரத்தின் அம்சங்கள் அறிவுசார்ந்தவை சமூகம் சார்ந்தவை உடல் சார்ந்தவை ஆன்மிகம் | தியானம் சார்ந்தவை தொழில் சார்ந்தவை உணர்வுகள் சார்ந்தவை சுற்றுச்சூழல் சார்ந்தவை ஆரோக்கிய சக்கரம் ஏன்....
-                            </p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('blog') ?>">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-
-                        <a href="<?= base_url('blog') ?>"><img src="<?= base_url('frontend/assets/images/sliders/diet.jpg') ?>"  alt="Tips for Eating Healthy When Working From Home" class="coblog-box1" /></a>
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-
-                        <div class="entry-title">
-                            <h4><a href="<?= base_url('blog') ?>">Diet Fails</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>டயட் பல தோல்விகள் சில பாடங்கள்! உடல் எடைக்குறைப்பு என்றவுடன் நம் நினைவுக்கு வருவது டயட்டிங். பொதுவாக டயட்டிங் என்றால் சாப்பிடும் அளவைக் குறைப்பது, எண்ணெய்ப் பலகாரங்களைத் தவிர்ப்பது, அரிசி உணவுகளைத் தவிர்த்து சப்பாத்தி போன்ற உணவுக்கு மாறுவது… டயட் ஃபெயில்டு....</p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('blog') ?>">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
-            <div>
-                <div class="blog-entry" data-hover="">
-                    <div class="entry-img">
-
-                        <!-- End .entry-date--><a href="<?= base_url('blog') ?>"><img src="<?= base_url('frontend/assets/images/sliders/high-fiber.webp') ?>" alt="Tips for Eating Healthy When Working From Home" /></a>
-                    </div>
-                    <!-- End .entry-img-->
-                    <div class="entry-content">
-
-                        <div class="entry-title">
-                            <h4><a href="<?= base_url('blog') ?>">Uses and Benefits of Fibre-rich food</a></h4>
-                        </div>
-                        <div class="entry-bio">
-                            <p>Uses and Benefits of Fibre-rich food நார்ச்சத்து என்றால் என்ன? நார்ச்சத்து என்பது நமது உடலால் ஜீரணிக்க முடியாத கார்போஹைட்ரேட் அல்லது ஸ்டார்ச் ஆகும். உங்கள் செரிமான மண்டலத்தின் கழிவுகளை வெளியேற்றும் கருவியாக....</p>
-                        </div>
-                        <div class="entry-more"> <a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('blog') ?>">
-                                <div class="line"> <span> </span></div><span>read more</span>
-                            </a></div>
-                    </div>
-                </div>
-                <!-- End .entry-content-->
-            </div>
-
-
-        </div>
-        <!-- End .carousel-->
-    </div>
-</section>
 
 
 <div class="modal fade pop-z" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            
+
             <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i  class="fa iccot-popicon1">&#xf00d;</i>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa iccot-popicon1">&#xf00d;</i>
                 </button>
                 <h4 class="heading-title iccot-poph1">ICCOT Booking form</h4>
-                <p class="desc iccot-popp1"  >Fill out the form below, and we will be in touch shortly.</p>
+                <p class="desc iccot-popp1">Fill out the form below, and we will be in touch shortly.</p>
                 <form class="booking-form" id="booking-form" method="post" action="<?= base_url('forms/public/iccot') ?>">
 
                     <div class="col-12 col-md-12 col-lg-12">
@@ -957,11 +910,11 @@ margin-right: 50px;
 <div class="modal fade pop-z" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-           
+
             <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i  class="fa iccot-popicon1">&#xf00d;</i></button>
-                <h4 class="heading-title  iccot-poph1" >GEM Pharmacy</h4>
-                <p class="desc iccot-popp1" >Fill out the form below, and we will be in touch shortly.</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa iccot-popicon1">&#xf00d;</i></button>
+                <h4 class="heading-title  iccot-poph1">GEM Pharmacy</h4>
+                <p class="desc iccot-popp1">Fill out the form below, and we will be in touch shortly.</p>
                 <form class="booking-form" id="booking-form" method="post" enctype="multipart/form-data" action="<?= base_url('forms/public/pharmacy') ?>">
                     <div class="col-12 col-md-12 col-lg-12">
                         <label class="lab">Name</label>
@@ -1026,7 +979,7 @@ margin-right: 50px;
                     </div>
                     <?= csrf_field() ?>
                 </form>
-               
+
 
             </div>
 
@@ -1037,9 +990,9 @@ margin-right: 50px;
 <div class="modal fade pop-z" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-           
+
             <div class="modal-body">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i  class="fa iccot-popicon1">&#xf00d;</i></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa iccot-popicon1">&#xf00d;</i></button>
                 <h4 class="heading-title  iccot-poph1">Blood Bank Booking form</h4>
                 <p class="desc iccot-popp1">Fill out the form below, and we will be in touch shortly.</p>
 

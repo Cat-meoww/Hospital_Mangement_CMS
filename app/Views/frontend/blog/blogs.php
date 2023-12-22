@@ -85,7 +85,7 @@
 
 
 
-p
+
 <section class="blog blog-grid" id="blog">
     <div class="container">
         <div class="row">

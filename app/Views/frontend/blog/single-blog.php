@@ -22,7 +22,7 @@
         color: black;
     }
 
-    .blog-heading {
+    .blog-head {
         font-size: 48px !important;
         line-height: 52px !important;
         letter-spacing: -0.03em !important;
@@ -39,17 +39,17 @@
     <div class="container">
 
         <div class="mb-3 col-12  col-lg-10 col-xl-7 mt-5 mt-lg-10 mb-6 mb-lg-8 ">
-            <h1 class="blog-heading"><?= $blog->heading ?></h1>
+            <h1 class="blog-head"><?= $blog->heading ?></h1>
         </div>
         <div class="d-flex justify-content-start mb-5 ">
-            <img  src=" <?= base_url("uploads/blogs/$blog->hero_image") ?>" alt="Hero image" class="aspect-ratio-16-9" />
+            <img src=" <?= base_url("uploads/blogs/$blog->hero_image") ?>" alt="Hero image" class="aspect-ratio-16-9" />
         </div>
         <div class="ck-content"><?= $blog->content ?></div>
 
     </div>
 
 </section>
-
+<?= $recent_blogs ?>
 
 <?= $this->endSection() ?>
 

@@ -640,7 +640,7 @@ class Home extends BaseController
 
         $listings = $Blogs
             ->select('*')
-            ->where('visibility', 'Public')->orderBy('id','DESC');
+            ->where('visibility', 'Public')->orderBy('id', 'DESC');
 
 
         $this->data['listings'] =  $listings->paginate($perPage);
@@ -669,6 +669,7 @@ class Home extends BaseController
             $this->data['title'] = $Blog->meta_title;
             $this->data['description'] = $Blog->meta_description;
             $this->data['blog'] = $Blog;
+            $this->data['RecentBlogs'] = \App\Libraries\ViewComponents::Render_RecentBlogs();
 
             return view('frontend/blog/single-blog', $this->data);
         } catch (\Exception $e) {

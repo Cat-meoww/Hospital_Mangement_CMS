@@ -36,6 +36,7 @@ class StaticPages extends BaseController
     }
     public function home()
     {
+        $this->data['recent_blogs'] = \App\Libraries\ViewComponents::Render_RecentBlogs();
         return view('frontend/coimbatore', $this->data);
     }
 

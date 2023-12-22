@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 01:20 PM
+-- Generation Time: Dec 22, 2023 at 10:29 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,85 @@ SET time_zone = "+00:00";
 --
 -- Database: `gem_hospital`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` int(11) NOT NULL,
+  `slug` varchar(500) NOT NULL,
+  `meta_title` varchar(100) NOT NULL,
+  `meta_description` varchar(500) NOT NULL,
+  `heading` varchar(500) NOT NULL,
+  `content` longtext NOT NULL,
+  `hero_image` varchar(1000) NOT NULL,
+  `visibility` enum('Public','Private') NOT NULL DEFAULT 'Public',
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `slug`, `meta_title`, `meta_description`, `heading`, `content`, `hero_image`, `visibility`, `created_on`, `updated_on`) VALUES
+(6, 'page', 'What Is Long-Form ?', 'Your content strategy can take on many forms. Writing long-form content is a tactic that certain industries depend on. Cleopatra realized that she needed Roman support, or, more specifCleopatra realized that she needed Roman support, or, more specifically, Caesar’s support, if she was to', 'Your content strategy?', '<p>Your content strategy can take on many forms. Writing long-form content is a tactic that certain industries depend on.</p><p>What is long-form content and does it work? At Bramework our business is to know blogging and what works best. We believe that there are many strategies that will help grow you or your agency and they all surround content.</p><p>We’re going to take a deep dive into writing longer content, the power of extra words and how to optimize this for lead conversion. If you are looking at taking a different approach to your content, keep reading.</p><h2>Long-Form Content and it’s Benefits</h2><p>Let’s first find out what long-form content is and how it can benefit us.</p><p>According to <a href=\"https://www.coredna.com/blogs/long-form-content\">core dna</a>, long-form content&nbsp;is between a short story (under 7,500 words) and a novelette (under 17,500 words) in length. In the content marketing world for your website, this is any content that is over 2,000 words. There are many benefits to writing longer articles.</p><p>Check out this word count chart detailing the correlation for ranking in Google from <a href=\"https://www.hubspot.com/\">HubSpot</a>:</p><p><img src=\"https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/long-form-content-statistics.png\" alt=\"long form content statistics\" srcset=\"https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/long-form-content-statistics.png 788w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/long-form-content-statistics-300x206.png 300w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/long-form-content-statistics-768x526.png 768w\" sizes=\"100vw\" width=\"788\" height=\"540\"></p><p>Here are some benefits of writing long-form content:&nbsp;</p><ul><li>It improve the search engine rankings&nbsp;for your content or blog</li><li>It increases the reader to engage and also helps time on page&nbsp;for SEO</li><li>It increases the engagement and more social shares&nbsp;</li><li>It builds authority for your brand or agency</li><li>It gives you the ability to link out more which creates more partnerships and referral relationships</li><li>It gives you the ability to provide more educational content to your audience which builds trust</li><li>It offers more backlink opportunities&nbsp;to build trust in the search engines</li><li>It leaves more room for engaging CTAs, which lead to more conversions</li><li>It gives you the ability to create more repurposed content for future posts&nbsp;</li><li>It encourages more conversations&nbsp;and commentary on your blog</li></ul><p><a href=\"https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.bramework.com%2Flong-form-content%2F&amp;text=There%20are%20many%20benefits%20to%20long-form%20content.%20%40Bramework%20built%20you%20a%20content%20strategy%20to%20learn%20for%202022%20right%20here%21%20Keep%20reading...%20%23longformcontentstrategy&amp;via=bramework&amp;related=bramework\"><span style=\"background-color:rgb(255,255,255);color:rgb(60,65,73);\">There are many benefits to long-form content. @Bramework built you a content strategy to learn for 2022 right here! Keep reading… #longformcontentstrategy<strong>CLICK TO TWEET</strong></span></a></p><p>&nbsp;</p><h4 style=\"text-align:center;\">Create Long-Form, SEO-Optimized, Traffic-Driving Blog Posts With First Draft PRO In Minutes!</h4><p style=\"text-align:center;\"><strong>???? Say Goodbye to Endless Hours of Research and Writing</strong></p><p>&nbsp;</p><h2>Long-form Content Examples</h2><p>There are many types of long-form content that can provide various benefits. It’s important that you know all the different types so you can choose the best one that suits your industry.</p><p>As an agency owner or a freelancer, these types of long-form content take time and dedication to complete. Here are some examples of long-form content that may benefit you:</p><ul><li><strong>Case study</strong> – a professional write up of a happy client, showcasing the struggle and solution your brand provided.</li><li><strong>White paper</strong> – a longform blog article that serves an in-depth resource or solution.</li><li><strong>E-Book</strong> – a gated downloadable piece of content that typically solves a long-term problem or is a step-by-step guide.</li><li><strong>Definitive guide</strong> – a downloadable resource for a tutorial or walkthrough to a solution.</li><li><strong>Annual year in review</strong> – a blog article or newsletter that you post annually, showcasing your brand’s growth and challenges.</li><li><strong>Roundups and reviews</strong> – lists of referral partners or resources you use and can review for your audience.</li><li><strong>Brochures or datasheets</strong> – these can come in the form of slide decks, one-pagers or infographics, to help your audience understand your services or products.</li></ul><p>The important question to take away from this list is this: which one of these pieces of long-form content will generate the most leads for my brand?</p><p>We are going to go through each long-form content example and show you what they are along with how you can use them to better your brand. There are some tips and tricks we’ve learned that may help you as well.</p><p>Here we go!</p><h2>Case Study</h2><p>Case studies are a great style of long-form content that can really drive the needle.</p><p>It’s important to understand what to include in your case study, how to present it and the format to follow in order to increase organic reach. But first, let’s define it.</p><p>A <a href=\"https://en.wikipedia.org/wiki/Case_study\">case study</a> is a research method involving an up-close, in-depth, and detailed examination of a particular case or customer. The goal is to show the problem and solution in the study.</p><p>A case study is an excellent way to showcase your work with a “proof is in the pudding” strategy. There is nothing quite like showing the result of your work from a successful partnership. The length of a case study can be from 500-1,500 words. Our advice would be to tell the story that works for both you and your case study participant.</p><p>HubSpot put together a few great posts on their own <a href=\"https://www.hubspot.com/case-studies\">case studies</a> including how the Rock and Roll Hall of Fame grew their audience by 81%.</p><p>Here’s a great example of a fun case study by VennGage:</p><p><a href=\"https://venngage-wordpress.s3.amazonaws.com/uploads/2019/07/Blue-Simple-Business-Case-Study-Template.jpg\"><img src=\"https://7423d840.rocketcdn.me/wp-content/uploads/2021/03/case-study--1024x664.png\" alt=\"case study example\" srcset=\"https://7423d840.rocketcdn.me/wp-content/uploads/2021/03/case-study--1024x664.png 1024w, https://7423d840.rocketcdn.me/wp-content/uploads/2021/03/case-study--300x194.png 300w, https://7423d840.rocketcdn.me/wp-content/uploads/2021/03/case-study--768x498.png 768w, https://7423d840.rocketcdn.me/wp-content/uploads/2021/03/case-study-.png 1072w\" sizes=\"100vw\" width=\"1024\" height=\"664\"></a></p><p><strong>Creating even one case study can increase your lead conversion by 12-15%, if it’s done correctly.</strong></p><p>As promised, we have put together the flow and format of a case study for you to follow easily. Use any tool you’d like to create a visually stunning case study, just be sure it’s branded and personalized. Here’s a quick sequence to follow when crafting the perfect case study:</p><ol><li><strong>The</strong> <strong>Customer Bio</strong>: A short description of the customer and their company.</li><li><strong>The Struggle</strong>:&nbsp;The customer and their company struggle that requires your help.</li><li><strong>The Attempt</strong>:&nbsp;The steps the customer took to solve the problem without success.</li><li><strong>The Connection</strong>:&nbsp;The connection between yourself and the company.</li><li><strong>The Solution:</strong> The product or service you will integrate to solve their problem.</li><li><strong>The Quote:</strong>&nbsp;A branded or personalized quote from the company on how the solution you provided helped them.</li><li><strong>The Results:</strong>&nbsp;Detail how your product or service helped the company and how your partnership still grows with the company.</li></ol><p><strong>PRO TIP</strong>: Use the <a href=\"https://www.bramework.com/features/\">Bramework app</a> when creating your case study to find out the top questions people are asking about case studies.</p><figure class=\"image\"><img style=\"aspect-ratio:480/360;\" src=\"https://i.ytimg.com/vi/7HyfSiZENEE/hqdefault.jpg\" alt=\"How To Write a Blog Post in Under 10 Minutes Using AI with Bramework\" width=\"480\" height=\"360\"></figure><h2>White Paper</h2><p>A white paper is an in-depth report about a topic and the issues around it. Its purpose is to educate readers and help them to understand and solve a problem. It serves as an example of a long-form piece of content that brings value to your audience.</p><p>Typically, the&nbsp;purpose of a white paper&nbsp;is to influence the decision-making processes of current and prospective customers by offering them both sides of the equation, unbiased.</p><p><strong>Step 1</strong>: Do your research! Your first step when creating a white paper would be to check out the <a href=\"https://www.bramework.com/features/\">Bramework blog builder</a> and ask the top questions of what people would like to know. You can also use the <a href=\"https://www.bramework.com/features/\">keyword analyzer</a> to see how it ranks in the search engines, along with volume and competitive rank.</p><p><strong>Step 2</strong>: Format properly. You can use a tool like the Bramework <a href=\"https://app.bramework.com/register\">blog builder</a> to create a document flow. You will want to highlight both sides of the problem with proper citations, references and historical data. Always have a beginning, middle and end. Conclude with both sides of the story!</p><p><strong>Step 3</strong>: Share it! Be sure to edit it properly and when it’s time to share, do it with pride. You’ve produced a beautiful piece of long-form content, this should be displayed everywhere your brand lives.</p><p>Here is <a href=\"https://cloud.google.com/security/overview/whitepaper\">a sample of a white paper from Google</a> that highlights Google Cloud Platform security. Notice how it has topics and subtopic headers outlined evenly, no images and internal/external links embedded. Google knows best!</p><h2>E-Book</h2><p>Everyone loves a good ebook! We a big fans of ebooks and all the value it brings your audience here at Bramework!</p><p>An&nbsp;ebook&nbsp;is a piece of long-form content presented in a format that allows it to be read on a computer or handheld device. The purpose of an ebook can range from educational content like tutorials to fan fiction. It is a great opportunity to incorporate gated content like a CTA in your blog.</p><p>An ebook is considered a larger project and may take up to a month to complete. You’ll want to include relevant facts, tools and tutorials so the reader really gets answers.</p><p>Here is the <a href=\"https://winning-teacher-4932.ck.page/e490f52adc\">Bramework ebook</a> we created just for you!</p><p>Here are a few tips on writing your ebook that can help speed up the process:</p><ul><li>Use ebook tools to help like <a href=\"https://www.canva.com/join/trade-tectonic-launching\">Canva</a>, <a href=\"https://www.bramework.com/pricing/\">Bramework Blog Builder</a> or <a href=\"https://www.google.com/drive/\">Google Drive</a></li><li>Format the ebook with a table of contents</li><li>Draft the ebook like a blog</li><li>Offer insightful, educational and non-bias advice in the ebook</li><li>Include a CTA (call to action)</li><li>Link to influencers and partners</li><li>Get a second pair of eyes on your ebook as you edit</li><li>Follow up after it’s downloaded</li><li>Track the data</li><li>Repeat quarterly if you can</li></ul><figure class=\"image\"><a href=\"https://www.internetlivestats.com/watch/blog-posts/\"><img style=\"aspect-ratio:768/512;\" src=\"https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-1024x683.jpg\" alt=\"white papers long form content\" srcset=\"https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-1024x683.jpg 1024w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-300x200.jpg 300w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-768x512.jpg 768w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-1536x1024.jpg 1536w, https://7423d840.rocketcdn.me/wp-content/uploads/2020/08/White-papers-longform-content-scaled-1-2048x1366.jpg 2048w\" sizes=\"100vw\" width=\"768\" height=\"512\"></a></figure><h2>Definitive Guide</h2><p>You’ve heard of the definitive guides out there…they are supposed to be the all-encompassing guide to everything needed to learn that one topic.</p><p>It’s important to know your sources when you are creating a definitive guide. You must be the expert on that topic when creating these long-form pieces of content.</p><p>Some rules to writing a definitive guide are:</p><ol><li>Have a purpose</li><li><a href=\"https://www.bramework.com/keyword-research-and-analysis-toolkit/\">Choose your keywords</a></li><li>Check the competition</li><li>Target your audience</li><li>Include statistics like case studies and white papers</li><li>Create actionable links and CTAs</li><li>Format and create visual graphics</li><li>Share on your social platforms and website</li></ol><p>Here is a great example of an ultimate guide brought to you by the team at Bramework:</p>', '1703065974_2ce50472a66fc9dc45af.jpg', 'Public', '2023-12-20 13:57:36', '2023-12-21 10:58:09'),
+(7, 'Cleopatra', 'Cleopatra', 'Cleopatra realized that she needed Roman support, or, more specifCleopatra realized that she needed Roman support, or, more specifically, Caesar’s support, if she was to regain her throne. Each was determined to use the other. Caesar sought money for repayment of the debts incurred by .leopatra realized that she needed Roman support, or, more specifCleopatra realized that she needed Roman support, or, more s', 'Cleopatra: Egypt Life and reign What Is Long-Form Content & Why Does It Work?What Is Long-Form Content & Why Does It Work?', '<p>BCE, Alexandria) Egyptian queen, famous in <a href=\"https://www.britannica.com/topic/history\"><u>history</u></a> and drama as the lover of <a href=\"https://www.britannica.com/biography/Julius-Caesar-Roman-ruler\"><u>Julius Caesar</u></a> and later as the wife of <a href=\"https://www.britannica.com/biography/Mark-Antony-Roman-triumvir\"><u>Mark Antony</u></a>. She became queen on the death of her father, <a href=\"https://www.britannica.com/biography/Ptolemy-XII-Auletes\"><u>Ptolemy XII</u></a>, in 51 BCE and ruled successively with her two brothers <a href=\"https://www.britannica.com/biography/Ptolemy-XIII-Theos-Philopator\"><u>Ptolemy XIII</u></a> (51–47) and <a href=\"https://www.britannica.com/biography/Ptolemy-XIV-Theos-Philopator-II\"><u>Ptolemy XIV</u></a> (47–44) and her son <a href=\"https://www.britannica.com/biography/Caesarion\"><u>Ptolemy XV Caesar</u></a> (44–30). After the <a href=\"https://www.britannica.com/place/ancient-Rome\"><u>Roman</u></a> armies of Octavian (the future emperor <a href=\"https://www.britannica.com/biography/Augustus-Roman-emperor\"><u>Augustus</u></a>) defeated their combined forces, Antony and Cleopatra committed suicide, and <a href=\"https://www.britannica.com/place/ancient-Egypt\"><u>Egypt</u></a> fell under <a href=\"https://www.britannica.com/place/Roman-Empire\"><u>Roman</u></a> domination. Cleopatra actively influenced Roman politics at a crucial period, and she came to represent, as did no other woman of <a href=\"https://www.britannica.com/event/Classical-antiquity\"><u>Classical antiquity</u></a>, the <a href=\"https://www.merriam-webster.com/dictionary/prototype\">prototype</a> of the <a href=\"https://www.merriam-webster.com/dictionary/romantic\">romantic</a> <a href=\"https://www.britannica.com/topic/femme-fatale\"><u>femme fatale</u></a>.</p><h2>Life and reign</h2><figure class=\"image\"><a href=\"https://cdn.britannica.com/20/152520-050-1CA6F97E/Relief-Cleopatra-goddess-Temple-Dandarah-Egypt-Hathor-30-bce.jpg\"><img style=\"aspect-ratio:300/312;\" src=\"https://cdn.britannica.com/20/152520-050-1CA6F97E/Relief-Cleopatra-goddess-Temple-Dandarah-Egypt-Hathor-30-bce.jpg?w=300\" alt=\"Cleopatra\" width=\"300\" height=\"312\"></a></figure><p><a href=\"https://cdn.britannica.com/20/152520-050-1CA6F97E/Relief-Cleopatra-goddess-Temple-Dandarah-Egypt-Hathor-30-bce.jpg\">Cleopatra</a></p><p>Relief of Cleopatra as a goddess, c. 69–30 BCE, Temple of Hathor, Dandarah, Egypt.</p><p>Daughter of King <a href=\"https://www.britannica.com/biography/Ptolemy-XII-Auletes\"><u>Ptolemy XII Auletes</u></a>, Cleopatra was destined to become the last queen of the Macedonian <a href=\"https://www.merriam-webster.com/dictionary/dynasty\">dynasty</a> that ruled Egypt between the death of <a href=\"https://www.britannica.com/biography/Alexander-the-Great\"><u>Alexander the Great</u></a> in 323 BCE and its annexation by Rome in 30 BCE. The line had been founded by Alexander’s general Ptolemy, who became King <a href=\"https://www.britannica.com/biography/Ptolemy-I-Soter\"><u>Ptolemy I Soter</u></a> of Egypt. Cleopatra was of Macedonian descent and had little, if any, Egyptian blood, although the Classical author <a href=\"https://www.britannica.com/biography/Plutarch\"><u>Plutarch</u></a> wrote that she alone of her house took the trouble to learn <a href=\"https://www.britannica.com/topic/Egyptian-language\"><u>Egyptian</u></a> and, for political reasons, styled herself as the new <a href=\"https://www.britannica.com/topic/Isis-Egyptian-goddess\"><u>Isis</u></a>, a title that distinguished her from the earlier Ptolemaic queen Cleopatra III, who had also claimed to be the living embodiment of the goddess Isis. Coin portraits of Cleopatra show a <a href=\"https://www.merriam-webster.com/dictionary/countenance\">countenance</a> alive rather than beautiful, with a sensitive mouth, firm chin, liquid eyes, broad forehead, and prominent nose. When Ptolemy XII died in 51 BCE, the throne passed to his young son, <a href=\"https://www.britannica.com/biography/Ptolemy-XIII-Theos-Philopator\"><u>Ptolemy XIII</u></a>, and daughter, Cleopatra VII. It is likely, but not proven, that the two married soon after their father’s death. The 18-year-old Cleopatra, older than her brother by about eight years, became the dominant ruler. Evidence shows that the first decree in which Ptolemy’s name precedes Cleopatra’s was in October of 50 BCE. Soon after, Cleopatra was forced to flee Egypt for <a href=\"https://www.britannica.com/place/Syria\"><u>Syria</u></a>, where she raised an army and in 48 BCE returned to face her brother at <a href=\"https://www.britannica.com/place/Pelusium\"><u>Pelusium</u></a>, on Egypt’s eastern border. The murder of the Roman general <a href=\"https://www.britannica.com/biography/Pompey-the-Great\"><u>Pompey</u></a>, who had sought refuge from Ptolemy XIII at Pelusium, and the arrival of <a href=\"https://www.britannica.com/biography/Julius-Caesar-Roman-ruler\"><u>Julius Caesar</u></a> brought temporary peace.</p><p>Cleopatra realized that she needed Roman support, or, more specifically, Caesar’s support, if she was to regain her throne. Each was determined to use the other. Caesar sought money for repayment of the debts <a href=\"https://www.britannica.com/dictionary/incurred\">incurred</a> by Cleopatra’s father, Auletes, as he struggled to retain his throne. Cleopatra was determined to keep her throne and, if possible, to restore the glories of the first Ptolemies and recover as much as possible of their dominions, which had included southern Syria and <a href=\"https://www.britannica.com/place/Palestine\"><u>Palestine</u></a>. <a href=\"https://www.britannica.com/topic/Caesar-and-Cleopatra-play-by-Shaw\"><u>Caesar and Cleopatra</u></a> became lovers and spent the winter besieged in <a href=\"https://www.britannica.com/place/Alexandria-Egypt\"><u>Alexandria</u></a>. Roman reinforcements arrived the following spring, and Ptolemy XIII fled and drowned in the <a href=\"https://www.britannica.com/place/Nile-River\"><u>Nile</u></a>. Cleopatra, now married to her brother Ptolemy XIV, was restored to her throne. In June 47 BCE she gave birth to <a href=\"https://www.britannica.com/biography/Caesarion\"><u>Ptolemy Caesar</u></a> (known to the people of Alexandria as Caesarion, or “little Caesar”). Whether Caesar was the father of Caesarion, as his name implies, cannot now be known.</p><p>It took Caesar two years to extinguish the last flames of Pompeian opposition. As soon as he returned to Rome, in 46 BCE, he celebrated a four-day triumph—the ceremonial in honour of a general after his victory over a foreign enemy—in which <a href=\"https://www.britannica.com/biography/Arsinoe-IV\"><u>Arsinoe</u></a>, Cleopatra’s younger and hostile sister, was paraded. Cleopatra paid at least one state visit to Rome, accompanied by her husband-brother and son. She was <a href=\"https://www.britannica.com/dictionary/accommodated\">accommodated</a> in Caesar’s private villa beyond the <a href=\"https://www.britannica.com/place/Tiber-River\"><u>Tiber River</u></a> and may have been present to witness the dedication of a golden statue of herself in the temple of Venus Genetrix, the ancestress of the Julian family to which Caesar belonged. Cleopatra was in Rome when Caesar was murdered in 44 BCE.</p><p><a href=\"https://www.britannica.com/quiz/pop-quiz-18-things-to-know-about-ancient-egypt\"><img src=\"https://cdn.britannica.com/57/122157-050-21261E20/Side-view-Sphinx-Great-Pyramid-of-Khufu.jpg\" alt=\"Al-Jizah. Giza Necropolis, Giza Plateau, Cairo, Egypt. Side view of Sphinx with the Great Pyramid of Khufu (Cheops) rising in the background. The sides of all three of the Giza pyramids are astronomically oriented to be north-south, east-west (see notes)\" width=\"70\"></a></p><p><a href=\"https://www.britannica.com/quiz/pop-quiz-18-things-to-know-about-ancient-egypt\"><strong>Britannica Quiz</strong></a></p><p><a href=\"https://www.britannica.com/quiz/pop-quiz-18-things-to-know-about-ancient-egypt\">Pop Quiz: 18 Things to Know About Ancient Egypt</a></p><figure class=\"image\"><a href=\"https://www.britannica.com/video/179446/Overview-fall-discussion-Egypt-relationship-Mark-Antony\"><img style=\"aspect-ratio:800/450;\" src=\"https://cdn.britannica.com/46/179446-138-59BE1E2E/Overview-fall-discussion-Egypt-relationship-Mark-Antony.jpg?w=800&amp;h=450&amp;c=crop\" alt=\"Learn how Cleopatra\'s relationship with Caesar and Mark Anthony brought the downfall of Egypt\" width=\"800\" height=\"450\"></a></figure><p>&nbsp;</p><p>Learn how Cleopatra\'s relationship with Caesar and Mark Anthony brought the downfall of Egypt</p><p>Overview of the fall of Egypt, with a detailed discussion of Cleopatra\'s relationship with Mark Antony.<span style=\"color:var(--link-color);\">(more)</span></p><p><a href=\"https://www.britannica.com/biography/Cleopatra-queen-of-Egypt/images-videos\">See all videos for this article</a></p><p>Soon after her return to Alexandria, in 44 BCE, Cleopatra’s coruler, Ptolemy XIV, died. Cleopatra now ruled with her infant son, Ptolemy XV Caesar. When, at the <a href=\"https://www.britannica.com/event/Battle-of-Philippi-Roman-history-42-BC\"><u>Battle of Philippi</u></a> in 42 BCE, Caesar’s assassins were routed, <a href=\"https://www.britannica.com/biography/Mark-Antony-Roman-triumvir\"><u>Mark Antony</u></a> became the <a href=\"https://www.britannica.com/topic/heir-apparent\"><u>heir apparent</u></a> of Caesar’s authority—or so it seemed, for Caesar’s great-nephew and personal heir, <a href=\"https://www.britannica.com/biography/Augustus-Roman-emperor\"><u>Octavian</u></a>, was but a sickly boy. Antony, now controller of Rome’s eastern territories, sent for Cleopatra so that she might explain her role in the aftermath of Caesar’s assassination. She set out for Tarsus in <a href=\"https://www.britannica.com/place/Anatolia\"><u>Asia Minor</u></a> loaded with gifts, having delayed her departure to heighten Antony’s expectation. She entered the city by sailing up the Cydnus River in a barge while dressed in the robes of the new Isis. Antony, who equated himself with the god <a href=\"https://www.britannica.com/topic/Dionysus\"><u>Dionysus</u></a>, was <a href=\"https://www.merriam-webster.com/dictionary/captivated\">captivated</a>. Forgetting his wife, <a href=\"https://www.britannica.com/biography/Fulvia-wife-of-Mark-Antony\"><u>Fulvia</u></a>, who in Italy was doing her best to maintain her husband’s interests against the growing menace of young Octavian, Antony returned to Alexandria, where he treated Cleopatra not as a “protected” <a href=\"https://www.merriam-webster.com/dictionary/sovereign\">sovereign</a> but as an independent monarch.</p><p>In Alexandria, Cleopatra and Antony formed a society of “inimitable livers” whose members lived what some historians have interpreted as a life of <a href=\"https://www.merriam-webster.com/dictionary/debauchery\">debauchery</a> and folly and others have interpreted as lives dedicated to the cult of the mystical god Dionysus.</p><p>Get a Britannica Premium subscription and gain access to exclusive content.<a href=\"https://premium.britannica.com/premium-membership/?utm_source=inline&amp;utm_medium=mendel&amp;utm_campaign=evergreen\"><strong>Subscribe Now</strong></a></p><p>In 40 BCE Cleopatra gave birth to twins, whom she named Alexander Helios and Cleopatra Selene. Antony had already left Alexandria to return to Italy, where he was forced to conclude a temporary settlement with Octavian. As part of this settlement, he married Octavian’s sister, Octavia (Fulvia having died). Three years later Antony was convinced that he and Octavian could never come to terms. His marriage to Octavia now an irrelevance, he returned to the east and reunited with Cleopatra. Antony needed Cleopatra’s financial support for his postponed Parthian campaign; in return, Cleopatra requested the return of much of Egypt’s eastern empire, including large portions of Syria and <a href=\"https://www.britannica.com/place/Lebanon\"><u>Lebanon</u></a> and even the rich balsam groves of <a href=\"https://www.britannica.com/place/Jericho-West-Bank\"><u>Jericho</u></a>.</p><figure class=\"image\"><a href=\"https://cdn.britannica.com/60/171560-050-B64DDE21/Ptolemy-XV-Caesar-Cleopatra-VII-relief-temple.jpg\"><img style=\"aspect-ratio:300/360;\" src=\"https://cdn.britannica.com/60/171560-050-B64DDE21/Ptolemy-XV-Caesar-Cleopatra-VII-relief-temple.jpg?w=300\" alt=\"Ptolemy XV Caesar\" width=\"300\" height=\"360\"></a></figure><p><a href=\"https://cdn.britannica.com/60/171560-050-B64DDE21/Ptolemy-XV-Caesar-Cleopatra-VII-relief-temple.jpg\">Ptolemy XV Caesar</a></p><p>Ptolemy XV Caesar (right) and his mother, Cleopatra VII, relief in the temple of Hathor, Dandarah, Egypt.<span style=\"color:var(--link-color);\">(more)</span></p><p>The Parthian campaign was a costly failure, as was the temporary conquest of <a href=\"https://www.britannica.com/place/Armenia\"><u>Armenia</u></a>. Nevertheless, in 34 BCE Antony celebrated a triumphal return to Alexandria. This was followed by a celebration known as “the Donations of Alexandria.” Crowds flocked to the Gymnasium to see Cleopatra and Antony seated on golden thrones on a silver platform with their children sitting on slightly lower thrones beside them. Antony proclaimed Caesarion to be Caesar’s son—thus <a href=\"https://www.merriam-webster.com/dictionary/relegating\">relegating</a> Octavian, who had been adopted by Caesar as his son and heir, to legal illegitimacy. Cleopatra was hailed as queen of kings, Caesarion as king of kings. Alexander Helios was awarded Armenia and the territory beyond the Euphrates, his infant brother Ptolemy the lands to the west of it. The boys’ sister, Cleopatra Selene, was to be ruler of Cyrene. It was clear to Octavian, watching from Rome, that Antony intended his <a href=\"https://www.britannica.com/topic/extended-family\"><u>extended family</u></a> to rule the civilized world. A <a href=\"https://www.merriam-webster.com/dictionary/propaganda\">propaganda</a> <a href=\"https://www.britannica.com/topic/war\"><u>war</u></a> erupted. Octavian seized Antony’s will (or what he claimed to be Antony’s will) from the temple of the <a href=\"https://www.britannica.com/topic/Vestal-Virgins\"><u>Vestal Virgins</u></a>, to whom it had been entrusted, and revealed to the Roman people that not only had Antony bestowed Roman possessions on a foreign woman but intended to be buried beside her in Egypt. The rumour quickly spread that Antony also intended to transfer the capital from Rome to Alexandria.</p><p>Antony and Cleopatra spent the winter of 32–31 BCE in Greece. The Roman Senate deprived Antony of his <a href=\"https://www.britannica.com/dictionary/prospective\">prospective</a> consulate for the following year, and it then declared war against Cleopatra. The naval <a href=\"https://www.britannica.com/event/Battle-of-Actium-ancient-Roman-history\"><u>Battle of Actium</u></a>, in which Octavian faced the combined forces of Antony and Cleopatra on September 2, 31 BCE, was a disaster for the Egyptians. Antony and Cleopatra fled to <a href=\"https://www.britannica.com/place/Egypt\"><u>Egypt</u></a>, and Cleopatra retired to her <a href=\"https://www.britannica.com/topic/mausoleum\"><u>mausoleum</u></a> as Antony went off to fight his last battle. Receiving the false news that Cleopatra had died, Antony fell on his sword. In a last excess of devotion, he had himself carried to Cleopatra’s retreat and there died, after bidding her to make her peace with Octavian.</p><p>Cleopatra buried Antony and then committed suicide. The means of her death is uncertain, though Classical writers came to believe that she had killed herself by means of an <a href=\"https://www.britannica.com/animal/asp\"><u>asp</u></a>, symbol of divine royalty. She was 39 and had been a queen for 22 years and Antony’s partner for 11. They were buried together, as both of them had wished, and with them was buried the <a href=\"https://www.britannica.com/place/Roman-Republic-historical-territory-Italy-1798-1799\"><u>Roman Republic</u></a>.</p><h2>Cleopatra through the ages</h2><p>The <a href=\"https://www.britannica.com/dictionary/vast\">vast</a> majority of Egypt’s many hundreds of queens, although famed throughout their own land, were more or less unknown in the outside world. As the dynastic age ended and the <a href=\"https://www.britannica.com/topic/hieroglyphic-writing\"><u>hieroglyphic script</u></a> was lost, the queens’ stories were forgotten and their monuments buried under Egypt’s sands. But Cleopatra had lived in a highly literate age, and her actions had influenced the formation of the <a href=\"https://www.britannica.com/place/Roman-Empire\"><u>Roman Empire</u></a>; her story could not be forgotten. <a href=\"https://www.britannica.com/biography/Augustus-Roman-emperor\"><u>Octavian</u></a> (the future emperor Augustus) was determined that Roman <a href=\"https://www.britannica.com/topic/history\"><u>history</u></a> should be recorded in a way that confirmed his right to rule. To achieve this, he published his own autobiography and censored Rome’s official records. As Cleopatra had played a key role in his struggle to power, her story was preserved as an <a href=\"https://www.merriam-webster.com/dictionary/integral\">integral</a> part of his. But it was diminished to just two episodes: her relationships with Julius Caesar and Mark Antony. Cleopatra, stripped of any political validity, was to be remembered as an immoral foreign woman who tempted upright Roman men. As such, she became a useful enemy for Octavian, who preferred to be remembered for fighting against foreigners rather than against his fellow Romans.</p><p>This official Roman version of a predatory, immoral Cleopatra passed into Western <a href=\"https://www.merriam-webster.com/dictionary/culture\">culture</a>, where it was retold and reinterpreted as the years passed, until it evolved into a story of a wicked life made good by an honourable death. Meanwhile, Muslim scholars, writing after <a href=\"https://www.britannica.com/place/Egypt/From-the-Islamic-conquest-to-1250#ref22356\"><u>the Arab conquest of Egypt</u></a> about 640 CE, developed their own version of the queen. Their Cleopatra was first and foremost a scholar and a scientist, a gifted philosopher and a chemist.</p><figure class=\"image\"><a href=\"https://cdn.britannica.com/02/66102-050-73794610/Theda-Bara-Cleopatra-1917.jpg\"><img style=\"aspect-ratio:300/237;\" src=\"https://cdn.britannica.com/02/66102-050-73794610/Theda-Bara-Cleopatra-1917.jpg?w=300\" alt=\"Cleopatra (1917)\" width=\"300\" height=\"237\"></a></figure><p><a href=\"https://cdn.britannica.com/02/66102-050-73794610/Theda-Bara-Cleopatra-1917.jpg\"><i>Cleopatra</i> (1917)</a></p><p>Theda Bara in the film <i>Cleopatra</i>, 1917.</p><figure class=\"image\"><a href=\"https://cdn.britannica.com/20/176620-050-A9738ADB/Elizabeth-Taylor-Cleopatra-Richard-Burton-Joseph-L.jpg\"><img style=\"aspect-ratio:300/173;\" src=\"https://cdn.britannica.com/20/176620-050-A9738ADB/Elizabeth-Taylor-Cleopatra-Richard-Burton-Joseph-L.jpg?w=300\" alt=\"Cleopatra\" width=\"300\" height=\"173\"></a></figure><p><a href=\"https://cdn.britannica.com/20/176620-050-A9738ADB/Elizabeth-Taylor-Cleopatra-Richard-Burton-Joseph-L.jpg\"><i>Cleopatra</i></a></p><p>Elizabeth Taylor and Richard Burton in <i>Cleopatra</i> (1963), directed by Joseph L. Mankiewicz.<span style=\"color:var(--link-color);\">(more)</span></p><p><a href=\"https://www.britannica.com/biography/Plutarch\"><u>Plutarch</u></a>’s <a href=\"https://www.britannica.com/topic/Parallel-Lives\"><i><u>Parallel Lives</u></i></a>, translated from the Greek into French by <a href=\"https://www.britannica.com/biography/Jacques-Amyot\"><u>Jacques Amyot</u></a> (1559) and then from the French into English by <a href=\"https://www.britannica.com/biography/Thomas-North\"><u>Sir Thomas North</u></a> (1579), served as the inspiration behind <a href=\"https://www.britannica.com/biography/William-Shakespeare\"><u>Shakespeare</u></a>’s play <a href=\"https://www.britannica.com/topic/Antony-and-Cleopatra-by-Shakespeare\"><i><u>Antony and Cleopatra</u></i></a> (1606–07). Shakespeare dropped some of Plutarch’s disapproval and allowed his queen to become a true heroine. His was by no means the first revision of Cleopatra, nor was it to be the last, but his is the Cleopatra that has <a href=\"https://www.britannica.com/dictionary/lingered\">lingered</a> longest in the public imagination. From Shakespeare stems a wealth of Cleopatra-themed art—plays, poetry, paintings, and operas. In the 20th century Cleopatra’s story was preserved and further developed through film. Many actresses, including <a href=\"https://www.britannica.com/biography/Theda-Bara\"><u>Theda Bara</u></a> (1917), <a href=\"https://www.britannica.com/biography/Claudette-Colbert\"><u>Claudette Colbert</u></a> (1934), and <a href=\"https://www.britannica.com/biography/Elizabeth-Taylor\"><u>Elizabeth Taylor</u></a> (1963), have played the queen, typically in expensive, exotic films that concentrate on the queen’s love life rather than her politics. Meanwhile, Cleopatra’s seductive beauty—a <a href=\"https://www.britannica.com/story/what-did-cleopatra-look-like\"><u>seductive beauty</u></a> that is not supported by the queen’s contemporary portraiture—has been used to sell a wide range of products, from cosmetics to cigarettes. In the late 20th century Cleopatra’s racial heritage became a subject of intense academic debate, with some <a href=\"https://www.britannica.com/topic/African-American\"><u>African American</u></a> scholars embracing Cleopatra as a black African heroine.</p>', '1703134378_927776c4e7bcdabd39ca.jpg', 'Public', '2023-12-21 10:22:58', '2023-12-21 10:55:47'),
+(8, '2023-12-13-github-availability-report-november-2023', 'GitHub Availability Report: November 2023', 'In November, we experienced one incident that resulted in degraded performance across GitHub services.', 'GitHub Availability Report: November 2023', '<p>In November, we experienced one incident that resulted in degraded performance across GitHub services.</p><h2><strong>November 3 18:42 UTC (lasting 38 minutes)</strong></h2><p>Between 18:42 and 19:20 UTC on November 3, the GitHub authorization service experienced excessive application memory use, leading to failed authorization requests and users getting 404 or error responses on most page and API requests.</p><p>A performance and resilience optimization to the authorization microservice contained a memory leak that was exposed under high traffic. Testing did not expose the service to sufficient traffic to discover the leak, allowing it to graduate to production at 18:37 UTC. The memory leak under high load caused pods to crash repeatedly starting at 18:42 UTC, failing authorization checks in their default closed state. These failures started triggering alerts at 18:44 UTC. Rolling back the authorization service change was delayed as parts of the deployment infrastructure relied on the authorization service and required manual intervention to complete. Rollback completed at 19:08 UTC and all impacted GitHub features recovered after pods came back online.</p><p>To reduce the risk of future deployments, we implemented changes to our rollout strategy by including additional monitoring and checks, which automatically block a deployment from proceeding if key metrics are not satisfactory. To reduce our time to recover in the future, we have removed dependencies between the authorization service and the tools needed to roll back changes.</p><p>Please follow our <a href=\"https://www.githubstatus.com/\"><u>status page</u></a> for real-time updates on status changes and post-incident recaps. To learn more about what we’re working on, check out the <a href=\"https://github.blog/category/engineering/\"><u>GitHub Engineering Blog</u></a>.</p>', '1703139977_d7108f98358d4ad93047.webp', 'Public', '2023-12-21 11:56:18', '2023-12-21 12:44:02'),
+(9, '2023-12-19-how-we-organize-and-get-things-done-with-serviceowners', 'How we organize and get things done with SERVICEOWNERS', 'Take CODEOWNERS and GitHub teams to the next level. Learn about how GitHub engineering solves the age old problem of who owns what.', 'How we organize and get things done with SERVICEOWNERS', '<p>GitHub’s primary codebase is <a href=\"https://github.blog/2023-04-06-building-github-with-ruby-and-rails/\"><u>a large Ruby on Rails monolith</u></a> with over 4.2 million lines of code across roughly 30,000 files. As the platform has grown over the years, we have come to realize that we need a new way to organize and think about the systems we run. Our traditional approach to organizing Hubbers and code has been through <a href=\"https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners\"><u>CODEOWNERS</u></a> in combination with GitHub teams, organizations, issues, and repositories. However, as GitHub’s user base continues to grow, we have discovered we need a new layer of abstraction. This is where SERVICEOWNERS comes in.</p><p><a href=\"https://en.wikipedia.org/wiki/Service-oriented_architecture\"><u>Service-oriented architecture</u></a> is not new, but we do not talk often about how large engineering teams organize around services–especially in a hybrid monolith/services architecture. GitHub engineering determined that we were missing a layer in between CODEOWNERS, how we group humans, and work to be done. Injecting a “service” layer between groups of functionality and the people maintaining them opens up a number of interesting possibilities.</p><p>One side-effect of adopting SERVICEOWNERS was realizing that the “ownership” model does not quite express how we work. Given our place in the open source ecosystem and what we value as a company, we thought the “maintainer” model more accurately describes the relationships between services and teams. So, no team “owns” anything, but instead they “maintain” various services.</p><h2>Consistent, company-wide grouping</h2><p>Achieving consistency in how we map running code–both within and without our monolith–to humans has had a number of positive outcomes. It promotes a shared lexicon, and, therefore, a shared understanding. The durability of services reduces the disruption of team reorganization. As priorities shift, services stay the same and require only minimal updates to yaml metadata to be accurate. Consistency in our service definitions also allows us to centralize information about the services we run into a service catalog. Our service catalog is the one-stop shop for up-to-date information on the services that power GitHub. Within the catalog, Hubbers of all stripes can find information on, for example, how a service is performing vis-a-vis an <a href=\"https://en.wikipedia.org/wiki/Service-level_objective\"><u>SLO</u></a>. Each service in the service catalog also has a number of scorecards as part of our fundamentals program.</p><p>With clearly defined services collected in a service catalog, we can easily visualize the relationships between services. We can identify dependencies and map how information flows through the platform. All this information improves the onboarding experience for new engineers, too, as the relationships between services define the platform architecture—without having to rely on out-of-date docs or hand-waving to explain our architecture.</p><p>The service catalog also has the huge benefit of centralizing information about which teams maintain which services, how to reach an on-call engineer, and what expectations the service has set in terms of support SLAs. Clean lines of communication to maintainers of running services has been a huge help in reducing our incident remediation time. Incident commanders know how to contact on-call engineers because they can find it in the service catalog. All of this is only possible thanks to SERVICEOWNERS.</p><h2>How it works</h2><figure class=\"image\"><img style=\"aspect-ratio:1024/378;\" src=\"https://github.blog/wp-content/uploads/2023/12/serviceowners-with-connections.png?w=1024&amp;resize=1024%2C378\" alt=\"a diagram depicting the connections between the GitHub monolith, the service catalog, repositories, and teams.\" srcset=\"https://github.blog/wp-content/uploads/2023/12/serviceowners-with-connections.png?w=1283 1283w, https://github.blog/wp-content/uploads/2023/12/serviceowners-with-connections.png?w=300 300w, https://github.blog/wp-content/uploads/2023/12/serviceowners-with-connections.png?w=768 768w, https://github.blog/wp-content/uploads/2023/12/serviceowners-with-connections.png?w=1024&amp;resize=1024%2C378 1024w\" sizes=\"100vw\" width=\"1024\" height=\"378\"></figure><h3>The SERVICEOWNERS file</h3><p>A SERVICEOWNERS file lives next to the CODEOWNERS file within our monolith. Like a traditional CODEOWNERS file, SERVICEOWNERS consists of a series of glob patterns (for example, app/api/integration*), directory names (for example, config/access_control/) and filenames (for example, app/api/grants.rb) followed by a service name (for example :apps maps to the team github/apps). Our CI enforces rules like:</p><ul><li>There can be no duplicate patterns/directories/files in SERVICEOWNERS.</li><li>All new files added to the github/github repository must have a service owner.</li><li>All patterns/directories/files must match at least one existing file.</li><li>Files matched by multiple glob patterns must be disambiguated by a file or directory definition.</li></ul><h3>The service-mappings.yaml file</h3><p>A service-mappings file defines how services referenced in the SERVICEOWNERS file relate to services in the service catalog and GitHub teams. This configuration can define a service’s product manager, engineering manager, repository, and chat information. Service mappings can also define information about a service’s various classifications, such as its “tier” rating, with zero being critical to the GitHub platform and three being experimental/non-critical.</p><h3>The serviceowners gem</h3><p>We have developed a Ruby gem we integrate with our Rails app that combines data from the SERVICEOWNERS and service-mappings files to produce several types of output. The serviceowners gem generates our CODEOWNERS file. So, instead of manually updating CODEOWNERS, changing which team or teams maintain a service is a one-line YAML change. The serviceowners gem also has an executable which allows engineers to query information about the maintainer of a file or which files a service maintains.</p><p>Because it’s GitHub, there’s of course also <a href=\"https://github.blog/2020-10-22-devops-best-practices-qa-automated-deployments-at-github/\"><u>a chat-op</u></a> for that:</p><blockquote><p><strong>me</strong>: hubot serviceowners for test/jobs/do_the_thing_with_the_stuff_test.rb</p><p><strong>hubot</strong>: The file test/jobs/do_the_thing_with_the_stuff_test.rb is part of the github/some_service service and is maintained by the cool-fun-team team who can be reached in #hijinx.</p></blockquote><h3>The ownership.yaml file</h3><p>The above examples mostly focus on breaking up the monolith into services, but our service catalog can slurp up service information from any repository within the GitHub org that has an ownership.yaml file. Like the service-mappings file, ownership expresses version controlled values for various service metadata. This allows us to have the boundaries of a service span across multiple repositories; for example, the GitHub Desktop app can have a component service within the monolith while also having its own standalone artifact from a different repository. Another benefit of the ownership file is that it allows us to focus code changes to the monolith codebase primarily around functionality and not maintainership.</p><h2>Conclusion</h2><p>The combination of CODEOWNERS and SERVICEOWNERS has provided serious value for us at GitHub. The tooling we continue to build atop these primitives will serve to make maintaining services clearer and easier. That’s good news for the future of GitHub. It also pairs quite nicely with our open source identity and access management project, <a href=\"https://github.blog/2022-06-09-introducing-entitlements-githubs-open-source-identity-and-access-management-solution/\"><u>entitlements</u></a>, too. If SERVICEOWNERS sounds like something your organization, open source or corporate alike, would benefit from, let us know on X at @<a href=\"https://twitter.com/github\"><u>github</u></a>.</p>', '1703140908_88bec4b9f4dd5897af96.webp', 'Public', '2023-12-21 12:11:48', '2023-12-21 12:11:48');
+INSERT INTO `blogs` (`id`, `slug`, `meta_title`, `meta_description`, `heading`, `content`, `hero_image`, `visibility`, `created_on`, `updated_on`) VALUES
+(10, 'upgrading-github-com-to-mysql-8-0', 'Upgrading GitHub.com to MySQL 8.0', 'GitHub uses MySQL to store vast amounts of relational data. This is the story of how we seamlessly upgraded our production fleet to MySQL 8.0.', 'Upgrading GitHub.com to MySQL 8.0', '<p>Over 15 years ago, GitHub started as a Ruby on Rails application with a single MySQL database. Since then, GitHub has evolved its MySQL architecture to meet the scaling and resiliency needs of the platform—including <a href=\"https://github.blog/2018-06-20-mysql-high-availability-at-github/\"><u>building for high availability</u></a>, <a href=\"https://github.blog/2017-07-06-mysql-testing-automation-at-github/\"><u>implementing testing automation</u></a>, and <a href=\"https://github.blog/2021-09-27-partitioning-githubs-relational-databases-scale/\"><u>partitioning the data</u></a>. Today, MySQL remains a core part of GitHub’s infrastructure and our relational database of choice.</p><p>This is the story of how we upgraded our fleet of 1200+ MySQL hosts to 8.0. Upgrading the fleet with no impact to our Service Level Objectives (SLO) was no small feat–planning, testing and the upgrade itself took over a year and collaboration across multiple teams within GitHub.</p><h2><strong>Motivation for upgrading</strong></h2><p>Why upgrade to MySQL 8.0? With <a href=\"https://dev.mysql.com/doc/refman/8.0/en/faqs-general.html\"><u>MySQL 5.7 nearing end of life</u></a>, we upgraded our fleet to the next major version, MySQL 8.0. We also wanted to be on a version of MySQL that gets the latest security patches, bug fixes, and performance enhancements. There are also new features in 8.0 that we want to test and benefit from, including Instant DDLs, invisible indexes, and compressed bin logs, among others.</p><h2><strong>GitHub’s MySQL infrastructure</strong></h2><p>Before we dive into how we did the upgrade, let’s take a 10,000-foot view of our MySQL infrastructure:</p><ul><li>Our fleet consists of 1200+ hosts. It’s a combination of Azure Virtual Machines and bare metal hosts in our data center.</li><li>We store 300+ TB of data and serve 5.5 million queries per second across 50+ database clusters.</li><li>Each cluster is <a href=\"https://github.blog/2018-06-20-mysql-high-availability-at-github/\"><u>configured for high availability</u></a> with a primary plus replicas cluster setup.</li><li>Our data is partitioned. We leverage both horizontal and vertical sharding to scale our MySQL clusters. We have MySQL clusters that store data for specific product-domain areas. We also have horizontally sharded <a href=\"https://vitess.io/\"><u>Vitess</u></a> clusters for large-domain areas that outgrew the single-primary MySQL cluster.</li><li>We have a large ecosystem of tools consisting of Percona Toolkit, <a href=\"https://github.com/github/gh-ost\"><u>gh-ost</u></a>, <a href=\"https://github.com/openark/orchestrator\"><u>orchestrator</u></a>,<a href=\"https://github.com/github/freno\"><u> freno</u></a>, and in-house automation used to operate the fleet.</li></ul><p>All this sums up to a diverse and complex deployment that needs to be upgraded while maintaining our SLOs.</p><h2>Preparing the journey</h2><p>As the primary data store for GitHub, we hold ourselves to a high standard for availability. Due to the size of our fleet and the criticality of MySQL infrastructure, we had a few requirements for the upgrade process:</p><ul><li>We must be able to upgrade each MySQL database while adhering to our Service Level Objectives (SLOs) and Service Level Agreements (SLAs).</li><li>We are unable to account for all failure modes in our testing and validation stages. So, in order to remain within SLO, we needed to be able to roll back to the prior version of MySQL 5.7 without a disruption of service.</li><li>We have a very diverse workload across our MySQL fleet. To reduce risk, we needed to upgrade each database cluster atomically and schedule around other major changes. This meant the upgrade process would be a long one. Therefore, we knew from the start we needed to be able to sustain operating a mixed-version environment.</li></ul><p>Preparation for the upgrade started in July 2022 and we had several milestones to reach even before upgrading a single production database.</p><h3><strong>Prepare infrastructure for upgrade</strong></h3><p>We needed to determine appropriate default values for MySQL 8.0 and perform some baseline performance benchmarking. Since we needed to operate two versions of MySQL, our tooling and automation needed to be able to handle mixed versions and be aware of new, different, or deprecated syntax between 5.7 and 8.0.</p><h3><strong>Ensure application compatibility</strong></h3><p>We added MySQL 8.0 to Continuous Integration (CI) for all applications using MySQL. We ran MySQL 5.7 and 8.0 side-by-side in CI to ensure that there wouldn’t be regressions during the prolonged upgrade process. We detected a variety of bugs and incompatibilities in CI, helping us remove any unsupported configurations or features and escape any new reserved keywords.</p><p>To help application developers transition towards MySQL 8.0, we also enabled an option to select a MySQL 8.0 prebuilt container in GitHub Codespaces for debugging and provided MySQL 8.0 development clusters for additional pre-prod testing.</p><h3><strong>Communication and transparency</strong></h3><p>We used GitHub Projects to create a rolling calendar to communicate and track our upgrade schedule internally. We created issue templates that tracked the checklist for both application teams and the database team to coordinate an upgrade.</p><figure class=\"image\"><img style=\"aspect-ratio:1797/936;\" src=\"https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=1024&amp;resize=1797%2C936\" alt=\"Project Board for tracking the MySQL 8.0 upgrade schedule\" srcset=\"https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=1797 1797w, https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=300 300w, https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=768 768w, https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=1024&amp;resize=1797%2C936 1024w, https://github.blog/wp-content/uploads/2023/12/image2-1.png?w=1536 1536w\" sizes=\"100vw\" width=\"1797\" height=\"936\"><figcaption>&nbsp;</figcaption></figure><p>Project Board for tracking the MySQL 8.0 upgrade schedule</p><h2><strong>Upgrade plan</strong></h2><p>To meet our availability standards, we had a gradual upgrade strategy that allowed for checkpoints and rollbacks throughout the process.</p><h3><strong>Step 1: Rolling replica upgrades</strong></h3><p>We started with upgrading a single replica and monitoring while it was still offline to ensure basic functionality was stable. Then, we enabled production traffic and continued to monitor for query latency, system metrics, and application metrics. We gradually brought 8.0 replicas online until we upgraded an entire data center and then iterated through other data centers. We left enough 5.7 replicas online in order to rollback, but we disabled production traffic to start serving all read traffic through 8.0 servers.</p><figure class=\"image\"><img style=\"aspect-ratio:1972/980;\" src=\"https://github.blog/wp-content/uploads/2023/12/image4.png?w=1024&amp;resize=1972%2C980\" alt=\"The replica upgrade strategy involved gradual rollouts in each data center (DC).\" srcset=\"https://github.blog/wp-content/uploads/2023/12/image4.png?w=1972 1972w, https://github.blog/wp-content/uploads/2023/12/image4.png?w=300 300w, https://github.blog/wp-content/uploads/2023/12/image4.png?w=768 768w, https://github.blog/wp-content/uploads/2023/12/image4.png?w=1024&amp;resize=1972%2C980 1024w, https://github.blog/wp-content/uploads/2023/12/image4.png?w=1536 1536w\" sizes=\"100vw\" width=\"1972\" height=\"980\"></figure><p>The replica upgrade strategy involved gradual rollouts in each data center (DC).</p><h3><strong>Step 2: Update replication topology</strong></h3><p>Once all the read-only traffic was being served via 8.0 replicas, we adjusted the replication topology as follows:</p><ul><li>An 8.0 primary candidate was configured to replicate directly under the current 5.7 primary.</li><li>Two replication chains were created downstream of that 8.0 replica:<ul><li>A set of only 5.7 replicas (not serving traffic, but ready in case of rollback).</li><li>A set of only 8.0 replicas (serving traffic).</li></ul></li><li>The topology was only in this state for a short period of time (hours at most) until we moved to the next step.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:928/752;\" src=\"https://github.blog/wp-content/uploads/2023/12/image3-1.png?w=928&amp;resize=928%2C752\" alt=\"To facilitate the upgrade, the topology was updated to have two replication chains.\" srcset=\"https://github.blog/wp-content/uploads/2023/12/image3-1.png?w=928&amp;resize=928%2C752 928w, https://github.blog/wp-content/uploads/2023/12/image3-1.png?w=300 300w, https://github.blog/wp-content/uploads/2023/12/image3-1.png?w=768 768w\" sizes=\"100vw\" width=\"928\" height=\"752\"></figure><p>To facilitate the upgrade, the topology was updated to have two replication chains.</p><h3><strong>Step 3: Promote MySQL 8.0 host to primary</strong></h3><p>We opted not to do direct upgrades on the primary database host. Instead, we would promote a MySQL 8.0 replica to primary through a graceful failover performed with <a href=\"https://github.com/openark/orchestrator\"><u>Orchestrator</u></a>. At that point, the replication topology consisted of an 8.0 primary with two replication chains attached to it: an offline set of 5.7 replicas in case of rollback and a serving set of 8.0 replicas.</p><p>Orchestrator was also configured to blacklist 5.7 hosts as potential failover candidates to prevent an accidental rollback in case of an unplanned failover.</p><figure class=\"image\"><img style=\"aspect-ratio:1982/900;\" src=\"https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=1024&amp;resize=1982%2C900\" alt=\"Primary failover and additional steps to finalize MySQL 8.0 upgrade for a database\" srcset=\"https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=1982 1982w, https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=300 300w, https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=768 768w, https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=1024&amp;resize=1982%2C900 1024w, https://github.blog/wp-content/uploads/2023/12/image1-1.png?w=1536 1536w\" sizes=\"100vw\" width=\"1982\" height=\"900\"></figure><p>Primary failover and additional steps to finalize MySQL 8.0 upgrade for a database</p><h3><strong>Step 4: Internal facing instance types upgraded</strong></h3><p>We also have ancillary servers for backups or non-production workloads. Those were subsequently upgraded for consistency.</p><h3><strong>Step 5: Cleanup</strong></h3><p>Once we confirmed that the cluster didn’t need to rollback and was successfully upgraded to 8.0, we removed the 5.7 servers. Validation consisted of at least one complete 24 hour traffic cycle to ensure there were no issues during peak traffic.</p><h2><strong>Ability to Rollback</strong></h2><p>A core part of keeping our upgrade strategy safe was maintaining the ability to rollback to the prior version of MySQL 5.7. For read-replicas, we ensured enough 5.7 replicas remained online to serve production traffic load, and rollback was initiated by disabling the 8.0 replicas if they weren’t performing well. For the primary, in order to roll back without data loss or service disruption, we needed to be able to maintain backwards data replication between 8.0 and 5.7.</p><p>MySQL supports replication from one release to the next higher release but does not explicitly support the reverse (<a href=\"https://dev.mysql.com/doc/refman/8.0/en/replication-compatibility.html\"><u>MySQL Replication compatibility</u></a>). When we tested promoting an 8.0 host to primary on our staging cluster, we saw replication break on all 5.7 replicas. There were a couple of problems we needed to overcome:</p><ol><li>In MySQL 8.0, utf8mb4 is the default character set and uses a more modern utf8mb4_0900_ai_ci collation as the default. The prior version of MySQL 5.7 supported the utf8mb4_unicode_520_ci collation but not the latest version of Unicode utf8mb4_0900_ai_ci.</li><li>MySQL 8.0<a href=\"https://dev.mysql.com/doc/refman/8.0/en/roles.html\"><u> introduces roles</u></a> for managing privileges but this feature did not exist in MySQL 5.7. When an 8.0 instance was promoted to be a primary in a cluster, we encountered problems. Our configuration management was expanding certain permission sets to include role statements and executing them, which broke downstream replication in 5.7 replicas. We solved this problem by temporarily adjusting defined permissions for affected users during the upgrade window.</li></ol><p>To address the character collation incompatibility, we had to set the default character encoding to utf8 and collation to utf8_unicode_ci.</p><p>For the GitHub.com monolith, our Rails configuration ensured that character collation was consistent and made it easier to standardize client configurations to the database. As a result, we had high confidence that we could maintain backward replication for our most critical applications.</p><h2><strong>Challenges</strong></h2><p>Throughout our testing, preparation and upgrades, we encountered some technical challenges.</p><h3><strong>What about Vitess?</strong></h3><p>We use Vitess for horizontally sharding relational data. For the most part, upgrading our Vitess clusters was not too different from upgrading the MySQL clusters. We were already running Vitess in CI, so we were able to validate query compatibility. In our upgrade strategy for sharded clusters, we upgraded one shard at a time. VTgate, the Vitess proxy layer, advertises the version of MySQL and some client behavior depends on this version information. For example, one application used a Java client that disabled the query cache for 5.7 servers—since the query cache was removed in 8.0, it generated blocking errors for them. So, once a single MySQL host was upgraded for a given keyspace, we had to make sure we also updated the VTgate setting to advertise 8.0.</p><h3><strong>Replication delay</strong></h3><p>We use read-replicas to scale our read availability. GitHub.com requires low replication delay in order to serve up-to-date data.</p><p>Earlier on in our testing, we encountered a replication bug in MySQL that was <a href=\"https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-28.html#mysqld-8-0-28-bug\"><u>patched on 8.0.28</u></a>:</p><blockquote><p>Replication: If a replica server with the system variable replica_preserve_commit_order = 1 set was used under intensive load for a long period, the instance could run out of commit order sequence tickets. Incorrect behavior after the maximum value was exceeded caused the applier to hang and the applier worker threads to wait indefinitely on the commit order queue. The commit order sequence ticket generator now wraps around correctly. Thanks to Zhai Weixiang for the contribution. (Bug #32891221, Bug #103636)</p></blockquote><p>We happen to meet all the criteria for hitting this bug.</p><ul><li>We use replica_preserve_commit_order because we use GTID based replication.</li><li>We have intensive load for long periods of time on many of our clusters and certainly for all of our most critical ones. Most of our clusters are very write-heavy.</li></ul><p>Since this bug was already patched upstream, we just needed to ensure we are deploying a version of MySQL higher than 8.0.28.</p><p>We also observed that the heavy writes that drove replication delay were exacerbated in MySQL 8.0. This made it even more important that we avoid heavy bursts in writes. At GitHub, we use <a href=\"https://github.com/github/freno\"><u>freno</u></a> to throttle write workloads based on replication lag.</p><h3><strong>Queries would pass CI but fail on production</strong></h3><p>We knew we would inevitably see problems for the first time in production environments—hence our gradual rollout strategy with upgrading replicas. We encountered queries that passed CI but would fail on production when encountering real-world workloads. Most notably, we encountered a problem where queries with large WHERE IN clauses would crash MySQL. We had large WHERE IN queries containing over tens of thousands of values. In those cases, we needed to rewrite the queries prior to continuing the upgrade process. Query sampling helped to track and detect these problems. At GitHub, we use <a href=\"https://www.solarwinds.com/database-performance-monitor\"><u>Solarwinds DPM (VividCortex)</u></a>, a SaaS database performance monitor, for query observability.</p><h2><strong>Learnings and takeaways</strong></h2><p>Between testing, performance tuning, and resolving identified issues, the overall upgrade process took over a year and involved engineers from multiple teams at GitHub. We upgraded our entire fleet to MySQL 8.0 – including staging clusters, production clusters in support of GitHub.com, and instances in support of internal tools. This upgrade highlighted the importance of our observability platform, testing plan, and rollback capabilities. The testing and gradual rollout strategy allowed us to identify problems early and reduce the likelihood for encountering new failure modes for the primary upgrade.</p><p>While there was a gradual rollout strategy, we still needed the ability to rollback at every step and we needed the observability to identify signals to indicate when a rollback was needed. The most challenging aspect of enabling rollbacks was holding onto the backward replication from the new 8.0 primary to 5.7 replicas. We learned that consistency in the <a href=\"https://github.com/trilogy-libraries/trilogy\"><u>Trilogy client library</u></a> gave us more predictability in connection behavior and allowed us to have confidence that connections from the main Rails monolith would not break backward replication.</p><p>However, for some of our MySQL clusters with connections from multiple different clients in different frameworks/languages, we saw backwards replication break in a matter of hours which shortened the window of opportunity for rollback. Luckily, those cases were few and we didn’t have an instance where the replication broke before we needed to rollback. But for us this was a lesson that there are benefits to having known and well-understood client-side connection configurations. It emphasized the value of developing guidelines and frameworks to ensure consistency in such configurations.</p><p>Prior efforts to <a href=\"https://github.blog/2021-09-27-partitioning-githubs-relational-databases-scale/\"><u>partition our data</u></a> paid off—it allowed us to have more targeted upgrades for the different data domains. This was important as one failing query would block the upgrade for an entire cluster and having different workloads partitioned allowed us to upgrade piecemeal and reduce the blast radius of unknown risks encountered during the process. The tradeoff here is that this also means that our MySQL fleet has grown.</p><p>The last time GitHub upgraded MySQL versions, we had five database clusters and now we have 50+ clusters. In order to successfully upgrade, we had to invest in observability, tooling, and processes for managing the fleet.</p><h2><strong>Conclusion</strong></h2><p>A MySQL upgrade is just one type of routine maintenance that we have to perform – it’s critical for us to have an upgrade path for any software we run on our fleet. As part of the upgrade project, we developed new processes and operational capabilities to successfully complete the MySQL version upgrade. Yet, we still had too many steps in the upgrade process that required manual intervention and we want to reduce the effort and time it takes to complete future MySQL upgrades.</p><p>We anticipate that our fleet will continue to grow as GitHub.com grows and we have goals to partition our data further which will increase our number of MySQL clusters over time. Building in automation for operational tasks and self-healing capabilities can help us scale MySQL operations in the future. We believe that investing in reliable fleet management and automation will allow us to scale github and keep up with required maintenance, providing a more predictable and resilient system.</p><p>The lessons from this project provided the foundations for our MySQL automation and will pave the way for future upgrades to be done more efficiently, but still with the same level of care and safety.</p>', '1703141093_b1cfcf522e6766f849b5.webp', 'Public', '2023-12-21 12:14:53', '2023-12-21 12:53:34'),
+(11, 'build-a-secure-code-mindset-with-the-github-secure-code-game', 'Build a secure code mindset with the GitHub Secure Code Game', 'Writing secure code is as much of an art as writing functional code, and it is the only way to write quality code. Learn how our Secure Code Game can provide you with hands-on training to spot and fix security issues in your code so that you can build a secure code mindset.', 'Build a secure code mindset with the GitHub Secure Code Game', '<p>Fixing security-related issues in code is a different kind of problem solving, and we often see developers introducing more problems as they try to fix these issues. I understand this because I was once one of those developers.</p><p>When I started to learn how to write functional code, I was asked to write a form that accepts user input. So, I made a form that accepts user input. I later learned that it was not enough for the code to be functional, it also needed to be secure–like adding user input validation. It was learning about this, and the attacks that could occur without this type of validation, that got me thinking about security as a developer. I learned that I didn’t always need to reinvent the wheel, and that I could instead rely on the best practices, approaches, and code from the people and communities that came before me.</p><p>It’s because of my own experiences, and helping others through my work on the <a href=\"https://securitylab.github.com/\"><u>GitHub Security Lab</u></a> team, that I created the <a href=\"https://github.com/skills/secure-code-game\"><u>Secure Code Game</u></a>. This hands-on secure coding training is now generally available for all GitHub users via <a href=\"https://skills.github.com/\"><u>GitHub Skills</u></a>. The Secure Code Game is perfect for developers and students getting started in their coding careers, or anyone who wants to sharpen their secure-coding abilities.</p><p>The game assumes a beginner or intermediate-level of knowledge, and gets more challenging as you complete each level. To meet the needs of open source developers and start with two of the most popular languages, the game currently supports learning for Python and C. As you complete the game and provide us with feedback, we’ll be able to understand where to take the game next. We are already planning to welcome community contributions for creating new levels in the future.</p><h2>The art of secure code</h2><p>It’s fairly common knowledge that there is a training gap when it comes to secure coding, and there are a few reasons for this. One is that secure code education is not typically a requirement of computer science degrees, even if it is strongly encouraged by some colleges and universities. Another reason is that there may not be enough emphasis on secure coding practices and training within organizations, so developers do not prioritize security while developing code. A third reason is the rapidly-evolving threat landscape, with vulnerabilities constantly evolving. Staying up to date on the latest threats and best practices can be tricky.</p><p>Yes, there is the argument that developers don’t necessarily find secure coding all that interesting. Writing code keeps them creative, and fixing security issues in functional code feels like being stuck in the same place without making progress. There’s something inherently satisfying about writing functional code that performs well and solves a problem within the project they are working on or for the products that their organization sells.</p><p>However, I would like to offer a perception shift: you cannot have quality code without having secure code, and writing secure code is a different form of problem solving. Hackers and security researchers see themselves as creatives who find problems in code because it takes creative thinking and experimenting to find an issue, exploit it, and understand the impact. Sure, there are hackers with malicious intent, but there are many who view themselves as bringing the art–your code–to the next level. As developers, if we want to ensure that we are shipping high-quality code, we must also learn the basics of the art of secure code.</p><h2>Gamification for a secure code mindset</h2><p>Learning secure coding basics isn’t about perfection, but about building an awareness mindset when it comes to reviewing your code for security issues or bugs. GitHub’s hands-on Secure Code Game is purpose-built to help you do just that. It empowers you to learn secure code best practices and theories, and put them into practice while you learn.</p><p>Through the game, we provide you with intentionally vulnerable code and ask you to find and fix the problem within it. You have the ability to assess your fix by running the code to understand if it is still functioning correctly but in a safe way. From here, you can then assess your fix against the exploits baked into the vulnerable code. If the pre-written vulnerabilities can no longer be exploited, you are ready to move to the next level. The levels become more difficult to complete as the game progresses. We recommend that you use an application security testing tool like <a href=\"https://codeql.github.com/\"><u>CodeQL</u></a> to find all of the vulnerabilities in later stages of the game and receive helpful hints on where those problems are and how to fix them.</p><p>To get started with the Secure Code Game within GitHub Skills, <a href=\"https://github.com/skills/secure-code-game\"><u>click here</u></a>. If you’re interested in contributing to the game, <a href=\"mailto:securitylab-social@github.com\"><u>I’d love to hear from you</u></a>.</p>', '1703141299_b6c1248e2ba84a057e6a.webp', 'Public', '2023-12-21 12:18:19', '2023-12-21 13:00:20');
+INSERT INTO `blogs` (`id`, `slug`, `meta_title`, `meta_description`, `heading`, `content`, `hero_image`, `visibility`, `created_on`, `updated_on`) VALUES
+(12, 'survey-reveals-ais-impact-on-the-developer-experience', 'Global Google Developer Experts Share Their Favorite Tools and Advice for New Developers', 'We surveyed 500 U.S.-based developers at companies with 1,000-plus employees about how managers should consider developer productivity, collaboration, and AI coding tools.', 'Global Google Developer Experts Share Their Favorite Tools and Advice for New Developers', '<p>Developers today do more than just write and ship code—they’re expected to navigate a number of tools, environments, and technologies, including the new frontier of generative artificial intelligence (AI) coding tools. But the most important thing for developers isn’t story points or the speed of deployments. It’s the developer experience, which determines how efficiently and productively developers can exceed standards, enter a flow state, and drive impact.</p><p>I say this not only as GitHub’s chief product officer, but as a long-time developer who has worked across every part of the stack. Decades ago, when I earned my master’s in mechanical engineering, I became one of the first technologists to apply AI in the lab. Back then, it would take our models five days to process our larger datasets—which is striking considering the speed of today’s AI models. I yearned for tools that would make me more efficient and shorten my time to production. This is why I’m passionate about developer experience (DevEx) and have made it my focus as GitHub’s chief product officer.</p><p>Amid the rapid advancements in generative AI, we wanted to get a better understanding from developers about how new tools—and current workflows—are impacting the overall developer experience. As a starting point, we focused on some of the biggest components of the developer experience: developer productivity, team collaboration, AI, and how developers think they can best drive impact in enterprise environments.</p><p>To do so, we partnered with Wakefield Research to survey 500 U.S.-based developers at enterprise companies. In the following report, we’ll show how organizations can remove barriers to help enterprise engineering teams drive innovation and impact in this new age of software development. Ultimately, the way to innovate at scale is to empower developers by improving their productivity, increasing their satisfaction, and enabling them to do their best work—every day. After all, there can be no progress without developers who are empowered to drive impact.</p><p><strong>Inbal Shani</strong><br><i>Chief Product Officer // GitHub</i></p><p><strong>Learn how generative AI is changing the developer experience</strong></p><p>Discover how generative AI is changing software development in a pre-recorded session from GitHub.</p><p><a href=\"https://resources.github.com/webcasts/ai-developer-experience-research/?utm_source=github&amp;utm_medium=blog&amp;utm_campaign=2023Q4-on-demand-wbr-AMER-Copilot-for-Business-MOFU\"><u>Watch the video &gt;</u></a></p><p>Key survey findings:</p><ul><li><strong>AI is here and it’s being used at scale.</strong> 92% of U.S.-based developers are already using AI coding tools both in and outside of work.</li><li><strong>Waiting on builds and tests is still a problem.</strong> Despite industry-wide investments in DevOps, developers still say the most time-consuming thing they’re doing at work besides writing code is waiting on builds and tests.</li><li><strong>Developers want more collaboration</strong>. Developers in enterprise settings work with an average of 21 other engineers on projects—and want collaboration to be a top metric in performance reviews.</li><li><strong>And they think AI will help.</strong> More than 4 out of 5 developers expect AI coding tools will make their team more collaborative.</li><li><strong>Developers also see big benefits to AI.</strong> 70% say AI coding tools will offer them an advantage at work and cite better code quality, completion time, and resolving incidents as some of the top anticipated benefits.</li></ul><h2>Why developer experience matters</h2><p>At GitHub, we’re aware there’s often a significant gap between <a href=\"https://future.com/software-development-building-for-99-developers/\"><u>the day-to-day reality for most developers</u></a> and “conversations about ‘what developers want.’”</p><p>With this survey, we wanted to better understand the typical experience for developers—and identify key ways companies can empower their developers and achieve greater success.</p><p>One big takeaway: It starts with investing in a great developer experience. And collaboration, as we learned from our research, is at the core of how developers want to work and what makes them most productive, satisfied, and impactful.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/484;\" src=\"https://github.blog/wp-content/uploads/2023/06/0.0@2x.png?resize=1400%2C484\" alt=\"A diagram of a formula behind the developer experience that accounts for productivity, impact, satisfaction, and collaboration. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/0.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/0.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/0.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/0.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"484\"></figure><p>C = Collaboration, the multiplier across the entire developer experience.</p><h4>DevEx is a formula that takes into account:</h4><ul><li>How simple and fast it is for a developer to implement a change on a codebase—or be <strong>productive</strong>.</li><li>How frictionless it is to move from idea through production to <strong>impact</strong>.</li><li>How positively or negatively the work environment, workflows, and tools affect developer <strong>satisfaction</strong>.</li></ul><p>For leaders, developer experience is about creating a collaborative environment where developers can be their most productive, impactful, and satisfied at work. For developers, collaboration is one of the most important parts of the equation.</p><p><a href=\"https://github.blog/2023-06-08-developer-experience-what-is-it-and-why-should-you-care/\">Learn more about developer experience</a></p><h2>Current performance metrics fall short of developer expectations</h2><ul><li>In many cases, the things developers value and want to do more of are in conflict with how their performance is measured.</li><li>Learning new skills and designing solutions to novel problems have the most positive impact on a developer’s work day, but they spend most of their time waiting on code reviews, builds, or tests.</li><li>Developers also believe their ability to collaborate with others and the quality of their code–more than the quantity and efficiency of their output—should be the top performance metrics they’re measured by.</li></ul><h3>Developers say performance metrics don’t meet expectations</h3><p>The way developers are currently evaluated doesn’t align with how they think their performance <i>should</i> be measured.</p><ul><li>For instance, the developers we surveyed say they’re currently measured by the number of incidents they resolve. But <strong>developers believe that </strong><i><strong>how</strong></i><strong> they handle those bugs and issues is more important to performance</strong>. This aligns with the belief that code quality over code quantity should remain a top performance metric.</li><li>Developers also believe <strong>collaboration and communication should be just as important as code quality in terms of performance measures</strong>. Their ability to collaborate and communicate with others is essential to their job, but only 33% of developers report that their companies use it as a performance metric.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1401/1986;\" src=\"https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?resize=1401%2C1986\" alt=\"Key survey findings showing what developer say their managers use to measure their performance and what developers think will matter more when they start using AI coding tools. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?w=1401 1401w, https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?w=212 212w, https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?w=722 722w, https://github.blog/wp-content/uploads/2023/06/16.0@2x.png?w=1084 1084w\" sizes=\"100vw\" width=\"1401\" height=\"1986\"></figure><p>Metrics currently used to measure performance, compared with metrics developers think should be used to measure their performance.</p><p>&nbsp;</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1474;\" src=\"https://github.blog/wp-content/uploads/2023/06/2.0@2x.png?resize=1400%2C1474\" alt=\"A chart showing what developers say their teams spend the most time doing at work.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/2.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/2.0@2x.png?w=285 285w, https://github.blog/wp-content/uploads/2023/06/2.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/2.0@2x.png?w=973 973w\" sizes=\"100vw\" width=\"1400\" height=\"1474\"></figure><p>The top ranked responses that developers say their teams are working the most on including writing code and finding and fixing security vulnerabilities.</p><h3>Developers want more opportunities to upskill and drive impact</h3><p>When developers are asked about what makes a <strong>positive impact</strong> on their workday, they rank <strong>learning new skills (43%), getting feedback from end users (39%), and automated tests (38%), and designing solutions to novel problems (36%)</strong> as top contenders.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1440;\" src=\"https://github.blog/wp-content/uploads/2023/06/3.0@2x.png?resize=1400%2C1440\" alt=\"A ranked list of the tasks 500 U.S.-based developers say have the most positive impact on their workdays. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/3.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/3.0@2x.png?w=292 292w, https://github.blog/wp-content/uploads/2023/06/3.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/3.0@2x.png?w=996 996w\" sizes=\"100vw\" width=\"1400\" height=\"1440\"></figure><p>The top tasks developers say positively impact their workdays.</p><p><strong>But developers say they’re spending most of their time writing code and tests, then waiting for that code to be reviewed or builds and tests to be executed.</strong></p><p>On a typical day, the enterprise <strong>developers we surveyed report their teams are busy with a variety of tasks</strong>, including writing code, fixing security vulnerabilities, and getting feedback from end users, among other things. Developers also report that they spend a similar amount of time across these tasks, indicating that they’re stretched thin throughout the day.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1440;\" src=\"https://github.blog/wp-content/uploads/2023/06/4.0@2x.png?resize=1400%2C1440\" alt=\"A ranked list of the top tasks developers and software engineers say they spend the most time working on each day. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/4.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/4.0@2x.png?w=292 292w, https://github.blog/wp-content/uploads/2023/06/4.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/4.0@2x.png?w=996 996w\" sizes=\"100vw\" width=\"1400\" height=\"1440\"></figure><p>The tasks developers say they spend the most time working on each day.</p><p><strong>Notably, developers say they spend the same amount of time waiting for builds and tests as they do writing new code.</strong></p><ul><li>This suggests that <strong>wait times for builds and tests are still a persistent problem despite investments in DevOps tools over the past decade</strong>.</li><li>Developers also continue to face obstacles, such as waiting on code review, builds, and test runs, which can hinder their ability to learn new skills and design solutions to novel problems, and our research suggests that these factors can have the biggest impact on their overall satisfaction.</li></ul><h3>Developers want feedback from end users, but face challenges</h3><p>Developers say getting feedback from end users (39%) is the second-most important thing that positively impacts their workdays—but it’s often challenging for development teams to get that feedback directly.</p><ul><li>Product managers and marketing teams often act as intermediaries, making it difficult for developers to directly receive end-user feedback.</li><li>Developers would ideally receive feedback from automated and validation tests to improve their work, but sometimes these tests are sent to other teams before being handed off to engineering teams.</li></ul><p><strong>The top two daily tasks for development teams include writing code (32%) and finding and fixing security vulnerabilities (31%)</strong>.</p><ul><li>This shows the increased importance developers have placed on security and underscores how companies are prioritizing security.</li><li>It also demonstrates the critical role that enterprise development teams play in meeting policy and board edicts around security.</li></ul><blockquote><p><strong>The bottom line</strong><br>Developers want to upskill, design solutions, get feedback from end users, and be evaluated on their communication skills. However, wait times on builds and tests, as well as the current performance metrics they’re evaluated on, are getting in the way.</p></blockquote><h2>Collaboration is the cornerstone of the developer experience</h2><ul><li>The developers that we surveyed work with 21 other developers on a typical project, and most work with other development teams on a weekly or daily basis.</li><li>Developers need the right tools and resources for this high-demand collaboration—and that includes regular touchpoints with their teams, heads-down time, access to fully configured dev environments, and formal mentor-mentee relationships.</li></ul><h3>Developers thrive in collaborative environments</h3><p>In our survey of enterprise engineers, developers say they work with an average of 21 other developers on a typical project—and 52% report working with other teams daily or weekly. Notably, they rank regular touchpoints as the most important factor for effective collaboration.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1990;\" src=\"https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?resize=1400%2C1990\" alt=\"A survey finding that developers at enterprise companies often work with an average of 21 developers on other projects and often work on a daily or weekly basis with colleagues.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?w=211 211w, https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?w=720 720w, https://github.blog/wp-content/uploads/2023/06/5.0@2x.png?w=1081 1081w\" sizes=\"100vw\" width=\"1400\" height=\"1990\"></figure><p>Developers in enterprise settings often work with an average of 21 other developers on a daily or weekly cadence.</p><p><strong>But developers also have a holistic view of collaboration</strong>—it’s defined not only by talking and meeting with others, but also by uninterrupted work time, access to fully configured developer environments, and formal mentor-mentee relationships.</p><ul><li><strong>Specified blocks with no team communication</strong> give developers the time and space to write code and work towards team goals.</li><li><strong>Access to fully configured developer environments</strong> promotes consistency throughout the development process. It also helps developers collaborate faster and avoid hearing the infamous line, “But it worked on my machine.”</li><li><strong>Mentorships</strong> can help developers upskill and build interpersonal skills that are essential in a collaborative work environment.</li></ul><p>It’s important to note these factors <strong>can also negatively impact a developer’s work day</strong>—which suggests that ineffective meetings can serve to distract rather than help developers (<a href=\"https://github.blog/2021-05-25-octoverse-spotlight-good-day-project/\"><u>something we’ve found in previous research</u></a>).</p><p>What does effective collaboration look like for developers?</p><p>Effectively measuring developer collaboration can seem like an elusive goal, but developers in our survey point to what works—and what doesn’t. Developers view regular touchpoints with colleagues across asynchronous channels, documentation, and well-run team meetings as critical to successful collaboration.</p><p>Coupled with previous GitHub research in “<a href=\"https://queue.acm.org/detail.cfm?id=3454124\"><u>The SPACE of developer productivity</u></a>,” we can infer what effective collaboration means to developers. Regular touchpoints—including synchronous meetings and asynchronous communication throughout the day via chat applications, documentation, pull requests, and issues—can improve the flow of and discoverability of information. This leads to better coordination and awareness of team member activities and task priorities. Regular touchpoints can also help align and focus teams to work on the right problems, leading to better solutions and stronger business impact.</p><p><img src=\"https://github.blog/wp-content/uploads/2023/06/6.0@2x.png?resize=1024%2C787\" alt=\"The key factors developers in a survey say contribute most highly to effective team collaboration including meetings, dedicated time for individual work, and access to fully configured dev environments.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/6.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/6.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/6.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/6.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1024\" height=\"787\"></p><p>Our survey indicates the <strong>factors most important to effective collaboration are so critical that when they’re not done effectively, they have a noticeable, negative impact</strong> on a developer’s work.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1592;\" src=\"https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?resize=1400%2C1592\" alt=\"A ranked list of the top tasks developers in a survey reported as having a negative impact on their overall workday experience. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?w=264 264w, https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?w=901 901w, https://github.blog/wp-content/uploads/2023/06/7.0@2x.png?w=1351 1351w\" sizes=\"100vw\" width=\"1400\" height=\"1592\"></figure><p>The tasks developers say most often have a negative impact on their workday experience.</p><p>&nbsp;</p><h4>We wanted to learn more about how developers collaborate</h4><p>So, we sourced some answers from our followers on Twitter. We <a href=\"https://twitter.com/github/status/1658137315359768578\"><u>asked developers what tips they have for effective collaboration</u></a>. Here’s what one developer had to say:</p><figure class=\"image\"><a href=\"https://twitter.com/colbyjray/status/1658158021682376706\"><img style=\"aspect-ratio:697/1024;\" src=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-1.png?resize=697%2C1024\" alt=\"Twitter user Colby Ray had multiple points in response to our prompt. Click the image to read his tweet.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-1.png?w=792 792w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-1.png?w=204 204w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-1.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-1.png?w=697 697w\" sizes=\"100vw\" width=\"697\" height=\"1024\"></a></figure><p>We also asked <a href=\"https://twitter.com/github/status/1659591002254893056\"><u>what makes for a productive and valuable meeting</u></a>:</p><figure class=\"image\"><a href=\"https://twitter.com/kettanaito/status/1659619803953258496\"><img style=\"aspect-ratio:792/384;\" src=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-2.png?w=792&amp;resize=792%2C384\" alt=\"Twitter user kettenaito had several points in response to our prompt. Click the image to read on Twitter.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-2.png?w=792&amp;resize=792%2C384 792w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-2.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-2.png?w=768 768w\" sizes=\"100vw\" width=\"792\" height=\"384\"></a></figure><figure class=\"image\"><a href=\"https://twitter.com/mateusfreira/status/1659864833825677314\"><img style=\"aspect-ratio:794/376;\" src=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-3.png?w=794&amp;resize=794%2C376\" alt=\"Twitter user Mateus Feira had several points in response to our prompt. Click the image to read on Twitter.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-3.png?w=794&amp;resize=794%2C376 794w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-3.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-3.png?w=768 768w\" sizes=\"100vw\" width=\"794\" height=\"376\"></a></figure><h3>Effective collaboration improves code quality</h3><p>As developer experience continues to be defined, so, too, will successful developer collaboration. Too many pings and messages can affect flow, but there’s still a need to stay in touch. In our survey, <strong>developers say effective collaboration results in improved test coverage and faster, cleaner, more secure code writing—which are best practices for any development team</strong>. This shows that when developers work effectively with others, they believe they build better and more secure software.</p><figure class=\"image\"><img style=\"aspect-ratio:1400/1076;\" src=\"https://github.blog/wp-content/uploads/2023/06/8.0@2x.png?resize=1400%2C1076\" alt=\"Developers in a survey report that collaboration positively impacts how they write code, how fast they can ship it, and more.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/8.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/8.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/8.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/8.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"1076\"></figure><p>Developers widely view effective collaboration as helping to improve what they ship and how often they ship it.</p><p><strong>Developers we surveyed believe collaboration and communication—along with code quality—should be the top priority for evaluation.</strong></p><ul><li>From DevOps to agile methodologies, <strong>developers and the greater business world have been talking about the importance of collaboration for a long time</strong>.</li><li>But developers are still not being measured on it.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1400/1134;\" src=\"https://github.blog/wp-content/uploads/2023/06/9.0@2x.png?resize=1400%2C1134\" alt=\"Developers in a survey respond to a question about what metrics they believe their companies should use to measure their performance and productivity.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/9.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/9.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/9.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/9.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"1134\"></figure><p>The metrics that developers think their managers should use to evaluate their performance and productivity.</p><p>We asked developers to share their <a href=\"https://twitter.com/github/status/1660618512438632448\"><u>ideas for measuring how well they collaborate</u></a>. Here’s what one developer had to say:</p><figure class=\"image\"><a href=\"https://twitter.com/AndrewDiMola/status/1660672513385414656\"><img style=\"aspect-ratio:982/1024;\" src=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-4.png?w=982&amp;resize=982%2C1024\" alt=\"Twitter user Andrew DiMola had several points in response to our prompt. Click to read on Twitter.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/twitter-reply-4.png?w=1122 1122w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-4.png?w=288 288w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-4.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/twitter-reply-4.png?w=982&amp;resize=982%2C1024 982w\" sizes=\"100vw\" width=\"982\" height=\"1024\"></a></figure><ul><li><strong>The takeaway</strong>: Companies and engineering managers should encourage regular team communication, and set time to check in–especially in remote environments–but respect developers’ need to work and focus.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1400/628;\" src=\"https://github.blog/wp-content/uploads/2023/06/10.0@2x.png?resize=1400%2C628\" alt=\"Developers think regular touchpoints with their teams including meetings, asynchronous communication, and innersource practices help organizations collaborate at scale.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/10.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/10.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/10.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/10.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"628\"></figure><p>Developers believe that effective and regular touchpoints with their colleagues are critical for effective team collaboration.</p><h4>4 tips for engineering managers to improve collaboration</h4><p>At GitHub, our researchers, developers, product teams, and analysts are dedicated to studying and improving developer productivity and satisfaction. <strong>Here are their tips for engineering leaders who want to improve collaboration among developers</strong>:</p><ol><li><strong>Make collaboration a goal in performance objectives</strong>. This builds the space and expectation that people will collaborate. This could be in the form of lunch and learns, joint projects, etc.</li><li><strong>Define and scope what collaboration looks like in your organization</strong>. Let people know when they’re being informed about something vs. being consulted about something. A matrix outlining roles and responsibilities helps define each person’s role and is something GitHub teams have implemented.</li><li><strong>Give developers time to converse and get to know one another</strong>. In particular, remote or hybrid organizations need to dedicate a portion of a developer’s time and virtual space to building relationships. <a href=\"https://github.blog/tag/remote-work/\"><i><u>Check out the GitHub guides to remote work</u></i></a>.</li><li><strong>Identify principal and distinguished engineers</strong>. Academic research supports the positive impact of change agents in organizations—and how they should be the people who are exceptionally great at collaboration. It’s a matter of identifying your distinguished engineers and elevating them to a place where they can model desired behaviors.</li></ol><blockquote><p><strong>The bottom line</strong><br>Effective developer collaboration improves code quality and should be a performance measure. Regular touchpoints, heads-down time, access to fully configured dev environments, and formal mentor-mentee relationships result in improved test coverage and faster, cleaner, more secure code writing.</p></blockquote><h2>AI improves individual performance and team collaboration</h2><ul><li>Almost all developers have used AI coding tools—92% of those we surveyed say they have used them either at work or in their personal time. We expect this number to increase in the months to come.</li><li>70% of developers believe that using AI coding tools will offer them an advantage in their work, with upskilling being the top benefit followed by productivity gains.</li><li>Given that upskilling is the number one task developers say improves their workdays, this is notable because AI coding tools can integrate it directly into a developer’s workflow.</li></ul><h3>Developers are already using AI coding tools at work</h3><p>A staggering 92% of U.S.-based developers working in large companies report using an AI coding tool either at work or in their personal time—and 70% say they see significant benefits to using these tools.</p><ul><li><strong>AI is here to stay—and it’s already transforming how developers approach their day-to-day work</strong>. That makes it critical for businesses and engineering leaders to adopt enterprise-grade AI tools to avoid their developers using non-approved applications. Companies should also establish governance standards for using AI tools to ensure that they are used ethically and effectively.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1400/620;\" src=\"https://github.blog/wp-content/uploads/2023/06/11.0@2x.png?resize=1400%2C620\" alt=\"92% of developers in a survey say they\'re already using AI coding tools at work.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/11.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/11.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/11.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/11.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"620\"></figure><p>Almost all developers are already using AI coding tools at and outside of work.</p><figure class=\"image\"><img style=\"aspect-ratio:1024/291;\" src=\"https://github.blog/wp-content/uploads/2023/06/Callout@2x.png?resize=1024%2C291\" alt=\"70% of developers see a benefit to using AI coding tools at work.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/Callout@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/Callout@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/Callout@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/Callout@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1024\" height=\"291\"></figure><p>&nbsp;</p><h3>Developers believe AI coding tools will enhance their performance</h3><p>With most developers experimenting with AI tools in the workplace, our survey results suggest it’s not just idle interest leading developers to use AI. Rather, it’s a recognition that AI coding tools will help them meet performance standards.</p><ul><li>In our survey, <strong>developers say AI coding tools can help them meet existing performance standards with improved code quality, faster outputs, and fewer production-level incidents</strong>. They also believe that these metrics should be used to measure their performance beyond code quantity.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1401/1986;\" src=\"https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?resize=1401%2C1986\" alt=\"The metrics developers say their managers use to measure their productivity vs. the metrics developers think their managers should use to measure their productivity if they use AI coding tools. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?w=1401 1401w, https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?w=212 212w, https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?w=722 722w, https://github.blog/wp-content/uploads/2023/06/12.0@2x.png?w=1084 1084w\" sizes=\"100vw\" width=\"1401\" height=\"1986\"></figure><p>Developers widely think that AI coding tools will layer into their existing workflows and bring greater efficiencies—but they do not think AI will change how software is made.</p><p><strong>Around one-third of developers report that their managers currently assess their performance based on the volume of code they produce</strong>—and an equal number anticipate that this will persist when they start using AI-based coding tools.</p><ul><li><strong>Notably, the quantity of code a developer produces may not necessarily correspond to its business value</strong>.</li><li><strong>Stay smart.</strong> With the increase of AI tooling being used in software development—which often contributes to code volume—engineering leaders will need to ask whether measuring code volume is still the best way to measure productivity and output.</li></ul><h3>Developers think AI coding tools will lead to greater team collaboration</h3><p>Beyond improving individual performance, more than 4 in 5 developers surveyed (81%) say AI coding tools will help increase collaboration within their teams and organizations.</p><ul><li><strong>In fact, security reviews, planning, and pair programming are the most significant points of collaboration and the tasks that development teams are expected to, and should, work on with the help of AI coding tools</strong>. This also indicates that code and security reviews will remain important as developers increase their use of AI coding tools in the workplace.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1400/982;\" src=\"https://github.blog/wp-content/uploads/2023/06/13.0@2x.png?resize=1400%2C982\" alt=\"Developers believe that AI coding tools will make engineering teams more collaborative as the quality of code produced becomes ever more important. \" srcset=\"https://github.blog/wp-content/uploads/2023/06/13.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/13.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/13.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/13.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"982\"></figure><p>Developers think their teams will need to become more collaborative as they start using AI coding tools.</p><p>&nbsp;</p><p>Notably, developers believe <strong>AI coding tools will give them more time to focus on solution design</strong>. This has direct organizational benefits and means developers believe they’ll spend more time designing new features and products with AI instead of writing boilerplate code.</p><ul><li><strong>Developers are already using generative AI coding tools to automate parts of their workflow</strong>, which frees up time for more collaborative projects like security reviews, planning, and pair programming.</li></ul><figure class=\"image\"><img style=\"aspect-ratio:1400/772;\" src=\"https://github.blog/wp-content/uploads/2023/06/15.0@2x.png?resize=1400%2C772\" alt=\"Developers think AI coding tools will help them upskill, become more productive, and focus on higher-value problem solving.\" srcset=\"https://github.blog/wp-content/uploads/2023/06/15.0@2x.png?w=1400 1400w, https://github.blog/wp-content/uploads/2023/06/15.0@2x.png?w=300 300w, https://github.blog/wp-content/uploads/2023/06/15.0@2x.png?w=768 768w, https://github.blog/wp-content/uploads/2023/06/15.0@2x.png?w=1024 1024w\" sizes=\"100vw\" width=\"1400\" height=\"772\"></figure><p>Developers believe that AI coding tools will help them focus on higher-value problem solving.</p><h3>Developers think AI increases productivity and prevents burnout</h3><p>Not only can AI coding tools help improve overall productivity, but they can also provide upskilling opportunities to help create a smarter workforce according to the developers we surveyed.</p><ul><li><strong>57% of developers believe AI coding tools help them improve their coding language skills</strong>—which is the top benefit they see. Beyond the prospect of acting as an upskilling aid, developers also say AI coding tools can also help with reducing cognitive effort, and since mental capacity and time are both finite resources, <strong>41% of developers believe that AI coding tools can help with preventing burnout</strong>.</li><li><a href=\"https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/\"><u>In previous research we conducted</u></a>, <strong>87% of developers reported that the AI coding tool GitHub Copilot helped them preserve mental effort while completing more repetitive tasks</strong>. This shows that AI coding tools allow developers to preserve cognitive effort and focus on more challenging and innovative aspects of software development or research and development.</li><li><strong>AI coding tools help developers upskill while they work.</strong> Across our survey, developers consistently rank learning new skills as the number one contributor to a positive workday. But 30% also say learning and development can have a negative impact on their overall workday, which suggests some developers view learning and development as adding more work to their workdays. Notably, developers say the top benefit of AI coding tools is learning new skills—and these tools can help developers learn while they work, instead of making learning and development an additional task.</li></ul><p>&nbsp;</p><h3>AI is improving the developer experience across the board</h3><p>Developers in our survey suggest they can better meet standards around code quality, completion time, and the number of incidents when using AI coding tools—all of which are measures developers believe are key areas for evaluating their performance.</p><p>AI coding tools can also help reduce the likelihood of coding errors and improve the accuracy of code—which ultimately leads to more reliable software, increased application performance, and better performance numbers for developers. <strong>As AI technology continues to advance, it is likely that these coding tools will have an even greater impact on developer performance and upskilling</strong>.</p><p>Developers think AI coding tools will help them upskill while they work</p><p>57% of the developers surveyed say using AI coding tools helps them develop their coding language skills, which they consider the top benefit of using these applications (with the second benefit being greater productivity). This suggests that developers view the use of AI coding tools as a way to upskill while they work, instead of adding another task to their workday for learning and development.</p><figure class=\"image\"><a href=\"https://github.com/features/copilot?utm_source=blog&amp;utm_medium=blogA&amp;utm_campaign=cta&amp;utm_content=copilot\"><img style=\"aspect-ratio:1024/257;\" src=\"https://github.blog/wp-content/uploads/2023/04/1200x300-Blog_Ad-Master-3.png?w=1024&amp;resize=1024%2C257\" alt=\"\" srcset=\"https://github.blog/wp-content/uploads/2023/04/1200x300-Blog_Ad-Master-3.png?w=1200 1200w, https://github.blog/wp-content/uploads/2023/04/1200x300-Blog_Ad-Master-3.png?w=300 300w, https://github.blog/wp-content/uploads/2023/04/1200x300-Blog_Ad-Master-3.png?w=768 768w, https://github.blog/wp-content/uploads/2023/04/1200x300-Blog_Ad-Master-3.png?w=1024&amp;resize=1024%2C257 1024w\" sizes=\"100vw\" width=\"1024\" height=\"257\"></a></figure><h3>AI coding tools are layering into existing developer workflows and creating greater efficiencies</h3><p><strong>Developers believe that AI coding tools will increase their productivity</strong>—but our survey suggests that developers don’t think these tools are fundamentally altering the software development lifecycle. Instead, developers suggest they’re bringing greater efficiencies to it.</p><ul><li>The use of automation and AI has been a part of the developer workflow for a considerable amount of time, with developers already utilizing a range of automated and AI-powered tools, such as machine learning-based security checks and CI/CD pipelines.</li><li>Rather than completely overhauling operations, <strong>these tools create greater efficiencies within existing workflows, and that frees up more time for developers to concentrate on developing solutions</strong>.</li></ul><blockquote><p><strong>The bottom line</strong><br>Almost all developers (92%) are using AI coding at work—and they say these tools not only improve day-to-day tasks but enable upskilling opportunities, too. Developers see material benefits to using AI tools including improved performance and coding skills, as well as increased team collaboration.</p></blockquote><h2>The path forward</h2><p><strong>Developer satisfaction, productivity, and organizational impact are all positioned to get a boost from AI coding tools—and that will have a material impact on the overall developer experience.</strong></p><p>92% of developers already saying they use AI coding tools at work and in their personal time, which makes it clear AI is here to stay. 70% of the developers we surveyed say they already see significant benefits when using AI coding tools, and 81% of the developers we surveyed expect AI coding tools to make their teams more collaborative—which is a net benefit for companies looking to improve both developer velocity and the developer experience.</p><p>Notably, 57% of developers believe that AI could help them upskill—and hold the potential to build learning and development into their daily workflow. With all of this in mind, technical leaders should start exploring AI as a solution to improve satisfaction, productivity, and the overall developer experience.</p><p><strong>In addition to exploring AI tools, here are three takeaways engineering and business leaders should consider to improve the developer experience:</strong></p><ol><li>Help your developers enter a flow state with tools, processes, and practices that help them be productive, drive impact, and do creative and meaningful work.</li><li>Empower collaboration by breaking down organizational silos and providing developers with the opportunity to communicate efficiently.</li><li>Make room for upskilling within developer workflows through key investments in AI to help your organization experiment and innovate for the future.</li></ol><h3>Methodology</h3><p>This report draws on a survey conducted online by Wakefield Research on behalf of GitHub from March 14, 2023 through March 29, 2023 among 500 non-student, U.S.-based developers who are not managers and work at companies with 1,000-plus employees. For a complete survey methodology, please contact <a href=\"mailto:press@github.com\"><strong><u>press@github.com</u></strong></a>.</p>', '1703144368_e65b057bbbb54a8d1f5c.webp', 'Public', '2023-12-21 13:09:28', '2023-12-21 13:24:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking_actions`
+--
+
+CREATE TABLE `booking_actions` (
+  `id` int(11) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `action` int(11) NOT NULL,
+  `comments` text NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `booking_actions`
+--
+
+INSERT INTO `booking_actions` (`id`, `booking_id`, `action`, `comments`, `created_by`, `created_on`, `updated_on`) VALUES
+(1, 60, 2, 'ccc', 1, '2023-12-14 20:33:07', '2023-12-14 20:33:07'),
+(2, 60, 2, 'saasas', 1, '2023-12-14 20:34:55', '2023-12-14 20:34:55'),
+(3, 60, 2, 'sdsdsd', 1, '2023-12-14 20:38:51', '2023-12-14 20:38:51'),
+(4, 60, 2, 'sdfdsf', 1, '2023-12-14 20:41:30', '2023-12-14 20:41:30'),
+(5, 60, 2, 'sdsd', 1, '2023-12-14 20:42:37', '2023-12-14 20:42:37'),
+(6, 60, 2, 'sdsd', 1, '2023-12-14 20:43:35', '2023-12-14 20:43:35'),
+(7, 60, 2, 'Sddsdsf', 1, '2023-12-14 20:44:50', '2023-12-14 20:44:50'),
+(8, 60, 2, 'aasas', 1, '2023-12-14 20:49:53', '2023-12-14 20:49:53'),
+(9, 60, 2, 'aas', 1, '2023-12-14 20:57:55', '2023-12-14 20:57:55'),
+(10, 60, 2, 'sddsf', 1, '2023-12-14 21:19:13', '2023-12-14 21:19:13'),
+(11, 60, 2, 'asas', 1, '2023-12-14 21:20:16', '2023-12-14 21:20:16'),
+(12, 60, 2, 'dsfdsf', 1, '2023-12-14 21:20:47', '2023-12-14 21:20:47'),
+(13, 60, 3, 'CCC', 1, '2023-12-14 21:21:08', '2023-12-14 21:21:08'),
+(14, 40, 2, 'GGG', 1, '2023-12-14 21:22:07', '2023-12-14 21:22:07'),
+(15, 40, 2, 'aas', 1, '2023-12-14 21:27:16', '2023-12-14 21:27:16'),
+(16, 39, 2, 'asas', 1, '2023-12-14 21:27:32', '2023-12-14 21:27:32'),
+(17, 15, 4, 'I don\'t like it', 1, '2023-12-14 21:39:02', '2023-12-14 21:39:02'),
+(18, 50, 3, 'cccc', 1, '2023-12-14 21:47:33', '2023-12-14 21:47:33'),
+(19, 49, 2, 'VDD', 1, '2023-12-14 21:47:51', '2023-12-14 21:47:51'),
+(20, 14, 3, 'ccc', 1, '2023-12-14 22:11:13', '2023-12-14 22:11:13'),
+(21, 59, 3, 'fgfg', 1, '2023-12-15 11:24:09', '2023-12-15 11:24:09'),
+(22, 58, 2, 'asdsadsad', 1, '2023-12-17 10:01:13', '2023-12-17 10:01:13'),
+(23, 54, 4, 'Turned off', 1, '2023-12-17 10:10:33', '2023-12-17 10:10:33');
 
 -- --------------------------------------------------------
 
@@ -109,7 +188,7 @@ CREATE TABLE `cms_pages` (
 --
 
 INSERT INTO `cms_pages` (`id`, `type`, `slug`, `meta_title`, `meta_description`, `heading`, `content`, `created_on`, `updated_on`) VALUES
-(1, 'doctor', 'Naveen', 'meta title', 'Meta dissas', 'headings', '<h4><strong>About Dr.Praveen Raj</strong></h4><p>He is responsible for placing GEM Obesity and Diabetes centre as a centre of excellence globally. His efforts has made sure that patients receive care and treatment in par with the best centres around the world.</p><p>He has completed his Bachelor of Medicine in PSG Institute of Medical Sciences, Coimbatore with Honours and the Masters in General Surgery from the prestigious Sri Ramachandra University, Chennai.</p><ul><li>&nbsp;He has been honoured with the <strong>Honorary Fellow in Advanced Laparoscopy</strong> by the Indian Association for Gastrointestinal Endosurgeons (IAGES).</li><li>He’s also the <strong>First in Asia to be awarded with a Doctorate (PhD) in Bariatric Surgery</strong> by the Datta Meghe Institute of Medical Sciences, Nagpur.</li></ul><p>&nbsp;</p><h4><strong>Departments, Centers, &amp; Programs:</strong></h4><ul><li>Department of Minimal Access Bariatric &amp; Robotic Surgery</li><li>Department of Surgical Gastroenterology</li></ul>', '2023-12-08 19:03:25', '2023-12-09 09:15:02'),
+(1, 'doctor', 'Dr-Praveen', 'meta title', 'Meta dissas', 'headings', '<h4><strong>About Dr.Praveen Raj</strong></h4><p>He is responsible for placing GEM Obesity and Diabetes centre as a centre of excellence globally. His efforts has made sure that patients receive care and treatment in par with the best centres around the world.</p><p>He has completed his Bachelor of Medicine in PSG Institute of Medical Sciences, Coimbatore with Honours and the Masters in General Surgery from the prestigious Sri Ramachandra University, Chennai.</p><ul><li>&nbsp;He has been honoured with the <strong>Honorary Fellow in Advanced Laparoscopy</strong> by the Indian Association for Gastrointestinal Endosurgeons (IAGES).</li><li>He’s also the <strong>First in Asia to be awarded with a Doctorate (PhD) in Bariatric Surgery</strong> by the Datta Meghe Institute of Medical Sciences, Nagpur.</li></ul><p>&nbsp;</p><h4><strong>Departments, Centers, &amp; Programs:</strong></h4><ul><li>Department of Minimal Access Bariatric &amp; Robotic Surgery</li><li>Department of Surgical Gastroenterology</li></ul>', '2023-12-08 19:03:25', '2023-12-21 14:05:57'),
 (22, 'doctor', 'Manasa', 'Dr manasa', 'Catalogy', 'About Dr.Manasa', '<p>He is responsible for placing GEM Obesity and Diabetes centre as a centre of excellence globally. His efforts has made sure that patients receive care and treatment in par with the best centres around the world.</p><p>He has completed his Bachelor of Medicine in PSG Institute of Medical Sciences, Coimbatore with Honours and the Masters in General Surgery from the prestigious Sri Ramachandra University, Chennai.</p><ul><li>He has been honoured with the <strong>Honorary Fellow in Advanced Laparoscopy</strong> by the Indian Association for Gastrointestinal Endosurgeons (IAGES).</li><li>He’s also the <strong>First in Asia to be awarded with a Doctorate (PhD) in Bariatric Surgery</strong> by the Datta Meghe Institute of Medical Sciences, Nagpur.</li></ul><p>&nbsp;</p><h4><strong>Departments, Centers, &amp; Programs:</strong></h4><ul><li>Department of Minimal Access Bariatric &amp; Robotic Surgery</li><li>Department of Surgical Gastroenterology</li></ul><p>&nbsp;</p><h4><strong>Social and Community Service :</strong></h4><p>&nbsp;</p><p><strong>GEM Digestive Diseases Foundation and Charitable Trust</strong></p><ul><li>To serve the needy and economically backward common public.Conduction of 65 in house periodic free medical camps.</li><li>Bearing of all the medical expenses.</li><li>Provision of high tech medical facilities and treatment at free / affordable cost.</li><li>Served 43,225 of patients till now 2,777 of free laparoscopic surgeries.</li><li>Financial assistance for poor students to persuade education</li></ul><p><strong>Free Medical ward at GEM Hospital</strong></p><ul><li>20 beds exclusively to cater medical services including laparoscopic surgeries free of cost forthe needy people.</li></ul><p><strong>Health Education</strong></p><ul><li>To make everyone realize “Prevention is better than cure”</li><li>A serial of lectures in Doordarshan – “Vayirae Nalama”, 2005</li><li>Major issues for discussion on Obesity and GI Malignancies aiming Prevention and early detection, cure</li><li>Periodic Hepatitis-B Awareness and free vaccination programmes every year one month in August.</li></ul><p><strong>Establishment of first Preventive gastroenterology Clinic</strong></p><ul><li>Obesity Awareness – Mini Marathon</li><li>For early detection</li><li>For health education</li><li>Cancer screening</li></ul>', '2023-12-08 19:32:13', '2023-12-09 07:42:38');
 
 -- --------------------------------------------------------
@@ -490,7 +569,7 @@ INSERT INTO `doctors` (`id`, `name`, `slug`, `dept_ids`, `services`, `descriptio
 (6, 'Dr Lakshman', 'lucky', '7', '23,18', 'ssdsd dfdfdf', 'MBBS, MD', 5, 5, '1700141935_0413a36dbc47671b5e44.webp', 'Public', 1, '2023-11-16 10:28:28', '2023-11-20 11:30:19'),
 (7, 'Dr Web developer', 'developer', '7', '19,18', 'sadsad', 'MBBS', 2, 3, '1700141868_98fcff917b791fe6779b.jpg', 'Public', 1, '2023-11-16 13:32:12', '2023-11-20 11:30:43'),
 (8, 'Manasa', 'Manasa', '7', '24,18', 'Testing', 'MBBS', 2, 8, '1700462902_d2cd75941398257a1819.jpg', 'Public', 1, '2023-11-20 06:48:22', '2023-11-20 11:32:31'),
-(9, 'Naveen', 'Naveen', '7', '18,20', 'asadasdsad', 'MBBS', 2, 8, '1700635076_15528018a611229d81b6.jpg', 'Public', 1, '2023-11-22 06:37:57', '2023-11-22 06:37:57');
+(9, 'Praveen ', 'Dr-Praveen', '7', '18,20', 'asadasdsad', 'MBBS', 2, 8, '1700635076_15528018a611229d81b6.jpg', 'Public', 1, '2023-11-22 06:37:57', '2023-12-21 14:05:57');
 
 -- --------------------------------------------------------
 
@@ -536,14 +615,1237 @@ CREATE TABLE `events_log` (
 --
 
 INSERT INTO `events_log` (`id`, `event_name`, `created_on`) VALUES
-(2, 'delete_expired_bookings', '2023-12-12 16:47:19'),
-(3, 'delete_expired_bookings', '2023-12-12 16:57:19'),
-(4, 'delete_expired_bookings', '2023-12-12 17:07:19'),
-(5, 'delete_expired_bookings', '2023-12-12 17:17:19'),
-(6, 'delete_expired_bookings', '2023-12-12 17:27:19'),
-(7, 'delete_expired_bookings', '2023-12-12 17:37:19'),
-(8, 'delete_expired_bookings', '2023-12-12 17:42:19'),
-(9, 'delete_expired_bookings', '2023-12-12 17:47:19');
+(1, 'delete_expired_bookings', '2023-12-14 11:47:19'),
+(2, 'delete_expired_bookings', '2023-12-14 11:52:19'),
+(3, 'delete_expired_bookings', '2023-12-14 11:57:19'),
+(4, 'delete_expired_bookings', '2023-12-14 12:02:19'),
+(5, 'delete_expired_bookings', '2023-12-14 12:07:19'),
+(6, 'delete_expired_bookings', '2023-12-14 12:12:19'),
+(7, 'delete_expired_bookings', '2023-12-14 12:17:19'),
+(8, 'delete_expired_bookings', '2023-12-14 12:22:19'),
+(9, 'delete_expired_bookings', '2023-12-14 12:27:19'),
+(10, 'delete_expired_bookings', '2023-12-14 12:32:19'),
+(11, 'delete_expired_bookings', '2023-12-14 12:37:19'),
+(12, 'delete_expired_bookings', '2023-12-14 12:42:19'),
+(13, 'delete_expired_bookings', '2023-12-14 12:47:19'),
+(14, 'delete_expired_bookings', '2023-12-14 12:52:19'),
+(15, 'delete_expired_bookings', '2023-12-14 12:57:19'),
+(16, 'delete_expired_bookings', '2023-12-14 13:02:19'),
+(17, 'delete_expired_bookings', '2023-12-14 13:07:19'),
+(18, 'delete_expired_bookings', '2023-12-14 13:12:19'),
+(19, 'delete_expired_bookings', '2023-12-14 13:17:19'),
+(20, 'delete_expired_bookings', '2023-12-14 13:22:19'),
+(21, 'delete_expired_bookings', '2023-12-14 13:27:19'),
+(22, 'delete_expired_bookings', '2023-12-14 13:32:19'),
+(23, 'delete_expired_bookings', '2023-12-14 13:37:19'),
+(24, 'delete_expired_bookings', '2023-12-14 13:42:19'),
+(25, 'delete_expired_bookings', '2023-12-14 13:47:19'),
+(26, 'delete_expired_bookings', '2023-12-14 13:52:19'),
+(27, 'delete_expired_bookings', '2023-12-14 13:57:19'),
+(28, 'delete_expired_bookings', '2023-12-14 14:02:19'),
+(29, 'delete_expired_bookings', '2023-12-14 14:07:19'),
+(30, 'delete_expired_bookings', '2023-12-14 14:12:19'),
+(31, 'delete_expired_bookings', '2023-12-14 14:17:19'),
+(32, 'delete_expired_bookings', '2023-12-14 15:05:56'),
+(33, 'delete_expired_bookings', '2023-12-14 15:07:19'),
+(34, 'delete_expired_bookings', '2023-12-14 15:12:19'),
+(35, 'delete_expired_bookings', '2023-12-14 15:17:19'),
+(36, 'delete_expired_bookings', '2023-12-14 15:22:19'),
+(37, 'delete_expired_bookings', '2023-12-14 15:27:19'),
+(38, 'delete_expired_bookings', '2023-12-14 15:32:19'),
+(39, 'delete_expired_bookings', '2023-12-14 15:37:19'),
+(40, 'delete_expired_bookings', '2023-12-14 15:42:19'),
+(41, 'delete_expired_bookings', '2023-12-14 15:47:19'),
+(42, 'delete_expired_bookings', '2023-12-14 15:52:19'),
+(43, 'delete_expired_bookings', '2023-12-14 15:57:19'),
+(44, 'delete_expired_bookings', '2023-12-14 16:02:19'),
+(45, 'delete_expired_bookings', '2023-12-14 16:07:19'),
+(46, 'delete_expired_bookings', '2023-12-14 16:12:19'),
+(47, 'delete_expired_bookings', '2023-12-14 16:17:19'),
+(48, 'delete_expired_bookings', '2023-12-14 16:22:19'),
+(49, 'delete_expired_bookings', '2023-12-14 16:27:19'),
+(50, 'delete_expired_bookings', '2023-12-14 16:32:19'),
+(51, 'delete_expired_bookings', '2023-12-14 16:37:19'),
+(52, 'delete_expired_bookings', '2023-12-14 16:42:19'),
+(53, 'delete_expired_bookings', '2023-12-14 16:47:19'),
+(54, 'delete_expired_bookings', '2023-12-14 16:52:19'),
+(55, 'delete_expired_bookings', '2023-12-14 16:57:19'),
+(56, 'delete_expired_bookings', '2023-12-14 17:02:19'),
+(57, 'delete_expired_bookings', '2023-12-14 17:07:19'),
+(58, 'delete_expired_bookings', '2023-12-14 17:12:19'),
+(59, 'delete_expired_bookings', '2023-12-14 17:17:19'),
+(60, 'delete_expired_bookings', '2023-12-14 17:22:19'),
+(61, 'delete_expired_bookings', '2023-12-14 17:27:19'),
+(62, 'delete_expired_bookings', '2023-12-14 17:32:19'),
+(63, 'delete_expired_bookings', '2023-12-14 17:37:19'),
+(64, 'delete_expired_bookings', '2023-12-14 17:42:19'),
+(65, 'delete_expired_bookings', '2023-12-14 17:47:19'),
+(66, 'delete_expired_bookings', '2023-12-14 17:52:19'),
+(67, 'delete_expired_bookings', '2023-12-14 17:57:19'),
+(68, 'delete_expired_bookings', '2023-12-14 18:02:19'),
+(69, 'delete_expired_bookings', '2023-12-14 18:07:19'),
+(70, 'delete_expired_bookings', '2023-12-14 18:12:19'),
+(71, 'delete_expired_bookings', '2023-12-14 18:17:19'),
+(72, 'delete_expired_bookings', '2023-12-14 18:22:19'),
+(73, 'delete_expired_bookings', '2023-12-14 18:27:19'),
+(74, 'delete_expired_bookings', '2023-12-14 18:32:19'),
+(75, 'delete_expired_bookings', '2023-12-14 18:37:19'),
+(76, 'delete_expired_bookings', '2023-12-14 18:42:19'),
+(77, 'delete_expired_bookings', '2023-12-14 18:47:19'),
+(78, 'delete_expired_bookings', '2023-12-14 18:52:19'),
+(79, 'delete_expired_bookings', '2023-12-14 18:57:19'),
+(80, 'delete_expired_bookings', '2023-12-14 19:02:19'),
+(81, 'delete_expired_bookings', '2023-12-14 19:07:19'),
+(82, 'delete_expired_bookings', '2023-12-14 19:12:19'),
+(83, 'delete_expired_bookings', '2023-12-14 19:17:19'),
+(84, 'delete_expired_bookings', '2023-12-14 19:22:19'),
+(85, 'delete_expired_bookings', '2023-12-14 19:27:19'),
+(86, 'delete_expired_bookings', '2023-12-14 19:32:19'),
+(87, 'delete_expired_bookings', '2023-12-14 19:37:19'),
+(88, 'delete_expired_bookings', '2023-12-14 19:42:19'),
+(89, 'delete_expired_bookings', '2023-12-14 19:47:19'),
+(90, 'delete_expired_bookings', '2023-12-14 19:52:19'),
+(91, 'delete_expired_bookings', '2023-12-14 20:18:58'),
+(92, 'delete_expired_bookings', '2023-12-14 20:22:19'),
+(93, 'delete_expired_bookings', '2023-12-14 20:27:19'),
+(94, 'delete_expired_bookings', '2023-12-14 20:32:19'),
+(95, 'delete_expired_bookings', '2023-12-14 20:37:19'),
+(96, 'delete_expired_bookings', '2023-12-14 20:42:19'),
+(97, 'delete_expired_bookings', '2023-12-14 20:47:19'),
+(98, 'delete_expired_bookings', '2023-12-14 20:52:19'),
+(99, 'delete_expired_bookings', '2023-12-14 20:57:19'),
+(100, 'delete_expired_bookings', '2023-12-14 21:02:19'),
+(101, 'delete_expired_bookings', '2023-12-14 21:07:19'),
+(102, 'delete_expired_bookings', '2023-12-14 21:12:19'),
+(103, 'delete_expired_bookings', '2023-12-14 21:19:22'),
+(104, 'delete_expired_bookings', '2023-12-14 21:22:19'),
+(105, 'delete_expired_bookings', '2023-12-14 21:27:19'),
+(106, 'delete_expired_bookings', '2023-12-14 21:32:19'),
+(107, 'delete_expired_bookings', '2023-12-14 21:37:19'),
+(108, 'delete_expired_bookings', '2023-12-14 21:42:19'),
+(109, 'delete_expired_bookings', '2023-12-14 21:47:19'),
+(110, 'delete_expired_bookings', '2023-12-14 21:52:19'),
+(111, 'delete_expired_bookings', '2023-12-14 21:57:19'),
+(112, 'delete_expired_bookings', '2023-12-14 22:02:19'),
+(113, 'delete_expired_bookings', '2023-12-14 22:07:19'),
+(114, 'delete_expired_bookings', '2023-12-14 22:12:19'),
+(115, 'delete_expired_bookings', '2023-12-14 22:17:19'),
+(116, 'delete_expired_bookings', '2023-12-14 22:22:19'),
+(117, 'delete_expired_bookings', '2023-12-14 22:27:19'),
+(118, 'delete_expired_bookings', '2023-12-14 22:32:19'),
+(119, 'delete_expired_bookings', '2023-12-14 22:37:19'),
+(120, 'delete_expired_bookings', '2023-12-14 22:42:19'),
+(121, 'delete_expired_bookings', '2023-12-14 22:47:19'),
+(122, 'delete_expired_bookings', '2023-12-14 22:52:19'),
+(123, 'delete_expired_bookings', '2023-12-14 22:57:19'),
+(124, 'delete_expired_bookings', '2023-12-14 23:02:19'),
+(125, 'delete_expired_bookings', '2023-12-14 23:07:19'),
+(126, 'delete_expired_bookings', '2023-12-14 23:12:19'),
+(127, 'delete_expired_bookings', '2023-12-14 23:17:19'),
+(128, 'delete_expired_bookings', '2023-12-14 23:22:19'),
+(129, 'delete_expired_bookings', '2023-12-14 23:27:19'),
+(130, 'delete_expired_bookings', '2023-12-14 23:32:19'),
+(131, 'delete_expired_bookings', '2023-12-14 23:37:19'),
+(132, 'delete_expired_bookings', '2023-12-14 23:42:19'),
+(133, 'delete_expired_bookings', '2023-12-15 10:14:31'),
+(134, 'delete_expired_bookings', '2023-12-15 10:17:19'),
+(135, 'delete_expired_bookings', '2023-12-15 10:22:19'),
+(136, 'delete_expired_bookings', '2023-12-15 10:27:19'),
+(137, 'delete_expired_bookings', '2023-12-15 10:32:19'),
+(138, 'delete_expired_bookings', '2023-12-15 10:37:19'),
+(139, 'delete_expired_bookings', '2023-12-15 10:42:19'),
+(140, 'delete_expired_bookings', '2023-12-15 10:47:19'),
+(141, 'delete_expired_bookings', '2023-12-15 10:52:19'),
+(142, 'delete_expired_bookings', '2023-12-15 10:57:19'),
+(143, 'delete_expired_bookings', '2023-12-15 11:02:19'),
+(144, 'delete_expired_bookings', '2023-12-15 11:12:50'),
+(145, 'delete_expired_bookings', '2023-12-15 11:17:19'),
+(146, 'delete_expired_bookings', '2023-12-15 11:22:19'),
+(147, 'delete_expired_bookings', '2023-12-15 11:27:19'),
+(148, 'delete_expired_bookings', '2023-12-15 11:32:19'),
+(149, 'delete_expired_bookings', '2023-12-15 11:37:19'),
+(150, 'delete_expired_bookings', '2023-12-15 11:42:19'),
+(151, 'delete_expired_bookings', '2023-12-15 11:47:19'),
+(152, 'delete_expired_bookings', '2023-12-15 11:52:19'),
+(153, 'delete_expired_bookings', '2023-12-15 11:57:19'),
+(154, 'delete_expired_bookings', '2023-12-15 12:02:19'),
+(155, 'delete_expired_bookings', '2023-12-15 12:07:19'),
+(156, 'delete_expired_bookings', '2023-12-15 12:12:19'),
+(157, 'delete_expired_bookings', '2023-12-15 12:17:19'),
+(158, 'delete_expired_bookings', '2023-12-15 12:22:19'),
+(159, 'delete_expired_bookings', '2023-12-15 12:27:19'),
+(160, 'delete_expired_bookings', '2023-12-15 12:32:19'),
+(161, 'delete_expired_bookings', '2023-12-15 12:37:19'),
+(162, 'delete_expired_bookings', '2023-12-15 12:42:19'),
+(163, 'delete_expired_bookings', '2023-12-15 12:47:19'),
+(164, 'delete_expired_bookings', '2023-12-15 12:52:19'),
+(165, 'delete_expired_bookings', '2023-12-15 12:57:19'),
+(166, 'delete_expired_bookings', '2023-12-15 13:02:19'),
+(167, 'delete_expired_bookings', '2023-12-15 13:07:19'),
+(168, 'delete_expired_bookings', '2023-12-15 13:12:19'),
+(169, 'delete_expired_bookings', '2023-12-15 13:17:19'),
+(170, 'delete_expired_bookings', '2023-12-15 13:22:19'),
+(171, 'delete_expired_bookings', '2023-12-15 13:27:19'),
+(172, 'delete_expired_bookings', '2023-12-15 13:32:19'),
+(173, 'delete_expired_bookings', '2023-12-15 13:37:19'),
+(174, 'delete_expired_bookings', '2023-12-15 13:42:19'),
+(175, 'delete_expired_bookings', '2023-12-15 13:47:19'),
+(176, 'delete_expired_bookings', '2023-12-15 13:52:19'),
+(177, 'delete_expired_bookings', '2023-12-15 13:57:19'),
+(178, 'delete_expired_bookings', '2023-12-15 14:02:19'),
+(179, 'delete_expired_bookings', '2023-12-15 14:07:19'),
+(180, 'delete_expired_bookings', '2023-12-15 14:12:19'),
+(181, 'delete_expired_bookings', '2023-12-15 14:17:19'),
+(182, 'delete_expired_bookings', '2023-12-15 15:10:47'),
+(183, 'delete_expired_bookings', '2023-12-15 15:12:19'),
+(184, 'delete_expired_bookings', '2023-12-15 15:17:19'),
+(185, 'delete_expired_bookings', '2023-12-15 15:22:19'),
+(186, 'delete_expired_bookings', '2023-12-15 15:27:19'),
+(187, 'delete_expired_bookings', '2023-12-15 15:32:19'),
+(188, 'delete_expired_bookings', '2023-12-15 15:37:19'),
+(189, 'delete_expired_bookings', '2023-12-15 15:42:19'),
+(190, 'delete_expired_bookings', '2023-12-15 15:47:19'),
+(191, 'delete_expired_bookings', '2023-12-15 15:52:19'),
+(192, 'delete_expired_bookings', '2023-12-15 15:57:19'),
+(193, 'delete_expired_bookings', '2023-12-15 16:02:19'),
+(194, 'delete_expired_bookings', '2023-12-15 16:07:19'),
+(195, 'delete_expired_bookings', '2023-12-15 16:12:19'),
+(196, 'delete_expired_bookings', '2023-12-15 16:17:19'),
+(197, 'delete_expired_bookings', '2023-12-15 16:22:19'),
+(198, 'delete_expired_bookings', '2023-12-15 16:27:19'),
+(199, 'delete_expired_bookings', '2023-12-15 16:32:19'),
+(200, 'delete_expired_bookings', '2023-12-15 16:37:19'),
+(201, 'delete_expired_bookings', '2023-12-15 16:42:19'),
+(202, 'delete_expired_bookings', '2023-12-15 16:47:19'),
+(203, 'delete_expired_bookings', '2023-12-15 16:52:19'),
+(204, 'delete_expired_bookings', '2023-12-15 16:57:19'),
+(205, 'delete_expired_bookings', '2023-12-15 17:02:19'),
+(206, 'delete_expired_bookings', '2023-12-15 17:07:19'),
+(207, 'delete_expired_bookings', '2023-12-15 17:12:19'),
+(208, 'delete_expired_bookings', '2023-12-15 17:17:19'),
+(209, 'delete_expired_bookings', '2023-12-15 17:22:19'),
+(210, 'delete_expired_bookings', '2023-12-15 17:27:19'),
+(211, 'delete_expired_bookings', '2023-12-15 17:32:19'),
+(212, 'delete_expired_bookings', '2023-12-15 17:37:19'),
+(213, 'delete_expired_bookings', '2023-12-15 17:42:19'),
+(214, 'delete_expired_bookings', '2023-12-15 17:47:19'),
+(215, 'delete_expired_bookings', '2023-12-15 17:52:19'),
+(216, 'delete_expired_bookings', '2023-12-15 17:57:19'),
+(217, 'delete_expired_bookings', '2023-12-15 18:02:19'),
+(218, 'delete_expired_bookings', '2023-12-15 18:07:19'),
+(219, 'delete_expired_bookings', '2023-12-15 18:12:19'),
+(220, 'delete_expired_bookings', '2023-12-15 18:17:19'),
+(221, 'delete_expired_bookings', '2023-12-15 18:22:19'),
+(222, 'delete_expired_bookings', '2023-12-15 18:27:19'),
+(223, 'delete_expired_bookings', '2023-12-15 18:32:19'),
+(224, 'delete_expired_bookings', '2023-12-15 18:37:19'),
+(225, 'delete_expired_bookings', '2023-12-15 18:42:19'),
+(226, 'delete_expired_bookings', '2023-12-15 18:47:19'),
+(227, 'delete_expired_bookings', '2023-12-15 18:52:19'),
+(228, 'delete_expired_bookings', '2023-12-15 18:57:19'),
+(229, 'delete_expired_bookings', '2023-12-15 19:02:19'),
+(230, 'delete_expired_bookings', '2023-12-15 19:07:19'),
+(231, 'delete_expired_bookings', '2023-12-15 19:12:19'),
+(232, 'delete_expired_bookings', '2023-12-15 19:17:19'),
+(233, 'delete_expired_bookings', '2023-12-15 20:27:16'),
+(234, 'delete_expired_bookings', '2023-12-15 20:27:19'),
+(235, 'delete_expired_bookings', '2023-12-15 20:32:19'),
+(236, 'delete_expired_bookings', '2023-12-15 20:37:19'),
+(237, 'delete_expired_bookings', '2023-12-15 20:42:19'),
+(238, 'delete_expired_bookings', '2023-12-15 20:47:19'),
+(239, 'delete_expired_bookings', '2023-12-15 20:52:19'),
+(240, 'delete_expired_bookings', '2023-12-15 20:57:19'),
+(241, 'delete_expired_bookings', '2023-12-15 21:02:19'),
+(242, 'delete_expired_bookings', '2023-12-15 21:07:19'),
+(243, 'delete_expired_bookings', '2023-12-15 21:12:19'),
+(244, 'delete_expired_bookings', '2023-12-15 21:17:19'),
+(245, 'delete_expired_bookings', '2023-12-15 21:22:19'),
+(246, 'delete_expired_bookings', '2023-12-15 21:27:19'),
+(247, 'delete_expired_bookings', '2023-12-15 21:32:19'),
+(248, 'delete_expired_bookings', '2023-12-15 21:37:19'),
+(249, 'delete_expired_bookings', '2023-12-15 21:42:19'),
+(250, 'delete_expired_bookings', '2023-12-15 21:47:19'),
+(251, 'delete_expired_bookings', '2023-12-15 22:02:42'),
+(252, 'delete_expired_bookings', '2023-12-15 22:07:19'),
+(253, 'delete_expired_bookings', '2023-12-15 22:12:19'),
+(254, 'delete_expired_bookings', '2023-12-15 22:17:19'),
+(255, 'delete_expired_bookings', '2023-12-15 22:22:19'),
+(256, 'delete_expired_bookings', '2023-12-15 22:27:19'),
+(257, 'delete_expired_bookings', '2023-12-15 22:32:19'),
+(258, 'delete_expired_bookings', '2023-12-15 22:37:19'),
+(259, 'delete_expired_bookings', '2023-12-15 22:42:19'),
+(260, 'delete_expired_bookings', '2023-12-15 22:47:19'),
+(261, 'delete_expired_bookings', '2023-12-15 22:52:19'),
+(262, 'delete_expired_bookings', '2023-12-15 22:57:19'),
+(263, 'delete_expired_bookings', '2023-12-15 23:02:19'),
+(264, 'delete_expired_bookings', '2023-12-15 23:07:19'),
+(265, 'delete_expired_bookings', '2023-12-15 23:12:19'),
+(266, 'delete_expired_bookings', '2023-12-15 23:17:19'),
+(267, 'delete_expired_bookings', '2023-12-15 23:22:19'),
+(268, 'delete_expired_bookings', '2023-12-15 23:27:19'),
+(269, 'delete_expired_bookings', '2023-12-15 23:32:19'),
+(270, 'delete_expired_bookings', '2023-12-15 23:37:19'),
+(271, 'delete_expired_bookings', '2023-12-15 23:44:11'),
+(272, 'delete_expired_bookings', '2023-12-15 23:47:19'),
+(273, 'delete_expired_bookings', '2023-12-15 23:52:19'),
+(274, 'delete_expired_bookings', '2023-12-15 23:57:19'),
+(275, 'delete_expired_bookings', '2023-12-16 00:02:19'),
+(276, 'delete_expired_bookings', '2023-12-16 00:07:19'),
+(277, 'delete_expired_bookings', '2023-12-16 00:12:19'),
+(278, 'delete_expired_bookings', '2023-12-16 08:28:46'),
+(279, 'delete_expired_bookings', '2023-12-16 08:32:19'),
+(280, 'delete_expired_bookings', '2023-12-16 08:37:19'),
+(281, 'delete_expired_bookings', '2023-12-16 08:42:19'),
+(282, 'delete_expired_bookings', '2023-12-16 08:47:19'),
+(283, 'delete_expired_bookings', '2023-12-16 08:52:19'),
+(284, 'delete_expired_bookings', '2023-12-16 08:57:19'),
+(285, 'delete_expired_bookings', '2023-12-16 09:02:19'),
+(286, 'delete_expired_bookings', '2023-12-16 09:07:19'),
+(287, 'delete_expired_bookings', '2023-12-16 09:12:19'),
+(288, 'delete_expired_bookings', '2023-12-16 09:17:19'),
+(289, 'delete_expired_bookings', '2023-12-16 09:22:19'),
+(290, 'delete_expired_bookings', '2023-12-16 09:27:19'),
+(291, 'delete_expired_bookings', '2023-12-16 09:49:42'),
+(292, 'delete_expired_bookings', '2023-12-16 09:52:19'),
+(293, 'delete_expired_bookings', '2023-12-16 09:57:19'),
+(294, 'delete_expired_bookings', '2023-12-16 10:02:19'),
+(295, 'delete_expired_bookings', '2023-12-16 10:07:19'),
+(296, 'delete_expired_bookings', '2023-12-16 10:12:19'),
+(297, 'delete_expired_bookings', '2023-12-16 10:17:19'),
+(298, 'delete_expired_bookings', '2023-12-16 10:22:19'),
+(299, 'delete_expired_bookings', '2023-12-16 10:27:19'),
+(300, 'delete_expired_bookings', '2023-12-16 10:32:19'),
+(301, 'delete_expired_bookings', '2023-12-16 10:37:19'),
+(302, 'delete_expired_bookings', '2023-12-16 10:42:19'),
+(303, 'delete_expired_bookings', '2023-12-16 10:47:19'),
+(304, 'delete_expired_bookings', '2023-12-16 10:52:19'),
+(305, 'delete_expired_bookings', '2023-12-16 10:57:19'),
+(306, 'delete_expired_bookings', '2023-12-16 11:02:19'),
+(307, 'delete_expired_bookings', '2023-12-16 11:07:19'),
+(308, 'delete_expired_bookings', '2023-12-16 11:12:19'),
+(309, 'delete_expired_bookings', '2023-12-16 11:17:19'),
+(310, 'delete_expired_bookings', '2023-12-16 11:22:19'),
+(311, 'delete_expired_bookings', '2023-12-16 11:27:19'),
+(312, 'delete_expired_bookings', '2023-12-16 11:32:19'),
+(313, 'delete_expired_bookings', '2023-12-16 11:37:19'),
+(314, 'delete_expired_bookings', '2023-12-16 11:42:19'),
+(315, 'delete_expired_bookings', '2023-12-16 11:47:19'),
+(316, 'delete_expired_bookings', '2023-12-16 11:52:19'),
+(317, 'delete_expired_bookings', '2023-12-16 11:57:19'),
+(318, 'delete_expired_bookings', '2023-12-16 12:02:19'),
+(319, 'delete_expired_bookings', '2023-12-16 12:07:19'),
+(320, 'delete_expired_bookings', '2023-12-16 12:12:19'),
+(321, 'delete_expired_bookings', '2023-12-16 12:17:19'),
+(322, 'delete_expired_bookings', '2023-12-16 12:22:19'),
+(323, 'delete_expired_bookings', '2023-12-16 12:27:19'),
+(324, 'delete_expired_bookings', '2023-12-16 12:32:19'),
+(325, 'delete_expired_bookings', '2023-12-16 12:37:19'),
+(326, 'delete_expired_bookings', '2023-12-16 12:42:19'),
+(327, 'delete_expired_bookings', '2023-12-16 12:47:19'),
+(328, 'delete_expired_bookings', '2023-12-16 12:52:19'),
+(329, 'delete_expired_bookings', '2023-12-16 12:57:19'),
+(330, 'delete_expired_bookings', '2023-12-16 13:02:19'),
+(331, 'delete_expired_bookings', '2023-12-16 13:07:19'),
+(332, 'delete_expired_bookings', '2023-12-16 13:12:19'),
+(333, 'delete_expired_bookings', '2023-12-16 13:17:19'),
+(334, 'delete_expired_bookings', '2023-12-16 13:22:19'),
+(335, 'delete_expired_bookings', '2023-12-16 13:27:19'),
+(336, 'delete_expired_bookings', '2023-12-16 13:32:19'),
+(337, 'delete_expired_bookings', '2023-12-16 13:37:19'),
+(338, 'delete_expired_bookings', '2023-12-16 13:42:19'),
+(339, 'delete_expired_bookings', '2023-12-16 13:47:19'),
+(340, 'delete_expired_bookings', '2023-12-16 13:52:19'),
+(341, 'delete_expired_bookings', '2023-12-16 13:57:19'),
+(342, 'delete_expired_bookings', '2023-12-16 14:02:19'),
+(343, 'delete_expired_bookings', '2023-12-16 14:07:19'),
+(344, 'delete_expired_bookings', '2023-12-16 14:12:19'),
+(345, 'delete_expired_bookings', '2023-12-16 14:17:19'),
+(346, 'delete_expired_bookings', '2023-12-16 14:22:19'),
+(347, 'delete_expired_bookings', '2023-12-16 14:27:19'),
+(348, 'delete_expired_bookings', '2023-12-16 14:32:19'),
+(349, 'delete_expired_bookings', '2023-12-16 15:02:11'),
+(350, 'delete_expired_bookings', '2023-12-16 15:02:19'),
+(351, 'delete_expired_bookings', '2023-12-16 15:07:19'),
+(352, 'delete_expired_bookings', '2023-12-16 15:12:19'),
+(353, 'delete_expired_bookings', '2023-12-16 15:17:19'),
+(354, 'delete_expired_bookings', '2023-12-16 15:22:19'),
+(355, 'delete_expired_bookings', '2023-12-16 15:27:19'),
+(356, 'delete_expired_bookings', '2023-12-16 15:32:19'),
+(357, 'delete_expired_bookings', '2023-12-16 15:37:19'),
+(358, 'delete_expired_bookings', '2023-12-16 15:42:19'),
+(359, 'delete_expired_bookings', '2023-12-16 15:47:19'),
+(360, 'delete_expired_bookings', '2023-12-16 15:52:19'),
+(361, 'delete_expired_bookings', '2023-12-16 15:57:19'),
+(362, 'delete_expired_bookings', '2023-12-16 16:02:19'),
+(363, 'delete_expired_bookings', '2023-12-16 16:07:19'),
+(364, 'delete_expired_bookings', '2023-12-16 16:12:19'),
+(365, 'delete_expired_bookings', '2023-12-16 16:17:19'),
+(366, 'delete_expired_bookings', '2023-12-16 16:22:19'),
+(367, 'delete_expired_bookings', '2023-12-16 16:27:19'),
+(368, 'delete_expired_bookings', '2023-12-16 16:32:19'),
+(369, 'delete_expired_bookings', '2023-12-16 16:37:19'),
+(370, 'delete_expired_bookings', '2023-12-16 16:42:19'),
+(371, 'delete_expired_bookings', '2023-12-16 16:47:19'),
+(372, 'delete_expired_bookings', '2023-12-16 16:52:19'),
+(373, 'delete_expired_bookings', '2023-12-16 16:57:19'),
+(374, 'delete_expired_bookings', '2023-12-16 17:02:19'),
+(375, 'delete_expired_bookings', '2023-12-16 17:07:19'),
+(376, 'delete_expired_bookings', '2023-12-16 17:12:19'),
+(377, 'delete_expired_bookings', '2023-12-16 17:17:19'),
+(378, 'delete_expired_bookings', '2023-12-16 17:22:19'),
+(379, 'delete_expired_bookings', '2023-12-16 17:27:19'),
+(380, 'delete_expired_bookings', '2023-12-16 17:32:19'),
+(381, 'delete_expired_bookings', '2023-12-16 17:37:19'),
+(382, 'delete_expired_bookings', '2023-12-16 17:42:19'),
+(383, 'delete_expired_bookings', '2023-12-16 17:47:19'),
+(384, 'delete_expired_bookings', '2023-12-16 17:52:19'),
+(385, 'delete_expired_bookings', '2023-12-16 17:57:19'),
+(386, 'delete_expired_bookings', '2023-12-16 18:02:19'),
+(387, 'delete_expired_bookings', '2023-12-16 18:07:19'),
+(388, 'delete_expired_bookings', '2023-12-16 18:12:19'),
+(389, 'delete_expired_bookings', '2023-12-16 18:17:19'),
+(390, 'delete_expired_bookings', '2023-12-16 18:22:19'),
+(391, 'delete_expired_bookings', '2023-12-16 18:27:19'),
+(392, 'delete_expired_bookings', '2023-12-16 18:32:19'),
+(393, 'delete_expired_bookings', '2023-12-16 18:37:19'),
+(394, 'delete_expired_bookings', '2023-12-16 18:42:19'),
+(395, 'delete_expired_bookings', '2023-12-16 18:47:19'),
+(396, 'delete_expired_bookings', '2023-12-16 18:52:19'),
+(397, 'delete_expired_bookings', '2023-12-16 18:57:19'),
+(398, 'delete_expired_bookings', '2023-12-16 19:02:19'),
+(399, 'delete_expired_bookings', '2023-12-16 19:07:19'),
+(400, 'delete_expired_bookings', '2023-12-16 19:12:19'),
+(401, 'delete_expired_bookings', '2023-12-16 19:17:19'),
+(402, 'delete_expired_bookings', '2023-12-16 19:22:19'),
+(403, 'delete_expired_bookings', '2023-12-16 19:27:19'),
+(404, 'delete_expired_bookings', '2023-12-16 19:32:19'),
+(405, 'delete_expired_bookings', '2023-12-16 19:37:19'),
+(406, 'delete_expired_bookings', '2023-12-16 19:42:19'),
+(407, 'delete_expired_bookings', '2023-12-16 19:47:19'),
+(408, 'delete_expired_bookings', '2023-12-16 19:52:19'),
+(409, 'delete_expired_bookings', '2023-12-16 19:57:19'),
+(410, 'delete_expired_bookings', '2023-12-16 20:02:19'),
+(411, 'delete_expired_bookings', '2023-12-16 20:07:19'),
+(412, 'delete_expired_bookings', '2023-12-16 20:12:19'),
+(413, 'delete_expired_bookings', '2023-12-16 21:20:53'),
+(414, 'delete_expired_bookings', '2023-12-16 21:22:19'),
+(415, 'delete_expired_bookings', '2023-12-16 21:27:19'),
+(416, 'delete_expired_bookings', '2023-12-16 21:32:19'),
+(417, 'delete_expired_bookings', '2023-12-16 21:37:19'),
+(418, 'delete_expired_bookings', '2023-12-16 21:42:19'),
+(419, 'delete_expired_bookings', '2023-12-16 21:47:19'),
+(420, 'delete_expired_bookings', '2023-12-16 21:52:19'),
+(421, 'delete_expired_bookings', '2023-12-16 21:57:19'),
+(422, 'delete_expired_bookings', '2023-12-16 22:02:19'),
+(423, 'delete_expired_bookings', '2023-12-16 22:07:20'),
+(424, 'delete_expired_bookings', '2023-12-16 22:12:19'),
+(425, 'delete_expired_bookings', '2023-12-16 22:17:19'),
+(426, 'delete_expired_bookings', '2023-12-16 22:22:19'),
+(427, 'delete_expired_bookings', '2023-12-16 22:27:19'),
+(428, 'delete_expired_bookings', '2023-12-16 22:32:19'),
+(429, 'delete_expired_bookings', '2023-12-16 22:37:19'),
+(430, 'delete_expired_bookings', '2023-12-16 22:42:19'),
+(431, 'delete_expired_bookings', '2023-12-16 22:47:19'),
+(432, 'delete_expired_bookings', '2023-12-16 22:52:19'),
+(433, 'delete_expired_bookings', '2023-12-16 22:57:19'),
+(434, 'delete_expired_bookings', '2023-12-16 23:02:19'),
+(435, 'delete_expired_bookings', '2023-12-16 23:07:19'),
+(436, 'delete_expired_bookings', '2023-12-16 23:12:19'),
+(437, 'delete_expired_bookings', '2023-12-16 23:17:19'),
+(438, 'delete_expired_bookings', '2023-12-16 23:22:19'),
+(439, 'delete_expired_bookings', '2023-12-16 23:27:19'),
+(440, 'delete_expired_bookings', '2023-12-16 23:32:19'),
+(441, 'delete_expired_bookings', '2023-12-16 23:37:19'),
+(442, 'delete_expired_bookings', '2023-12-16 23:42:19'),
+(443, 'delete_expired_bookings', '2023-12-16 23:47:19'),
+(444, 'delete_expired_bookings', '2023-12-16 23:52:19'),
+(445, 'delete_expired_bookings', '2023-12-16 23:57:19'),
+(446, 'delete_expired_bookings', '2023-12-17 00:02:19'),
+(447, 'delete_expired_bookings', '2023-12-17 00:07:19'),
+(448, 'delete_expired_bookings', '2023-12-17 00:12:19'),
+(449, 'delete_expired_bookings', '2023-12-17 00:17:19'),
+(450, 'delete_expired_bookings', '2023-12-17 00:22:19'),
+(451, 'delete_expired_bookings', '2023-12-17 00:27:19'),
+(452, 'delete_expired_bookings', '2023-12-17 00:32:19'),
+(453, 'delete_expired_bookings', '2023-12-17 00:37:19'),
+(454, 'delete_expired_bookings', '2023-12-17 00:42:19'),
+(455, 'delete_expired_bookings', '2023-12-17 00:47:19'),
+(456, 'delete_expired_bookings', '2023-12-17 00:52:19'),
+(457, 'delete_expired_bookings', '2023-12-17 00:57:19'),
+(458, 'delete_expired_bookings', '2023-12-17 01:02:19'),
+(459, 'delete_expired_bookings', '2023-12-17 01:07:19'),
+(460, 'delete_expired_bookings', '2023-12-17 01:12:19'),
+(461, 'delete_expired_bookings', '2023-12-17 09:02:27'),
+(462, 'delete_expired_bookings', '2023-12-17 09:07:19'),
+(463, 'delete_expired_bookings', '2023-12-17 09:12:19'),
+(464, 'delete_expired_bookings', '2023-12-17 09:17:19'),
+(465, 'delete_expired_bookings', '2023-12-17 09:22:19'),
+(466, 'delete_expired_bookings', '2023-12-17 09:27:19'),
+(467, 'delete_expired_bookings', '2023-12-17 09:32:19'),
+(468, 'delete_expired_bookings', '2023-12-17 09:37:19'),
+(469, 'delete_expired_bookings', '2023-12-17 09:42:19'),
+(470, 'delete_expired_bookings', '2023-12-17 09:47:19'),
+(471, 'delete_expired_bookings', '2023-12-17 09:52:19'),
+(472, 'delete_expired_bookings', '2023-12-17 09:57:19'),
+(473, 'delete_expired_bookings', '2023-12-17 10:02:19'),
+(474, 'delete_expired_bookings', '2023-12-17 10:07:19'),
+(475, 'delete_expired_bookings', '2023-12-17 10:12:19'),
+(476, 'delete_expired_bookings', '2023-12-17 10:17:19'),
+(477, 'delete_expired_bookings', '2023-12-17 10:22:19'),
+(478, 'delete_expired_bookings', '2023-12-17 10:27:19'),
+(479, 'delete_expired_bookings', '2023-12-17 10:32:19'),
+(480, 'delete_expired_bookings', '2023-12-17 10:37:19'),
+(481, 'delete_expired_bookings', '2023-12-17 10:42:19'),
+(482, 'delete_expired_bookings', '2023-12-17 10:47:19'),
+(483, 'delete_expired_bookings', '2023-12-17 10:52:19'),
+(484, 'delete_expired_bookings', '2023-12-17 10:57:19'),
+(485, 'delete_expired_bookings', '2023-12-17 11:02:19'),
+(486, 'delete_expired_bookings', '2023-12-17 11:07:19'),
+(487, 'delete_expired_bookings', '2023-12-17 11:55:38'),
+(488, 'delete_expired_bookings', '2023-12-17 11:57:19'),
+(489, 'delete_expired_bookings', '2023-12-17 12:02:19'),
+(490, 'delete_expired_bookings', '2023-12-17 12:07:19'),
+(491, 'delete_expired_bookings', '2023-12-17 12:12:19'),
+(492, 'delete_expired_bookings', '2023-12-17 12:17:19'),
+(493, 'delete_expired_bookings', '2023-12-17 12:22:19'),
+(494, 'delete_expired_bookings', '2023-12-17 12:27:19'),
+(495, 'delete_expired_bookings', '2023-12-17 12:32:19'),
+(496, 'delete_expired_bookings', '2023-12-17 12:37:19'),
+(497, 'delete_expired_bookings', '2023-12-17 12:42:19'),
+(498, 'delete_expired_bookings', '2023-12-17 12:47:19'),
+(499, 'delete_expired_bookings', '2023-12-17 12:52:19'),
+(500, 'delete_expired_bookings', '2023-12-17 12:57:19'),
+(501, 'delete_expired_bookings', '2023-12-17 13:02:19'),
+(502, 'delete_expired_bookings', '2023-12-17 13:07:19'),
+(503, 'delete_expired_bookings', '2023-12-17 13:12:19'),
+(504, 'delete_expired_bookings', '2023-12-17 13:17:19'),
+(505, 'delete_expired_bookings', '2023-12-17 13:22:19'),
+(506, 'delete_expired_bookings', '2023-12-17 13:27:19'),
+(507, 'delete_expired_bookings', '2023-12-17 13:32:19'),
+(508, 'delete_expired_bookings', '2023-12-17 13:37:19'),
+(509, 'delete_expired_bookings', '2023-12-17 13:42:19'),
+(510, 'delete_expired_bookings', '2023-12-17 13:47:19'),
+(511, 'delete_expired_bookings', '2023-12-17 14:12:23'),
+(512, 'delete_expired_bookings', '2023-12-17 14:17:19'),
+(513, 'delete_expired_bookings', '2023-12-17 14:22:19'),
+(514, 'delete_expired_bookings', '2023-12-17 14:27:19'),
+(515, 'delete_expired_bookings', '2023-12-17 14:32:19'),
+(516, 'delete_expired_bookings', '2023-12-17 14:37:19'),
+(517, 'delete_expired_bookings', '2023-12-17 14:42:19'),
+(518, 'delete_expired_bookings', '2023-12-17 14:47:19'),
+(519, 'delete_expired_bookings', '2023-12-17 14:52:19'),
+(520, 'delete_expired_bookings', '2023-12-17 14:57:19'),
+(521, 'delete_expired_bookings', '2023-12-17 15:02:19'),
+(522, 'delete_expired_bookings', '2023-12-17 15:07:19'),
+(523, 'delete_expired_bookings', '2023-12-17 15:12:19'),
+(524, 'delete_expired_bookings', '2023-12-17 15:17:19'),
+(525, 'delete_expired_bookings', '2023-12-17 15:22:19'),
+(526, 'delete_expired_bookings', '2023-12-17 15:27:19'),
+(527, 'delete_expired_bookings', '2023-12-17 15:32:19'),
+(528, 'delete_expired_bookings', '2023-12-17 15:37:19'),
+(529, 'delete_expired_bookings', '2023-12-17 15:42:19'),
+(530, 'delete_expired_bookings', '2023-12-17 15:47:19'),
+(531, 'delete_expired_bookings', '2023-12-17 15:52:46'),
+(532, 'delete_expired_bookings', '2023-12-17 15:57:19'),
+(533, 'delete_expired_bookings', '2023-12-17 16:02:19'),
+(534, 'delete_expired_bookings', '2023-12-17 16:07:19'),
+(535, 'delete_expired_bookings', '2023-12-17 16:12:19'),
+(536, 'delete_expired_bookings', '2023-12-17 16:17:19'),
+(537, 'delete_expired_bookings', '2023-12-17 16:22:19'),
+(538, 'delete_expired_bookings', '2023-12-17 16:27:19'),
+(539, 'delete_expired_bookings', '2023-12-17 16:32:19'),
+(540, 'delete_expired_bookings', '2023-12-17 16:37:19'),
+(541, 'delete_expired_bookings', '2023-12-17 16:42:19'),
+(542, 'delete_expired_bookings', '2023-12-17 16:47:19'),
+(543, 'delete_expired_bookings', '2023-12-17 16:52:19'),
+(544, 'delete_expired_bookings', '2023-12-17 16:57:19'),
+(545, 'delete_expired_bookings', '2023-12-17 17:02:19'),
+(546, 'delete_expired_bookings', '2023-12-17 17:07:19'),
+(547, 'delete_expired_bookings', '2023-12-17 17:12:19'),
+(548, 'delete_expired_bookings', '2023-12-17 17:17:19'),
+(549, 'delete_expired_bookings', '2023-12-17 17:22:19'),
+(550, 'delete_expired_bookings', '2023-12-17 17:27:19'),
+(551, 'delete_expired_bookings', '2023-12-17 17:32:19'),
+(552, 'delete_expired_bookings', '2023-12-17 17:37:19'),
+(553, 'delete_expired_bookings', '2023-12-17 17:42:19'),
+(554, 'delete_expired_bookings', '2023-12-17 17:47:19'),
+(555, 'delete_expired_bookings', '2023-12-17 17:52:19'),
+(556, 'delete_expired_bookings', '2023-12-17 17:57:19'),
+(557, 'delete_expired_bookings', '2023-12-17 18:02:19'),
+(558, 'delete_expired_bookings', '2023-12-17 18:07:19'),
+(559, 'delete_expired_bookings', '2023-12-17 18:12:19'),
+(560, 'delete_expired_bookings', '2023-12-17 18:17:19'),
+(561, 'delete_expired_bookings', '2023-12-17 18:22:19'),
+(562, 'delete_expired_bookings', '2023-12-17 18:27:19'),
+(563, 'delete_expired_bookings', '2023-12-17 18:32:19'),
+(564, 'delete_expired_bookings', '2023-12-17 18:37:19'),
+(565, 'delete_expired_bookings', '2023-12-17 18:42:19'),
+(566, 'delete_expired_bookings', '2023-12-17 18:47:19'),
+(567, 'delete_expired_bookings', '2023-12-17 18:52:19'),
+(568, 'delete_expired_bookings', '2023-12-17 18:57:19'),
+(569, 'delete_expired_bookings', '2023-12-17 19:02:19'),
+(570, 'delete_expired_bookings', '2023-12-17 19:07:19'),
+(571, 'delete_expired_bookings', '2023-12-17 19:12:19'),
+(572, 'delete_expired_bookings', '2023-12-17 19:17:19'),
+(573, 'delete_expired_bookings', '2023-12-17 19:22:19'),
+(574, 'delete_expired_bookings', '2023-12-17 19:27:19'),
+(575, 'delete_expired_bookings', '2023-12-17 19:32:19'),
+(576, 'delete_expired_bookings', '2023-12-17 19:37:19'),
+(577, 'delete_expired_bookings', '2023-12-17 19:42:19'),
+(578, 'delete_expired_bookings', '2023-12-17 19:47:19'),
+(579, 'delete_expired_bookings', '2023-12-17 19:52:19'),
+(580, 'delete_expired_bookings', '2023-12-17 19:57:19'),
+(581, 'delete_expired_bookings', '2023-12-17 20:02:19'),
+(582, 'delete_expired_bookings', '2023-12-17 20:07:19'),
+(583, 'delete_expired_bookings', '2023-12-17 21:14:35'),
+(584, 'delete_expired_bookings', '2023-12-17 21:17:19'),
+(585, 'delete_expired_bookings', '2023-12-17 21:22:19'),
+(586, 'delete_expired_bookings', '2023-12-17 21:27:19'),
+(587, 'delete_expired_bookings', '2023-12-17 21:58:33'),
+(588, 'delete_expired_bookings', '2023-12-17 22:02:19'),
+(589, 'delete_expired_bookings', '2023-12-17 22:07:19'),
+(590, 'delete_expired_bookings', '2023-12-17 22:12:19'),
+(591, 'delete_expired_bookings', '2023-12-17 22:17:19'),
+(592, 'delete_expired_bookings', '2023-12-17 22:22:19'),
+(593, 'delete_expired_bookings', '2023-12-17 22:27:19'),
+(594, 'delete_expired_bookings', '2023-12-17 22:32:19'),
+(595, 'delete_expired_bookings', '2023-12-17 22:37:19'),
+(596, 'delete_expired_bookings', '2023-12-17 22:42:19'),
+(597, 'delete_expired_bookings', '2023-12-17 22:47:19'),
+(598, 'delete_expired_bookings', '2023-12-17 22:52:19'),
+(599, 'delete_expired_bookings', '2023-12-17 22:57:19'),
+(600, 'delete_expired_bookings', '2023-12-17 23:02:19'),
+(601, 'delete_expired_bookings', '2023-12-17 23:07:19'),
+(602, 'delete_expired_bookings', '2023-12-17 23:12:19'),
+(603, 'delete_expired_bookings', '2023-12-17 23:17:19'),
+(604, 'delete_expired_bookings', '2023-12-17 23:22:19'),
+(605, 'delete_expired_bookings', '2023-12-17 23:27:19'),
+(606, 'delete_expired_bookings', '2023-12-17 23:32:19'),
+(607, 'delete_expired_bookings', '2023-12-18 09:04:04'),
+(608, 'delete_expired_bookings', '2023-12-18 09:07:19'),
+(609, 'delete_expired_bookings', '2023-12-18 09:12:19'),
+(610, 'delete_expired_bookings', '2023-12-18 09:17:19'),
+(611, 'delete_expired_bookings', '2023-12-18 09:46:06'),
+(612, 'delete_expired_bookings', '2023-12-18 09:47:19'),
+(613, 'delete_expired_bookings', '2023-12-18 09:52:19'),
+(614, 'delete_expired_bookings', '2023-12-18 09:57:19'),
+(615, 'delete_expired_bookings', '2023-12-18 10:08:39'),
+(616, 'delete_expired_bookings', '2023-12-18 10:12:19'),
+(617, 'delete_expired_bookings', '2023-12-18 10:17:19'),
+(618, 'delete_expired_bookings', '2023-12-18 10:22:19'),
+(619, 'delete_expired_bookings', '2023-12-18 10:27:19'),
+(620, 'delete_expired_bookings', '2023-12-18 10:32:19'),
+(621, 'delete_expired_bookings', '2023-12-18 10:37:19'),
+(622, 'delete_expired_bookings', '2023-12-18 10:42:19'),
+(623, 'delete_expired_bookings', '2023-12-18 10:47:19'),
+(624, 'delete_expired_bookings', '2023-12-18 10:52:19'),
+(625, 'delete_expired_bookings', '2023-12-18 10:57:19'),
+(626, 'delete_expired_bookings', '2023-12-18 11:02:19'),
+(627, 'delete_expired_bookings', '2023-12-18 11:07:19'),
+(628, 'delete_expired_bookings', '2023-12-18 11:12:19'),
+(629, 'delete_expired_bookings', '2023-12-18 11:17:19'),
+(630, 'delete_expired_bookings', '2023-12-18 11:22:19'),
+(631, 'delete_expired_bookings', '2023-12-18 11:27:19'),
+(632, 'delete_expired_bookings', '2023-12-18 11:32:19'),
+(633, 'delete_expired_bookings', '2023-12-18 11:37:19'),
+(634, 'delete_expired_bookings', '2023-12-18 11:42:19'),
+(635, 'delete_expired_bookings', '2023-12-18 11:47:19'),
+(636, 'delete_expired_bookings', '2023-12-18 11:52:19'),
+(637, 'delete_expired_bookings', '2023-12-18 11:57:19'),
+(638, 'delete_expired_bookings', '2023-12-18 12:02:19'),
+(639, 'delete_expired_bookings', '2023-12-18 12:07:19'),
+(640, 'delete_expired_bookings', '2023-12-18 12:12:19'),
+(641, 'delete_expired_bookings', '2023-12-18 12:17:19'),
+(642, 'delete_expired_bookings', '2023-12-18 12:22:19'),
+(643, 'delete_expired_bookings', '2023-12-18 12:27:19'),
+(644, 'delete_expired_bookings', '2023-12-18 12:32:19'),
+(645, 'delete_expired_bookings', '2023-12-18 12:37:19'),
+(646, 'delete_expired_bookings', '2023-12-18 12:42:19'),
+(647, 'delete_expired_bookings', '2023-12-18 12:47:19'),
+(648, 'delete_expired_bookings', '2023-12-18 12:52:19'),
+(649, 'delete_expired_bookings', '2023-12-18 12:57:19'),
+(650, 'delete_expired_bookings', '2023-12-18 13:02:19'),
+(651, 'delete_expired_bookings', '2023-12-18 13:07:19'),
+(652, 'delete_expired_bookings', '2023-12-18 13:12:19'),
+(653, 'delete_expired_bookings', '2023-12-18 13:17:19'),
+(654, 'delete_expired_bookings', '2023-12-18 13:22:19'),
+(655, 'delete_expired_bookings', '2023-12-18 13:27:19'),
+(656, 'delete_expired_bookings', '2023-12-18 13:32:19'),
+(657, 'delete_expired_bookings', '2023-12-18 13:37:19'),
+(658, 'delete_expired_bookings', '2023-12-18 13:42:19'),
+(659, 'delete_expired_bookings', '2023-12-18 13:47:19'),
+(660, 'delete_expired_bookings', '2023-12-18 13:52:19'),
+(661, 'delete_expired_bookings', '2023-12-18 13:57:19'),
+(662, 'delete_expired_bookings', '2023-12-18 14:02:19'),
+(663, 'delete_expired_bookings', '2023-12-18 14:07:19'),
+(664, 'delete_expired_bookings', '2023-12-18 14:12:19'),
+(665, 'delete_expired_bookings', '2023-12-18 14:17:19'),
+(666, 'delete_expired_bookings', '2023-12-18 14:22:19'),
+(667, 'delete_expired_bookings', '2023-12-18 14:27:19'),
+(668, 'delete_expired_bookings', '2023-12-18 14:32:19'),
+(669, 'delete_expired_bookings', '2023-12-18 14:37:19'),
+(670, 'delete_expired_bookings', '2023-12-18 15:13:38'),
+(671, 'delete_expired_bookings', '2023-12-18 15:17:19'),
+(672, 'delete_expired_bookings', '2023-12-18 15:22:19'),
+(673, 'delete_expired_bookings', '2023-12-18 15:27:19'),
+(674, 'delete_expired_bookings', '2023-12-18 15:32:19'),
+(675, 'delete_expired_bookings', '2023-12-18 15:37:19'),
+(676, 'delete_expired_bookings', '2023-12-18 15:42:19'),
+(677, 'delete_expired_bookings', '2023-12-18 15:47:19'),
+(678, 'delete_expired_bookings', '2023-12-18 15:52:19'),
+(679, 'delete_expired_bookings', '2023-12-18 15:57:19'),
+(680, 'delete_expired_bookings', '2023-12-18 16:23:20'),
+(681, 'delete_expired_bookings', '2023-12-18 16:27:19'),
+(682, 'delete_expired_bookings', '2023-12-18 16:32:19'),
+(683, 'delete_expired_bookings', '2023-12-18 16:37:19'),
+(684, 'delete_expired_bookings', '2023-12-18 16:42:19'),
+(685, 'delete_expired_bookings', '2023-12-18 16:47:19'),
+(686, 'delete_expired_bookings', '2023-12-18 16:52:19'),
+(687, 'delete_expired_bookings', '2023-12-18 16:57:19'),
+(688, 'delete_expired_bookings', '2023-12-18 17:02:19'),
+(689, 'delete_expired_bookings', '2023-12-18 17:07:19'),
+(690, 'delete_expired_bookings', '2023-12-18 17:12:19'),
+(691, 'delete_expired_bookings', '2023-12-18 17:17:19'),
+(692, 'delete_expired_bookings', '2023-12-18 17:22:19'),
+(693, 'delete_expired_bookings', '2023-12-18 17:27:19'),
+(694, 'delete_expired_bookings', '2023-12-18 17:32:19'),
+(695, 'delete_expired_bookings', '2023-12-18 17:37:19'),
+(696, 'delete_expired_bookings', '2023-12-18 17:42:19'),
+(697, 'delete_expired_bookings', '2023-12-18 17:47:19'),
+(698, 'delete_expired_bookings', '2023-12-18 17:52:19'),
+(699, 'delete_expired_bookings', '2023-12-18 17:57:19'),
+(700, 'delete_expired_bookings', '2023-12-18 18:02:19'),
+(701, 'delete_expired_bookings', '2023-12-18 18:07:19'),
+(702, 'delete_expired_bookings', '2023-12-18 18:12:19'),
+(703, 'delete_expired_bookings', '2023-12-18 18:17:19'),
+(704, 'delete_expired_bookings', '2023-12-18 18:22:22'),
+(705, 'delete_expired_bookings', '2023-12-18 18:27:19'),
+(706, 'delete_expired_bookings', '2023-12-18 18:32:19'),
+(707, 'delete_expired_bookings', '2023-12-18 18:37:19'),
+(708, 'delete_expired_bookings', '2023-12-18 18:42:19'),
+(709, 'delete_expired_bookings', '2023-12-18 18:47:19'),
+(710, 'delete_expired_bookings', '2023-12-18 18:52:19'),
+(711, 'delete_expired_bookings', '2023-12-18 18:57:19'),
+(712, 'delete_expired_bookings', '2023-12-18 19:02:19'),
+(713, 'delete_expired_bookings', '2023-12-18 19:07:19'),
+(714, 'delete_expired_bookings', '2023-12-18 19:12:19'),
+(715, 'delete_expired_bookings', '2023-12-18 19:17:19'),
+(716, 'delete_expired_bookings', '2023-12-18 19:22:19'),
+(717, 'delete_expired_bookings', '2023-12-18 19:27:19'),
+(718, 'delete_expired_bookings', '2023-12-18 20:14:19'),
+(719, 'delete_expired_bookings', '2023-12-18 20:17:19'),
+(720, 'delete_expired_bookings', '2023-12-18 20:22:19'),
+(721, 'delete_expired_bookings', '2023-12-18 20:27:19'),
+(722, 'delete_expired_bookings', '2023-12-18 20:32:19'),
+(723, 'delete_expired_bookings', '2023-12-18 20:57:56'),
+(724, 'delete_expired_bookings', '2023-12-18 21:02:19'),
+(725, 'delete_expired_bookings', '2023-12-18 21:07:19'),
+(726, 'delete_expired_bookings', '2023-12-18 21:12:19'),
+(727, 'delete_expired_bookings', '2023-12-18 21:17:19'),
+(728, 'delete_expired_bookings', '2023-12-18 21:22:19'),
+(729, 'delete_expired_bookings', '2023-12-18 21:27:19'),
+(730, 'delete_expired_bookings', '2023-12-18 21:32:19'),
+(731, 'delete_expired_bookings', '2023-12-18 21:37:19'),
+(732, 'delete_expired_bookings', '2023-12-18 21:42:19'),
+(733, 'delete_expired_bookings', '2023-12-18 21:47:19'),
+(734, 'delete_expired_bookings', '2023-12-18 21:52:19'),
+(735, 'delete_expired_bookings', '2023-12-18 21:57:19'),
+(736, 'delete_expired_bookings', '2023-12-18 22:02:19'),
+(737, 'delete_expired_bookings', '2023-12-18 22:07:19'),
+(738, 'delete_expired_bookings', '2023-12-18 22:12:19'),
+(739, 'delete_expired_bookings', '2023-12-19 09:06:32'),
+(740, 'delete_expired_bookings', '2023-12-19 09:07:19'),
+(741, 'delete_expired_bookings', '2023-12-19 09:12:19'),
+(742, 'delete_expired_bookings', '2023-12-19 09:17:19'),
+(743, 'delete_expired_bookings', '2023-12-19 10:04:30'),
+(744, 'delete_expired_bookings', '2023-12-19 10:07:19'),
+(745, 'delete_expired_bookings', '2023-12-19 10:12:19'),
+(746, 'delete_expired_bookings', '2023-12-19 10:17:19'),
+(747, 'delete_expired_bookings', '2023-12-19 10:22:19'),
+(748, 'delete_expired_bookings', '2023-12-19 10:27:19'),
+(749, 'delete_expired_bookings', '2023-12-19 10:32:19'),
+(750, 'delete_expired_bookings', '2023-12-19 10:37:19'),
+(751, 'delete_expired_bookings', '2023-12-19 10:42:19'),
+(752, 'delete_expired_bookings', '2023-12-19 10:47:19'),
+(753, 'delete_expired_bookings', '2023-12-19 10:52:19'),
+(754, 'delete_expired_bookings', '2023-12-19 10:57:19'),
+(755, 'delete_expired_bookings', '2023-12-19 11:02:19'),
+(756, 'delete_expired_bookings', '2023-12-19 11:07:19'),
+(757, 'delete_expired_bookings', '2023-12-19 11:12:19'),
+(758, 'delete_expired_bookings', '2023-12-19 11:17:19'),
+(759, 'delete_expired_bookings', '2023-12-19 11:22:21'),
+(760, 'delete_expired_bookings', '2023-12-19 11:27:19'),
+(761, 'delete_expired_bookings', '2023-12-19 11:32:19'),
+(762, 'delete_expired_bookings', '2023-12-19 11:37:19'),
+(763, 'delete_expired_bookings', '2023-12-19 11:42:19'),
+(764, 'delete_expired_bookings', '2023-12-19 11:47:19'),
+(765, 'delete_expired_bookings', '2023-12-19 11:52:19'),
+(766, 'delete_expired_bookings', '2023-12-19 11:57:19'),
+(767, 'delete_expired_bookings', '2023-12-19 12:02:19'),
+(768, 'delete_expired_bookings', '2023-12-19 12:07:19'),
+(769, 'delete_expired_bookings', '2023-12-19 12:12:19'),
+(770, 'delete_expired_bookings', '2023-12-19 12:17:19'),
+(771, 'delete_expired_bookings', '2023-12-19 12:22:19'),
+(772, 'delete_expired_bookings', '2023-12-19 12:27:19'),
+(773, 'delete_expired_bookings', '2023-12-19 12:32:19'),
+(774, 'delete_expired_bookings', '2023-12-19 12:37:19'),
+(775, 'delete_expired_bookings', '2023-12-19 12:42:19'),
+(776, 'delete_expired_bookings', '2023-12-19 12:47:19'),
+(777, 'delete_expired_bookings', '2023-12-19 12:52:19'),
+(778, 'delete_expired_bookings', '2023-12-19 12:57:19'),
+(779, 'delete_expired_bookings', '2023-12-19 13:02:19'),
+(780, 'delete_expired_bookings', '2023-12-19 13:07:19'),
+(781, 'delete_expired_bookings', '2023-12-19 13:12:19'),
+(782, 'delete_expired_bookings', '2023-12-19 13:17:19'),
+(783, 'delete_expired_bookings', '2023-12-19 13:22:19'),
+(784, 'delete_expired_bookings', '2023-12-19 13:27:19'),
+(785, 'delete_expired_bookings', '2023-12-19 13:32:19'),
+(786, 'delete_expired_bookings', '2023-12-19 13:37:19'),
+(787, 'delete_expired_bookings', '2023-12-19 13:42:19'),
+(788, 'delete_expired_bookings', '2023-12-19 13:47:19'),
+(789, 'delete_expired_bookings', '2023-12-19 13:52:19'),
+(790, 'delete_expired_bookings', '2023-12-19 13:57:19'),
+(791, 'delete_expired_bookings', '2023-12-19 14:02:19'),
+(792, 'delete_expired_bookings', '2023-12-19 14:07:19'),
+(793, 'delete_expired_bookings', '2023-12-19 14:12:19'),
+(794, 'delete_expired_bookings', '2023-12-19 14:17:19'),
+(795, 'delete_expired_bookings', '2023-12-19 15:28:23'),
+(796, 'delete_expired_bookings', '2023-12-19 15:32:19'),
+(797, 'delete_expired_bookings', '2023-12-19 15:37:19'),
+(798, 'delete_expired_bookings', '2023-12-19 15:42:19'),
+(799, 'delete_expired_bookings', '2023-12-19 15:47:19'),
+(800, 'delete_expired_bookings', '2023-12-19 15:52:19'),
+(801, 'delete_expired_bookings', '2023-12-19 15:57:19'),
+(802, 'delete_expired_bookings', '2023-12-19 16:02:19'),
+(803, 'delete_expired_bookings', '2023-12-19 16:07:19'),
+(804, 'delete_expired_bookings', '2023-12-19 16:12:19'),
+(805, 'delete_expired_bookings', '2023-12-19 16:17:19'),
+(806, 'delete_expired_bookings', '2023-12-19 16:22:19'),
+(807, 'delete_expired_bookings', '2023-12-19 16:27:19'),
+(808, 'delete_expired_bookings', '2023-12-19 16:32:19'),
+(809, 'delete_expired_bookings', '2023-12-19 16:37:19'),
+(810, 'delete_expired_bookings', '2023-12-19 16:42:19'),
+(811, 'delete_expired_bookings', '2023-12-19 16:47:19'),
+(812, 'delete_expired_bookings', '2023-12-19 16:52:19'),
+(813, 'delete_expired_bookings', '2023-12-19 16:57:19'),
+(814, 'delete_expired_bookings', '2023-12-19 17:02:19'),
+(815, 'delete_expired_bookings', '2023-12-19 17:07:19'),
+(816, 'delete_expired_bookings', '2023-12-19 17:12:19'),
+(817, 'delete_expired_bookings', '2023-12-19 17:17:19'),
+(818, 'delete_expired_bookings', '2023-12-19 17:22:19'),
+(819, 'delete_expired_bookings', '2023-12-19 17:27:19'),
+(820, 'delete_expired_bookings', '2023-12-19 17:32:19'),
+(821, 'delete_expired_bookings', '2023-12-19 17:37:19'),
+(822, 'delete_expired_bookings', '2023-12-19 17:42:19'),
+(823, 'delete_expired_bookings', '2023-12-19 17:47:19'),
+(824, 'delete_expired_bookings', '2023-12-19 17:52:19'),
+(825, 'delete_expired_bookings', '2023-12-19 17:57:19'),
+(826, 'delete_expired_bookings', '2023-12-19 18:02:19'),
+(827, 'delete_expired_bookings', '2023-12-19 18:07:19'),
+(828, 'delete_expired_bookings', '2023-12-19 18:12:20'),
+(829, 'delete_expired_bookings', '2023-12-19 18:17:19'),
+(830, 'delete_expired_bookings', '2023-12-19 18:22:19'),
+(831, 'delete_expired_bookings', '2023-12-19 18:27:19'),
+(832, 'delete_expired_bookings', '2023-12-19 18:32:19'),
+(833, 'delete_expired_bookings', '2023-12-19 18:37:19'),
+(834, 'delete_expired_bookings', '2023-12-19 18:42:19'),
+(835, 'delete_expired_bookings', '2023-12-19 18:47:19'),
+(836, 'delete_expired_bookings', '2023-12-19 18:52:19'),
+(837, 'delete_expired_bookings', '2023-12-19 19:31:15'),
+(838, 'delete_expired_bookings', '2023-12-19 19:32:19'),
+(839, 'delete_expired_bookings', '2023-12-19 19:37:19'),
+(840, 'delete_expired_bookings', '2023-12-19 19:42:19'),
+(841, 'delete_expired_bookings', '2023-12-19 19:47:19'),
+(842, 'delete_expired_bookings', '2023-12-19 19:52:19'),
+(843, 'delete_expired_bookings', '2023-12-19 19:57:19'),
+(844, 'delete_expired_bookings', '2023-12-19 20:02:19'),
+(845, 'delete_expired_bookings', '2023-12-19 20:07:19'),
+(846, 'delete_expired_bookings', '2023-12-19 20:12:19'),
+(847, 'delete_expired_bookings', '2023-12-19 20:17:19'),
+(848, 'delete_expired_bookings', '2023-12-19 20:22:19'),
+(849, 'delete_expired_bookings', '2023-12-19 20:27:19'),
+(850, 'delete_expired_bookings', '2023-12-19 20:32:19'),
+(851, 'delete_expired_bookings', '2023-12-19 20:37:19'),
+(852, 'delete_expired_bookings', '2023-12-19 20:42:19'),
+(853, 'delete_expired_bookings', '2023-12-19 20:47:19'),
+(854, 'delete_expired_bookings', '2023-12-19 20:52:19'),
+(855, 'delete_expired_bookings', '2023-12-19 20:57:19'),
+(856, 'delete_expired_bookings', '2023-12-19 21:02:19'),
+(857, 'delete_expired_bookings', '2023-12-19 21:07:19'),
+(858, 'delete_expired_bookings', '2023-12-19 21:12:19'),
+(859, 'delete_expired_bookings', '2023-12-19 21:17:19'),
+(860, 'delete_expired_bookings', '2023-12-19 21:22:19'),
+(861, 'delete_expired_bookings', '2023-12-19 21:27:19'),
+(862, 'delete_expired_bookings', '2023-12-19 21:32:19'),
+(863, 'delete_expired_bookings', '2023-12-19 21:37:19'),
+(864, 'delete_expired_bookings', '2023-12-19 21:42:19'),
+(865, 'delete_expired_bookings', '2023-12-19 21:47:19'),
+(866, 'delete_expired_bookings', '2023-12-19 21:52:19'),
+(867, 'delete_expired_bookings', '2023-12-19 21:57:19'),
+(868, 'delete_expired_bookings', '2023-12-19 22:02:19'),
+(869, 'delete_expired_bookings', '2023-12-19 22:07:19'),
+(870, 'delete_expired_bookings', '2023-12-19 22:12:19'),
+(871, 'delete_expired_bookings', '2023-12-19 22:17:19'),
+(872, 'delete_expired_bookings', '2023-12-19 22:22:19'),
+(873, 'delete_expired_bookings', '2023-12-19 22:27:19'),
+(874, 'delete_expired_bookings', '2023-12-19 22:32:19'),
+(875, 'delete_expired_bookings', '2023-12-19 22:37:19'),
+(876, 'delete_expired_bookings', '2023-12-19 22:42:19'),
+(877, 'delete_expired_bookings', '2023-12-19 22:47:19'),
+(878, 'delete_expired_bookings', '2023-12-19 22:52:19'),
+(879, 'delete_expired_bookings', '2023-12-19 22:57:19'),
+(880, 'delete_expired_bookings', '2023-12-19 23:02:19'),
+(881, 'delete_expired_bookings', '2023-12-19 23:07:19'),
+(882, 'delete_expired_bookings', '2023-12-19 23:12:19'),
+(883, 'delete_expired_bookings', '2023-12-19 23:17:19'),
+(884, 'delete_expired_bookings', '2023-12-19 23:22:19'),
+(885, 'delete_expired_bookings', '2023-12-19 23:27:19'),
+(886, 'delete_expired_bookings', '2023-12-19 23:32:19'),
+(887, 'delete_expired_bookings', '2023-12-19 23:37:19'),
+(888, 'delete_expired_bookings', '2023-12-19 23:42:19'),
+(889, 'delete_expired_bookings', '2023-12-19 23:47:19'),
+(890, 'delete_expired_bookings', '2023-12-20 09:53:21'),
+(891, 'delete_expired_bookings', '2023-12-20 09:57:19'),
+(892, 'delete_expired_bookings', '2023-12-20 10:02:19'),
+(893, 'delete_expired_bookings', '2023-12-20 10:07:19'),
+(894, 'delete_expired_bookings', '2023-12-20 10:12:19'),
+(895, 'delete_expired_bookings', '2023-12-20 10:17:19'),
+(896, 'delete_expired_bookings', '2023-12-20 10:22:19'),
+(897, 'delete_expired_bookings', '2023-12-20 10:47:16'),
+(898, 'delete_expired_bookings', '2023-12-20 10:47:19'),
+(899, 'delete_expired_bookings', '2023-12-20 10:52:19'),
+(900, 'delete_expired_bookings', '2023-12-20 10:57:19'),
+(901, 'delete_expired_bookings', '2023-12-20 11:02:19'),
+(902, 'delete_expired_bookings', '2023-12-20 11:07:19'),
+(903, 'delete_expired_bookings', '2023-12-20 11:12:19'),
+(904, 'delete_expired_bookings', '2023-12-20 11:17:19'),
+(905, 'delete_expired_bookings', '2023-12-20 11:22:19'),
+(906, 'delete_expired_bookings', '2023-12-20 11:27:19'),
+(907, 'delete_expired_bookings', '2023-12-20 11:32:19'),
+(908, 'delete_expired_bookings', '2023-12-20 11:37:19'),
+(909, 'delete_expired_bookings', '2023-12-20 11:42:19');
+INSERT INTO `events_log` (`id`, `event_name`, `created_on`) VALUES
+(910, 'delete_expired_bookings', '2023-12-20 11:47:19'),
+(911, 'delete_expired_bookings', '2023-12-20 11:52:19'),
+(912, 'delete_expired_bookings', '2023-12-20 11:57:19'),
+(913, 'delete_expired_bookings', '2023-12-20 12:02:19'),
+(914, 'delete_expired_bookings', '2023-12-20 12:07:19'),
+(915, 'delete_expired_bookings', '2023-12-20 12:12:19'),
+(916, 'delete_expired_bookings', '2023-12-20 12:17:19'),
+(917, 'delete_expired_bookings', '2023-12-20 12:22:19'),
+(918, 'delete_expired_bookings', '2023-12-20 12:27:19'),
+(919, 'delete_expired_bookings', '2023-12-20 12:32:19'),
+(920, 'delete_expired_bookings', '2023-12-20 12:37:19'),
+(921, 'delete_expired_bookings', '2023-12-20 12:42:19'),
+(922, 'delete_expired_bookings', '2023-12-20 12:47:19'),
+(923, 'delete_expired_bookings', '2023-12-20 12:52:19'),
+(924, 'delete_expired_bookings', '2023-12-20 12:57:19'),
+(925, 'delete_expired_bookings', '2023-12-20 13:02:19'),
+(926, 'delete_expired_bookings', '2023-12-20 13:07:19'),
+(927, 'delete_expired_bookings', '2023-12-20 13:12:19'),
+(928, 'delete_expired_bookings', '2023-12-20 13:17:19'),
+(929, 'delete_expired_bookings', '2023-12-20 13:22:19'),
+(930, 'delete_expired_bookings', '2023-12-20 13:27:19'),
+(931, 'delete_expired_bookings', '2023-12-20 13:32:19'),
+(932, 'delete_expired_bookings', '2023-12-20 13:37:19'),
+(933, 'delete_expired_bookings', '2023-12-20 13:42:19'),
+(934, 'delete_expired_bookings', '2023-12-20 13:47:19'),
+(935, 'delete_expired_bookings', '2023-12-20 13:52:19'),
+(936, 'delete_expired_bookings', '2023-12-20 13:57:19'),
+(937, 'delete_expired_bookings', '2023-12-20 14:02:19'),
+(938, 'delete_expired_bookings', '2023-12-20 14:07:19'),
+(939, 'delete_expired_bookings', '2023-12-20 14:12:19'),
+(940, 'delete_expired_bookings', '2023-12-20 14:17:19'),
+(941, 'delete_expired_bookings', '2023-12-20 14:22:19'),
+(942, 'delete_expired_bookings', '2023-12-20 14:27:19'),
+(943, 'delete_expired_bookings', '2023-12-20 14:32:19'),
+(944, 'delete_expired_bookings', '2023-12-20 14:37:19'),
+(945, 'delete_expired_bookings', '2023-12-20 15:15:43'),
+(946, 'delete_expired_bookings', '2023-12-20 15:17:19'),
+(947, 'delete_expired_bookings', '2023-12-20 15:22:19'),
+(948, 'delete_expired_bookings', '2023-12-20 15:27:19'),
+(949, 'delete_expired_bookings', '2023-12-20 15:32:19'),
+(950, 'delete_expired_bookings', '2023-12-20 15:37:19'),
+(951, 'delete_expired_bookings', '2023-12-20 15:42:19'),
+(952, 'delete_expired_bookings', '2023-12-20 15:47:19'),
+(953, 'delete_expired_bookings', '2023-12-20 15:52:19'),
+(954, 'delete_expired_bookings', '2023-12-20 15:57:19'),
+(955, 'delete_expired_bookings', '2023-12-20 16:02:19'),
+(956, 'delete_expired_bookings', '2023-12-20 16:07:19'),
+(957, 'delete_expired_bookings', '2023-12-20 16:12:19'),
+(958, 'delete_expired_bookings', '2023-12-20 16:17:19'),
+(959, 'delete_expired_bookings', '2023-12-20 16:22:19'),
+(960, 'delete_expired_bookings', '2023-12-20 16:27:19'),
+(961, 'delete_expired_bookings', '2023-12-20 16:32:19'),
+(962, 'delete_expired_bookings', '2023-12-20 16:37:19'),
+(963, 'delete_expired_bookings', '2023-12-20 16:42:19'),
+(964, 'delete_expired_bookings', '2023-12-20 16:47:19'),
+(965, 'delete_expired_bookings', '2023-12-20 16:52:19'),
+(966, 'delete_expired_bookings', '2023-12-20 16:57:19'),
+(967, 'delete_expired_bookings', '2023-12-20 17:02:19'),
+(968, 'delete_expired_bookings', '2023-12-20 17:07:19'),
+(969, 'delete_expired_bookings', '2023-12-20 17:12:19'),
+(970, 'delete_expired_bookings', '2023-12-20 17:17:19'),
+(971, 'delete_expired_bookings', '2023-12-20 17:22:19'),
+(972, 'delete_expired_bookings', '2023-12-20 17:27:19'),
+(973, 'delete_expired_bookings', '2023-12-20 17:32:19'),
+(974, 'delete_expired_bookings', '2023-12-20 17:37:19'),
+(975, 'delete_expired_bookings', '2023-12-20 17:42:19'),
+(976, 'delete_expired_bookings', '2023-12-20 17:47:19'),
+(977, 'delete_expired_bookings', '2023-12-20 17:52:19'),
+(978, 'delete_expired_bookings', '2023-12-20 17:57:19'),
+(979, 'delete_expired_bookings', '2023-12-20 18:02:19'),
+(980, 'delete_expired_bookings', '2023-12-20 18:07:19'),
+(981, 'delete_expired_bookings', '2023-12-20 18:12:19'),
+(982, 'delete_expired_bookings', '2023-12-20 18:17:19'),
+(983, 'delete_expired_bookings', '2023-12-20 18:22:19'),
+(984, 'delete_expired_bookings', '2023-12-20 18:27:19'),
+(985, 'delete_expired_bookings', '2023-12-20 18:32:19'),
+(986, 'delete_expired_bookings', '2023-12-20 18:37:19'),
+(987, 'delete_expired_bookings', '2023-12-20 18:42:19'),
+(988, 'delete_expired_bookings', '2023-12-20 18:47:19'),
+(989, 'delete_expired_bookings', '2023-12-20 18:52:19'),
+(990, 'delete_expired_bookings', '2023-12-20 18:57:19'),
+(991, 'delete_expired_bookings', '2023-12-20 19:02:19'),
+(992, 'delete_expired_bookings', '2023-12-20 19:07:19'),
+(993, 'delete_expired_bookings', '2023-12-20 19:12:19'),
+(994, 'delete_expired_bookings', '2023-12-20 19:17:19'),
+(995, 'delete_expired_bookings', '2023-12-20 19:22:19'),
+(996, 'delete_expired_bookings', '2023-12-20 19:45:20'),
+(997, 'delete_expired_bookings', '2023-12-20 19:47:19'),
+(998, 'delete_expired_bookings', '2023-12-20 19:52:19'),
+(999, 'delete_expired_bookings', '2023-12-20 19:57:19'),
+(1000, 'delete_expired_bookings', '2023-12-20 20:02:19'),
+(1001, 'delete_expired_bookings', '2023-12-20 20:07:19'),
+(1002, 'delete_expired_bookings', '2023-12-20 20:12:19'),
+(1003, 'delete_expired_bookings', '2023-12-20 20:17:19'),
+(1004, 'delete_expired_bookings', '2023-12-20 20:22:19'),
+(1005, 'delete_expired_bookings', '2023-12-20 20:27:19'),
+(1006, 'delete_expired_bookings', '2023-12-20 20:32:19'),
+(1007, 'delete_expired_bookings', '2023-12-20 20:37:19'),
+(1008, 'delete_expired_bookings', '2023-12-20 20:42:19'),
+(1009, 'delete_expired_bookings', '2023-12-20 20:47:19'),
+(1010, 'delete_expired_bookings', '2023-12-20 20:52:19'),
+(1011, 'delete_expired_bookings', '2023-12-20 20:57:19'),
+(1012, 'delete_expired_bookings', '2023-12-20 21:02:19'),
+(1013, 'delete_expired_bookings', '2023-12-20 21:07:19'),
+(1014, 'delete_expired_bookings', '2023-12-20 21:12:19'),
+(1015, 'delete_expired_bookings', '2023-12-20 21:17:19'),
+(1016, 'delete_expired_bookings', '2023-12-20 21:22:19'),
+(1017, 'delete_expired_bookings', '2023-12-20 21:27:19'),
+(1018, 'delete_expired_bookings', '2023-12-20 21:32:19'),
+(1019, 'delete_expired_bookings', '2023-12-20 21:37:19'),
+(1020, 'delete_expired_bookings', '2023-12-20 21:42:19'),
+(1021, 'delete_expired_bookings', '2023-12-20 21:47:19'),
+(1022, 'delete_expired_bookings', '2023-12-20 21:52:19'),
+(1023, 'delete_expired_bookings', '2023-12-20 21:57:19'),
+(1024, 'delete_expired_bookings', '2023-12-20 22:02:19'),
+(1025, 'delete_expired_bookings', '2023-12-20 22:07:19'),
+(1026, 'delete_expired_bookings', '2023-12-20 22:12:19'),
+(1027, 'delete_expired_bookings', '2023-12-20 22:17:19'),
+(1028, 'delete_expired_bookings', '2023-12-20 22:22:19'),
+(1029, 'delete_expired_bookings', '2023-12-20 22:27:19'),
+(1030, 'delete_expired_bookings', '2023-12-20 22:32:19'),
+(1031, 'delete_expired_bookings', '2023-12-20 22:37:19'),
+(1032, 'delete_expired_bookings', '2023-12-20 22:42:19'),
+(1033, 'delete_expired_bookings', '2023-12-20 22:47:19'),
+(1034, 'delete_expired_bookings', '2023-12-20 22:52:19'),
+(1035, 'delete_expired_bookings', '2023-12-20 22:57:19'),
+(1036, 'delete_expired_bookings', '2023-12-20 23:02:19'),
+(1037, 'delete_expired_bookings', '2023-12-20 23:07:19'),
+(1038, 'delete_expired_bookings', '2023-12-20 23:12:19'),
+(1039, 'delete_expired_bookings', '2023-12-20 23:17:19'),
+(1040, 'delete_expired_bookings', '2023-12-20 23:22:19'),
+(1041, 'delete_expired_bookings', '2023-12-21 08:56:36'),
+(1042, 'delete_expired_bookings', '2023-12-21 08:57:19'),
+(1043, 'delete_expired_bookings', '2023-12-21 09:02:19'),
+(1044, 'delete_expired_bookings', '2023-12-21 09:07:19'),
+(1045, 'delete_expired_bookings', '2023-12-21 09:12:19'),
+(1046, 'delete_expired_bookings', '2023-12-21 09:17:19'),
+(1047, 'delete_expired_bookings', '2023-12-21 09:22:19'),
+(1048, 'delete_expired_bookings', '2023-12-21 09:50:04'),
+(1049, 'delete_expired_bookings', '2023-12-21 09:52:19'),
+(1050, 'delete_expired_bookings', '2023-12-21 09:57:19'),
+(1051, 'delete_expired_bookings', '2023-12-21 10:02:19'),
+(1052, 'delete_expired_bookings', '2023-12-21 10:07:19'),
+(1053, 'delete_expired_bookings', '2023-12-21 10:12:19'),
+(1054, 'delete_expired_bookings', '2023-12-21 10:17:19'),
+(1055, 'delete_expired_bookings', '2023-12-21 10:22:19'),
+(1056, 'delete_expired_bookings', '2023-12-21 10:27:19'),
+(1057, 'delete_expired_bookings', '2023-12-21 10:32:19'),
+(1058, 'delete_expired_bookings', '2023-12-21 10:37:19'),
+(1059, 'delete_expired_bookings', '2023-12-21 10:42:19'),
+(1060, 'delete_expired_bookings', '2023-12-21 10:47:19'),
+(1061, 'delete_expired_bookings', '2023-12-21 10:52:19'),
+(1062, 'delete_expired_bookings', '2023-12-21 10:57:19'),
+(1063, 'delete_expired_bookings', '2023-12-21 11:02:19'),
+(1064, 'delete_expired_bookings', '2023-12-21 11:07:19'),
+(1065, 'delete_expired_bookings', '2023-12-21 11:12:19'),
+(1066, 'delete_expired_bookings', '2023-12-21 11:17:19'),
+(1067, 'delete_expired_bookings', '2023-12-21 11:22:19'),
+(1068, 'delete_expired_bookings', '2023-12-21 11:27:19'),
+(1069, 'delete_expired_bookings', '2023-12-21 11:32:19'),
+(1070, 'delete_expired_bookings', '2023-12-21 11:37:19'),
+(1071, 'delete_expired_bookings', '2023-12-21 11:42:19'),
+(1072, 'delete_expired_bookings', '2023-12-21 11:47:19'),
+(1073, 'delete_expired_bookings', '2023-12-21 11:52:19'),
+(1074, 'delete_expired_bookings', '2023-12-21 11:57:19'),
+(1075, 'delete_expired_bookings', '2023-12-21 12:02:19'),
+(1076, 'delete_expired_bookings', '2023-12-21 12:07:19'),
+(1077, 'delete_expired_bookings', '2023-12-21 12:12:19'),
+(1078, 'delete_expired_bookings', '2023-12-21 12:17:19'),
+(1079, 'delete_expired_bookings', '2023-12-21 12:22:19'),
+(1080, 'delete_expired_bookings', '2023-12-21 12:27:19'),
+(1081, 'delete_expired_bookings', '2023-12-21 12:32:19'),
+(1082, 'delete_expired_bookings', '2023-12-21 12:37:19'),
+(1083, 'delete_expired_bookings', '2023-12-21 12:42:19'),
+(1084, 'delete_expired_bookings', '2023-12-21 12:47:19'),
+(1085, 'delete_expired_bookings', '2023-12-21 12:52:19'),
+(1086, 'delete_expired_bookings', '2023-12-21 12:57:19'),
+(1087, 'delete_expired_bookings', '2023-12-21 13:02:19'),
+(1088, 'delete_expired_bookings', '2023-12-21 13:07:19'),
+(1089, 'delete_expired_bookings', '2023-12-21 13:12:19'),
+(1090, 'delete_expired_bookings', '2023-12-21 13:17:19'),
+(1091, 'delete_expired_bookings', '2023-12-21 13:22:19'),
+(1092, 'delete_expired_bookings', '2023-12-21 13:27:19'),
+(1093, 'delete_expired_bookings', '2023-12-21 13:32:19'),
+(1094, 'delete_expired_bookings', '2023-12-21 13:37:19'),
+(1095, 'delete_expired_bookings', '2023-12-21 13:42:19'),
+(1096, 'delete_expired_bookings', '2023-12-21 13:47:19'),
+(1097, 'delete_expired_bookings', '2023-12-21 13:52:19'),
+(1098, 'delete_expired_bookings', '2023-12-21 13:57:19'),
+(1099, 'delete_expired_bookings', '2023-12-21 14:02:19'),
+(1100, 'delete_expired_bookings', '2023-12-21 14:07:19'),
+(1101, 'delete_expired_bookings', '2023-12-21 14:12:19'),
+(1102, 'delete_expired_bookings', '2023-12-21 14:17:19'),
+(1103, 'delete_expired_bookings', '2023-12-21 14:22:19'),
+(1104, 'delete_expired_bookings', '2023-12-21 14:27:19'),
+(1105, 'delete_expired_bookings', '2023-12-21 14:32:19'),
+(1106, 'delete_expired_bookings', '2023-12-21 14:37:19'),
+(1107, 'delete_expired_bookings', '2023-12-21 15:11:33'),
+(1108, 'delete_expired_bookings', '2023-12-21 15:12:19'),
+(1109, 'delete_expired_bookings', '2023-12-21 15:17:19'),
+(1110, 'delete_expired_bookings', '2023-12-21 15:22:19'),
+(1111, 'delete_expired_bookings', '2023-12-21 15:27:19'),
+(1112, 'delete_expired_bookings', '2023-12-21 15:32:19'),
+(1113, 'delete_expired_bookings', '2023-12-21 15:37:19'),
+(1114, 'delete_expired_bookings', '2023-12-21 15:42:19'),
+(1115, 'delete_expired_bookings', '2023-12-21 15:47:19'),
+(1116, 'delete_expired_bookings', '2023-12-21 15:52:19'),
+(1117, 'delete_expired_bookings', '2023-12-21 15:57:19'),
+(1118, 'delete_expired_bookings', '2023-12-21 16:02:19'),
+(1119, 'delete_expired_bookings', '2023-12-21 16:07:19'),
+(1120, 'delete_expired_bookings', '2023-12-21 16:12:19'),
+(1121, 'delete_expired_bookings', '2023-12-21 16:32:12'),
+(1122, 'delete_expired_bookings', '2023-12-21 16:32:19'),
+(1123, 'delete_expired_bookings', '2023-12-21 16:37:19'),
+(1124, 'delete_expired_bookings', '2023-12-21 16:42:19'),
+(1125, 'delete_expired_bookings', '2023-12-21 16:47:19'),
+(1126, 'delete_expired_bookings', '2023-12-21 16:52:19'),
+(1127, 'delete_expired_bookings', '2023-12-21 16:57:19'),
+(1128, 'delete_expired_bookings', '2023-12-21 17:02:19'),
+(1129, 'delete_expired_bookings', '2023-12-21 17:07:19'),
+(1130, 'delete_expired_bookings', '2023-12-21 17:12:19'),
+(1131, 'delete_expired_bookings', '2023-12-21 17:17:19'),
+(1132, 'delete_expired_bookings', '2023-12-21 17:22:19'),
+(1133, 'delete_expired_bookings', '2023-12-21 17:27:19'),
+(1134, 'delete_expired_bookings', '2023-12-21 17:32:19'),
+(1135, 'delete_expired_bookings', '2023-12-21 17:37:19'),
+(1136, 'delete_expired_bookings', '2023-12-21 17:42:19'),
+(1137, 'delete_expired_bookings', '2023-12-21 17:47:19'),
+(1138, 'delete_expired_bookings', '2023-12-21 17:52:19'),
+(1139, 'delete_expired_bookings', '2023-12-21 17:57:19'),
+(1140, 'delete_expired_bookings', '2023-12-21 18:02:19'),
+(1141, 'delete_expired_bookings', '2023-12-21 18:07:19'),
+(1142, 'delete_expired_bookings', '2023-12-21 18:12:19'),
+(1143, 'delete_expired_bookings', '2023-12-21 18:17:19'),
+(1144, 'delete_expired_bookings', '2023-12-21 18:22:19'),
+(1145, 'delete_expired_bookings', '2023-12-21 18:27:19'),
+(1146, 'delete_expired_bookings', '2023-12-21 18:32:19'),
+(1147, 'delete_expired_bookings', '2023-12-21 18:37:19'),
+(1148, 'delete_expired_bookings', '2023-12-21 18:42:19'),
+(1149, 'delete_expired_bookings', '2023-12-21 18:47:19'),
+(1150, 'delete_expired_bookings', '2023-12-21 18:52:19'),
+(1151, 'delete_expired_bookings', '2023-12-21 18:57:19'),
+(1152, 'delete_expired_bookings', '2023-12-21 19:02:19'),
+(1153, 'delete_expired_bookings', '2023-12-21 19:07:19'),
+(1154, 'delete_expired_bookings', '2023-12-21 19:12:19'),
+(1155, 'delete_expired_bookings', '2023-12-21 19:17:19'),
+(1156, 'delete_expired_bookings', '2023-12-21 19:22:19'),
+(1157, 'delete_expired_bookings', '2023-12-21 19:27:19'),
+(1158, 'delete_expired_bookings', '2023-12-21 19:32:19'),
+(1159, 'delete_expired_bookings', '2023-12-21 19:37:19'),
+(1160, 'delete_expired_bookings', '2023-12-21 19:42:19'),
+(1161, 'delete_expired_bookings', '2023-12-21 20:15:28'),
+(1162, 'delete_expired_bookings', '2023-12-21 20:17:19'),
+(1163, 'delete_expired_bookings', '2023-12-21 20:22:19'),
+(1164, 'delete_expired_bookings', '2023-12-21 20:27:19'),
+(1165, 'delete_expired_bookings', '2023-12-21 20:32:19'),
+(1166, 'delete_expired_bookings', '2023-12-21 20:37:19'),
+(1167, 'delete_expired_bookings', '2023-12-21 20:42:19'),
+(1168, 'delete_expired_bookings', '2023-12-21 20:47:19'),
+(1169, 'delete_expired_bookings', '2023-12-21 20:52:19'),
+(1170, 'delete_expired_bookings', '2023-12-21 20:57:19'),
+(1171, 'delete_expired_bookings', '2023-12-21 21:02:19'),
+(1172, 'delete_expired_bookings', '2023-12-21 21:07:19'),
+(1173, 'delete_expired_bookings', '2023-12-21 21:12:19'),
+(1174, 'delete_expired_bookings', '2023-12-21 21:17:19'),
+(1175, 'delete_expired_bookings', '2023-12-21 21:22:19'),
+(1176, 'delete_expired_bookings', '2023-12-21 21:27:19'),
+(1177, 'delete_expired_bookings', '2023-12-21 21:32:19'),
+(1178, 'delete_expired_bookings', '2023-12-21 21:37:19'),
+(1179, 'delete_expired_bookings', '2023-12-21 21:42:19'),
+(1180, 'delete_expired_bookings', '2023-12-21 21:47:19'),
+(1181, 'delete_expired_bookings', '2023-12-21 21:52:19'),
+(1182, 'delete_expired_bookings', '2023-12-21 21:57:19'),
+(1183, 'delete_expired_bookings', '2023-12-21 22:02:19'),
+(1184, 'delete_expired_bookings', '2023-12-21 22:07:19'),
+(1185, 'delete_expired_bookings', '2023-12-21 22:12:19'),
+(1186, 'delete_expired_bookings', '2023-12-21 22:17:19'),
+(1187, 'delete_expired_bookings', '2023-12-21 22:22:19'),
+(1188, 'delete_expired_bookings', '2023-12-21 22:27:19'),
+(1189, 'delete_expired_bookings', '2023-12-21 22:32:19'),
+(1190, 'delete_expired_bookings', '2023-12-21 22:37:19'),
+(1191, 'delete_expired_bookings', '2023-12-21 22:42:19'),
+(1192, 'delete_expired_bookings', '2023-12-21 22:47:19'),
+(1193, 'delete_expired_bookings', '2023-12-21 22:52:19'),
+(1194, 'delete_expired_bookings', '2023-12-21 22:57:19'),
+(1195, 'delete_expired_bookings', '2023-12-21 23:02:19'),
+(1196, 'delete_expired_bookings', '2023-12-21 23:07:19'),
+(1197, 'delete_expired_bookings', '2023-12-21 23:12:19'),
+(1198, 'delete_expired_bookings', '2023-12-21 23:17:19'),
+(1199, 'delete_expired_bookings', '2023-12-21 23:22:19'),
+(1200, 'delete_expired_bookings', '2023-12-21 23:27:19'),
+(1201, 'delete_expired_bookings', '2023-12-21 23:32:19'),
+(1202, 'delete_expired_bookings', '2023-12-21 23:37:19'),
+(1203, 'delete_expired_bookings', '2023-12-21 23:42:19'),
+(1204, 'delete_expired_bookings', '2023-12-21 23:47:19'),
+(1205, 'delete_expired_bookings', '2023-12-21 23:52:19'),
+(1206, 'delete_expired_bookings', '2023-12-22 08:20:26'),
+(1207, 'delete_expired_bookings', '2023-12-22 08:22:19'),
+(1208, 'delete_expired_bookings', '2023-12-22 08:27:19'),
+(1209, 'delete_expired_bookings', '2023-12-22 08:32:19'),
+(1210, 'delete_expired_bookings', '2023-12-22 08:37:19'),
+(1211, 'delete_expired_bookings', '2023-12-22 08:42:19'),
+(1212, 'delete_expired_bookings', '2023-12-22 08:47:19'),
+(1213, 'delete_expired_bookings', '2023-12-22 08:52:19'),
+(1214, 'delete_expired_bookings', '2023-12-22 08:57:19'),
+(1215, 'delete_expired_bookings', '2023-12-22 09:02:19'),
+(1216, 'delete_expired_bookings', '2023-12-22 09:07:19'),
+(1217, 'delete_expired_bookings', '2023-12-22 09:12:19'),
+(1218, 'delete_expired_bookings', '2023-12-22 09:17:19'),
+(1219, 'delete_expired_bookings', '2023-12-22 09:22:19'),
+(1220, 'delete_expired_bookings', '2023-12-22 09:33:10'),
+(1221, 'delete_expired_bookings', '2023-12-22 09:37:19'),
+(1222, 'delete_expired_bookings', '2023-12-22 09:42:19'),
+(1223, 'delete_expired_bookings', '2023-12-22 09:47:19'),
+(1224, 'delete_expired_bookings', '2023-12-22 09:57:13'),
+(1225, 'delete_expired_bookings', '2023-12-22 09:57:19'),
+(1226, 'delete_expired_bookings', '2023-12-22 10:02:19'),
+(1227, 'delete_expired_bookings', '2023-12-22 10:07:19'),
+(1228, 'delete_expired_bookings', '2023-12-22 10:32:12'),
+(1229, 'delete_expired_bookings', '2023-12-22 10:32:19'),
+(1230, 'delete_expired_bookings', '2023-12-22 10:37:20');
 
 -- --------------------------------------------------------
 
@@ -583,6 +1885,9 @@ CREATE TABLE `general_bookings` (
   `phone` varchar(13) NOT NULL,
   `email` varchar(50) NOT NULL,
   `booking_date` date NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `follow_date` date DEFAULT NULL,
+  `revenue` int(11) NOT NULL DEFAULT 0,
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_on` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -591,63 +1896,93 @@ CREATE TABLE `general_bookings` (
 -- Dumping data for table `general_bookings`
 --
 
-INSERT INTO `general_bookings` (`id`, `branch`, `service`, `name`, `age`, `message`, `phone`, `email`, `booking_date`, `created_on`, `updated_on`) VALUES
-(2, 3, 18, 'asad', 12, 'assad', '6309757242', '0', '2023-11-22', '2023-11-22 05:43:15', '2023-11-22 05:43:15'),
-(3, 3, 18, 'lakshman', 21, 'sfdsf', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-22 06:04:04', '2023-11-22 06:04:04'),
-(4, 3, 18, 'lakshman', 21, 'Note', '6309757242', 'superadmin@mail.com', '2023-11-29', '2023-11-27 13:18:41', '2023-11-27 13:18:41'),
-(5, 3, 18, 'lakshman', 21, 'CC', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 10:55:58', '2023-11-28 10:55:58'),
-(6, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 10:58:57', '2023-11-28 10:58:57'),
-(7, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 10:59:15', '2023-11-28 10:59:15'),
-(8, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:00:02', '2023-11-28 11:00:02'),
-(9, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:02:15', '2023-11-28 11:02:15'),
-(10, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:03:24', '2023-11-28 11:03:24'),
-(11, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:05:37', '2023-11-28 11:05:37'),
-(12, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:05:56', '2023-11-28 11:05:56'),
-(13, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:06:43', '2023-11-28 11:06:43'),
-(14, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:06:54', '2023-11-28 11:06:54'),
-(15, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:07:06', '2023-11-28 11:07:06'),
-(16, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:07:23', '2023-11-28 11:07:23'),
-(17, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:08:30', '2023-11-28 11:08:30'),
-(18, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:09:23', '2023-11-28 11:09:23'),
-(19, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:10:13', '2023-11-28 11:10:13'),
-(20, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:11:05', '2023-11-28 11:11:05'),
-(21, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:11:32', '2023-11-28 11:11:32'),
-(22, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:13:30', '2023-11-28 11:13:30'),
-(23, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:16:26', '2023-11-28 11:16:26'),
-(24, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:19:47', '2023-11-28 11:19:47'),
-(25, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:20:31', '2023-11-28 11:20:31'),
-(26, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:23:29', '2023-11-28 11:23:29'),
-(27, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:25:45', '2023-11-28 11:25:45'),
-(28, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:30:42', '2023-11-28 11:30:42'),
-(29, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:31:37', '2023-11-28 11:31:37'),
-(30, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:32:02', '2023-11-28 11:32:02'),
-(31, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:32:46', '2023-11-28 11:32:46'),
-(32, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:35:07', '2023-11-28 11:35:07'),
-(33, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:42:25', '2023-11-28 11:42:25'),
-(34, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:48:35', '2023-11-28 11:48:35'),
-(35, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:49:20', '2023-11-28 11:49:20'),
-(36, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:49:32', '2023-11-28 11:49:32'),
-(37, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:50:17', '2023-11-28 11:50:17'),
-(38, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:52:38', '2023-11-28 11:52:38'),
-(39, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:53:28', '2023-11-28 11:53:28'),
-(40, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 11:55:01', '2023-11-28 11:55:01'),
-(41, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:02:55', '2023-11-28 12:02:55'),
-(42, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:06:35', '2023-11-28 12:06:35'),
-(43, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:07:07', '2023-11-28 12:07:07'),
-(44, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:07:50', '2023-11-28 12:07:50'),
-(45, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:17:04', '2023-11-28 12:17:04'),
-(46, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:20:39', '2023-11-28 12:20:39'),
-(47, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:22:06', '2023-11-28 12:22:06'),
-(48, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:23:35', '2023-11-28 12:23:35'),
-(49, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:24:05', '2023-11-28 12:24:05'),
-(50, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', '2023-11-28 12:29:53', '2023-11-28 12:29:53'),
-(51, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', '2023-11-28 12:34:42', '2023-11-28 12:34:42'),
-(52, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', '2023-11-28 12:36:13', '2023-11-28 12:36:13'),
-(53, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', '2023-11-28 13:16:51', '2023-11-28 13:16:51'),
-(54, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', '2023-11-28 13:17:17', '2023-11-28 13:17:17'),
-(55, 6, 25, 'lakshman', 31, 'asasasdas', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', '2023-11-28 13:21:27', '2023-11-28 13:21:27'),
-(56, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', '2023-11-29 12:38:19', '2023-11-29 12:38:19'),
-(57, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', '2023-11-29 12:39:15', '2023-11-29 12:39:15');
+INSERT INTO `general_bookings` (`id`, `branch`, `service`, `name`, `age`, `message`, `phone`, `email`, `booking_date`, `status`, `follow_date`, `revenue`, `created_on`, `updated_on`) VALUES
+(2, 3, 18, 'asad', 12, 'assad', '6309757242', '0', '2023-11-22', 1, NULL, 0, '2023-11-22 05:43:15', '2023-11-22 05:43:15'),
+(3, 3, 18, 'lakshman', 21, 'sfdsf', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-22 06:04:04', '2023-11-22 06:04:04'),
+(4, 3, 18, 'lakshman', 21, 'Note', '6309757242', 'superadmin@mail.com', '2023-11-29', 1, NULL, 0, '2023-10-27 13:18:41', '2023-11-27 13:18:41'),
+(5, 3, 18, 'lakshman', 21, 'CC', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:55:58', '2023-11-28 10:55:58'),
+(6, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:58:57', '2023-11-28 10:58:57'),
+(7, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:59:15', '2023-11-28 10:59:15'),
+(8, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:00:02', '2023-11-28 11:00:02'),
+(9, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:02:15', '2023-11-28 11:02:15'),
+(10, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:03:24', '2023-11-28 11:03:24'),
+(11, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:05:37', '2023-11-28 11:05:37'),
+(12, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:05:56', '2023-11-28 11:05:56'),
+(13, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:06:43', '2023-11-28 11:06:43'),
+(14, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 3, NULL, 3500, '2023-11-28 11:06:54', '2023-12-14 22:11:13'),
+(15, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 4, NULL, 0, '2023-11-28 11:07:06', '2023-12-14 21:39:02'),
+(16, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:07:23', '2023-11-28 11:07:23'),
+(17, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:08:30', '2023-11-28 11:08:30'),
+(18, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:09:23', '2023-11-28 11:09:23'),
+(19, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:10:13', '2023-11-28 11:10:13'),
+(20, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:11:05', '2023-11-28 11:11:05'),
+(21, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:11:32', '2023-11-28 11:11:32'),
+(22, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:13:30', '2023-11-28 11:13:30'),
+(23, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:16:26', '2023-11-28 11:16:26'),
+(24, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:19:47', '2023-11-28 11:19:47'),
+(25, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:20:31', '2023-11-28 11:20:31'),
+(26, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:23:29', '2023-11-28 11:23:29'),
+(27, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:25:45', '2023-11-28 11:25:45'),
+(28, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:30:42', '2023-11-28 11:30:42'),
+(29, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:31:37', '2023-11-28 11:31:37'),
+(30, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:32:02', '2023-11-28 11:32:02'),
+(31, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:32:46', '2023-11-28 11:32:46'),
+(32, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:35:07', '2023-11-28 11:35:07'),
+(33, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:42:25', '2023-11-28 11:42:25'),
+(34, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:48:35', '2023-11-28 11:48:35'),
+(35, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:49:20', '2023-11-28 11:49:20'),
+(36, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:49:32', '2023-11-28 11:49:32'),
+(37, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:50:17', '2023-11-28 11:50:17'),
+(38, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:52:38', '2023-11-28 11:52:38'),
+(39, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-22', 0, '2023-11-28 11:53:28', '2023-12-14 21:27:32'),
+(40, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-16', 0, '2023-11-28 11:55:01', '2023-12-14 21:27:16'),
+(41, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:02:55', '2023-11-28 12:02:55'),
+(42, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:06:35', '2023-11-28 12:06:35'),
+(43, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:07:07', '2023-11-28 12:07:07'),
+(44, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:07:50', '2023-11-28 12:07:50'),
+(45, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:17:04', '2023-11-28 12:17:04'),
+(46, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:20:39', '2023-11-28 12:20:39'),
+(47, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:22:06', '2023-11-28 12:22:06'),
+(48, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:23:35', '2023-11-28 12:23:35'),
+(49, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-22', 0, '2023-11-28 12:24:05', '2023-12-14 21:47:51'),
+(50, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 3, NULL, 3000, '2023-11-28 12:29:53', '2023-12-14 21:47:33'),
+(51, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 12:34:42', '2023-11-28 12:34:42'),
+(52, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 12:36:13', '2023-11-28 12:36:13'),
+(53, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', 1, NULL, 0, '2023-10-28 13:16:51', '2023-11-28 13:16:51'),
+(54, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', 4, NULL, 0, '2023-10-28 13:17:17', '2023-12-17 10:10:33'),
+(55, 6, 25, 'lakshman', 31, 'asasasdas', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 13:21:27', '2023-11-28 13:21:27'),
+(56, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-29 12:38:19', '2023-11-29 12:38:19'),
+(57, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-29 12:39:15', '2023-11-29 12:39:15'),
+(58, 3, 18, 'lakshman', 21, 'asadsad', '6309757242', 'naveen@insakal.in', '2023-12-30', 2, '2023-12-20', 0, '2023-12-13 19:36:40', '2023-12-17 10:01:13'),
+(59, 3, 18, 'naveen', 21, 'sadsad', '6309757242', 'superadmin@mail.com', '2023-12-30', 3, NULL, 400, '2023-12-13 19:45:34', '2023-12-15 11:24:09'),
+(60, 3, 18, 'naveen', 21, 'awsadasd', '6309757242', 'naveen@insakal.in', '2023-12-16', 3, '2023-12-29', 2900, '2023-12-14 17:39:56', '2023-12-14 21:21:08'),
+(61, 4, 21, 'Shiva', 23, 'adasdasd', '6309757242', 'naveen@insakal.in', '2023-12-30', 1, NULL, 0, '2023-12-15 11:38:44', '2023-12-15 11:38:44'),
+(62, 7, 19, 'lakshman', 31, 'Hello world', '6309757242', 'superadmin@mail.com', '2024-01-24', 1, NULL, 0, '2023-12-16 08:48:48', '2023-12-16 08:48:48'),
+(63, 4, 30, 'DODD', 21, '1212', '6309757242', 'superadmin@mail.com', '2023-12-31', 1, NULL, 0, '2023-12-18 10:35:48', '2023-12-18 10:35:48'),
+(64, 7, 20, 'Naveen', 12, 'sdfdsfdsf', '6309757242', 'naveen@insakal.in', '2023-12-20', 1, NULL, 0, '2023-12-18 11:06:32', '2023-12-18 11:06:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `general_booking_status`
+--
+
+CREATE TABLE `general_booking_status` (
+  `id` int(11) NOT NULL,
+  `status` varchar(50) NOT NULL,
+  `alias` varchar(50) NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `general_booking_status`
+--
+
+INSERT INTO `general_booking_status` (`id`, `status`, `alias`, `created_on`) VALUES
+(1, 'No Action', 'No Action', '2023-12-14 12:23:52'),
+(2, 'In Progress', 'Follow Up', '2023-12-14 12:23:52'),
+(3, 'Completed', 'Turned On', '2023-12-14 12:23:52'),
+(4, 'Rejected', 'Turned Off', '2023-12-14 12:23:52');
 
 -- --------------------------------------------------------
 
@@ -699,6 +2034,20 @@ CREATE TABLE `payments` (
   `expired_on` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`id`, `booking_id`, `transaction_id`, `amount`, `status`, `order_id`, `payment_id`, `verify_signature`, `method`, `created_on`, `updated_on`, `expired_on`) VALUES
+(4, 23, '7386a133-c40e-46a8-87c8-accbe88a1d49', 1000, 'SUCCESS', 'order_NAwZ1G4Rm3Levt', 'pay_NAwZWb4jnhlXcB', '52e3b26680be7f885a8b4418c2e964af48f8f9daffdd91b9f70e9dd030762cda', '', '2023-12-11 06:43:54', '2023-12-11 06:44:36', '2023-12-12 15:52:36'),
+(5, 24, '04f011ca-228b-41bd-b14b-4b71d88bc707', 1000, 'SUCCESS', 'order_NB0C3X5xkEvNDP', 'pay_NB0ZetTQuuJSpc', '8573f37b0ce5561d065a5bc178019428d69dc0e5cab4a994e00ab219fe30dab2', '', '2023-12-11 10:16:56', '2023-12-11 10:39:27', '2023-12-12 15:52:36'),
+(6, 25, '46396794-3fc1-4e86-b514-5772df4a377e', 1000, 'SUCCESS', 'order_NB0pEj1mN9Mzl4', 'pay_NB0psywl4l0kZD', '25293fc8d1eb5c6933188c4353c894f8e2d59f7a510b1bb9b9d31756a3487396', NULL, '2023-12-11 10:54:01', '2023-12-11 10:54:47', '2023-12-12 15:52:36'),
+(7, 26, '89d38a89-ff0b-4c27-9feb-7c6291ade22e', 1000, 'SUCCESS', 'order_NB0slUpubxOZiC', 'pay_NB0ugdGIZTtI5L', '7edc6047023f0be1b892b3637fbe87425356cadb98675b0a53335b64eb556332', 'upi', '2023-12-11 10:57:21', '2023-12-11 10:59:20', '2023-12-12 15:52:36'),
+(13, 32, '9d4f48a2-b64d-4e89-a3d3-e8d27c9cea5a', 1000, 'SUCCESS', 'order_NCtIjqZfpJwLBE', 'pay_NCtJCFdU2CpidS', 'f8ee1270cab7f14753e4974edc4c456d639926cc8d89592edf06dfdccf892c5a', NULL, '2023-12-16 10:20:24', '2023-12-16 10:20:59', '2023-12-16 10:30:24'),
+(15, 34, '681149eb-bdac-4fa8-be72-a0d3df07c644', 1000, 'SUCCESS', 'order_NDho2BSLOQ9Sfi', 'pay_NDhoK1TdyQPlR3', '37874d5711fd07cafa79f578db1a808e93603978f2e0578061daa0b0230969ee', NULL, '2023-12-18 11:44:43', '2023-12-18 11:45:08', '2023-12-18 11:54:43'),
+(16, 35, 'f923666c-6a1b-4093-b0bd-b4c731f7532b', 1000, 'SUCCESS', 'order_NDijHgPWgTTb64', 'pay_NDimLb8n73KFq4', '8ab972a9edbcd6e4ba932dc9e04a7af5063e68c9d22407576fb246f51de5e010', NULL, '2023-12-18 12:38:54', '2023-12-18 12:41:57', '2023-12-18 12:48:54'),
+(17, 36, '809ae6af-183c-40d6-aabc-e9ddc9f23f5b', 1000, 'SUCCESS', 'order_NDindM6tyzFwTT', 'pay_NDio1UdPHon4LD', 'bfb0ee2c0168acde59eae310a91d8840bec4fcb855c4c3f800a6db78bc772858', NULL, '2023-12-18 12:43:01', '2023-12-18 12:43:37', '2023-12-18 12:53:01');
+
 -- --------------------------------------------------------
 
 --
@@ -714,6 +2063,91 @@ CREATE TABLE `reserved_slots` (
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_on` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reserved_slots`
+--
+
+INSERT INTO `reserved_slots` (`id`, `doctor_id`, `booking_date`, `slot_id`, `booking_id`, `created_on`, `updated_on`) VALUES
+(4, 6, '2023-12-11', 9, 23, '2023-12-11 06:44:36', '2023-12-11 06:44:36'),
+(5, 6, '2023-12-30', 7, 24, '2023-12-11 10:39:27', '2023-12-11 10:39:27'),
+(6, 6, '2023-12-11', 10, 25, '2023-12-11 10:54:47', '2023-12-11 10:54:47'),
+(7, 5, '2023-12-23', 15, 26, '2023-12-11 10:59:20', '2023-12-11 10:59:20'),
+(8, 6, '2024-01-12', 7, 32, '2023-12-16 10:20:59', '2023-12-16 10:20:59'),
+(9, 5, '2024-01-24', 13, 34, '2023-12-18 11:45:08', '2023-12-18 11:45:08'),
+(10, 8, '2023-12-29', 20, 35, '2023-12-18 12:41:57', '2023-12-18 12:41:57'),
+(11, 5, '2024-01-23', 13, 36, '2023-12-18 12:43:37', '2023-12-18 12:43:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reset_password`
+--
+
+CREATE TABLE `reset_password` (
+  `id` int(11) NOT NULL,
+  `uuid` varchar(50) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `expired_on` datetime NOT NULL,
+  `useragent` varchar(50) NOT NULL,
+  `ip_address` varchar(100) NOT NULL,
+  `is_changed` tinyint(1) NOT NULL DEFAULT 0,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reset_password`
+--
+
+INSERT INTO `reset_password` (`id`, `uuid`, `user_id`, `expired_on`, `useragent`, `ip_address`, `is_changed`, `created_on`, `updated_on`) VALUES
+(11, '820a3220-af27-4582-930c-8124f49790d3', 21, '2023-12-17 22:01:26', 'Windows 10', '::1', 1, '2023-12-16 21:51:26', '2023-12-16 22:40:45'),
+(12, '7328e14b-6d51-491d-af7f-06ec8dd6544d', 1, '2023-12-16 22:37:43', 'Windows 10', '::1', 0, '2023-12-16 22:27:43', '2023-12-16 22:27:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `routes`
+--
+
+CREATE TABLE `routes` (
+  `id` int(11) NOT NULL,
+  `method` varchar(10) NOT NULL,
+  `route` varchar(800) NOT NULL,
+  `name` varchar(500) DEFAULT NULL,
+  `handler` varchar(800) NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `routes`
+--
+
+INSERT INTO `routes` (`id`, `method`, `route`, `name`, `handler`, `created_on`, `updated_on`) VALUES
+(1, 'GET', 'admin/dashboard', 'admin.dashboard', '\\App\\Controllers\\admin\\admin::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(2, 'GET', 'admin/profile', NULL, '\\App\\Controllers\\admin\\admin::profile', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(3, 'GET', 'admin/all-master/locations', NULL, '\\App\\Controllers\\admin\\master\\location::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(4, 'GET', 'admin/all-master/services', NULL, '\\App\\Controllers\\admin\\master\\services::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(5, 'GET', 'admin/all-master/departments', NULL, '\\App\\Controllers\\admin\\master\\departments::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(6, 'GET', 'admin/all-master/branches', NULL, '\\App\\Controllers\\admin\\master\\branches::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(7, 'GET', 'admin/all-master/doctors/roles', NULL, '\\App\\Controllers\\admin\\master\\doctors_role::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(8, 'GET', 'admin/all-master/doctors/list', 'doctor.list', '\\App\\Controllers\\admin\\master\\doctors::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(9, 'GET', 'admin/cms-page/doctor/([0-9]+)', NULL, '\\App\\Controllers\\admin\\cms\\pages::doctor/$1', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(10, 'GET', 'admin/management/agent_management', NULL, '\\App\\Controllers\\admin\\admin::agent_management', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(11, 'GET', 'admin/management/client_management', NULL, '\\App\\Controllers\\admin\\admin::client_management', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(12, 'GET', 'admin/branch-management/departments', NULL, '\\App\\Controllers\\admin\\master\\branch_management::departments', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(13, 'GET', 'admin/branch-management/services', NULL, '\\App\\Controllers\\admin\\master\\branch_management::services', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(14, 'GET', 'admin/branch-management/doctors', NULL, '\\App\\Controllers\\admin\\master\\branch_management::doctors', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(15, 'GET', 'admin/booking-management/video/doctors', NULL, '\\App\\Controllers\\admin\\master\\bookings\\video_management::doctors', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(16, 'GET', 'admin/booking-management/video/time-slots', NULL, '\\App\\Controllers\\admin\\master\\bookings\\time_slots::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(17, 'GET', 'admin/cms/faq', NULL, '\\App\\Controllers\\admin\\cms\\faq::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(18, 'GET', 'admin/cms/ads', NULL, '\\App\\Controllers\\admin\\cms\\ads::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(19, 'GET', 'admin/cms/best-deals', NULL, '\\App\\Controllers\\admin\\cms\\best_deals::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(20, 'GET', 'admin/enquiries/faq', NULL, '\\App\\Controllers\\admin\\enquiries::faq', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(21, 'GET', 'admin/enquiries/contact-us', NULL, '\\App\\Controllers\\admin\\enquiries::contact_us', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(22, 'GET', 'admin/bookings/general', NULL, '\\App\\Controllers\\admin\\bookings::general_bookings', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
+(23, 'GET', 'admin/bookings/video', NULL, '\\App\\Controllers\\admin\\bookings::video_bookings', '2023-12-19 16:57:01', '2023-12-19 16:59:18');
 
 -- --------------------------------------------------------
 
@@ -5955,10 +7389,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `usertype`, `telephone`, `country_id`, `password`, `user_role`, `about`, `location`, `profile_url`, `extras`, `is_logged`, `updated_on`, `created_on`, `token`, `conn_id`, `in_active`) VALUES
-(1, 'admin', 'Admin', 'AC', 'admin@gmail.com', 'Others', '0', 0, '21232f297a57a5a743894a0e4a801fc3', 1, NULL, NULL, NULL, NULL, 1, '2023-12-09 05:15:35', '2022-05-17 09:25:00', '4be073a1d6eca1b7bbd2af7a6386120a', '', 0),
+(1, 'admin', 'Admin ', 'AC', 'admin@gmail.com', 'Others', '6309757242', 0, '21232f297a57a5a743894a0e4a801fc3', 1, NULL, NULL, NULL, NULL, 1, '2023-12-21 11:52:38', '2022-05-17 09:25:00', '338d34ab482bb765f0d7c81f0547ce11', '', 0),
 (2, 'employee', 'Naruto', 'Uztumaki', 'agent@gmail.com', 'Builders', '6309757241', 0, 'b33aed8f3134996703dc39f9a7c95783', 2, 'Nothing About Me', 'PONDI TAMIL NADU', '1695386878_dd691ada3de7b24efde8.jpg', NULL, 1, '2023-10-27 12:01:36', '2022-05-17 09:25:00', 'bc068bd06d4b88ead00fe6096591fe16', '', 0),
 (3, 'Yash', 'Yash', 'P', 'pro_kgf@123.com', 'Others', '0', 0, 'kgf123', 3, NULL, NULL, NULL, NULL, 0, '2022-10-19 12:14:58', '2022-05-17 09:25:00', '', '222', 0),
-(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'arjun@gmail.com', 'Owner', '1234567890', 0, '7626d28b710e7f9e98d9dfbe9bf0d123', 2, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2023-10-25 15:55:56', '2023-10-11 17:51:22', '0d955801d3e2d96ba5cfb4cd246fd0a7', NULL, 0);
+(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'pidugunaveensetty@gmail.com', 'Owner', '1234567890', 0, '827ccb0eea8a706c4c34a16891f84e7b', 2, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2023-12-16 22:40:45', '2023-10-11 17:51:22', '16800f5ceeee057699e30fd881aa1462', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -6008,6 +7442,20 @@ CREATE TABLE `video_bookings` (
   `updated_on` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `video_bookings`
+--
+
+INSERT INTO `video_bookings` (`id`, `firstname`, `lastname`, `phone`, `email`, `service`, `doctor`, `booking_date`, `slot_id`, `start_time`, `end_time`, `message`, `transaction_id`, `created_on`, `updated_on`) VALUES
+(23, 'RAJ', 'GOD', '6309757242', 'naveen@insakal.in', 18, 6, '2023-12-11', 9, '10:30:00', '10:45:00', 'Nothing', '7386a133-c40e-46a8-87c8-accbe88a1d49', '2023-12-11 06:43:53', '2023-12-11 06:43:53'),
+(24, 'Naveen', 'Happy', '6309757242', 'Staff1@123.com', 19, 6, '2023-12-30', 7, '10:00:00', '10:15:00', 'asas', '04f011ca-228b-41bd-b14b-4b71d88bc707', '2023-12-11 10:16:53', '2023-12-11 10:16:53'),
+(25, 'Naveen', 'Happy', '6309757242', 'superadmin@mail.com', 19, 6, '2023-12-11', 10, '10:45:00', '11:00:00', 'dzfdfdfsdf', '46396794-3fc1-4e86-b514-5772df4a377e', '2023-12-11 10:53:59', '2023-12-11 10:53:59'),
+(26, 'Naveen', 'Happy', '6309757242', 'agent@gmail.com', 18, 5, '2023-12-23', 15, '12:00:00', '12:15:00', 'test', '89d38a89-ff0b-4c27-9feb-7c6291ade22e', '2023-12-11 10:57:19', '2023-12-11 10:57:19'),
+(32, 'Naveen', 'Happy', '6309757242', 'naveen@insakal.in', 19, 6, '2024-01-12', 7, '10:00:00', '10:15:00', 'ssd', '9d4f48a2-b64d-4e89-a3d3-e8d27c9cea5a', '2023-12-16 10:20:22', '2023-12-16 10:20:22'),
+(34, 'Naveen', 'Happy', '6309757242', 'pidugunaveensetty@gmail.com', 18, 5, '2024-01-24', 13, '11:30:00', '11:45:00', 'zxcsxzc', '681149eb-bdac-4fa8-be72-a0d3df07c644', '2023-12-18 11:44:41', '2023-12-18 11:44:41'),
+(35, 'Naveen', 'Happy', '6309757242', 'superadmin@mail.com', 20, 8, '2023-12-29', 20, '13:15:00', '13:30:00', 'Go to hell', 'f923666c-6a1b-4093-b0bd-b4c731f7532b', '2023-12-18 12:38:53', '2023-12-18 12:38:53'),
+(36, 'Groot', 'jack', '1234567894', 'groot@gmail.com', 18, 5, '2024-01-23', 13, '11:30:00', '11:45:00', 'asdsad', '809ae6af-183c-40d6-aabc-e9ddc9f23f5b', '2023-12-18 12:43:00', '2023-12-18 12:43:00');
+
 -- --------------------------------------------------------
 
 --
@@ -6037,6 +7485,23 @@ INSERT INTO `video_booking_doctors` (`id`, `doctor`, `slots`, `visibility`, `cre
 --
 
 --
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `slug` (`slug`);
+ALTER TABLE `blogs` ADD FULLTEXT KEY `meta_title` (`meta_title`);
+ALTER TABLE `blogs` ADD FULLTEXT KEY `meta_description` (`meta_description`);
+
+--
+-- Indexes for table `booking_actions`
+--
+ALTER TABLE `booking_actions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `action` (`action`),
+  ADD KEY `booking_id` (`booking_id`);
+
+--
 -- Indexes for table `branches`
 --
 ALTER TABLE `branches`
@@ -6055,7 +7520,9 @@ ALTER TABLE `cms_faq`
 --
 ALTER TABLE `cms_pages`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `type` (`type`,`slug`);
+  ADD UNIQUE KEY `type` (`type`,`slug`),
+  ADD KEY `slug` (`slug`),
+  ADD KEY `type_2` (`type`);
 ALTER TABLE `cms_pages` ADD FULLTEXT KEY `meta_title` (`meta_title`);
 ALTER TABLE `cms_pages` ADD FULLTEXT KEY `meta_description` (`meta_description`);
 
@@ -6106,6 +7573,13 @@ ALTER TABLE `faq_enquiries`
 -- Indexes for table `general_bookings`
 --
 ALTER TABLE `general_bookings`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `status` (`status`);
+
+--
+-- Indexes for table `general_booking_status`
+--
+ALTER TABLE `general_booking_status`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -6129,6 +7603,19 @@ ALTER TABLE `reserved_slots`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `doctor_id` (`doctor_id`,`booking_date`,`slot_id`),
   ADD KEY `booking_id` (`booking_id`);
+
+--
+-- Indexes for table `reset_password`
+--
+ALTER TABLE `reset_password`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `routes`
+--
+ALTER TABLE `routes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `method` (`method`,`route`) USING HASH;
 
 --
 -- Indexes for table `services`
@@ -6185,6 +7672,18 @@ ALTER TABLE `video_booking_doctors`
 --
 
 --
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `booking_actions`
+--
+ALTER TABLE `booking_actions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
 -- AUTO_INCREMENT for table `branches`
 --
 ALTER TABLE `branches`
@@ -6236,7 +7735,7 @@ ALTER TABLE `doctors_roles`
 -- AUTO_INCREMENT for table `events_log`
 --
 ALTER TABLE `events_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1231;
 
 --
 -- AUTO_INCREMENT for table `faq_enquiries`
@@ -6248,7 +7747,13 @@ ALTER TABLE `faq_enquiries`
 -- AUTO_INCREMENT for table `general_bookings`
 --
 ALTER TABLE `general_bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT for table `general_booking_status`
+--
+ALTER TABLE `general_booking_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `locations`
@@ -6260,13 +7765,25 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `reserved_slots`
 --
 ALTER TABLE `reserved_slots`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `reset_password`
+--
+ALTER TABLE `reset_password`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `routes`
+--
+ALTER TABLE `routes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -6302,7 +7819,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `video_bookings`
 --
 ALTER TABLE `video_bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `video_booking_doctors`
@@ -6315,10 +7832,23 @@ ALTER TABLE `video_booking_doctors`
 --
 
 --
+-- Constraints for table `booking_actions`
+--
+ALTER TABLE `booking_actions`
+  ADD CONSTRAINT `booking_actions_ibfk_1` FOREIGN KEY (`booking_id`) REFERENCES `general_bookings` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `booking_actions_ibfk_2` FOREIGN KEY (`action`) REFERENCES `general_booking_status` (`id`);
+
+--
 -- Constraints for table `branches`
 --
 ALTER TABLE `branches`
   ADD CONSTRAINT `branches_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `general_bookings`
+--
+ALTER TABLE `general_bookings`
+  ADD CONSTRAINT `general_bookings_ibfk_1` FOREIGN KEY (`status`) REFERENCES `general_booking_status` (`id`);
 
 --
 -- Constraints for table `payments`
@@ -6349,6 +7879,23 @@ ALTER TABLE `states`
 --
 ALTER TABLE `video_booking_doctors`
   ADD CONSTRAINT `video_booking_doctors_ibfk_1` FOREIGN KEY (`doctor`) REFERENCES `doctors` (`id`) ON DELETE CASCADE;
+
+DELIMITER $$
+--
+-- Events
+--
+CREATE DEFINER=`root`@`localhost` EVENT `delete_expired_bookings` ON SCHEDULE EVERY 5 MINUTE STARTS '2023-12-12 16:37:19' ON COMPLETION NOT PRESERVE ENABLE DO BEGIN
+    DELETE FROM video_bookings
+    WHERE id IN (
+        SELECT booking_id
+        FROM payments
+        WHERE expired_on <= CURRENT_TIMESTAMP AND status != 'SUCCESS'
+    );
+
+    INSERT INTO events_log (`event_name`) VALUES ('delete_expired_bookings');
+END$$
+
+DELIMITER ;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
