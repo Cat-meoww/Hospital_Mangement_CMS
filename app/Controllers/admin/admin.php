@@ -78,25 +78,7 @@ class admin extends General
 
         $this->data['dataset'] = $DATASET;
     }
-
-
-
-    public function agent_management()
-    {
-        $userModel = new UserModel();
-        $agentData = $userModel->where('user_role', 2)->findAll();
-        $this->data['title'] = "Agent Management";
-        $this->data['user'] = $agentData;
-        return view('admin/users/agent_management', $this->data);
-    }
-    public function client_management()
-    {
-        $userModel = new UserModel();
-        $allUserData = $userModel->where('user_role', 3)->findAll();
-        $this->data['title'] = "Client Management";
-        $this->data['user'] = $allUserData;
-        return view('admin/users/client_management', $this->data);
-    }
+    
     public function profile()
     {
         $userModel = new UserModel();

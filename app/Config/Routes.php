@@ -157,9 +157,8 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
             $routes->get('update/(:num)', 'blog::update/$1', ['as' => 'blog.update']);
         });
     });
-    $routes->group('management', static function ($routes) {
-        $routes->get('agent_management', 'admin::agent_management');
-        $routes->get('client_management', 'admin::client_management');
+    $routes->group('management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
+        $routes->get('users', 'UserMangement::index');
     });
     $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->get('departments', 'branch_management::departments');
@@ -206,6 +205,11 @@ $routes->group('api', static function ($routes) {
                 $routes->post('create', 'location::create');
                 $routes->post('update', 'location::update');
                 $routes->post('delete', 'location::delete');
+            });
+            $routes->group('users', static function ($routes) {
+                $routes->post('create', 'UserMangement::create');
+                $routes->post('update', 'UserMangement::update');
+                $routes->post('delete', 'UserMangement::delete');
             });
             $routes->group('services', static function ($routes) {
                 $routes->post('create', 'services::create');

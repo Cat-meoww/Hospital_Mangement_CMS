@@ -23,6 +23,17 @@
             <span>All Master</span>
         </h2>
         <li class="menu nav-item">
+            <a href="<?= base_url("admin/management/users") ?>" class="nav-link group <?= nav_active("admin/management/users") ?>">
+                <div class="flex pl-1 items-center">
+                    
+                    <svg class="w-5 h-5" width="32" height="32" fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M247.63,39.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.49-11.78,43.16-.16,65.74a71.34,71.34,0,0,0-14.17,27L98.33,151c7.82-16.33,7.52-33.35-1-47.49-13.2-21.79-43.67-33.47-81.5-31.25a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,168,54.58,54.58,0,0,0,87,162.33l25,25V216a8,8,0,0,0,16,0V186.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,133.21,250.67,91.65,247.63,39.89ZM47.81,147.6C32.47,138.31,23.79,116.32,24,88c28.32-.24,50.31,8.47,59.6,23.81,4.85,8,5.64,17.33,2.46,26.94L61.65,114.34a8,8,0,0,0-11.31,11.31l24.41,24.41C65.14,153.24,55.82,152.45,47.81,147.6Zm149.31-10.22c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.31L140.65,128c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.82,89.33-34.83C232.94,90.34,220.14,123.44,197.12,137.38Z"></path>
+                    </svg>
+                    <span class="pl-1 text-black dark:text-white ">Users</span>
+                </div>
+            </a>
+        </li>
+        <li class="menu nav-item">
             <a href="<?= base_url("admin/all-master/locations") ?>" class="nav-link group <?= nav_active("admin/all-master/locations") ?>">
                 <div class="flex pl-1 items-center">
                     <!-- <svg class="w-5 h-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,30 +199,8 @@
                 <li><a href="<?= base_url("admin/cms/best-deals") ?>" <?= sub_menu_active("admin/cms/best-deals") ?>>Best Deals</a></li> -->
             </ul>
         </li>
-        <!-- <li class="menu nav-item">
-            <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'apps'}" <?= sub_nav_active("admin/management") ?> @click="activeMenu === 'apps' ? activeMenu = null : activeMenu = 'apps'">
-                <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'apps'}">
-                    <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.659675 9.35355C0.446775 9.15829 0.446775 8.84171 0.659675 8.64645L4.25 5.35355C4.4629 5.15829 4.4629 4.84171 4.25 4.64645L0.659675 1.35355C0.446776 1.15829 0.446776 0.841709 0.659675 0.646446C0.872575 0.451184 1.21775 0.451185 1.43065 0.646446L5.02098 3.93934C5.65967 4.52513 5.65968 5.47487 5.02098 6.06066L1.43065 9.35355C1.21775 9.54882 0.872574 9.54882 0.659675 9.35355Z" fill="currentcolor" />
-                    </svg>
-                </div>
-                <div class="flex items-center">
-                    <svg class="w-5 h-5" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 10L16 17L28 10L16 3L4 10Z" fill="black" fill-opacity="0.1" />
-                        <path d="M16.5039 29.8638L28.5039 22.8638C28.733 22.7301 28.8996 22.511 28.9671 22.2545C28.9889 22.1714 29 22.0859 29 22C29 21.988 28.9998 21.976 28.9994 21.964C28.9934 21.7993 28.9468 21.6385 28.8638 21.4961C28.6846 21.1889 28.3557 21 28 21C27.8229 21 27.649 21.047 27.4961 21.1362L16 27.8423L4.50399 21.1363C4.35094 21.047 4.17706 21 4 21C3.98302 21 3.96603 21.0004 3.94907 21.0013C3.61197 21.0185 3.3063 21.2046 3.13622 21.4961C3.04701 21.6491 3 21.8229 3 22C3 22.017 3.00043 22.034 3.0013 22.0509C3.01849 22.388 3.20457 22.6937 3.49613 22.8638L15.4961 29.8638C15.8075 30.0454 16.1925 30.0454 16.5039 29.8638Z" fill="currentcolor" />
-                        <path d="M16.5039 23.8638L28.5039 16.8638C28.733 16.7301 28.8996 16.511 28.9671 16.2545C28.9889 16.1714 29 16.0859 29 16C29 15.988 28.9998 15.976 28.9994 15.964C28.9934 15.7993 28.9468 15.6385 28.8638 15.4961C28.6846 15.1889 28.3557 15 28 15C27.8229 15 27.649 15.047 27.4961 15.1362L16 21.8423L4.50399 15.1363C4.35094 15.047 4.17706 15 4 15C3.98302 15 3.96603 15.0004 3.94907 15.0013C3.61197 15.0185 3.3063 15.2046 3.13622 15.4961C3.04701 15.6491 3 15.8229 3 16C3 16.017 3.00043 16.034 3.0013 16.0509C3.01849 16.388 3.20457 16.6937 3.49613 16.8638L15.4961 23.8638C15.8075 24.0454 16.1925 24.0454 16.5039 23.8638Z" fill="currentcolor" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.496 2.13622C15.8074 1.95459 16.1924 1.95459 16.5038 2.13622L28.5038 9.13622C28.6528 9.22314 28.7768 9.34713 28.8637 9.49613C29.142 9.97318 28.9808 10.5855 28.5038 10.8638L16.5038 17.8638C16.1924 18.0454 15.8074 18.0454 15.496 17.8638L3.49605 10.8638C3.34704 10.7769 3.22306 10.6529 3.13614 10.5039C2.85786 10.0268 3.019 9.4145 3.49605 9.13622L15.496 2.13622ZM5.98455 10L15.9999 4.1577L26.0153 10L15.9999 15.8423L5.98455 10Z" fill="currentcolor" />
-                    </svg>
-                    <span class="pl-1">User Management</span>
-                </div>
-            </a>
-            <ul x-cloak x-show="activeMenu === 'apps'" x-collapse class="sub-menu flex flex-col gap-1 text-black dark:text-white/80">
-                <li><a href="<?= base_url("admin/management/agent_management") ?>" <?= sub_menu_active("admin/management/agent_management") ?>>Agents</a></li>
-                <li><a href="<?= base_url("admin/management/client_management") ?>" <?= sub_menu_active("admin/management/client_management") ?>>Clients</a></li>
-            </ul>
-        </li>
         
-        <li class="menu nav-item">
+        <!-- <li class="menu nav-item">
             <a href="javaScript:;" class="nav-link group active text-black dark:text-white" :class="{'active' : activeMenu === 'enquiries'}" <?= sub_nav_active("admin/enquiries", 'enquiries') ?> @click="activeMenu === 'enquiries' ? activeMenu = null : activeMenu = 'enquiries'">
                 <div class="text-black/50 dark:text-white/20 w-4 h-4 flex items-center justify-center" :class="{'!rotate-90' : activeMenu === 'enquiries'}">
                     <svg width="6" height="10" viewbox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
