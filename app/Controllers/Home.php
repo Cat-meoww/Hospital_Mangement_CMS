@@ -239,6 +239,83 @@ class Home extends BaseController
             return redirect()->back()->withInput()->with('error', $e->getMessage());
         }
     }
+    public function service_appointment()
+    {
+        try {
+            $rules = [
+                'branch' => [
+                    'label' => 'Branch',
+                    'rules' => "trim|required|is_not_unique[branches.id,visibility,Public]",
+                    'errors' => [
+                        'is_not_unique' => "Related {field} not founded"
+                    ],
+                ],
+                'service-name' => [
+                    'label' => 'Service Name',
+                    'rules' => "trim|required|alpha_space",
+                ],
+                'name' => [
+                    'label' => 'Full Name',
+                    'rules' => "trim|required|alpha_space",
+                ],
+                'phone' => [
+                    'label' => 'Phone Number',
+                    'rules' => "trim|required|numeric|exact_length[10]",
+                    'errors' => [
+                        'numeric' => 'Required valid number',
+                        'exact_length' => 'Required 10 digits {field}',
+                    ]
+                ],
+                'booking-date' => [
+                    'label' => 'Prefered Date',
+                    'rules' => "trim|required|valid_date[Y-m-d]|from_today",
+                ],
+                'message' => [
+                    'label' => 'Message',
+                    'rules' => "trim|required",
+                ],
+            ];
+
+            if (!$this->validate($rules)) {
+                return redirect()->back()->withInput();
+            } else {
+                $ServiceBookings = new \App\Models\ServiceBookings();
+                $Branches = new \App\Models\Branches();
+
+                $branch = (int) $this->request->getPost('branch');
+                $service =  $this->request->getPost('service-name');
+
+
+
+
+                $query = $ServiceBookings->insert([
+                    'branch' => $branch,
+                    'service' => $service,
+                    'name' => $this->request->getPost('name'),
+                    'message' => $this->request->getPost('message'),
+                    'phone' => $this->request->getPost('phone'),
+                    'booking_date' => $this->request->getPost('booking-date'),
+                ], true);
+
+                if ($query) {
+
+                    
+
+                  
+
+
+                    return redirect()
+                        ->with('booking_id', $query)
+                        ->with('customer', $this->request->getPost('name'))
+                        ->with('service', $service)
+                        ->to('appointment/service-thanks');
+                }
+                throw new Exception("Unable to store data");
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
+        }
+    }
 
     public function video_booking()
     {
@@ -582,6 +659,11 @@ class Home extends BaseController
     {
         $this->data['title'] = "Thanks";
         return view('frontend/general-thank', $this->data);
+    }
+    public function service_thanks()
+    {
+        $this->data['title'] = "Thanks";
+        return view('frontend/service-thank', $this->data);
     }
 
     private function send_mail($To, $Subject, $Message)

@@ -34,51 +34,29 @@
 
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>specialities</span></a>
-                <ul class="dropdown-menu " style="width:600px;">
-
-                    <div class="nav-ser" style="display: flex; flex-direction:row; gap:2px;  ">
-                        <ul class="col-6 ">
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/esophago-gastric-surgery') ?>"><span>Esophago Gastric Surgery</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/colorectal-surgery') ?>"><span>colorectal surgery</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/liver-pancreas') ?>"><span>liver & pancreas</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/medical-gastroenterology') ?>"><span>Medical Gastroenterology</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/endogynecology') ?>"><span>endogynecology</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/obesity-diabetes') ?>"><span>obesity & diabetes</span></a>
-                            </li>
-                        </ul>
-                        <ul class="col-6">
-                            <li class="nav-item ">
-                                <a href="#"><span>hernia care</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/digestive-cancer-care') ?>"><span>digestive cancer care</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/multi-organ-transplant') ?>"><span>multi organ transplant</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/cardiology') ?>"><span>cardiology</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/nephrology') ?>"><span>nephrology</span></a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= base_url('services/urology') ?>"><span>urology</span></a>
-                            </li>
-                        </ul>
-                    </div>
-
+                <ul class="dropdown-menu" >
+                    <li class="nav-item ">
+                            <a href="<?= base_url('services/jaundice-demo') ?>"><span>Jaundice</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?= base_url('services/gall-bladder') ?>"><span>Gall Bladder</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?= base_url('services/fissure') ?>"><span>Fissure</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?= base_url('services/piles') ?>"><span>Piles</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?= base_url('services/pancreatic-cancer') ?>"><span>Pancreatic Cancer</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="<?= base_url('services/urology') ?>"><span>Urology</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="https://gem-dev.verse.net.in/hernia1/demo-hernia/demohernia.html"><span>Hernia</span></a>
+                        </li>
+                   
                 </ul>
             </li>
            

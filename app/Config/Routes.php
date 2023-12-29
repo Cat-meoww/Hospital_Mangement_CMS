@@ -73,6 +73,9 @@ $routes->group('services', function ($routes) {
     $routes->get('cardiology', 'StaticPages::cardiology');
     $routes->get('nephrology', 'StaticPages::nephrology');
     $routes->get('urology', 'StaticPages::urology');
+    $routes->get('fissure', 'StaticPages::fissure');
+    $routes->get('pancreatic-cancer', 'StaticPages::pancreatic');
+    $routes->get('jaundice-demo', 'StaticPages::jaundice_demo');
 });
 $routes->group('blog', function ($routes) {
     $routes->get('/', 'Home::blogs');
@@ -114,6 +117,7 @@ $routes->group('appointment', function ($routes) {
     $routes->get('video-consultation', 'Home::video_booking');
 
     $routes->get('thanks', 'Home::thanks');
+    $routes->get('service-thanks', 'Home::service_thanks');
 });
 
 
@@ -193,6 +197,7 @@ $routes->group('forms', static function ($routes) {
         $routes->post('faq', 'Home::post_faq');
         $routes->post('book-appointment', 'Home::book_appointment');
         $routes->post('video-consultation', 'Home::handle_video_form');
+        $routes->post('service-appointment', 'Home::service_appointment');
     });
 });
 

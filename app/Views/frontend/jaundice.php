@@ -194,7 +194,7 @@ img, svg {
 <body  class="jaun-body">
 
 
-<div class="wrapper clearfix position-relative" id="wrapperParallax">
+
         
 
 
@@ -216,7 +216,7 @@ img, svg {
                     data-autoplay="true" data-nav="true" data-dots="false" data-space="0" data-loop="true"
                     data-speed="800" data-slider-id="#custom-carousel">
                     <!--  Start .slide-->
-                    <div class="slide bg-overlay bg-overlay-dark-slider" style="object-fit:cover;">
+                    <div class="slide bg-overlay bg-overlay-dark-slider">
                         <div class="bg-section" >
 
                             <img  src=" <?= base_url('frontend/assets/images/team/grid/jaundice.webp') ?>"  alt="Background" />
@@ -235,8 +235,8 @@ img, svg {
                                             >
                                             <ol class="breadcrumb d-flex justify-content-center fo-si "
                                                 >
-                                                <li class="breadcrumb-item"><a href="">Home</a></li>
-                                                <li class=""><a href="">Jaundice</a></li>
+                                                <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
+                                                <li class=""><a href="<?= base_url('jaundice')?>">Jaundice</a></li>
                                             </ol>
                                         </div>
 
@@ -1135,7 +1135,7 @@ img, svg {
             </div>
         </div>
     </div>
-</div>
+
                       </body>  
 
 

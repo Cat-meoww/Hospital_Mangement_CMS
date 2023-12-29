@@ -51,9 +51,7 @@
     }
 
     .jaun-sec2 {
-        margin-top: -40px;
-
-
+        margin-top: -60px;
     }
 
     textarea.form-control {
@@ -341,9 +339,9 @@
 
 
 
-
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
+
 
 <body class="jaun-body">
 
@@ -361,6 +359,7 @@
       Page Title #3 Section
       ============================
       -->
+
     <style>
         .slider.slider-2 .slide {
             height: 620px !important;
@@ -390,22 +389,22 @@
                 <div class="slide bg-overlay bg-overlay-dark-slider">
                     <div class="bg-section">
 
-                        <img src=" <?= base_url('frontend/assets/images/team/grid/GallbladderStones.webp') ?>" alt="Background" />
+                        <img src=" <?= base_url('frontend/assets/images/team/grid/Fistula.webp') ?>" alt="Background" />
 
                     </div>
                     <div class="container">
                         <div class="slide-content">
                             <div class="row">
                                 <div class="col-12 col-lg-7">
-                                    <h3 class="slide-headline her-head">
-                                        Gallstones! Expert Treatment at GEM Hospital </h3>
+                                    <h2 class="slide-headline her-head">
+                                        Anal and Perianal Fistulas Resolved at GEM Hospital</h2>
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <p class="slide-desc her-para">Unwanted pebbles in your digestive system? Gallstones might be the culprit. Learn about their formation, symptoms, and treatment options available at GEM Hospital. </p>
+                                    <p class="slide-desc her-para">Embark on a Journey to Wellness: Understanding Anal Fissures and Perianal Fistulas </p>
                                     <div class="col-12 chair-bread">
                                         <ol class="breadcrumb d-flex justify-content-center fo-si ">
                                             <li class="breadcrumb-item"><a href="<?= base_url('') ?>">Home</a></li>
-                                            <li class=""><a href="<?= base_url('services/gall-bladder') ?>">Gallbladder</a></li>
+                                            <li class=""><a href="<?= base_url('services/fissure') ?>">Fissure</a></li>
                                         </ol>
                                     </div>
 
@@ -431,7 +430,6 @@
 
 
 
-
     <div class="row my-5 position-relative">
         <div class="col-12 col-md-8 jaun-div1">
             <div class="container px-5">
@@ -442,20 +440,20 @@
                                 <p class="paragraph hernia-what">Overview</p>
 
                                 <h6 class="heading-title">
-                                    What Are Gallbladder Stones?
+                                    What Is Fissure?
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                 </h6>
                             </div>
                             <p class="desc">&bull;
-                                Gallstones are hard, often cholesterol-based deposits that form inside your gallbladder, a small sac located beneath your liver.
+                                Navigating the intricacies of anal health is essential for a life free from discomfort.
                             </p>
                             <p class="desc">&bull;
-                                Though usually harmless, they can sometimes cause intense pain and discomfort, requiring medical attention.
+                                At GEM Hospital, our specialized doctors are dedicated to shedding light on the signs and symptoms of Anal Fissures and Perianal Fistulas, empowering you to recognize the early indicators of these conditions.
                             </p>
-                            <p class="desc"> <strong class="jaun-str">Diagnosis:</strong><br>Gem Hospital employs advanced imaging techniques for accurate diagnosis of gallbladder stones, ensuring a precise understanding of the patient's condition </p>
-                            <p class="desc"> <strong class="jaun-str">Treatment:</strong><br>At Gem Hospital, expert surgeons use cutting-edge technology to perform minimally invasive surgeries, providing effective and swift treatment for gallbladder stones.</p>
-                            <p class="desc"> <strong class="jaun-str">After Treatment Care:</strong><br>Post-surgery, Gem Hospital ensures meticulous aftercare, promoting a smooth recovery for patients with gallbladder stones through personalized monitoring and guidance. </p>
-                            <p class="desc"> <strong class="jaun-str">Patient Support:</strong><br>Gem Hospital offers unwavering support to gallbladder stone patients, with a dedicated team providing information, assistance, and emotional support throughout their healthcare journey. </p>
+                            <p class="desc"> <strong class="jaun-str">Diagnosis:</strong><br>Gem Hospital employs advanced diagnostic methods to accurately identify anal fissures and perianal fistulas, ensuring precise and effective treatment plans. </p>
+                            <p class="desc"> <strong class="jaun-str">Treatment:</strong><br>At Gem Hospital, we offer cutting-edge treatments for anal fissures and perianal fistulas, providing relief through personalized and expert care.</p>
+                            <p class="desc"> <strong class="jaun-str">After Treatment Care:</strong><br>Experience compassionate post-treatment care at Gem Hospital, ensuring your comfort and a swift recovery from anal fissures and perianal fistulas. </p>
+                            <p class="desc"> <strong class="jaun-str">Patient Support:</strong><br>Gem Hospital is committed to supporting patients throughout their journey, offering guidance and care for those dealing with anal fissures and perianal fistulas.</p>
 
 
 
@@ -473,7 +471,7 @@
                                 <div class="heading heading-7 text-center">
 
 
-                                    <h2 class="heading-title">Gall bladder stone Symptoms</h2>
+                                    <h2 class="heading-title">Recognizing the Signs: Anal Fissures and Perianal Fistulas Unveiled</h2>
                                 </div>
                             </div>
                         </div>
@@ -483,37 +481,26 @@
 
                         <div class="row ">
                             <div class="col-12 ">
-                                <div class="heading">
 
 
-                                    <h6 class="paragraph gre jaun-head2">
-                                        Most gallstones don't cause any symptoms and go unnoticed. However, when they block bile ducts, things can get uncomfortable.
-                                        <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                    </h6>
-                                </div>
+                                <p class="desc">&bull; Anal fissures and perianal fistulas can often be elusive, causing undue discomfort. Our insightful guide breaks down the distinctive signs, allowing you to grasp the nuances of these conditions </p>
 
-                                <p class="desc">&bull; Sudden, intense pain in your upper right abdomen or between your shoulder blades </p>
 
-                                <p class="desc">&bull; Nausea and vomiting</p>
-                                <div>
-                                    <img src=" <?= base_url('frontend/assets/images/background/GallbladderSymptoms.png') ?>" alt=" symptoms-of-gallbladder" class="mob" />
-                                </div>
-                                <p class="desc">&bull; Fever and chills</p>
-                                <p class="desc">&bull; Yellowing of the skin and eyes (jaundice)
-                                </p>
-                                <p class="desc">&bull; Dark urine and pale stools
-                                </p>
+                                <p class="desc">&bull; From subtle discomfort to noticeable symptoms, discover the key markers that warrant attention.</p>
+
+
                                 <div class="row jaun-div2">
                                     <div class="col-12">
                                         <div class="heading">
 
 
                                             <h6 class="paragraph gre jaun-head2">
-                                                Book an Appointment Now!
+                                                Ready to Take Control? Book Your Appointment with GEM Hospital Today!
                                                 <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                             </h6>
-
-                                            <p class="desc jaun-desc"> Click "Book Appointment Now" and let GEM Hospital's Gallbladder specialists guide you back to radiant health!
+                                            <p class="desc jaun-desc"> Whether you've identified potential symptoms or seek preventative guidance, our team of expert doctors at GEM Hospital specializes in anal health. Book an appointment now to consult with our specialists, ensuring personalized care and tailored solutions for anal fissures and perianal fistulas. Your journey to lasting relief begins with a single click or call to GEM Hospital.
+                                            </p>
+                                            <p class="desc jaun-desc"> Click "Book Appointment Now" and let GEM Hospital's Fissure specialists guide you back to radiant health!
                                             </p>
                                             <div class="col-6">
 
@@ -536,7 +523,7 @@
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">Causes of Gallbladder Stones</h2>
+                                <h2 class="heading-title">Causes Of Fissure</h2>
                             </div>
                         </div>
                     </div>
@@ -550,22 +537,44 @@
 
 
 
-                                <p class="gre jaun-head2">
-                                    The exact cause of gallstones remains a mystery, but several factors can contribute:
+                                <h6 class="paragraph gre jaun-head2">
+                                    Sometimes, the pain that whispers in the shadows needs a specialist's ear
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </p>
+                                </h6>
                             </div>
 
-                            <p class="desc"> <strong class="jaun-str">High cholesterol levels: </strong><br> Excess cholesterol in bile can solidify and form stones. </p>
+                            <p class="desc"> Living with the discomfort of anal fissures or the persistent drainage of perianal fistulas can be both physically and emotionally taxing. But understanding the causes behind these conditions can illuminate the path to healing. </p>
+                            <br>
+
+                            <h6 class="paragraph gre jaun-head2">
+                                What causes of Anal Fissures?
+                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                            </h6>
+                            <p class="desc "> <strong>These small tears in the delicate lining of the anus can arise from a variety of factors:</strong> </p>
+
+                            <p class="desc"> <strong class="jaun-str">Straining during bowel movements:</strong><br>Chronic constipation or passing hard stools can put excessive pressure on the anal canal, leading to tearing. </p>
+                            <p class="desc"> <strong class="jaun-str">Chronic diarrhea:</strong><br> Frequent loose stools can irritate the anal lining, making it more susceptible to fissures.</p>
+                            <p class="desc"> <strong class="jaun-str">Sphincter muscle tension: </strong><br> Tightness in the muscles around the anus can restrict blood flow and weaken the lining, increasing the risk of tears.</p>
                             <div>
-                                <img src=" <?= base_url('frontend/assets/images/background/CausesofGallbladder.png') ?>" alt="causes-of-gallbladder" class="mob" />
+                                <img src=" <?= base_url('frontend/assets/images/background/causesofAnalFissures.png') ?>" alt="causes-of-fissure" class="mob" />
                             </div>
+                            <p class="desc"> <strong class="jaun-str">Childbirth: </strong><br>The pressure exerted during delivery can sometimes cause fissures in the anus.</p>
+                            <p class="desc"> <strong class="jaun-str">Medical conditions: </strong><br> Inflammatory bowel disease (IBD) or Crohn's disease can contribute to anal fissures.</p><br>
 
-                            <p class="desc"> <strong class="jaun-str">Excess bilirubin:</strong><br>This bile pigment, produced during red blood cell breakdown, can also solidify and contribute to stone formation.</p>
-                            <p class="desc"> <strong class="jaun-str">Obesity: </strong><br> Being overweight or obese increases the risk of gallstones.</p>
-                            <p class="desc"> <strong class="jaun-str">Rapid weight loss: </strong><br> Losing weight quickly can increase cholesterol levels in bile, promoting stone formation.</p>
-                            <p class="desc"> <strong class="jaun-str">Family history: </strong><br> Having a family history of gallstones increases your risk.</p>
-                            <p class="desc"> <strong class="jaun-str">Certain medical conditions:</strong><br>Conditions like diabetes, high blood pressure, and Crohn's disease can also play a role.</p>
+                            <h6 class="paragraph gre jaun-head2">
+                                What causes Perianal Fistulas?
+                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                            </h6>
+                            <p class="desc "> <strong>These troublesome tunnels connecting the anal canal to the skin surface often stem from:</strong> </p>
+
+                            <p class="desc"> <strong class="jaun-str">Infected anal glands:</strong><br>Blockage or inflammation of the tiny glands near the anus can lead to abscess formation, which can eventually drain and form a fistula.</p>
+                            <p class="desc"> <strong class="jaun-str">Crohn's disease or ulcerative colitis: </strong><br> These inflammatory bowel diseases can weaken the tissues around the anus, making them susceptible to fistula formation.</p>
+                            <div>
+                                <img src=" <?= base_url('frontend/assets/images/background/CausesofPerianalFistulas.png') ?>" alt="causes-of-fissure" class="mob" />
+                            </div>
+                            <p class="desc"> <strong class="jaun-str">Trauma:</strong><br>Injury to the anal area, including childbirth or surgery, can damage tissue and create a pathway for fistula development.</p>
+                            <p class="desc"> <strong class="jaun-str">Sexually transmitted infections (STIs): </strong><br>Certain STIs, like chlamydia or gonorrhea, can spread to the anal area and cause abscesses that lead to fistulas.</p>
+
 
                             <div class="row jaun-div3">
                                 <div class="col-12">
@@ -573,11 +582,16 @@
 
 
                                         <h6 class="paragraph gre jaun-head2">
-                                            Don't Let Gallbladder Dim Your Shine: Book Your Appointment at GEM Hospital Today!
+                                            Seeking the Right Path: A Specialist's Touch at GEM Hospital
                                             <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                         </h6>
+                                        <p class="desc jaun-desc"> While the causes of anal fissures and perianal fistulas may seem daunting, GEM Hospital's team of experienced specialists is here to guide you towards healing. Our compassionate doctors offer comprehensive diagnosis, treatment options tailored to your specific needs, and ongoing support to ensure your comfort and well-being.
+                                        </p>
+                                        <p class="desc jaun-desc"> Don't let the whispers of pain turn into a deafening roar. Book your appointment at GEM Hospital today and take the first step towards a brighter, pain-free future.
+                                        </p>
+                                        <p class="desc jaun-desc"> Remember, at GEM Hospital, we listen to the whispers and offer the light of healing.
 
-
+                                        </p>
                                         <div class="col-6">
 
                                             <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
@@ -594,14 +608,13 @@
 
                 </section>
 
-
-                <section class="blog blog-grid blog-grid-3 jaun-sec5" id="blog-2">
+                <section class="blog blog-grid blog-grid-3 jaun-sec4" id="blog-2">
                     <div class="row">
-                        <div class="col-12 col-lg-12 offset-lg-0">
+                        <div class="col-12 col-lg-6 offset-lg-3">
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">Gallbladder Treatment Options At GEM</h2>
+                                <h2 class="heading-title">Diagnosing Fissure</h2>
                             </div>
                         </div>
                     </div>
@@ -613,25 +626,43 @@
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="heading">
-
-
-
-                                <p class="gre jaun-head2 ">
-                                    If you experience any of these symptoms, consulting a doctor at GEM Hospital is crucial. Here, our experienced gallbladder stone specialists will diagnose your condition and recommend the best treatment approach.
+                                <p class="paragraph gre jaun-head2">
+                                    Unveiling the culprits behind your discomfort: GEM Hospital's expertise in precise diagnosis.
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                 </p>
 
+
+
+
                             </div>
 
-                            <p class="desc"> <strong class="jaun-str">Medications: </strong> Certain medications can help dissolve cholesterol-based stones. </p>
 
-                            <p class="desc"> <strong class="jaun-str">Laparoscopic surgery:</strong> This minimally invasive procedure involves removing the gallbladder through small incisions.</p>
-                            <p class="desc"> <strong class="jaun-str">Medications: Targeting the Root Cause</strong><br>Gallbladder can be a symptom of various underlying conditions, and sometimes, a targeted medication is the key. For instance, antibiotics might be used for bacterial infections, while ursodeoxycholic acid helps bile flow more freely. Remember, these medications should only be administered under the watchful eye of a qualified doctor like our specialists at GEM Hospital.</p>
-                            <p class="desc"> <strong class="jaun-str">Open surgery: </strong> In some cases, a larger incision might be necessary.
-                            </p>
+
+
+                            <h6 class="paragraph gre jaun-head2">
+                                Anal Fissures: The Burning Tear
+                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                            </h6>
+                            <p class="desc ">Imagine a paper cut, but in the delicate lining of your anal canal. That's essentially what an anal fissure is – a small tear in the sensitive tissue. While seemingly minor, fissures can cause intense burning pain, especially during bowel movements. </p>
                             <div>
-                                <img src=" <?= base_url('frontend/assets/images/background/GallbladderTreatment.png') ?>" alt="treatment-for-gallbladder" class="mob" />
+                                <img src=" <?= base_url('frontend/assets/images/background/AnalFissuresDiagnosis.png') ?>" alt="Diagnosing-Fissure" class="mob" />
                             </div>
+
+                            <p class="desc"> <strong class="jaun-str">Medical history and physical examination:</strong><br>Our doctors will discuss your symptoms and gently examine the anal area to identify the fissure and its location.</p>
+                            <p class="desc"> <strong class="jaun-str">Anoscopy: </strong><br> A small, lubricated tube with a light source allows for a closer look at the anal canal and confirmation of the fissure.</p><br>
+
+                            <h6 class="paragraph gre jaun-head2">
+                                Perianal Fistulas: The Tunnel Troublemakers
+                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                            </h6>
+                            <p class="desc "> Unlike fissures, perianal fistulas are not tears, but rather abnormal tunnels that develop between the anal canal and the skin around the anus. These tunnels can be caused by infected anal glands or abscesses, and often drain pus or blood. </p>
+                            <div>
+                                <img src=" <?= base_url('frontend/assets/images/background/PerianalFistulas.png') ?>" alt="Diagnosing-Fissure" class="mob" />
+                            </div>
+
+                            <p class="desc"> <strong class="jaun-str">Physical examination:</strong><br>Similar to fissure diagnosis, a gentle examination will be conducted to identify the opening of the fistula.</p>
+                            <p class="desc"> <strong class="jaun-str">Fistula probing: </strong><br> A thin probe is gently inserted into the fistula opening to trace its path and determine its complexity.</p>
+                            <p class="desc"> <strong class="jaun-str">Imaging tests: </strong><br>In some cases, additional tests like an ultrasound or MRI may be needed to map the exact course of the fistula, especially if it's complex</p>
 
 
 
@@ -640,17 +671,16 @@
                                     <div class="heading">
 
 
-                                        <h6 class="paragraph gre jaun-head2">
-                                            Don't Let Gallstones Stonewall Your Health: Schedule a Consultation at GEM Hospital Today!
+                                        <h6 class="paragraph jaun-head2">
+                                            Don't let discomfort hold you back. Book an appointment with our anal fissure and perianal fistula specialists at GEM Hospital today and take the first step towards a brighter, pain-free future.
                                             <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                         </h6>
-                                        <p class="desc jaun-desc"> Gallstones can significantly impact your quality of life. If you suspect you might have them, don't hesitate to schedule a consultation at GEM Hospital. Our dedicated team of gallbladder stone specialists is here to guide you through diagnosis, treatment, and recovery.
+                                        <p class="desc jaun-desc"> Remember, early diagnosis is key to effective treatment. Don't hesitate to seek help.
                                         </p>
-
                                         <div class="col-6">
 
                                             <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
-                                                    <span></span></span><span>Schedule Your Consultation</span></a>
+                                                    <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -661,14 +691,17 @@
                         </div>
 
                 </section>
-
                 <section class="blog blog-grid blog-grid-3 jaun-sec5" id="blog-2">
                     <div class="row">
                         <div class="col-12 col-lg-12 offset-lg-0">
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">Gallbladder Stones: From Laparoscopic Surgery to Prevention</h2>
+                                <h2 class="heading-title">Treating Fissures</h2>
+                                <h6 class="paragraph gre jaun-head2">
+                                    Treating Anal Fissures at GEM Hospital
+                                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                </h6>
                             </div>
                         </div>
                     </div>
@@ -679,24 +712,40 @@
 
                     <div class="row ">
                         <div class="col-12 ">
+
+                            <p class="desc "> <strong>Unlocking Relief Through Expert Care</strong> </p><br>
+
+                            <p class="desc"> <strong class="jaun-str">Tailored Treatment Plans:</strong> Our specialists at GEM Hospital craft personalized treatment strategies for anal fissures, addressing individual needs with precision. </p>
+
+                            <p class="desc"> <strong class="jaun-str">Cutting-edge Procedures: </strong>Benefit from the latest medical advancements as our skilled doctors employ state-of-the-art techniques for effective and minimally invasive treatment.</p>
+                            <p class="desc"> <strong class="jaun-str">Holistic Healing Approach: </strong><br>Beyond symptom management, GEM Hospital emphasizes overall well-being, ensuring a comprehensive approach to your recovery journey.</p>
+                            <p class="desc"> <strong class="jaun-str">Patient-Centric Care: </strong> Experience compassionate care designed around your comfort, with a focus on open communication and patient involvement in decision-making.
+                            </p>
+                            <div>
+                                <img src=" <?= base_url('frontend/assets/images/background/TreatingAnalFissures.png') ?>" alt="treatment-for-fissure" class="mob" />
+                            </div>
+                            <p class="desc"> <strong class="jaun-str">Post-Treatment Support: </strong><br> GEM Hospital remains committed to your health beyond the treatment phase, providing ongoing support and guidance for a sustained recovery.
+                            </p> <br>
+
+
                             <div class="heading">
-
-
-
-                                <p class=" gre jaun-head2">
-                                    Gallbladder stones, those pesky little concretions nestled within your right abdomen, can wreak havoc on your digestion and well-being. But fear not, fellow foodie! GEM Hospital, renowned for its expertise in laparoscopic gallbladder surgery, is here to guide you through the maze of gallstones and pave the way for a pain-free future.
+                                <h6 class="paragraph gre jaun-head2">
+                                    Managing Perianal Fistulas with GEM's Expertise
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </p>
-                                <p class=" gre jaun-head2">
-                                    Gone are the days of gruesome incisions and lengthy hospital stays. Laparoscopic surgery, a minimally invasive technique championed by GEM Hospital, replaces them with just a few tiny keyhole punctures. Through these portals, our skilled surgeons maneuver miniature instruments and a camera, skillfully removing your gallbladder with utmost precision. The benefits are undeniable:
-                                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </p>
+                                </h6><br>
+                                <p class="desc "> <strong>Your Partner in Perianal Health</strong> </p>
+
+
+
+
                             </div>
 
-                            <p class="desc"> <strong class="jaun-str">Faster recovery: </strong> Back on your feet in days, not weeks. </p>
+                            <p class="desc"> <strong class="jaun-str">Specialized Fistula Management:</strong> GEM Hospital's renowned specialists bring unparalleled expertise to the management of perianal fistulas, ensuring a thorough and effective approach.</p>
 
-                            <p class="desc"> <strong class="jaun-str">Minimal scarring:</strong> Bid farewell to unsightly reminders.</p>
-                            <p class="desc"> <strong class="jaun-str">Reduced pain: </strong><br>Laparoscopy reigns supreme in the comfort department.</p>
+                            <p class="desc"> <strong class="jaun-str">Collaborative Treatment Planning: </strong>Work hand-in-hand with our medical experts to create a customized plan that aligns with your specific condition, ensuring optimal results.</p>
+                            <p class="desc"> <strong class="jaun-str">Advanced Surgical Interventions: </strong><br> Rely on GEM Hospital's skilled surgeons who employ advanced surgical techniques for precise and successful perianal fistula management.</p>
+                            <p class="desc"> <strong class="jaun-str">Holistic Wellness Integration:</strong>Beyond medical interventions, GEM Hospital integrates holistic wellness practices into the management plan for a well-rounded approach to perianal health.
+                            </p>
 
 
 
@@ -708,15 +757,16 @@
 
 
                                         <h6 class="paragraph gre jaun-head2">
-                                            Don't Let Gallstones Stonewall Your Health: Schedule a Consultation at GEM Hospital Today!
+                                            Don't Let Fissure Steal Your Shine - Book Your Appointment Now!
                                             <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                         </h6>
-
+                                        <p class="desc jaun-desc"> Take the first step towards relief by scheduling a consultation with our dedicated specialists. Book an appointment now to receive expert guidance and embark on your journey to recovery.
+                                        </p>
 
                                         <div class="col-6">
 
                                             <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
-                                                    <span></span></span><span>Book Your Appointment</span></a>
+                                                    <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -735,7 +785,7 @@
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">How to Prevent Gallbladder Stones</h2>
+                                <h2 class="heading-title">Preventing Fissure</h2>
                             </div>
                         </div>
                     </div>
@@ -751,50 +801,23 @@
 
 
                                 <p class="gre jaun-head2">
-                                    While surgery effectively removes existing gallstones, understanding the contributing factors can help prevent their unwelcome return. Here are some lifestyle tips to keep your gallbladder happy.
+                                    Jaundice, a yellowing of the skin and eyes in newborns, can be a worrying sight for new parents. But fear not! By taking proactive steps during pregnancy and beyond, you can significantly reduce the risk of your baby facing this common challenge.
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                 </p>
                             </div>
-                            <p class="desc"> <strong class="jaun-str">Maintain a healthy weight:</strong> Obesity is a major risk factor for gallstones. </p>
-                            <div>
-                                <img src=" <?= base_url('frontend/assets/images/background/preventgallbladder.png') ?>" alt="prevent-for-gallbladder" class="mob" />
-                            </div>
-
-                            <p class="desc"> <strong class="jaun-str">Embrace a balanced diet:</strong>Limit processed foods and opt for fruits, vegetables, and whole grains.</p>
-                            <p class="desc"> <strong class="jaun-str">Stay hydrated:</strong>Drinking plenty of water keeps your bile flowing freely.</p>
-                            <p class="desc"> <strong class="jaun-str">Exercise regularly:</strong>Physical activity promotes overall health and may help prevent gallstones.</p>
-
-                            <div class="row jaun-div4">
-                                <div class="col-12">
-                                    <div class="heading">
-
-
-                                        <h6 class="paragraph gre jaun-head2">
-                                            Don't let gallstones dictate your life. Schedule a consultation with GEM Hospital's gall bladder stone specialists today!
-                                            <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                        </h6>
-
-
-                                        <div class="col-6">
-
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
-                                                    <span></span></span><span>Book Your Appointment</span></a>
-                                        </div>
 
 
 
 
-                                    </div>
+                        </div>
                 </section>
-
-
-                <section class="blog blog-grid blog-grid-3 jaun-sec5" id="blog-2">
+                <section class="blog blog-grid blog-grid-3 jaun-sec6" id="blog-2">
                     <div class="row">
                         <div class="col-12 col-lg-12 offset-lg-0">
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">Diet for Gallbladder Stones</h2>
+                                <h2 class="heading-title care jaun-head3">Anal Fissures: The Tiny Tears</h2>
                             </div>
                         </div>
                     </div>
@@ -809,44 +832,44 @@
 
 
 
-                                <h6 class=" paragraph gre jaun-head2">
-                                    Diet: Your First Line of Defense
+                                <p class=" gre jaun-head2">
+                                    Imagine a small, painful tear in the delicate lining of your anus. That's an anal fissure, often caused by constipation, straining during bowel movements, or chronic diarrhea. While seemingly minor, these fissures can pack a punch, causing sharp pain, bleeding, and itching.
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </h6>
-
+                                </p>
                             </div>
+                            <p class="desc"> <strong class="jaun-str">Embrace Fiber:</strong> A diet rich in fruits, vegetables, and whole grains keeps stool soft and passage smooth, reducing strain.</p>
 
-                            <p class="desc"> <strong class="jaun-str">Embrace Fiber: </strong>Load up on fruits, vegetables, and whole grains – these dietary heroes keep your digestive system running smoothly and reduce cholesterol levels, a major contributor to gallstones. </p>
-
-                            <p class="desc"> <strong class="jaun-str">Go Lean on Fat: </strong> Choose lean protein sources like skinless chicken and fish, and limit fatty red meat and fried foods. Remember, excessive fat intake can trigger gallbladder contractions, leading to discomfort.</p>
-                            <p class="desc"> <strong class="jaun-str">Downsize Portions: </strong><br>Smaller, more frequent meals are easier on your gallbladder than large, heavy ones. This helps regulate bile production and prevents stone formation.</p>
-                            <p class="desc"> <strong class="jaun-str"> Hydration is Key: </strong><br>Staying well-hydrated keeps your bile flowing freely and prevents it from becoming concentrated, which can lead to stone formation. Aim for eight glasses of water daily.</p>
-
-
-
-
-
+                            <p class="desc"> <strong class="jaun-str">Hydration is Key:</strong>Water keeps things moving and prevents constipation, a major fissure culprit.</p>
+                            <p class="desc"> <strong class="jaun-str">Listen to Your Body:</strong>Don't ignore the urge to go, and avoid straining during bowel movements.</p>
+                            <p class="desc"> <strong class="jaun-str">Sitz Baths: </strong>Warm water soaks can soothe inflamed tissues and promote healing.</p>
+                            <p class="desc"> <strong class="jaun-str">Gentle Touch: </strong>Avoid harsh soaps and wiping, and pat dry gently after using the restroom.</p>
 
 
 
 
 
                         </div>
-
                 </section>
                 <style>
-                    .jaun-sec8 {
-                        margin-top: -60px;
+                    .jaun-sec9 {
+                        margin-top: -80px;
+                    }
+
+                    @media screen and (max-width:600px) {
+                        .jaun-sec9 {
+                            margin-top: -30px;
+                        }
                     }
                 </style>
 
-                <section class="blog blog-grid blog-grid-3 jaun-sec8" id="blog-2">
+
+                <section class="blog blog-grid blog-grid-3 jaun-sec9" id="blog-2">
                     <div class="row">
                         <div class="col-12 col-lg-12 offset-lg-0">
                             <div class="heading heading-7 text-center">
 
 
-                                <h2 class="heading-title">Natural Remedies for Gallbladder Stones</h2>
+                                <h2 class="heading-title care jaun-head3">Perianal Fistulas: Tunnels of Trouble</h2>
                             </div>
                         </div>
                     </div>
@@ -861,139 +884,24 @@
 
 
 
-                                <h6 class=" paragraph gre jaun-head2">
-                                    Finding Solace in Nature
+                                <p class="gre jaun-head2">
+                                    When an untreated anal fissure becomes infected, it can burrow deeper, creating a tunnel called a perianal fistula. These fistulas can be a source of chronic pain, discharge, and even abscesses.
                                     <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </h6>
-
-                            </div>
-
-                            <p class="desc"> <strong class="jaun-str">Herbal Helpers: </strong>Turmeric, dandelion root, and milk thistle are natural anti-inflammatories that can ease gallbladder pain and support bile flow. Consult your doctor before trying any herbs, as they may interact with medications.</p>
-
-                            <p class="desc"> <strong class="jaun-str">Apple Cider Vinegar: </strong> This tart elixir is believed to stimulate bile production and break down gallstones. Dilute a tablespoon in a glass of water and sip before meals.</p>
-                            <p class="desc"> <strong class="jaun-str">Warm Compresses: </strong><br>Applying a warm compress to your abdomen can help relax muscles and alleviate pain. Remember, avoid excessive heat, as it can worsen inflammation.</p>
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-
-                </section>
-
-                <section class="blog blog-grid blog-grid-3 jaun-sec8" id="blog-2">
-                    <div class="row">
-                        <div class="col-12 col-lg-12 offset-lg-0">
-                            <div class="heading heading-7 text-center">
-
-
-                                <h2 class="heading-title">Home Remedies for Gall Bladder Stone Pain</h2>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- End .row-->
-
-                    <div class="row ">
-                        <div class="col-12 ">
-                            <div class="heading">
-
-
-
-                                <h6 class=" paragraph gre jaun-head2">
-                                    for Pain Relief:
-                                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                </h6>
-
-                            </div>
-
-                            <p class="desc"> <strong class="jaun-str">Ginger Tea:</strong>Ginger's anti-inflammatory properties can soothe gallbladder pain and nausea. Steep a teaspoon of grated ginger in hot water for 10 minutes, strain, and sip. </p>
-
-                            <p class="desc"> <strong class="jaun-str">Peppermint Oil: </strong> Dilute a few drops of peppermint oil in a carrier oil like coconut and massage it gently onto your abdomen. Peppermint oil relaxes muscles and eases discomfort.</p>
-                            <p class="desc"> <strong class="jaun-str">Stress Management: </strong><br>Stress can exacerbate gallbladder symptoms. Practice yoga, meditation, or deep breathing exercises to manage stress and keep your mind and body calm.</p>
-                            <p class="desc"> <strong class="jaun-str"> Remember: </strong><br>While these tips can offer relief and even prevent future gallstones, they are not a substitute for professional medical advice.</p>
-
-
-
-
-
-
-
-
-
-
-                        </div>
-
-                </section>
-
-                <section class="blog blog-grid blog-grid-3 jaun-sec2" id="blog-2">
-                    <div class="entry-introduction">
-                        <div class="row">
-                            <div class="col-12 col-lg-12 offset-lg-0">
-                                <div class="heading heading-7 text-center">
-
-
-                                    <h2 class="heading-title">When to See a Specialist at GEM Hospital</h2>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- End .row-->
-
-                        <div class="row ">
-                            <div class="col-12 ">
-
-
-                                <p class="desc">&bull; Severe or persistent pain </p>
-
-                                <p class="desc">&bull; Fever or chills</p>
-
-                                <p class="desc">&bull; Jaundice (yellowing of the skin and eyes)</p>
-                                <p class="desc">&bull; Vomiting or nausea
                                 </p>
-                                <p class="desc">&bull; Sudden worsening of symptoms
-                                </p>
-                                <div class="row jaun-div2">
-                                    <div class="col-12">
-                                        <div class="heading">
-
-
-                                            <h6 class="paragraph gre jaun-head2">
-                                                Click here to book your appointment and take control of your gallbladder health!
-                                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                                            </h6>
-
-                                            <p class="desc jaun-desc"> Don't wait until the pain becomes unbearable, schedule a consultation with a gallbladder stone specialist at GEM Hospital today. Our experienced team is dedicated to providing comprehensive diagnosis, treatment options, and personalized care to help you find lasting relief from gallstones and get back to living your life to the fullest.
-                                            </p>
-                                            <div class="col-6">
-
-                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
-                                                        <span></span></span><span>Book Appointment Now</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
                             </div>
+                            <p class="desc"> <strong class="jaun-str">Early Intervention:</strong> Prompt treatment of anal fissures can prevent fistula formation.</p>
+
+                            <p class="desc"> <strong class="jaun-str">Hydration is Key:</strong>Water keeps things moving and prevents constipation, a major fissure culprit.</p>
+                            <p class="desc"> <strong class="jaun-str">Hygiene Matters:</strong>Maintain good anal hygiene to prevent infections.</p>
+                            <p class="desc"> <strong class="jaun-str">Regular Checkups:</strong>Schedule regular checkups with your doctor for early detection and treatment of any fissures or fistulas.</p>
+
+
+
+
+
+
                         </div>
-
                 </section>
-
-
-
-
-
 
 
 
@@ -1017,10 +925,10 @@
                         <div class="col-12 ">
 
 
-                            <p class="desc"> <strong class="jaun-str">Expert diagnosis:</strong> Our experienced doctors utilize advanced tests to pinpoint the exact cause of your Gallbladder, ensuring the right treatment plan.</p>
+                            <p class="desc">Gem hospital & its doctors have performed the largest numbers of ligation of intersphincteric fistula tract(LIFT) surgery in the country</p>
 
-                            <p class="desc"> <strong class="jaun-str">Effective treatment:</strong> We tailor treatment options to your specific needs, whether it's medication, phototherapy, or other innovative methods.</p>
-                            <p class="desc"> <strong class="jaun-str">Compassionate care:</strong> We understand the emotional toll of Gallbladder. Our friendly staff provides unwavering support and guidance throughout your journey.</p>
+                            <p class="desc">Gem hospital has reported the lowest recurrence rates across continents</p>
+                            <p class="desc">Comprehensive fistula care involving treatment and reducing further recurrence</p>
 
                             <div class="row jaun-div3">
                                 <div class="col-12">
@@ -1028,18 +936,20 @@
 
 
                                         <h6 class="paragraph gre jaun-head2">
-                                            Book an Consultation Now!
+                                            Don't let discomfort hold you back. Book an appointment today with our specialists at GEM Hospital and take control of your anal health.
                                             <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
                                         </h6>
-                                        <p class="desc jaun-desc"> Ready to take control of your health? Schedule your consultation today!<br>
-                                            Click the "Schedule Your Consultation" button below and let our Gallbladder specialists help you conquer this condition and reclaim your vibrant life.<br>Don't wait, Gallbladder can worsen. Act now and take charge of your health.
+                                        <p class="desc jaun-desc"> At GEM Hospital, our experienced specialists understand the discomfort and challenges associated with anal fissures and perianal fistulas. We offer comprehensive treatment options, from conservative measures to minimally invasive procedures, to help you find relief and regain your well-being.
+
+                                        </p>
+                                        <p class="desc jaun-desc"> Remember, prevention is always better than cure. By incorporating these simple tips into your daily routine, you can significantly reduce your risk of developing anal fissures and perianal fistulas.
 
                                         </p>
 
                                         <div class="col-6">
 
                                             <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
-                                                    <span></span></span><span>Schedule your consultation</span></a>
+                                                    <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1149,17 +1059,6 @@
             <div class="col-12 col-lg-12 position-relative">
 
 
-
-
-
-
-
-
-
-
-
-
-
                 <section class="departments departments-2" id="departments-2">
                     <div class="container">
                         <div class="row">
@@ -1216,7 +1115,7 @@
 
 
                                     <h6 class="heading-title jaun-head6">Experts
-                                        Speech About Gallbladder</h6>
+                                        Speech About Fissure</h6>
                                 </div>
                             </div>
                         </div>
@@ -1300,11 +1199,9 @@
 
         </div>
     </div>
-
+    </div>
     </div>
 </body>
-
-
 
 
 

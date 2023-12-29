@@ -9,148 +9,143 @@
 <?= $this->section('content') ?>
 
 <section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
-            <div class="title">
-              <div class="title-card"  style="margin-top: -180px ;">
-                <div class="title-heading">
-                  <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Hernia</h1>
-                </div>
-                <div class="title-sub-heading">
-                  <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
-                </div>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Hernia</li>
-                </ol>
-              </div>
+  <div class="bg-section"><img src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>" alt="Background" /></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0">
+        <div class="title">
+          <div class="title-card" style="margin-top: -180px ;">
+            <div class="title-heading">
+              <!---<h1>Pediatric Clinic</h1>---->
+              <h1>Hernia</h1>
             </div>
-            <!-- End .title -->
+            <div class="title-sub-heading">
+              <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
+            </div>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="<?= base_url('') ?>">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Hernia</li>
+            </ol>
           </div>
-          <!-- End .col-lg-8 -->
         </div>
-        <!-- End .row-->
+        <!-- End .title -->
       </div>
-     
-      <!-- End .container-->
-    </section>
-    <style>
-      @media screen and (max-width:600px) {
-        .page-title.page-title-3 .title .title-card{
-         
-          margin-top: 0px !important;
-      
-      
-          
-        }
-        
-      }
-        
-      </style>
-    <!--
+      <!-- End .col-lg-8 -->
+    </div>
+    <!-- End .row-->
+  </div>
+
+  <!-- End .container-->
+</section>
+<style>
+  @media screen and (max-width:600px) {
+    .page-title.page-title-3 .title .title-card {
+      margin-top: 0px !important;
+    }
+
+  }
+</style>
+<!--
       ============================
       Single Services Section
       ============================
       -->
-    <section class="single-service" style="padding-bottom: 0px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-12">
-            <!---<h6 class="service-heading">Pediatric providers see patients from birth into early adulthood to make sure children achieve stay healthy. Our care includes preventive health checkups. Cardiologists study the disorders of the heart, but the study of adult and child heart disorders are through different training.</h6>---->
-            <!--
+<section class="single-service" style="padding-bottom: 0px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-12">
+        <!---<h6 class="service-heading">Pediatric providers see patients from birth into early adulthood to make sure children achieve stay healthy. Our care includes preventive health checkups. Cardiologists study the disorders of the heart, but the study of adult and child heart disorders are through different training.</h6>---->
+        <!--
               ============================
               Video #02 Section
               ============================
               -->
 
-            <div class="entry-introduction">
-              <div class="row">
-                <div class="col-12 col-lg-8">
-                  <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/hernia.jpg') ?>" alt="background" /></div>
-                    <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
-                    <!-- End .popup-video-->
+        <div class="entry-introduction">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
+                <div class="bg-section"><img src="<?= base_url('frontend/assets/images/video/hernia.jpg') ?>" alt="background" /></div>
+                <!--<a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
+                <!-- End .popup-video-->
+              </div>
+              <h6 class="entry-heading" style="font-size: 24px; color:#0D3E21;">
+                Descriptions
+              </h6>
+              <p class="desc">
+                A hernia is a condition of abnormal protrusion of an organ or the covering of an organ through the wall of the cavity that normally contains it.
+              </p>
+              <p class="desc">Consistent pressure and muscle weakening in a particular area of the body contributes its formation.</p>
+            </div>
+            <div class="col-12 col-lg-4">
+
+              <div class="sidebar sidebar-service">
+
+
+
+                <div class="widget widget-services">
+                  <div class="widget-title">
+                    <h5>Book Appointment</h5>
                   </div>
-                   <h6 class="entry-heading" style="font-size: 24px; color:#0D3E21;">
-                   Descriptions
-                  </h6>
-                  <p class="desc">
-                    A hernia is a condition of abnormal protrusion of an organ or the covering of an organ through the wall of the cavity that normally contains it.
-                  </p>
-				  <p class="desc">Consistent pressure and muscle weakening in a particular area of the body contributes its formation.</p>
-                </div>
-                <div class="col-12 col-lg-4">
+                  <div class="widget-content">
+                    <ul class="list-unstyled">
+                      <li><a href="<?= base_url('appointment/video-consultation') ?>"> <span class="line"> <span></span></span><span>Video
+                            Consultation</span></a></li>
+                      <li><a href="<?= base_url('appointment/book-appointment') ?>"> <span class="line"> <span></span></span><span>Visit to
+                            Hospital</span></a></li>
 
-                  <div class="sidebar sidebar-service">
-
-                
-
-                    <div class="widget widget-services">
-                      <div class="widget-title">
-                        <h5>Book Appointment</h5>
-                      </div>
-                      <div class="widget-content">
-                        <ul class="list-unstyled">
-                          <li><a href="<?= base_url('appointment/video-consultation')?>"> <span class="line"> <span></span></span><span>Video
-                                Consultation</span></a></li>
-                          <li><a href="<?= base_url('appointment/book-appointment')?>"> <span class="line"> <span></span></span><span>Visit to
-                                Hospital</span></a></li>
-
-                        </ul>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-
-               <div class="row">
-                  <!--"col-12 col-lg-4"-->
-                  <div class="col-12 col-lg-12">
-
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Symptoms</h4>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> pain at the site of hernia, swelling on the site which may reduce on lying down or increase on activity, difficulty in passing stools or urine, swelling or pain in the previously operated scars.</li>
-                      <li><i class="fas fa-check"></i> There are different types of hernias, each requiring a medical / surgical intervention to prevent complications Providing the best treatment depends on the condition of the patient. Some surgeries involved are Open Surgery, Laparoscopic Hernia Surgery (Keyhole), Transabdominal preperitoneal or TAPP, Totally Extraperitoneal or TEP</li>
-                      <br><br>
                     </ul>
                   </div>
-                  <div class="col-12 col-lg-12">
-
-                   <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Hernia Treatment</h4>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Management of an umbilical or an inguinal hernia is always surgical.</li>
-                      <li><i class="fas fa-check"></i> As a hernia is an anatomical defect, medicines will not help. That's the absolute truth!!</li>
-                      <li><i class="fas fa-check"></i> Open surgery and keyhole surgery have been advocated for umbilical and inguinal hernia repair.</li>
-                      <li><i class="fas fa-check"></i> In keyhole surgery, the adhesions are released and the defect is repaired either with intra corporeal suturing or with mesh and tacks.</li>
-                    </ul>
-					<br><br>
-
-                  </div>
-				   <div class="col-12 col-lg-12">
-                    <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Types Of Hernia</h4>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Inguinal Hernias</h4>
-                    <p class="desc">Inguinal hernias are the most common type, accounting for 75% of all hernias. They mostly affect men or people assigned male at birth (AMAB). They happen when part of your bowel protrudes into your inguinal canal, a passage way that runs down your inner thigh.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Incisional Hernia</h4>
-                    <p class="desc">An incisional hernia occurs when tissue protrudes through a former incision in your abdominal wall that weakened over time. It's a common side effect of abdominal surgery.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Umbilical Hernia</h4>
-                    <p class="desc">An umbilical hernia occurs when part of your intestine pokes through an opening in your abdominal wall near your belly button. Most umbilical hernias are congenital (present from birth).</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Spigelain Hernia</h4>
-                    <p class="desc">A spigelian hernia is a rare, abnormal protrusion of abdominal contents or peritoneum through a defect (spigelian fascia), which is comprised of the transversus abdominis and the internal oblique aponeuroses.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Epigastric Hernia</h4>
-                    <p class="desc">An epigastric hernia is a lump in the midline between your belly button and sternum (breastbone) which can cause pain. Your abdominal cavity contains your intestines and other structures. These are protected by your abdominal wall, which is made up of four layers.</p>
-					<h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Femoral Hernia</h4>
-                    <p class="desc">A femoral hernia is a less-common type of groin hernia that occurs in the femoral canal, which runs underneath the inguinal canal. Fatty tissue may poke through.</p>
-                  </div>
-
                 </div>
 
+              </div>
+
+            </div>
+
+            <div class="row">
+              <!--"col-12 col-lg-4"-->
+              <div class="col-12 col-lg-12">
+
+                <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Symptoms</h4>
+                <ul class="list-unstyled advantages">
+                  <li><i class="fas fa-check"></i> pain at the site of hernia, swelling on the site which may reduce on lying down or increase on activity, difficulty in passing stools or urine, swelling or pain in the previously operated scars.</li>
+                  <li><i class="fas fa-check"></i> There are different types of hernias, each requiring a medical / surgical intervention to prevent complications Providing the best treatment depends on the condition of the patient. Some surgeries involved are Open Surgery, Laparoscopic Hernia Surgery (Keyhole), Transabdominal preperitoneal or TAPP, Totally Extraperitoneal or TEP</li>
+                  <br><br>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-12">
+
+                <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Hernia Treatment</h4>
+                <ul class="list-unstyled advantages">
+                  <li><i class="fas fa-check"></i> Management of an umbilical or an inguinal hernia is always surgical.</li>
+                  <li><i class="fas fa-check"></i> As a hernia is an anatomical defect, medicines will not help. That's the absolute truth!!</li>
+                  <li><i class="fas fa-check"></i> Open surgery and keyhole surgery have been advocated for umbilical and inguinal hernia repair.</li>
+                  <li><i class="fas fa-check"></i> In keyhole surgery, the adhesions are released and the defect is repaired either with intra corporeal suturing or with mesh and tacks.</li>
+                </ul>
+                <br><br>
+
+              </div>
+              <div class="col-12 col-lg-12">
+                <h4 class="desc" style="font-size: 26px; line-height: initial; color: #0D3E21;">Types Of Hernia</h4>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Inguinal Hernias</h4>
+                <p class="desc">Inguinal hernias are the most common type, accounting for 75% of all hernias. They mostly affect men or people assigned male at birth (AMAB). They happen when part of your bowel protrudes into your inguinal canal, a passage way that runs down your inner thigh.</p>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Incisional Hernia</h4>
+                <p class="desc">An incisional hernia occurs when tissue protrudes through a former incision in your abdominal wall that weakened over time. It's a common side effect of abdominal surgery.</p>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Umbilical Hernia</h4>
+                <p class="desc">An umbilical hernia occurs when part of your intestine pokes through an opening in your abdominal wall near your belly button. Most umbilical hernias are congenital (present from birth).</p>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Spigelain Hernia</h4>
+                <p class="desc">A spigelian hernia is a rare, abnormal protrusion of abdominal contents or peritoneum through a defect (spigelian fascia), which is comprised of the transversus abdominis and the internal oblique aponeuroses.</p>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Epigastric Hernia</h4>
+                <p class="desc">An epigastric hernia is a lump in the midline between your belly button and sternum (breastbone) which can cause pain. Your abdominal cavity contains your intestines and other structures. These are protected by your abdominal wall, which is made up of four layers.</p>
+                <h4 class="desc" style="font-size: 18px; line-height: initial; color: #118B0F">Femoral Hernia</h4>
+                <p class="desc">A femoral hernia is a less-common type of groin hernia that occurs in the femoral canal, which runs underneath the inguinal canal. Fatty tissue may poke through.</p>
+              </div>
+
+            </div>
 
 
-                <!---<div class="col-12"> 
+
+            <!---<div class="col-12"> 
                     <div class="signature-block"><a class="btn btn--primary btn-line btn-line-after" href="doctors-grid.html"><span>find a doctor</span><span class="line"> <span></span></span></a>
                       <div class="signature-body"> 
                         <h6>john winston</h6>
@@ -158,9 +153,9 @@
                       </div>
                     </div>
                   </div>--->
-              </div>
-            </div>
-            <!---<div class="entry-infos health-plans">
+          </div>
+        </div>
+        <!---<div class="entry-infos health-plans">
                 <h5 class="entry-heading">health care plans</h5>
                 <p class="entry-desc">Our doctors include highly qualified practitioners came from a range of backgrounds and bring with a diversity of skills and special interests. Our administration and support staff all have exceptional people skills and trained to assist you with all medical enquiries.</p>
                 <div class="advantages-box"> 
@@ -180,7 +175,7 @@
                 </div>
               </div>--->
 
-            <!-----<div class="entry-infos core-values">
+        <!-----<div class="entry-infos core-values">
               <h6 class="entry-heading" style="text-align: center; color:#0D3E21;">Our Department</h6>
               <h5 class="entry-heading" style="text-align: center; font-size: 37px; color:#118B0F;">Awards and Achievement</h5>
               
@@ -262,8 +257,8 @@
               </div>
             </div>--->
 
-            
-            <!----<section class="departments departments-2" id="departments-2">
+
+        <!----<section class="departments departments-2" id="departments-2">
         <div class="container">
           <div class="row"> 
             <div class="col-12 col-lg-6 offset-lg-3">
@@ -330,11 +325,11 @@
 
 
 
-           
-			
-			
-           
-            <!----<section class="blog blog-grid blog-grid-3" id="blog-2">
+
+
+
+
+        <!----<section class="blog blog-grid blog-grid-3" id="blog-2">
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-lg-6 offset-lg-3">
@@ -378,7 +373,7 @@
               </div>
             </section>---->
 
-            <!----<div class="entry-infos tips-info">
+        <!----<div class="entry-infos tips-info">
               <h2 class="desc" style="font-size: 24px; text-align: center; color:#0D3E21;">FAQ</h2>
               <h1 class="entry-heading" style="font-size: 37px; text-align: center; color:#118B0F;">Frequently Ask Questions.</h1>
               
@@ -418,14 +413,14 @@
 
             </div>---->
 
-          </div>
-
-        </div>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
 
- 
+
 
 
 <?= $this->endSection() ?>

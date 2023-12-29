@@ -32,6 +32,7 @@ class StaticPages extends BaseController
     }
     public function coimbatore()
     {
+        $this->data['recent_blogs'] = \App\Libraries\ViewComponents::Render_RecentBlogs();
         return view('frontend/coimbatore', $this->data);
     }
     public function home()
@@ -83,6 +84,10 @@ class StaticPages extends BaseController
     }
     public function piles()
     {
+        $this->data['service_name'] = "Piles";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
         return view('frontend/piles', $this->data);
     }
     public function upper_gi()
@@ -91,10 +96,18 @@ class StaticPages extends BaseController
     }
     public function gall_bladder()
     {
+        $this->data['service_name'] = "Gall bladder";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
         return view('frontend/gall-bladder', $this->data);
     }
     public function hernia_care()
     {
+        $this->data['service_name'] = "Hernia";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
         return view('frontend/hernia-care', $this->data);
     }
     public function digestive_cancer_care()
@@ -115,6 +128,10 @@ class StaticPages extends BaseController
     }
     public function urology()
     {
+        $this->data['service_name'] = "Urology";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
         return view('frontend/urology', $this->data);
     }
     public function health_package()
@@ -208,5 +225,42 @@ class StaticPages extends BaseController
     public function doctor_ramesh()
     {
         return view('frontend/doctor-ramesh', $this->data);
+    }
+    public function fissure()
+    {
+        $this->data['service_name'] = "Fissure";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
+        return view('frontend/fissure', $this->data);
+    }
+    public function pancreatic()
+    {
+        $this->data['service_name'] = "Pancreatic";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
+        return view('frontend/pancreatic-cancer', $this->data);
+    }
+    public function jaundice_demo()
+    {
+        $this->data['service_name'] = "Jaundice";
+        $this->data['Options'] = [
+            'branches' => $this->generate_branches(),
+        ];
+        return view('frontend/jaundice-demo', $this->data);
+    }
+
+    private function generate_branches()
+    {
+        $Branches = new \App\Models\Branches();
+
+        $arrayOfObjects = $Branches->select('id,name')->where('visibility', 'Public')->get()->getResult();
+        $associativeArray = [];
+        $associativeArray[''] = "Select center";
+        foreach ($arrayOfObjects as $object) {
+            $associativeArray[$object->id] = $object->name;
+        }
+        return $associativeArray;
     }
 }

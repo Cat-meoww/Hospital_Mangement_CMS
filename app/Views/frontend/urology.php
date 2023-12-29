@@ -1,350 +1,1051 @@
-<?= $this->extend('layout/frontend/main') ?>
+<?= $this->extend('layout/frontend/service-layout') ?>
 
 <?= $this->section('header') ?>
 
+<style>
+    .owl-item>.slide {
+        background-position-y: center !important;
+    }
 
+    .chair-bread {
+        margin-top: 25px;
+        margin-left: 350px;
+        font-weight: bold;
+
+    }
+
+    .fo-si {
+        font-family: sans-serif;
+    }
+
+    .jaun-img {
+        width: 127px;
+    }
+
+    .jaun-div1 {
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow-x: hidden;
+    }
+
+    .heading-title {
+        color: black;
+    }
+
+    .jaun-sec1 {
+        margin-top: -50px;
+    }
+
+    .jaun-head2 {
+        color: black !important;
+        font-size: 18px !important;
+    }
+
+    .jaun-str {
+        color: black !important;
+    }
+
+    .mob {
+        width: 100% !important;
+        margin: 20px 0px !important;
+    }
+
+    .jaun-sec2 {
+        margin-top: -80px;
+    }
+
+    textarea.form-control {
+        height: 90px;
+    }
+
+    .contactForm {
+        margin-top: -20px !important;
+    }
+
+    @media screen and (max-width:600px) {
+        .jaun-sec2 {
+            margin-top: -20px !important;
+        }
+    }
+
+    .jaun-div2 {
+        margin-top: 50px;
+    }
+
+    .jaun-desc {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .bts {
+        margin-left: 40% !important;
+    }
+
+    .jaun-sec3 {
+        margin-top: -40px;
+    }
+
+    @media screen and (max-width:600px) {
+        .jaun-sec3 {
+            margin-top: -40px !important;
+        }
+    }
+
+    .jaun-div3 {
+        margin-top: 50px;
+    }
+
+    .jaun-sec4 {
+        margin-top: -120px;
+    }
+
+    @media screen and (max-width:600px) {
+        .jaun-sec4 {
+            margin-top: -40px;
+        }
+
+    }
+
+    .jaun-div4 {
+        margin-top: 50px;
+    }
+
+    .jaun-sec5 {
+        margin-top: -120px;
+    }
+
+    @media screen and (max-width:600px) {
+        .jaun-sec5 {
+            margin-top: -40px;
+        }
+    }
+
+    .jaun-sec6 {
+        margin-top: -120px;
+    }
+
+    .jaun-head3 {
+        text-align: left;
+    }
+
+    .jaun-div5 {
+        top: 110px;
+        z-index: 1;
+    }
+
+    .jaun-div6 {
+        border: 1px solid #0c0c0c;
+        border-radius: 25px;
+        background-color: #118b0f4d;
+
+    }
+
+    .jaun-head5 {
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+    .jaun-head6 {
+        font-size: 36px;
+    }
+
+    .jaun-head7 {
+        text-align: center;
+    }
+
+    .jaun-fimg1 {
+        position: relative;
+    }
+
+    .bn-1 {
+        width: 20% !important;
+        position: absolute;
+        left: 25%;
+        bottom: 35%;
+    }
+
+    .jaun-sec7 {
+        margin-top: -20px;
+        margin-bottom: 60px;
+    }
+
+    .jaun-body {
+        overflow: visible;
+    }
+
+    @media screen and (max-width:600px) {
+        .jaun-sec6 {
+            margin-top: -20px !important;
+        }
+
+    }
+
+    @media screen and (max-width:900px) {
+        .her-head {
+            font-size: 24px !important;
+        }
+
+        .chair-bread {
+            margin-left: 0px !important;
+        }
+
+        .hernia-what {
+            margin-top: 50px !important;
+        }
+
+    }
+
+
+    @media screen and (max-width:600px) {
+        .page-title.page-title-3 .title .title-card {
+
+            margin-top: 0px !important;
+
+
+
+        }
+
+        .gr {
+            margin-top: 20px;
+        }
+
+        .mob {
+            height: 250px;
+        }
+
+        .features-bar {
+            padding-bottom: 80px;
+        }
+
+        .donations.donations-2 {
+            padding-top: 0;
+        }
+
+        .features.features-2 {
+            padding-top: 20px;
+        }
+
+        .departments.departments-2 {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+
+        .heading {
+            margin-top: -40px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .gre {
+            margin-top: 20px;
+            text-align: left;
+
+        }
+
+        .bts {
+            width: 250px;
+            margin-left: 20px !important;
+        }
+
+        .gem-cont {
+            margin-top: 0px !important;
+        }
+
+        .book-btn {
+            margin-top: 0px !important;
+        }
+
+        .cause-para {
+            margin-top: 30px !important;
+        }
+
+        .bn-1 {
+            position: absolute;
+            left: 40% !important;
+        }
+
+
+
+    }
+
+    .form-control {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .nice-select .list {
+        width: 100%;
+    }
+
+    .nice-select {
+        line-height: normal;
+        display: flex;
+    }
+
+    .features-bar {
+        padding-top: 0;
+        padding-bottom: 85px;
+        overflow: visible;
+    }
+
+    .blog-grid.blog-grid-3 {
+        padding-top: 80px !important;
+    }
+
+    .blog-grid {
+        padding-bottom: 30px !important;
+    }
+
+    .features.features-2 {
+        padding-top: 20px;
+        padding-bottom: 0;
+        overflow: visible;
+    }
+
+    .donations.donations-2 {
+        padding-top: 20px;
+    }
+
+    img,
+    svg {
+        vertical-align: middle;
+
+    }
+
+    .desc {
+        color: black;
+    }
+
+    .jaun-info1 {
+        border-style: none;
+    }
+
+    .jaun-info2 {
+        color: green;
+    }
+
+    .con-jaun {
+        margin-left: 70px !important;
+    }
+
+    @media screen and (max-width:600px) {
+        .con-jaun {
+            margin-left: 0px !important;
+
+        }
+
+    }
+</style>
 
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
 
+<body class="jaun-body">
 
-<section class="page-title page-title-3 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
-      <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/page-titles/s1.png') ?>"    alt="Background" /></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-0" >
-            <div class="title">
-              <div class="title-card"  style="margin-top: -180px ;">
-                <div class="title-heading">
-                  <!---<h1>Pediatric Clinic</h1>---->
-                  <h1>Urology</h1>
-                </div>
-                <div class="title-sub-heading">
-                  <!---<p>All cardiologists study the disorders of the heart, but the study of adult and child heart disorders are trained to take care of small children.</p>--->
-                  <p>GEM is equipped with the latest technology and advanced equipment for diagnosis and treatment, including robotic-assisted surgery.</p>
-                </div>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="<?= base_url('')?>">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Urology</li>
-                </ol>
-              </div>
-            </div>
-            <!-- End .title -->
-          </div>
-          <!-- End .col-lg-8 -->
-        </div>
-        <!-- End .row-->
-      </div>
-     
-      <!-- End .container-->
-    </section>
     <style>
-      @media screen and (max-width:600px) {
-        .page-title.page-title-3 .title .title-card{
-         
-          margin-top: 0px !important;
-      
-      
-          
+        .slider.slider-2 .slide {
+            height: 620px !important;
         }
-        
-      }
-        
-      </style>
-    <!--
-      ============================
-      Single Services Section
-      ============================
-      -->
-    <section class="single-service">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-12">
-            <!---<h6 class="service-heading">Pediatric providers see patients from birth into early adulthood to make sure children achieve stay healthy. Our care includes preventive health checkups. Cardiologists study the disorders of the heart, but the study of adult and child heart disorders are through different training.</h6>---->
-            <!--
-              ============================
-              Video #02 Section
-              ============================
-              -->
 
-            <div class="entry-introduction">
-              <div class="row">
-                <div class="col-12 col-lg-8">
-                  <div class="video video-2 bg-overlay bg-overlay-video" id="video-2">
-                    <div class="bg-section"><img  src="<?= base_url('frontend/assets/images/video/14.png') ?>"    alt="background" /></div>
-                    <!--<a e-titles/s1.pngclass="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our presentation!</span></a>-->
-                    <!-- End .popup-video-->
-                  </div>
-                   <h6 class="entry-heading" style="font-size: 24px; color:#0D3E21;">
-                    Descriptions
-                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
-                  </h6>
-                  <p class="desc">
-                   At GEM Hospital, our Urology department is committed to providing exceptional care for all your urological needs. We offer comprehensive services to ensure optimal urological health and well-being.</p>
-                 <p class="desc">Our experienced urologist expertise spans the entire</p>
-                    <p class="desc">&bull; A spectrum of urology</p>
-                    <p class="desc">&bull; Kidney diseases</p>
-                    <p class="desc">&bull; Bladder problems</p>
-					<p class="desc">&bull; Prostate conditions</p>
-                    <p class="desc">&bull; Urinary tract disorders</p>
-                    <p class="desc">&bull; Male reproductive health.</p>
-                  
-                  <!--We will work with you to develop individualised care plans, including management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type of practitioner you require. We treat all enquiries in the strictest confidence.-->
-                  
-                  <p class="desc">Equipped with the latest advancements in medical technology, our urology department ensures accurate diagnosis and effective treatment. From advanced imaging techniques to minimally invasive surgical procedures, we utilize state-of-the-art equipment to deliver superior care and improved patient outcomes..
+        .bg-overlay-dark-slider:before {
+            background-image: linear-gradient(180deg, #0cd748 100%, #198754 30%);
+            opacity: 0.3;
 
-                    <!--Today hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes for all through a comprehensive medical research.-->
-                  </p>
-                </div>
-                <div class="col-12 col-lg-4">
+        }
 
-                  <div class="sidebar sidebar-service">
+        .features-bar {
+            padding-top: 120px !important;
+        }
 
-                    
+        p {
+            margin-bottom: 8px !important;
+        }
+    </style>
 
-                    <div class="widget widget-services">
-                      <div class="widget-title">
-                        <h5>Book Appointment</h5>
-                      </div>
-                      <div class="widget-content">
-                        <ul class="list-unstyled">
-                          <li><a href="<?= base_url('appointment/video-consultation') ?>"> <span class="line"> <span></span></span><span>Video
-                                Consultation</span></a></li>
-                          <li><a href="<?= base_url('appointment/book-appointment') ?>"> <span class="line"> <span></span></span><span>Visit to
-                                Hospital</span></a></li>
+    <section class="slider slider-2" id="slider-2">
+        <div class="container-fluid pr-0 pl-0">
+            <div class="slider-carousel owl-carousel carousel-navs" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="false" data-space="0" data-loop="true" data-speed="800" data-slider-id="#custom-carousel">
+                <!--  Start .slide-->
+                <div class="slide bg-overlay bg-overlay-dark-slider">
+                    <div class="bg-section">
 
-                        </ul>
-                      </div>
+                        <img src=" <?= base_url('frontend/assets/images/team/grid/') ?>" />
+
                     </div>
-
-                  </div>
-
-                </div>
-
-                <div class="row">
-                  <!--"col-12 col-lg-4"-->
-                  <div class="col-12 col-lg-6">
-
-                    <h5 class="desc">Conditions Treated</h5>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Urinary tract infections</li>
-                      <li><i class="fas fa-check"></i> Kidney stones</li>
-                      <li><i class="fas fa-check"></i> Urinary retention</li>
-                      <li><i class="fas fa-check"></i> Urinary incontinence</li>
-					  <li><i class="fas fa-check"></i> Prostate cancer</li>
-                      <li><i class="fas fa-check"></i> Bladder cancer</li>
-                      <li><i class="fas fa-check"></i> Erectile dysfunction</li>
-					  <li><i class="fas fa-check"></i> Urinary tract obstructions</li>
-                      <li><i class="fas fa-check"></i> Congenital abnormalities of the urinary tract</li>
-                      <br><br>
-                    </ul>
-                  </div>
-                  <div class="col-12 col-lg-6">
-
-                    <h5 class="desc">Tests and Treatments Offered</h5>
-                    <ul class="list-unstyled advantages">
-                      <li><i class="fas fa-check"></i> Stones treatment through laser</li>
-                      <li><i class="fas fa-check"></i> DJ Stenting</li>
-                      <li><i class="fas fa-check"></i> Infections</li>
-                      <li><i class="fas fa-check"></i> Benign Prostatic Hypertrophy</li>
-					   <li><i class="fas fa-check"></i> Urethral Dilatation</li>
-                      <li><i class="fas fa-check"></i> Circumcision</li>
-                      <li><i class="fas fa-check"></i> Cystoscopy</li>
-                     
-                    </ul>
-
-                  </div>
-
-                </div>
+                    <div class="container">
+                        <div class="slide-content">
+                            <div class="row">
+                                <div class="col-12 col-lg-7">
+                                    <h2 class="slide-headline her-head">
+                                        Urology Treatment - A Guide to Urology at GEM Hospital</h2>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <p class="slide-desc her-para">Your urinary system – a silent workhorse silently filtering waste and maintaining balance.
+                                        But when things go awry, consulting a urologist at GEM Hospital can rewrite the narrative. </p>
+                                    <div class="col-12 chair-bread">
+                                        <ol class="breadcrumb d-flex justify-content-center fo-si ">
+                                            <li class="breadcrumb-item"><a href="<?= base_url('') ?>">Home</a></li>
+                                            <li class=""><a href="<?= base_url('urology') ?>">Urology</a></li>
+                                        </ol>
+                                    </div>
 
 
-
-                <!---<div class="col-12"> 
-                    <div class="signature-block"><a class="btn btn--primary btn-line btn-line-after" href="doctors-grid.html"><span>find a doctor</span><span class="line"> <span></span></span></a>
-                      <div class="signature-body"> 
-                        <h6>john winston</h6>
-                        <p>pediatrician</p><img class="signature-img" src="assets/images/signature/1.png" alt="signature"/>
-                      </div>
+                                </div>
+                            </div>
+                            <!--  End .row-->
+                        </div>
+                        <!-- End .slide-content -->
                     </div>
-                  </div>--->
-              </div>
+                    <!-- End .container-->
+                </div>
+                <!-- End .slide-->
+                <!--  Start .slide-->
+
+                <!-- End .slide-->
             </div>
-            <!---<div class="entry-infos health-plans">
-                <h5 class="entry-heading">health care plans</h5>
-                <p class="entry-desc">Our doctors include highly qualified practitioners came from a range of backgrounds and bring with a diversity of skills and special interests. Our administration and support staff all have exceptional people skills and trained to assist you with all medical enquiries.</p>
-                <div class="advantages-box"> 
-                  <ul class="advantages-list">
-                    <li><i class="fas fa-check"></i> Review your medical records.</li>
-                    <li><i class="fas fa-check"></i> Check and test blood pressure.</li>
-                    <li><i class="fas fa-check"></i> Run tests such as blood tests.</li>
-                  </ul>
-                  <ul class="advantages-list">
-                    <li><i class="fas fa-check"></i> Check and test lung function.</li>
-                    <li><i class="fas fa-check"></i> Narrowing of the arteries.</li>
-                    <li><i class="fas fa-check"></i> Other specialized tests.</li>
-                  </ul>
-                </div>
-                <div class="entry-action">
-                  <p> <span class="currency">$50</span><span class="time"> Monthly</span></p><a class="btn btn--secondary btn-line btn-line-before" href="page-pricing.html"><span class="line"><span></span></span><span>explore other plans</span></a>
-                </div>
-              </div>--->
-
-            
-
-            <!---For Loved By Our Patients--->
-            <section class="departments departments-2" id="departments-2">
-        <div class="container">
-          <div class="row"> 
-            <div class="col-12 col-lg-6 offset-lg-3">
-              <div class="heading heading-12 heading-13 text-center">
-                <h6 class="" style=" font-weight: 700;
-  font-size: 16px;
-  line-height: 27px;
-  color: var(--global--color-secondary);">Patients Story</h6>
-                <h2 class="heading-title" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
-  text-transform: capitalize;
-  font-size: 40px;
-  line-height: 55px;
-  margin-bottom: 25px;
-  font-weight: 500;">Loved by our Patients</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-              <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="2" data-autoplay="true"
-                  data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">  
-            <div class=" col-12 col-md-12 col-lg-12">
-              <div class="department-panel" data-hover="">
-                <div class="department-panel-holder">
-                  <div class="department-content"> 
-                    <div class="department-title">
-                           <ul>
-							<li><a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a></li>
-					</ul>
-                    </div>
-                    <div class="department-desc">
-                      <p>Good clean hospital, courteous doctors and staff.Thanks and Regards to Gem Hospital and Team.</p>
-                    </div>
-                    
-                    <div class="department-more">
-                    <p style="color: black;font-weight: 700;
-  font-size: 16px;
-  line-height: 27px;
-  color: black;">shankar reddy</p>
-                    </div>
-                  </div>
-                  <!-- End .team-img-->
-                  <!-- End .team-content -->
-                </div>
-                <!-- End .team-member-holder-->
-              </div>
-            </div>
-            
-            <div class=" col-12 col-md-12 col-lg-12">
-              <div class="department-panel" data-hover="">
-                <div class="department-panel-holder">
-                  <div class="department-content"> 
-                    <div class="department-title">
-					  <ul>
-							<li><a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a>
-							<a><i class="fa fa-star checked" ></i></a></li>
-					</ul>
-                    </div>
-                     <style>
-                      .checked{
-                        color: gold;
-                      }
-                    </style>
-					
-                    <div class="department-desc">
-                      <p>We are extremely happy on the treatment received for our dad who is 80+ years of old who undergone surgery. Doctor was so polite and cleared all our doubts on both pre and post consultations, all our queries were answered. Hospital is fully equipped of medical needs, we got a good care from staffs  and dr.secretary, nurses were very much supportive. </p>
-                    </div>
-                    
-                    <div class="department-more">
-                    <p style="color: black;font-weight: 700;
-  font-size: 16px;
-  line-height: 27px;
-  color: black;">gayathri krishna</p>
-                    </div>
-                  </div>
-                  <!-- End .team-img-->
-                  <!-- End .team-content -->
-                </div>
-                <!-- End .team-member-holder-->
-              </div>
-            </div>
-            </div>
-          </div>
-          <!-- End .departments-action-->
+            <!-- End .slider-carousel-->
         </div>
-        <!-- End .container-->
-      </section>
-
-
-
-           
-			
-			
-            <!---Know More about Esophago Gastric Surgeries---->
-           
-
-            <div class="entry-infos tips-info">
-              <h2 class="desc" style=" font-weight: 700;
-  font-size: 16px;
-  line-height: 27px;
-  color: var(--global--color-secondary); text-align: center; ">FAQ</h2>
-              <h1 class="entry-heading" style="text-align: center; color:#118B0F; font-family: var(--global--font-heading);
-  text-transform: capitalize;
-  font-size: 40px;
-  line-height: 55px;
-  margin-bottom: 25px;
-  font-weight: 500;">Frequently Ask Questions</h1>
-              <!---<p class="entry-desc">We help create a care plan that addresses your specific condition and we are here to answer all of your questions & acknowledge your concerns. Today the hospital is recognised as a world renowned institution, not only providing outstanding care and treatment, but improving the outcomes.</p>---->
-              <div class="accordion accordion-3" id="accordion03">
-                <div class="card">
-                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">What causes urinary tract infections (UTIs)?</a></div>
-                  <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                    <div class="card-body">UTIs are primarily caused by bacterial infections. The most common bacteria responsible for UTIs is Escherichia coli (E. coli), which normally resides in the digestive tract. Bacteria can enter the urinary tract through the urethra and multiply, leading to infection.</div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
-                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">Can genetics play a role in urological problems?</a></div>
-                  <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                    <div class="card-body">Yes, genetics can contribute to urological problems. Some urological conditions, such as certain types of kidney diseases, prostate cancer, and hereditary urinary tract disorders, can have a genetic component. Family history can be a risk factor for developing these conditions.</div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
-                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Are all urological conditions treated surgically? </a></div>
-                  <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                    <div class="card-body">No, not all urological conditions require surgery. Urologists consider various treatment options depending on the specific condition. Non-surgical treatments, such as medications, lifestyle modifications, or minimally invasive procedures, are often used as initial approaches. Surgery may be recommended when conservative treatments are ineffective or for more complex cases.</div>
-                  </div>
-                </div>
-				 <div class="card">
-                  <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button"
-                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">When should I see a urologist? </a></div>
-                  <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                    <div class="card-body">You should consider seeing a urologist if you experience symptoms such as blood in urine, frequent urination, urinary incontinence, kidney stones, urinary tract infections, erectile dysfunction, or any other urological concerns.</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
+        <!--  End .container-fluid-->
     </section>
+
+
+
+
+
+
+    <div class="row my-5 position-relative">
+        <div class="col-12 col-md-8 jaun-div1">
+            <div class="container px-5">
+
+                <div class="entry-introduction">
+                    <div class="row ">
+                        <div class="col-12 ">
+                            <div class="heading ">
+                                <p class="paragraph hernia-what">Overview</p>
+
+                                <h6 class="heading-title">
+                                    What is Urology?
+                                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                </h6>
+                            </div>
+                            <p class="desc">&bull;
+                                Urology, a branch of medicine dedicated to the urinary tract and male reproductive system, delves into the intricate workings of these vital organs. From addressing everyday concerns like urinary tract infections to managing complex conditions like kidney
+                                stones and prostate cancer, urologists at GEM Hospital are your partners in ensuring optimal urinary and reproductive health.
+                            </p>
+                            <p class="desc"> <strong class="jaun-str">Diagnosis:</strong><br> Cutting-edge diagnostics at Gem Hospital ensure accurate identification of urological issues, guiding personalized treatment plans for optimal patient care </p>
+                            <p class="desc"> <strong class="jaun-str">Treatment:</strong><br>Gem Hospital excels in advanced urological treatments, offering innovative solutions for conditions, ensuring effective care and improved quality of life. </p>
+                            <p class="desc"> <strong class="jaun-str">After Treatment Care:</strong><br>Post-urology treatment at Gem Hospital involves comprehensive aftercare, fostering a smooth recovery journey with expert guidance and continuous support for patients' well-being. </p>
+                            <p class="desc"> <strong class="jaun-str">Patient Support:</strong><br>Gem Hospital prioritizes patient support, providing a caring environment where individuals receive not only top-notch urological care but also emotional support throughout their health journey.</p>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <section class="blog blog-grid blog-grid-3 jaun-sec3" id="blog-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <div class="heading heading-7 text-center">
+
+
+                                <h2 class="heading-title">Common Urological Conditions We Tackle at GEM Hospital
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- End .row-->
+
+                    <div class="row ">
+                        <div class="col-12 ">
+                            <p class="desc"> <strong class="jaun-str">
+                                    Urinary Tract Infections (UTIs):</strong><br>These bacterial invaders wreak havoc on the bladder and urethra, causing burning pain, frequent urination,
+                                and blood in urine. Our urologists diagnose and treat UTIs effectively, preventing complications.
+                            </p>
+                            <p class="desc"> <strong class="jaun-str">
+                                    Kidney Stones:</strong><br>Hard-mineral deposits forming in the kidneys can be excruciatingly painful. At GEM Hospital,
+                                we offer advanced techniques like minimally invasive surgery and shockwave lithotripsy to pulverize and eliminate these stones.
+                            </p>
+                            <div>
+
+
+                                <p class="desc"> <strong class="jaun-str">
+                                        Prostate Issues:</strong><br> Enlarged prostate or prostate cancer can significantly impact men's health. Our urologists offer a range of treatment options,
+                                    including medication, minimally invasive procedures, and robot-assisted surgery, to address these concerns
+                                </p>
+
+                                <div class="row jaun-div3">
+                                    <div class="col-12">
+                                        <div class="heading">
+
+
+
+                                            <div class="col-6">
+
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                        <span></span></span><span>Book Appointment Now</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+                </section>
+
+                <section class="blog blog-grid blog-grid-3 jaun-sec2" id="blog-2">
+                    <div class="entry-introduction">
+                        <div class="row">
+                            <div class="col-12 col-lg-12 ">
+                                <div class="heading heading-7 text-center">
+
+
+                                    <h2 class="heading-title">Advanced Urological Treatments at GEM Hospital</h2>
+                                </div>
+                            </div>
+                        </div><br>
+
+
+                        <!-- End .row-->
+
+                        <div class="row ">
+                            <div class="col-12 ">
+                                <div class="heading">
+                                    <p class="desc">GEM Hospital embraces cutting-edge
+                                        technology and minimally invasive techniques to ensure the best possible outcomes for our patients. Some of our advanced urological treatments include:</p>
+                                    <!----<h6 class="paragraph gre jaun-head2" >
+                                            Common Whispers of Pancreatic Cancer:
+                                        </h6><br>--->
+                                    <p class="desc"> <strong class="jaun-str">
+                                            Robotic-Assisted Surgery:</strong> Utilizing the precision and dexterity of robotic arms,
+                                        our surgeons perform complex procedures with minimal scarring and faster recovery times.
+                                    </p>
+                                    <p class="desc"> <strong class="jaun-str">
+                                            Laser Treatment: </strong>For conditions like kidney stones and BPH (benign prostatic hyperplasia), laser therapy offers a minimally invasive and effective solution.
+                                    </p>
+                                    <p class="desc"> <strong class="jaun-str">
+                                            Holmium Laser Enucleation of the Prostate (HoLEP):</strong> This minimally invasive procedure
+                                        utilizes a holmium laser to remove excess prostate tissue, offering a bloodless and tissue-preserving alternative to traditional surgery.
+                                    </p>
+                                </div>
+
+                                <h6 class="paragraph gre jaun-head2">
+                                    Innovative Approaches in Urology Treatment</h6>
+                                <p class="desc">GEM Hospital actively participates in clinical trials and research,
+                                    staying at the forefront of groundbreaking urological advancements. Some of the innovative approaches we are exploring include:</p>
+                                <p class="desc"> <strong class="jaun-str">
+                                        Gene Therapy: </strong>This revolutionary technique holds promise for treating urological cancers and genetic disorders.
+                                </p>
+                                <p class="desc"> <strong class="jaun-str">
+                                        Personalized Medicine:</strong>Tailoring treatment plans based on individual genetic makeup and disease characteristics for optimal outcomes.
+                                </p>
+                                <p class="desc"> <strong class="jaun-str">
+                                        Stem Cell Therapy:</strong> Regenerative medicine using stem cells offers potential for treating a variety of urological conditions.
+                                </p>
+                                <div class="row jaun-div2">
+                                    <div class="col-12">
+                                        <div class="heading">
+
+
+                                            <h6 class="paragraph gre jaun-head2">
+                                                Book your appointment today and take control of your health.
+
+                                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                            </h6>
+
+                                            <div class="col-6">
+
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                        <span></span></span><span>Book Appointment Now</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="blog blog-grid blog-grid-3 jaun-sec2" id="blog-2">
+                                    <div class="col-12 ">
+                                        <div class="heading ">
+                                            <h6 class="heading-title">
+                                                What are Minimally Invasive Urological Procedures?
+                                                <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                            </h6>
+                                        </div><br>
+                                        <div class="heading">
+                                            <h6 class="paragraph gre jaun-head2">
+                                                Minimally invasive urology utilizes specialized instruments
+                                                and techniques to access and treat urological conditions through small incisions or natural openings. This translates to:
+                                            </h6>
+                                        </div>
+
+                                        <p class="desc">&bull; Reduced scarring compared to traditional open surgery.</p>
+                                        <p class="desc">&bull; Shorter hospital stays and faster recovery times.</p>
+                                        <p class="desc">&bull; Less pain and discomfort during and after the procedure.</p>
+                                        <p class="desc">&bull; Faster return to normal activities.</p>
+
+                                    </div>
+                                </section>
+
+
+
+                            </div>
+                        </div>
+
+                </section>
+
+
+                <section class="blog blog-grid blog-grid-3 jaun-sec4" id="blog-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 ">
+                            <div class="heading heading-7 text-center">
+
+
+                                <h2 class="heading-title">GEM Hospital: Your One-Stop Shop for Urological Care
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-12 ">
+                            <div class="heading">
+                                <h6 class="paragraph gre jaun-head2">
+                                    We are proud to offer a wide range of minimally invasive procedures for various urological conditions, including:
+                                    <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                </h6>
+                            </div>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Kidney stone removal:</strong><br> Through techniques like ureteroscopy and percutaneous nephrolithotomy, we can remove kidney stones with minimal impact.
+                            </p>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Bladder cancer treatment: </strong><br> We offer minimally invasive options like transurethral resection of bladder tumors (TURBT) for early-stage bladder cancer.
+                            </p>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Prostate surgery:</strong><br>Minimally invasive options like robotic-assisted laparoscopic prostatectomy (RALP) offer precise prostate removal with quicker recovery.
+                            </p>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Urinary incontinence treatment:</strong><br> Procedures like botox injections and sling procedures can address incontinence concerns effectively.
+                            </p>
+
+
+                            <h6 class="paragraph gre jaun-head2">Comprehensive Expertise Awaits</h6>
+                            <h6 class="paragraph jaun-head2 pre">Our dedication to urological care extends beyond just procedures. We offer:</h6>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Experienced urology specialists:</strong><br> Our team of highly qualified urologists possess extensive expertise
+                                in diagnosing and treating a wide range of urological conditions.
+                            </p>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Advanced diagnostic techniques:</strong><br> We utilize cutting-edge technology
+                                like cystoscopy, urodynamics, and imaging tests to provide accurate diagnoses and guide treatment decisions.
+                            </p>
+                            <p class="desc">&bull;<strong class="jaun-str">
+                                    Compassionate and personalized care:</strong><br> We understand the sensitive nature of urological
+                                concerns and prioritize patient comfort and well-being throughout the treatment journey.
+                            </p>
+                            <div class="row jaun-div4">
+                                <div class="col-12">
+                                    <div class="heading">
+                                        <h6 class="paragraph jaun-head2">
+                                            Ready to Take the Next Step? Book Your Appointment Today!
+                                            <!---We provide all aspects of medical practice for your whole family, including general check-ups or assisting you with injuries.--->
+                                        </h6>
+                                        <div class="col-6">
+
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                    <span></span></span><span>Book Appointment Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                </section>
+                <section class="blog blog-grid blog-grid-3 jaun-sec5" id="blog-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 offset-lg-0">
+                            <div class="heading heading-7 text-center">
+
+
+                                <h2 class="heading-title">Diagnostic Techniques in Urology
+                                </h2>
+                            </div>
+                        </div>
+                    </div><br>
+
+
+
+                    <!-- End .row-->
+
+                    <div class="row ">
+                        <div class="col-12 ">
+                            <div class="heading">
+
+                                <p class="desc">Accurate diagnosis is the foundation for successful treatment.
+                                    GEM Hospital is equipped with state-of-the-art diagnostic tools and technologies, including:</p>
+                            </div>
+
+                            <p class="desc"><strong class="jaun-str">Ultrasound:</strong>This painless imaging technique provides detailed visualization of the urinary tract organs.
+                            </p>
+
+                            <p class="desc"> <strong class="jaun-str">Cystoscopy:</strong>A thin tube with a camera allows for direct examination of the bladder and urethra.
+                            </p>
+                            <p class="desc"> <strong class="jaun-str">Urodynamic studies:</strong>These tests assess bladder function and identify any underlying issues.
+                            </p>
+
+
+
+                            <p class="desc">
+                                <strong class="jaun-str">Reconstructive Urology:</strong> Reclaiming Your Quality of Life
+                            </p>
+                            <p class="desc">Whether you're facing challenges due to congenital anomalies, trauma, or disease, our reconstructive urology specialists offer expert solutions to restore function and confidence. We leverage the latest advancements in minimally invasive techniques and personalized treatment plans to optimize outcomes and minimize recovery times.
+                                Whether it's reconstructing the urinary tract or enhancing sexual function, our goal is to empower you to reclaim your full potential.
+                            </p>
+                            <p class="desc">
+                                <strong class="jaun-str">Urological Surgery:</strong> Precision You Can Trust
+                            </p>
+                            <p class="desc">
+                                When surgery is the best course of action, GEM Hospital's team of urological surgeons brings precision and excellence to the forefront. With extensive experience and unwavering dedication to patient safety, they utilize the most advanced technologies and minimally invasive approaches to deliver optimal results.
+                                From delicate bladder procedures to complex kidney cancer surgery, our surgeons perform every operation with meticulous care and unwavering commitment to your well-being.
+                            </p>
+
+                            <p class="desc"><strong class="jaun-str">Your Journey Begins Here</strong></p>
+                            <p class="desc">Don't let urological concerns hold you back from living a full and vibrant life. At GEM Hospital, we offer a comprehensive spectrum of urological services, personalized to your unique needs. By combining a patient-centric approach with surgical
+                                expertise and cutting-edge technology, we empower you to reclaim your well-being and embrace a future of renewed confidence.</p>
+                        </div>
+                        <div class="row jaun-div4">
+                            <div class="col-12">
+                                <div class="heading">
+                                    <h6 class="paragraph jaun-head2">
+                                        Book your appointment today and take the first step towards a healthier, happier you.
+                                    </h6><br>
+                                    <p class="desc">Remember, you are not alone. GEM Hospital is your partner in every step of your urological health journey.</p>
+                                    <div class="col-6">
+
+                                        <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                <span></span></span><span>Book Appointment Now</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+                <section class="blog blog-grid blog-grid-3 jaun-sec5" id="blog-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 offset-lg-0">
+                            <div class="heading heading-7 text-center">
+
+
+                                <h2 class="heading-title">Your Guide to Urological Care at GEM Hospital
+                                </h2>
+                            </div>
+                        </div>
+                    </div><br>
+
+
+
+                    <!-- End .row-->
+
+                    <div class="row ">
+                        <div class="col-12 ">
+                            <div class="heading">
+                                <p class="desc">
+                                    Specialized Consultations, Pediatric Expertise, and Preventive Insights.
+                                </p>
+                                <p class="desc">Maintaining optimal urinary health is crucial for overall well-being. At GEM Hospital, we understand
+                                    the importance of addressing urological concerns with sensitivity, expertise, and a comprehensive approach.
+                                </p>
+                            </div>
+
+                            <p class="desc"> &bull; <strong class="jaun-str">Early Detection and Prevention:</strong> Key to Urological Wellness</p>
+                            <p class="desc">Proactive urological care forms the cornerstone of good health.
+                                Regular check-ups and open communication with your doctor can help identify potential issues early, when they're often easier to manage.</p>
+                            <p class="desc"> &bull; In-Depth Consultations with GEM's Urology Specialists</p>
+                            <p class="desc">Our team of experienced urologists is dedicated to providing personalized care, tailored to your unique needs.
+                                We conduct thorough consultations, employing advanced diagnostic tools and techniques to get to the root of your urological concerns.</p>
+                            <p class="desc"> &bull; <strong class="jaun-str">Pediatric Urology:</strong> Specialized Care for Little Ones </p>
+                            <p class="desc">When it comes to children's urinary health, specialized care is essential. Our pediatric urologists have extensive
+                                experience in addressing urological issues in children, ensuring your child receives the gentlest and most effective treatment.</p>
+                            <p class="desc"> &bull; <strong class="jaun-str"> Beyond Diagnostics:</strong> Treatment Options at GEM Hospital</p>
+                            <p class="desc">We offer a wide range of urological treatment options, from minimally invasive procedures to advanced surgical interventions.
+                                Our focus is on providing minimally invasive solutions whenever possible, ensuring faster recovery times and reduced discomfort.</p>
+
+                            <p class="desc"> &bull; <strong class="jaun-str"> GEM Hospital: </strong> Your Partner in Urological Health</p>
+                            <p class="desc">At GEM Hospital, we believe in a patient-centric approach to urological care. We prioritize clear communication,
+                                answer your questions with empathy, and involve you in every step of the treatment journey.</p>
+                            <div class="row jaun-div4">
+                                <div class="col-12">
+                                    <div class="heading">
+                                        <h6 class="paragraph jaun-head2">
+                                            Book an Appointment Today:
+                                        </h6>
+                                        <p class="desc">Don't let urological concerns impact your quality of life.
+                                            Take the first step towards optimal urinary health by booking an appointment with our expert urologists at GEM Hospital. We're here to support you on your journey to complete urological well-being.</p>
+                                        <p class="desc">Remember, early detection and intervention are key to managing urological issues effectively.
+                                            Don't hesitate to reach out to our experienced team at GEM Hospital. We're here to help! </p>
+
+                                        <div class="col-6">
+
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                    <span></span></span><span>Book Appointment Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </section>
+
+
+
+                <section class="blog blog-grid blog-grid-3 jaun-sec6" id="blog-2">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 offset-lg-2">
+                            <div class="heading heading-7 text-center">
+
+
+                                <h2 class="heading-title">Contact Informations</h2>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- End .row-->
+                    <div class="row con-jaun">
+                        <div class="card col-lg-6 col-md-3 jaun-info1">
+                            <div class="card-body">
+                                <h4 class="card-title">Chennai</h4>
+                                <h6 class="card-text"><span class="jaun-info2">Ph.No :</span> +91 72006 05493</h6>
+                                <a href="tel:7200605493" class="btn btn--primary">Call Us</a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-6 col-md-3 jaun-info1">
+                            <div class="card-body">
+                                <h4 class="card-title">Coimbatore</h4>
+                                <h6 class="card-text"><span class="jaun-info2">Ph.No :</span> +91 91500 92609</h6>
+                                <a href="tel:9150092609" class="btn btn--primary">Call Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row con-jaun">
+
+                        <div class="card col-lg-6 col-md-3 jaun-info1">
+                            <div class="card-body">
+                                <h4 class="card-title">Tiruppur</h4>
+                                <h6 class="card-text"><span class="jaun-info2">Ph.No :</span> +91 89258 47515</h6>
+                                <a href="tel:8925847515" class="btn btn--primary">Call Us</a>
+                            </div>
+                        </div>
+                        <div class="card col-lg-6 col-md-3 jaun-info1">
+                            <div class="card-body">
+                                <h4 class="card-title">Pondicherry</h4>
+                                <h6 class="card-text"><span class="jaun-info2">Ph.No :</span> +91 72006 05493</h6>
+                                <a href="tel:7200605493" class="btn btn--primary">Call Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+
+            </div>
+
+        </div>
+        <style>
+            @media screen and (max-width:600px) {
+                .box-width {
+                    margin-left: 15px;
+                    width: 90% !important;
+                    margin-top: 30px;
+                }
+
+            }
+
+            .box-width {
+                width: 28%;
+
+            }
+        </style>
+        <div class="col-12 col-md-4 position-relative pe-0 pe-lg-5 box-width">
+
+            <div class="sticky-top py-3 px-3 px-md-0 jaun-div5">
+                <?= $this->include('frontend/Forms/service-form') ?>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="container position-relative">
+        <div class="row position-relative">
+            <div class="col-12 col-lg-12 position-relative">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <section class="departments departments-2" id="departments-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 offset-lg-3">
+                                <div class="heading heading-12 heading-13 text-center">
+
+                                    <h2 class="heading-title">Loved by our Patients</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel owl-carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
+                            <div class="col-12 col-lg-8">
+
+                                <div class="about-img"><img class="img-fluid jaun-fimg1" src=" <?= base_url('frontend/assets/images/blog/grid/sddefaultpat3.webp') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+
+                                    </a></div>
+
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefaultpat2.webp') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                    </a></div>
+                            </div>
+                            <div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefaultpat1.webp') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                        </a></div>
+                                </div>
+                                <!-- End .entry-content-->
+
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefaultpat2.webp') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                    </a></div>
+                            </div>
+                        </div>
+
+                        <!-- End .departments-action-->
+                    </div>
+                    <!-- End .container-->
+                </section>
+
+
+
+
+                <!---Our Experts---->
+
+                <!---Know More about Esophago Gastric Surgeries---->
+                <section class="blog blog-grid blog-grid-3 jaun-sec7" id="blog-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-6 offset-lg-3">
+                                <div class="heading heading-7 text-center">
+
+
+                                    <h6 class="heading-title jaun-head6">Experts
+                                        Speech About Jaundice</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- End .row-->
+                        <div class="carousel owl-carousel carousel-dots" data-slide="4" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="30" data-loop="true" data-speed="200" id="more">
+                            <div class="col-12 col-lg-8">
+
+                                <div class="about-img"><img class="img-fluid jaun-fimg1" src=" <?= base_url('frontend/assets/images/blog/grid/sddefaultne.jpg') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+
+                                    </a></div>
+
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefault.jpg') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                    </a></div>
+                            </div>
+                            <div>
+                                <div class="col-12 col-lg-8">
+                                    <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefault.webp') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                        </a></div>
+                                </div>
+                                <!-- End .entry-content-->
+
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <div class="about-img"><img class="img-fluid" src=" <?= base_url('frontend/assets/images/blog/grid/sddefault.jpg') ?>" alt="about Image" /><br><a class="" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <img src=" <?= base_url('frontend/assets/images/favicon/playbutton.png') ?>" class="bn-1" />
+                                    </a></div>
+                            </div>
+                        </div>
+                        <!-- End .carousel-->
+                    </div>
+                </section>
+
+                <div class="entry-infos tips-info heading">
+
+                    <h1 class="heading-title jaun-head7">Frequently Ask
+                        Questions</h1>
+                    <div class="accordion accordion-3" id="accordion03">
+                        <div class="card">
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">How Long Is Recovery?</a></div>
+                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
+                                <div class="card-body">The recovery period will vary depending on the type of hernia, type of surgery, age, and overall health. It’s normal to feel moderate pain. The recovery period for patients who have undergone Robotic surgery will be approximately 2 weeks and 3 to 4 weeks for Laparoscopic surgery.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">How Long Will I Have To Stay In the Hospital?</a></div>
+                            <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
+                                <div class="card-body">You can go home on the procedure day itself if you have done a Laparoscopic or Robotic Surgery</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Is It Dangerous To Ignore The Hernia?</a></div>
+                            <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
+                                <div class="card-body">If you ignore it will become bigger and more painful. At worst it can demand immediate Surgery and it could be more extreme</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Difference Between An Open Vs Laparoscopic Hernia Surgery?</a></div>
+                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
+                                <div class="card-body">An open surgery requires an incision to put the bulging tissue back in place and it will take a lot of time for recovery.<br><br>
+
+                                    <b>Laparoscopic surgery is minimally-invasive which requires a small incision and also reduces recovery time.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Does The Surgery Affect Pregnancy?</a></div>
+                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
+                                <div class="card-body">Doctors usually recommend delaying elective hernia repair until after delivery. But Women can have laparoscopic hernia mesh surgery during pregnancy without complications and it requires fetal monitoring. The researchers also suggested performing a hernia in conjunction with a C-section to be the best option for pregnant patients.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>-
+
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
 
 
 <?= $this->endSection() ?>
