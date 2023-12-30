@@ -52,6 +52,35 @@ class bookings extends General
 
         return view('admin/bookings/general_bookings', $this->data);
     }
+    public function service_bookings()
+    {
+
+        $GeneralBookings = new \App\Models\GeneralBookings();
+        $this->data['title'] = "Service Booking Enquires";
+        $this->data['Dataset'] = $GeneralBookings->orderBy('created_on', 'DESC')->findAll();
+
+
+        $this->data['Options'] = [
+            'services' => $this->generate_services(),
+            'branch' => $this->generate_branches(),
+            'date_types' => [
+                'ENTRY' => "Entry Date Wise",
+                'BOOKING' => "Booking Date Wise",
+                'FOLLOW' => "Follow up Date Wise"
+            ],
+            'action' => [
+                '' => "Select atleast One",
+                '2' => "Follow Up",
+                '3' => "Turned On",
+                '4' => "Turned Off"
+            ],
+            'booking_status' =>  $this->generate_booking_status(),
+            'branches' =>  $this->generate_branches(),
+            'services' =>  $this->generate_services()
+        ];
+
+        return view('admin/bookings/service_bookings', $this->data);
+    }
     public function video_bookings()
     {
 
@@ -384,6 +413,131 @@ class bookings extends General
             return $this->handle_exception($e);
         }
     }
+    public function service_datatable()
+    {
+        try {
+
+            $ordercol = ['id', 'firstname', 'lastname', 'phone', 'email', 'id', 'id', 'booking_date', 'start_time'];
+            $ServiceBookings = new \App\Models\ServiceBookings();
+            $sql = $ServiceBookings->select();
+
+            $recordsTotal = $sql->countAllResults(false);
+
+
+            $PostData = [
+                'datetype' => $this->request->getVar('datetype'),
+                'from_date' =>  $this->request->getVar('from_date'),
+                'to_date' => $this->request->getVar('to_date'),
+            ];
+            $rules  = [
+                'datetype' => 'in_list[BOOKING,ENTRY,FOLLOW]',
+                'from_date' => 'required|valid_date[Y-m-d]',
+                'to_date' => 'required|valid_date[Y-m-d]',
+            ];
+
+            if ($this->validateData($PostData, $rules)) {
+                $datetype = $this->request->getVar('datetype');
+                $from_date = $this->request->getVar('from_date');
+                $to_date = $this->request->getVar('to_date');
+                $booking_status = $this->request->getVar('booking_status');
+                $branch = $this->request->getVar('branch');
+                $service = $this->request->getVar('service');
+
+
+
+                switch ($datetype) {
+                    case 'ENTRY':
+                        $sql = $sql->where('date(created_on) >=', $from_date)->where('date(created_on) <=', $to_date);
+                        break;
+                    case 'BOOKING':
+                        $sql = $sql->where('booking_date >=', $from_date)->where('booking_date <=', $to_date);
+                        break;
+                    case 'FOLLOW':
+                        $sql = $sql->where('follow_date >=', $from_date)->where('follow_date <=', $to_date);
+                        break;
+
+                    default:
+
+                        break;
+                }
+
+                if ($booking_status) {
+                    $sql = $sql->where('status', (int)$booking_status);
+                }
+                if ($branch) {
+                    $sql = $sql->where('branch', (int)$branch);
+                }
+                if ($service) {
+                    $sql = $sql->where('service', (int)$service);
+                }
+            }
+
+
+            if ($this->request->getVar('search[value]')) {
+                $filterval = $this->request->getPost('search[value]');
+                $sql =  $sql->groupStart()
+                    ->like('id', $filterval)
+                    ->orLike('name', $filterval)
+                    ->orLike('phone', $filterval)
+                    ->orLike('booking_date', $filterval)
+                    ->groupEnd();
+            }
+
+            if ($this->request->getVar('order')) {
+                $colorder = $this->request->getPost('order[0][column]');
+                $coldir = $this->request->getPost('order[0][dir]');
+                $columnname = $ordercol[$colorder] ??   'id';
+
+                $sql = $sql->orderBy($columnname, $coldir);
+            } else {
+                //default
+                $sql = $sql->orderBy('id', "DESC");
+            }
+            $recordsFiltered = $sql->countAllResults(false);
+            if ($this->request->getPost('length') != -1) {
+                $sql = $sql->limit($this->request->getPost('length'), $this->request->getPost('start'));
+            }
+
+            $query = $sql->get();
+
+            $data = [];
+            $lastquery = (string) $this->db->getLastQuery();
+
+            
+            $Branches = $this->generate_branches();
+            $Booking_status = $this->generate_booking_status();
+
+            foreach ($query->getResult() as $row) {
+                $subarray = [];
+                $subarray[] = "#" . $row->id;
+                $subarray[] = $Branches[$row->branch] ?? "Unknown";
+                $subarray[] = $row->service;
+                $subarray[] = $row->name;
+                $subarray[] = $row->phone;
+
+
+                $subarray[] = $row->booking_date;
+                $subarray[] = humanizeDate($row->created_on);
+                $subarray[] = $row->follow_date ? humanizeDate($row->follow_date) : "";
+                $subarray[] = $row->revenue;
+                $subarray[] = $Booking_status[$row->status] ?? "Unknown";
+                $subarray[] = '1';
+                $subarray['id'] = $row->id;
+                $subarray['status'] = $this->data['booking_status'][$row->status] ?? "Unknown";
+
+                $data[] = $subarray;
+            }
+            $output = [
+                "draw"                 => $this->request->getPost('draw'),
+                "recordsTotal"         => $recordsTotal,
+                "recordsFiltered"    => $recordsFiltered,
+                "data"                 => $data,
+            ];
+            return $this->respond($output);
+        } catch (\Exception $e) {
+            return $this->handle_exception($e);
+        }
+    }
 
     private function handle_exception(\Exception $e)
     {
@@ -459,6 +613,88 @@ class bookings extends General
 
 
                 $query = $GeneralBookings->where('id', $id)->set($data)->update();
+
+
+
+                if ($query) {
+
+                    $BookingActions->insert([
+                        'booking_id' => $id,
+                        'action' => $action,
+                        'comments' => $comments,
+                        'created_by' => $this->session->user_id
+                    ]);
+                    return $this->respond([
+                        'status' => "success",
+                        'msg' => "Stored data successfully."
+                    ]);
+                }
+                throw new \Exception("Unable to Update Status");
+            } else {
+                throw new \Exception("Invalid data");
+            }
+        } catch (\Exception $e) {
+
+            return $this->handle_exception($e);
+        }
+    }
+    public function service_update_status()
+    {
+
+        try {
+            $rules  = [
+                'id' => [
+                    'label' => 'ID',
+                    'rules' => "trim|required|is_natural|is_not_unique[service_bookings.id]",
+                    'errors' => [
+                        'is_not_unique' => "Related Booking id not founded"
+                    ],
+                ],
+                'action' => [
+                    'label' => 'Action',
+                    'rules' => "trim|required|is_not_unique[general_booking_status.id]",
+                ],
+
+
+                'comments' => [
+                    'label' => 'Comments',
+                    'rules' => "trim|required|min_length[3]|max_length[500]",
+                ],
+
+
+            ];
+            if ($this->validate($rules)) {
+                $ServiceBookings = new \App\Models\ServiceBookings();
+                $BookingActions = new \App\Models\BookingActions();
+                $id = $this->request->getPost('id');
+                $action = $this->request->getPost('action');
+                $comments = $this->request->getPost('comments');
+                $follow_up = $this->request->getPost('follow_date');
+                $revenue = (int) $this->request->getPost('revenue');
+
+                $data = [
+                    'status' => $action,
+                ];
+
+
+                if ($action == "2") {
+                    if (!$this->validator->check($follow_up, 'required|valid_date[Y-m-d]|from_today', ['required' => "Required Valid Follow up date", 'valid_date' => "Required Valid Follow up date Formate"])) {
+                        throw new \Exception("Required valid date");
+                    }
+                    $data['follow_date'] = $follow_up;
+                }
+                if ($action == "3") {
+                    if (!$this->validator->check($revenue, 'required|greater_than[0]', ['required' => "Required Revenue", 'greater_than' => "Revenue Must be greater than 0"])) {
+                        throw new \Exception("Required valid Revenue");
+                    }
+                    $data['revenue'] = $revenue;
+                }
+
+
+
+
+
+                $query = $ServiceBookings->where('id', $id)->set($data)->update();
 
 
 

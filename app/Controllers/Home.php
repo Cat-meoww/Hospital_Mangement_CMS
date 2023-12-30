@@ -299,9 +299,18 @@ class Home extends BaseController
 
                 if ($query) {
 
-                    
 
-                  
+                    $populate = [
+                        'booking_id' => $query,
+                        'name' => $this->request->getPost('name'),
+                        'phno' => $this->request->getPost('phone'),
+                        'branch' => $Branches->select('name')->find($branch)->name ?? "miscellaneous",
+                        'service' => $service,
+                        'booking_date' => $this->request->getPost('booking-date'),
+                    ];
+
+                    $this->send_mail(env('app.smtp.to'), "GEM Hospital -  Booking Enquiry for $service", view('layout/templates/email_general_booking', $populate));
+
 
 
                     return redirect()

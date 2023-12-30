@@ -187,6 +187,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
     $routes->group('bookings', static function ($routes) {
         $routes->get('general', 'bookings::general_bookings');
         $routes->get('video', 'bookings::video_bookings');
+        $routes->get('service', 'bookings::service_bookings');
     });
 });
 
@@ -286,6 +287,8 @@ $routes->group('api', static function ($routes) {
                 $routes->post('video', 'bookings::video_datatable');
                 $routes->post('general', 'bookings::general_datatable');
                 $routes->post('general/update_status', 'bookings::general_update_status');
+                $routes->post('service', 'bookings::service_datatable');
+                $routes->post('service/update_status', 'bookings::service_update_status');
             });
         });
         $routes->group('dashboard', static function ($routes) {

@@ -171,6 +171,7 @@
             </a>
             <ul x-cloak x-show="activeMenu === 'bookings'" x-collapse class="sub-menu flex flex-col gap-1 text-black dark:text-white/80">
                 <li><a href="<?= base_url("admin/bookings/general") ?>" <?= sub_menu_active("admin/bookings/general") ?>>General</a></li>
+                <li><a href="<?= base_url("admin/bookings/service") ?>" <?= sub_menu_active("admin/bookings/service") ?>>Service</a></li>
                 <li><a href="<?= base_url("admin/bookings/video") ?>" <?= sub_menu_active("admin/bookings/video") ?>>Video</a></li>
             </ul>
         </li>
