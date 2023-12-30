@@ -76,10 +76,19 @@
 
 
 
-            <nav class="navbar navbar-expand-xl navbar-sticky" id="primary-menu">
+            <nav class="navbar justify-content-between navbar-expand-xl navbar-sticky" id="primary-menu">
                 <a class="border-0" href="<?= base_url('') ?>"><img class="logo logo-dark" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="" class="nav-img" /><img class="logo logo-mobile" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="Medisch Logo" /></a>
 
-
+                <div class="d-flex gap-5 ">
+                    <div class="d-flex flex-column gap-3">
+                        <h5 class="fw-bold m-0">Chennai</h5>
+                        <h6 class="m-0"><span class="text-success">Ph.No:</span> +91 72006 05493</h6>
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                        <h5 class="fw-bold m-0">Coimbatore</h5>
+                        <h6 class="m-0"><span class="text-success">Ph.No:</span>+9191500 92609</h6>
+                    </div>
+                </div>
                 <!--  End .navbar-collapse-->
             </nav>
 
