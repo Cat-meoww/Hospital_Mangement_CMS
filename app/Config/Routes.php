@@ -52,7 +52,7 @@ $routes->get('/doctor-anand', 'StaticPages::doctor_anand');
 $routes->get('/doctor-harish', 'StaticPages::doctor_harish');
 $routes->get('/doctor-nalan', 'StaticPages::doctor_nalan');
 $routes->get('/doctor-rajapandian', 'StaticPages::doctor_rajapandian');
-$routes->get('/doctor-saravanakumar', 'StaticPages::doctor_saravanakumar');
+$routes->get('/doctor-saravan   akumar', 'StaticPages::doctor_saravanakumar');
 $routes->get('/doctor-ramesh', 'StaticPages::doctor_ramesh');
 
 $routes->group('services', function ($routes) {

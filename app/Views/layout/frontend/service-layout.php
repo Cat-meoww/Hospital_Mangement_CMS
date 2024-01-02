@@ -82,11 +82,11 @@
                 <div class="d-flex gap-5 ">
                     <div class="d-flex flex-column gap-3">
                         <h5 class="fw-bold m-0">Chennai</h5>
-                        <h6 class="m-0"><span class="text-success">Ph.No:</span>+91 72006 05493</h6>
+                        <h6 class="m-0">+91 72006 05493</h6>
                     </div>
                     <div class="d-flex flex-column gap-3">
                         <h5 class="fw-bold m-0">Coimbatore</h5>
-                        <h6 class="m-0"><span class="text-success">Ph.No:</span>+91 91500 92609</h6>
+                        <h6 class="m-0">+91 91500 92609</h6>
                     </div>
                 </div>
                 <!--  End .navbar-collapse-->

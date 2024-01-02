@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-xl navbar-sticky" id="primary-menu">
-    <a class="navbar-brand border-0" href="<?= base_url('') ?>"><img class="logo logo-dark" src="<?= base_url('frontend/assets/images/favicon/Desktop_GEM_logo.svg') ?>" alt="" /><img class="logo logo-mobile" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="Medisch Logo" /></a>
+    <a class="border-0" href="<?= base_url('') ?>">
+        <img class="logo logo-dark" width="250" src="<?= base_url('frontend/assets/images/favicon/GEM_LOGO.png') ?>" alt="" />
+        <img class="logo logo-mobile" src="<?= base_url('frontend/assets/images/favicon/photo1699001614.jpeg') ?>" alt="Mobile Logo" />
+    </a>
     <div class="module-holder module-holder-phone">
         <!--  Start Module Search  -->
         <div class="module module-search float-left">
-            <div class="module-icon search-icon">
-                <i class="icon-search" data-hover=""></i>
-            </div>
+
         </div>
         <!--  End .module-search-->
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav">
             <li class="nav-item" data-hover="" id="contact">
-                <a href="<?= base_url('home') ?>"><span>Home</span></a>
+                <a href="<?= base_url('coimbatore') ?>"><span>Home</span></a>
             </li>
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>About</span></a>
@@ -27,39 +28,39 @@
                         <a href="<?= base_url('chairman') ?>"><span>About Founder</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('') ?>"><span>About Management</span></a>
+                        <a href="<?= base_url('board-director') ?>"><span>About Management</span></a>
                     </li>
                 </ul>
             </li>
 
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>specialities</span></a>
-                <ul class="dropdown-menu" >
+                <ul class="dropdown-menu">
                     <li class="nav-item ">
-                            <a href="<?= base_url('services/jaundice-demo') ?>"><span>Jaundice</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/gall-bladder') ?>"><span>Gall Bladder</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/fissure') ?>"><span>Fissure</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/piles') ?>"><span>Piles</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/pancreatic-cancer') ?>"><span>Pancreatic Cancer</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="<?= base_url('services/urology') ?>"><span>Urology</span></a>
-                        </li>
-                        <li class="nav-item ">
-                            <a href="https://gem-dev.verse.net.in/hernia1/demo-hernia/demohernia.html"><span>Hernia</span></a>
-                        </li>
-                   
+                        <a href="<?= base_url('services/jaundice') ?>"><span>Jaundice</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/gall-bladder') ?>"><span>Gall Bladder</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/fissure') ?>"><span>Fissure</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/piles') ?>"><span>Piles</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/pancreatic-cancer') ?>"><span>Pancreatic Cancer</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/urology') ?>"><span>Urology</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('services/hernia-care') ?>"><span>Hernia</span></a>
+                    </li>
+
                 </ul>
             </li>
-           
+
             <li class="nav-item" data-hover="" id="contact">
                 <a href="<?= base_url('health-package') ?>"><span class="text-truncate">health package</span></a>
             </li>
@@ -79,25 +80,25 @@
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Doctors</span></a>
                 <ul class="dropdown-menu">
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Coimbatore</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Coimbatore</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Chennai - Perungudi</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Chennai - Perungudi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Chennai - Aminjikarai</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Chennai - Aminjikarai</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Tiruppur</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Tiruppur</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Pondicherry</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Pondicherry</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Erode</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Erode</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= base_url('doctorinfo') ?>"><span>Thrissur</span></a>
+                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Thrissur</span></a>
                     </li>
                 </ul>
             </li>
@@ -105,7 +106,7 @@
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Our Centers</span></a>
                 <ul class="dropdown-menu">
                     <li class="nav-item">
-                        <a href="<?= base_url('home') ?>"><span>Coimbatore</span></a>
+                        <a href="<?= base_url('coimbatore') ?>"><span>Coimbatore</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="https://chennai.gemhospitals.com"><span>Chennai - Perungudi</span></a>
@@ -142,14 +143,14 @@
 
 
         </ul>
-        <div class="module-holder  border-0">
+        <div class="">
             <!--  Start Module Search  -->
 
             <!--  End .module-search-->
             <!-- Start .module-contact-->
-            <div class="module-contact">
-                <a class="btn btn--secondary" href=""></a><a class="btn btn--primary btn-line btn-line-after" href="<?= base_url('appointment/book-appointment') ?>">
-                    <span>make appointment</span><span class="line"> <span></span></span></a>
+            <div class="">
+                <a class="btn btn--primary btn-line btn-line-after bt-wi" href="<?= base_url('appointment/book-appointment') ?>">
+                    <span>book appointment</span><span class="line"> <span></span></span></a>
             </div>
         </div>
         <!--  End .module-holder-->
