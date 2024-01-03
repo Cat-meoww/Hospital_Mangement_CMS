@@ -532,7 +532,7 @@
 
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -606,7 +606,7 @@
 
                                             <div class="col-6">
 
-                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                         <span></span></span><span>Book Appointment Now</span></a>
                                             </div>
                                         </div>
@@ -702,7 +702,7 @@
                                         </p>
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -918,7 +918,7 @@
                                         </p>
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -1181,7 +1181,7 @@
 
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -1446,42 +1446,44 @@
                         Questions</h1>
                     <div class="accordion accordion-3" id="accordion03">
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">How Long Is Recovery?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">The recovery period will vary depending on the type of hernia, type of surgery, age, and overall health. It’s normal to feel moderate pain. The recovery period for patients who have undergone Robotic surgery will be approximately 2 weeks and 3 to 4 weeks for Laparoscopic surgery.</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">How Long Will I Have To Stay In the Hospital?</a></div>
-                            <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                                <div class="card-body">You can go home on the procedure day itself if you have done a Laparoscopic or Robotic Surgery</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Is It Dangerous To Ignore The Hernia?</a></div>
-                            <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                                <div class="card-body">If you ignore it will become bigger and more painful. At worst it can demand immediate Surgery and it could be more extreme</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Difference Between An Open Vs Laparoscopic Hernia Surgery?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">An open surgery requires an incision to put the bulging tissue back in place and it will take a lot of time for recovery.<br><br>
-
-                                    <b>Laparoscopic surgery is minimally-invasive which requires a small incision and also reduces recovery time.</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Does The Surgery Affect Pregnancy?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">Doctors usually recommend delaying elective hernia repair until after delivery. But Women can have laparoscopic hernia mesh surgery during pregnancy without complications and it requires fetal monitoring. The researchers also suggested performing a hernia in conjunction with a C-section to be the best option for pregnant patients.</div>
-                            </div>
-                        </div>
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">1. How Long is Pancreatic Cancer Treatment?</a></div>
+                  <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Treatment duration varies; it depends on cancer stage and individual factors. Consult your oncologist for personalized information on recovery and follow-up care.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">2. Hospital Stay for Pancreatic Cancer?</a></div>
+                  <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Hospitalization varies by treatment type and patient needs. Mild cases may allow outpatient care, while severe cases may require extended hospital stays. Consult your healthcare provider.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link  collapsed" data-hover="" data-bs-toggle="collapse" role="button"
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">3. Is Ignoring Pancreatic Cancer Symptoms Dangerous?</a></div>
+                  <div class="collapse " id="collapse01-3" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Ignoring symptoms can be perilous. Pancreatic cancer may progress rapidly. Early diagnosis and treatment enhance outcomes. Seek prompt medical attention for evaluation and guidance.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-4" href="#collapse01-4">4.What Supportive Care is Available for Pancreatic Cancer Patients?</a></div>
+                  <div class="collapse" id="collapse01-4" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Supportive care includes pain management, nutritional support, and counseling. It aims to improve quality of life during treatment.</div>
+                  </div>
+                </div>
+				        <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-5" href="#collapse01-5">5. When to Seek Medical Attention for Pancreatic Cancer Symptoms?</a></div>
+                  <div class="collapse" id="collapse01-5" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">If you experience persistent abdominal pain, unexplained weight loss, or digestive issues, consult a healthcare professional promptly. Early detection improves the chances of effective treatment</div>
+                  </div>
+                </div>
 
                     </div>
 
-                </div>-
+                </div>
 
 
 

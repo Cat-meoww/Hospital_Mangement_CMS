@@ -1,5 +1,5 @@
-<div class=" heading px-3 jaun-div6">
-    <h5 class="heading-title mb-1 jaun-head5" style="line-height:1.2;">Book Appointment For <?= $service_name ?></h5>
+<div class=" heading px-3 jaun-div6" id="service-booking-form">
+    <h5 class="heading-title mb-1 jaun-head5" style="line-height:1.5;">Book Appointment For <?= $service_name ?></h5>
     <form class="" method="post" action="<?= base_url('forms/public/service-appointment') ?>">
         <input type="hidden" name="service-name" value="<?= $service_name ?>">
         <div class="row">

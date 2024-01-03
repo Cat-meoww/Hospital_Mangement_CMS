@@ -504,7 +504,7 @@
                                             </p>
                                             <div class="col-6">
 
-                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                         <span></span></span><span>Book Appointment Now</span></a>
                                             </div>
                                         </div>
@@ -594,7 +594,7 @@
                                         </p>
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -679,7 +679,7 @@
                                         </p>
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -765,7 +765,7 @@
 
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -948,7 +948,7 @@
 
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -1156,36 +1156,34 @@
                         Questions</h1>
                     <div class="accordion accordion-3" id="accordion03">
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">How Long Is Recovery?</a></div>
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">1. How Long is the Recovery for Anal Fissures and Perianal Fistulas?</a></div>
                             <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">The recovery period will vary depending on the type of hernia, type of surgery, age, and overall health. It’s normal to feel moderate pain. The recovery period for patients who have undergone Robotic surgery will be approximately 2 weeks and 3 to 4 weeks for Laparoscopic surgery.</div>
+                                <div class="card-body color-heading">Recovery varies; mild cases may improve in weeks, while severe cases may need prolonged treatment. Consult your healthcare provider for personalized information.</div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">How Long Will I Have To Stay In the Hospital?</a></div>
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">2. Hospital Stay for Anal Fissures and Perianal Fistulas?</a></div>
                             <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                                <div class="card-body">You can go home on the procedure day itself if you have done a Laparoscopic or Robotic Surgery</div>
+                                <div class="card-body color-heading">Hospitalization duration depends on severity. Mild cases may not need admission, while severe cases require close monitoring and treatment. Consult your healthcare provider for details</div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Is It Dangerous To Ignore The Hernia?</a></div>
-                            <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                                <div class="card-body">If you ignore it will become bigger and more painful. At worst it can demand immediate Surgery and it could be more extreme</div>
+                            <div class="card-heading"><a class="card-link  collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">3. Is Ignoring Anal Fissures and Perianal Fistulas Dangerous?</a></div>
+                            <div class="collapse " id="collapse01-3" data-bs-parent="#accordion03">
+                                <div class="card-body color-heading">Ignoring these conditions can lead to complications. Timely medical attention is crucial for accurate diagnosis and effective treatment to prevent worsening symptoms and issues.</div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Difference Between An Open Vs Laparoscopic Hernia Surgery?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">An open surgery requires an incision to put the bulging tissue back in place and it will take a lot of time for recovery.<br><br>
-
-                                    <b>Laparoscopic surgery is minimally-invasive which requires a small incision and also reduces recovery time.</b>
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-4" href="#collapse01-4">4. Are there home remedies for managing symptoms of Anal Fissures and Perianal Fistulas?</a></div>
+                            <div class="collapse" id="collapse01-4" data-bs-parent="#accordion03">
+                                <div class="card-body color-heading">While medical treatment is essential, lifestyle changes and dietary adjustments may aid healing. Consult your healthcare provider for guidance on complementary measures.
                                 </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Does The Surgery Affect Pregnancy?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">Doctors usually recommend delaying elective hernia repair until after delivery. But Women can have laparoscopic hernia mesh surgery during pregnancy without complications and it requires fetal monitoring. The researchers also suggested performing a hernia in conjunction with a C-section to be the best option for pregnant patients.</div>
+                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-5" href="#collapse01-5">5. When to Seek Medical Attention for Anal Fissures and Perianal Fistulas?</a></div>
+                            <div class="collapse" id="collapse01-5" data-bs-parent="#accordion03">
+                                <div class="card-body color-heading">If you experience persistent pain, bleeding, or discomfort in the anal area, consult a healthcare professional promptly. Early detection and intervention enhance treatment outcomes.</div>
                             </div>
                         </div>
 

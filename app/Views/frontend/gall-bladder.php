@@ -517,7 +517,7 @@
                                             </p>
                                             <div class="col-6">
 
-                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                         <span></span></span><span>Book Appointment Now</span></a>
                                             </div>
                                         </div>
@@ -580,7 +580,7 @@
 
                                         <div class="col-6">
 
-                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                            <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                     <span></span></span><span>Book Appointment Now</span></a>
                                         </div>
                                     </div>
@@ -976,7 +976,7 @@
                                             </p>
                                             <div class="col-6">
 
-                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#new"> <span class="line">
+                                                <a class="btn btn--primary btn-line btn-line-before btn--block mt-3 bts" href="#service-booking-form"> <span class="line">
                                                         <span></span></span><span>Book Appointment Now</span></a>
                                             </div>
                                         </div>
@@ -1257,38 +1257,40 @@
                         Questions</h1>
                     <div class="accordion accordion-3" id="accordion03">
                         <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">How Long Is Recovery?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">The recovery period will vary depending on the type of hernia, type of surgery, age, and overall health. It’s normal to feel moderate pain. The recovery period for patients who have undergone Robotic surgery will be approximately 2 weeks and 3 to 4 weeks for Laparoscopic surgery.</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">How Long Will I Have To Stay In the Hospital?</a></div>
-                            <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                                <div class="card-body">You can go home on the procedure day itself if you have done a Laparoscopic or Robotic Surgery</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">Is It Dangerous To Ignore The Hernia?</a></div>
-                            <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                                <div class="card-body">If you ignore it will become bigger and more painful. At worst it can demand immediate Surgery and it could be more extreme</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Difference Between An Open Vs Laparoscopic Hernia Surgery?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">An open surgery requires an incision to put the bulging tissue back in place and it will take a lot of time for recovery.<br><br>
-
-                                    <b>Laparoscopic surgery is minimally-invasive which requires a small incision and also reduces recovery time.</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Does The Surgery Affect Pregnancy?</a></div>
-                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                <div class="card-body">Doctors usually recommend delaying elective hernia repair until after delivery. But Women can have laparoscopic hernia mesh surgery during pregnancy without complications and it requires fetal monitoring. The researchers also suggested performing a hernia in conjunction with a C-section to be the best option for pregnant patients.</div>
-                            </div>
-                        </div>
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">1. How Long is Gallbladder Recovery?</a></div>
+                  <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Recovery time varies based on the procedure. Laparoscopic surgery may allow quicker recovery, while open surgery might require a longer recovery period. Follow your surgeon's guidance.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">2. Hospital Stay for Gallbladder Surgery?</a></div>
+                  <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Hospital stay depends on the surgical approach and individual factors. Laparoscopic procedures often involve shorter stays, while open surgery may require a longer recovery period.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link  collapsed" data-hover="" data-bs-toggle="collapse" role="button"
+                      aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">3. Is Ignoring Gallbladder Symptoms Dangerous?</a></div>
+                  <div class="collapse " id="collapse01-3" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">Ignoring gallbladder symptoms, such as pain or discomfort after meals, can lead to complications like gallstones. Seek prompt medical attention for accurate diagnosis and appropriate treatment.</div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-4">4. Are there home remedies for managing Gallbladder symptoms?</a></div>
+                  <div class="collapse" id="collapse01-4" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">While medical consultation is crucial, dietary adjustments like reducing fatty foods may help manage gallbladder symptoms. Consult your healthcare provider for personalized advice.</div>
+                  </div>
+                </div>
+				        <div class="card">
+                  <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse"
+                      role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-5">5. When to Seek Medical Attention for Gallbladder Issues?</a></div>
+                  <div class="collapse" id="collapse01-5" data-bs-parent="#accordion03">
+                    <div class="card-body color-heading">If you experience severe abdominal pain, jaundice, or persistent vomiting, seek immediate medical attention. These symptoms may indicate gallbladder problems requiring urgent evaluation and treatment.</div>
+                  </div>
+                </div>
 
                     </div>
 
