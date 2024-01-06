@@ -68,6 +68,11 @@
                                         <?= form_dropdown('branch',  $Options['branches'], [], ' required width="100%" data-placeholder="Select an option" class=" form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"');
                                         ?>
                                     </div>
+                                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Role</label>
+                                        <?= form_dropdown('sub_role', $Options['subroles'], '', ' required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"');
+                                        ?>
+                                    </div>
 
                                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Visiblity</label>
@@ -151,7 +156,7 @@
 
 
                                 <td>
-                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $item['id'] ?>" data-branch="<?= $item['branch'] ?>" data-username="<?= esc($item['username']) ?>" data-email="<?= esc($item['email']) ?>" data-telephone="<?= esc($item['telephone']) ?>" data-firstname="<?= esc($item['firstname']) ?>" data-lastname="<?= esc($item['lastname']) ?>" data-in-active="<?= $item['in_active'] ?>">
+                                    <div class="flex gap-1 flex-row justify-center" data-id="<?= $item['id'] ?>" data-branch="<?= $item['branch'] ?>" data-subrole="<?= esc($item['sub_role']) ?>" data-username="<?= esc($item['username']) ?>" data-email="<?= esc($item['email']) ?>" data-telephone="<?= esc($item['telephone']) ?>" data-firstname="<?= esc($item['firstname']) ?>" data-lastname="<?= esc($item['lastname']) ?>" data-in-active="<?= $item['in_active'] ?>">
 
                                         <button type="button" title="Edit" data-bs-toggle="modal" data-bs-target="#edit-modal" class="p-1 text-black dark:text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
@@ -217,6 +222,11 @@
                     <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
                         <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Branch</label>
                         <?= form_dropdown('branch',  $Options['branches'], [], 'id="edit-form-branch" required width="100%" data-placeholder="Select an option" class=" form-select !bg-none py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"');
+                        ?>
+                    </div>
+                    <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10">
+                        <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Role</label>
+                        <?= form_dropdown('sub_role', $Options['subroles'], '', 'id="edit-form-subrole" required class="form-select py-2.5 px-4 w-full text-black dark:text-white border border-black/10 dark:border-white/10 rounded-lg placeholder:text-black/20 dark:placeholder:text-white/20 focus:border-black dark:focus:border-white/10 focus:ring-0 focus:shadow-none;"');
                         ?>
                     </div>
 
@@ -365,6 +375,7 @@
                         const telephone = parent.data('telephone');
                         const branch = parseInt(parent.data('branch'))??"0";
                         const inactive = parent.data('in-active');
+                        const subrole = parent.data('subrole');
 
                         console.log({
                             username,
@@ -391,6 +402,7 @@
                         $("#edit-form-telephone").val(telephone);
                         $("#edit-form-branch").val(branch);
                         $("#edit-form-visiblity").val(inactive);
+                        $("#edit-form-subrole").val(subrole);
 
 
 

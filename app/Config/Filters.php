@@ -13,6 +13,7 @@ use App\Filters\AuthApi;
 use App\Filters\Is_admin;
 use App\Filters\NoAuth;
 use App\Filters\Is_agent;
+use App\Filters\RolePermission;
 
 class Filters extends BaseConfig
 {
@@ -31,6 +32,7 @@ class Filters extends BaseConfig
         'Is_admin' => Is_admin::class,
         'redirect_dashboard' => NoAuth::class,
         'Is_agent' => Is_agent::class,
+        'RolePermission' => RolePermission::class,
     ];
 
     /**
@@ -78,6 +80,7 @@ class Filters extends BaseConfig
         'isApiAuthed' => ['before' => ['api/authed*']],
         'Is_admin' => ['before' => ['admin*', 'api/admin*']],
         'Is_agent' => ['before' => ['agent*']],
+        'RolePermission' => ['before' => ['admin*']],
         'csrf' => ['before' => ['forms/public/*']]
     ];
 }

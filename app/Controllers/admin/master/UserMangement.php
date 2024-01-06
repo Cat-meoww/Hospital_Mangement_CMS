@@ -29,7 +29,7 @@ class UserMangement extends General
         $this->data['title'] = "User Management";
         $this->data['Dataset'] = $Dataset;
         $this->data['Options'] = [
-            'roles' => $this->generate_roles(),
+            'subroles' => $this->generate_subroles(),
             'branches' => $this->generate_branch(),
             'visiblity' => [
                 0 => "Active",
@@ -43,6 +43,18 @@ class UserMangement extends General
         $UserRoles = new \App\Models\UserRoles();
 
         $arrayOfObjects = $UserRoles->select('id,role_name as name')->get()->getResult();
+        $associativeArray = [];
+
+        foreach ($arrayOfObjects as $object) {
+            $associativeArray[$object->id] = $object->name;
+        }
+        return $associativeArray;
+    }
+    private function generate_subroles()
+    {
+        $SubRoles = new \App\Models\SubRoles();
+
+        $arrayOfObjects = $SubRoles->select('id,name')->get()->getResult();
         $associativeArray = [];
 
         foreach ($arrayOfObjects as $object) {
@@ -97,6 +109,10 @@ class UserMangement extends General
                     'label' => 'Branch',
                     'rules' => "trim|required",
                 ],
+                'sub_role' => [
+                    'label' => 'Role',
+                    'rules' => "trim|required|is_not_unique[sub_roles.id]",
+                ],
                 'visiblity' => [
                     'label' => 'Visiblity',
                     'rules' => "trim|required|in_list[0,1]",
@@ -117,7 +133,8 @@ class UserMangement extends General
                     'telephone' => $this->request->getPost('telephone'),
                     'email' => $this->request->getPost('email'),
                     'password' => md5((string)$email),
-                    'branch' => $branch
+                    'branch' => $branch,
+                    'sub_role' => $this->request->getPost('sub_role'),
                 );
 
                 $query = $UserModel->insert($data);
@@ -173,6 +190,10 @@ class UserMangement extends General
                     'label' => 'Branch',
                     'rules' => "trim|required",
                 ],
+                'sub_role' => [
+                    'label' => 'Role',
+                    'rules' => "trim|required|is_not_unique[sub_roles.id]",
+                ],
                 'visiblity' => [
                     'label' => 'Visiblity',
                     'rules' => "trim|required|in_list[0,1]",
@@ -193,6 +214,7 @@ class UserMangement extends General
                     'telephone' => $this->request->getPost('telephone'),
                     'email' => $this->request->getPost('email'),
                     'branch' => (int) $this->request->getPost('branch'),
+                    'sub_role' => $this->request->getPost('sub_role'),
                     'in_active' => (int) $this->request->getPost('visiblity'),
                 ])->update();
 

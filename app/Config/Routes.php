@@ -147,6 +147,14 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         $routes->get('departments', 'departments::index');
         $routes->get('branches', 'branches::index');
 
+        $routes->get('role-permissions/(:num)', 'RolePermissions::index/$1');
+
+        $routes->group('sub-roles', static function ($routes) {
+            $routes->get('/', 'subroles::index', ['as' => 'subroles.index']);
+            $routes->get('create', 'subroles::new', ['as' => 'subroles.new']);
+            $routes->get('update/(:num)', 'subroles::edit/$1', ['as' => 'subroles.edit']);
+        });
+
         $routes->group('doctors', static function ($routes) {
             $routes->get('roles', 'doctors_role::index');
             $routes->get('list', 'doctors::index', ['as' => "doctor.list"]);
@@ -162,7 +170,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         });
     });
     $routes->group('management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
-        $routes->get('users', 'UserMangement::index');
+        $routes->get('users', 'UserMangement::index',['as' => 'users.index']);
     });
     $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->get('departments', 'branch_management::departments');
@@ -216,6 +224,14 @@ $routes->group('api', static function ($routes) {
                 $routes->post('create', 'UserMangement::create');
                 $routes->post('update', 'UserMangement::update');
                 $routes->post('delete', 'UserMangement::delete');
+            });
+            $routes->group('sub-roles', static function ($routes) {
+                $routes->post('create', 'subroles::create');
+                $routes->post('update', 'subroles::update');
+                $routes->post('delete', 'subroles::delete');
+            });
+            $routes->group('role-permissions', static function ($routes) {
+                $routes->post('handler', 'RolePermissions::PermissonHandler');
             });
             $routes->group('services', static function ($routes) {
                 $routes->post('create', 'services::create');

@@ -4,16 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Routes extends Model
+class RoutePermissions extends Model
 {
-    protected $table      = 'routes';
+    protected $table      = 'route_permissions';
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'object';
 
-    protected $allowedFields = ['method', 'route', 'name', 'handler'];
+
+    protected $allowedFields = ['role_id', 'route_id'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';
