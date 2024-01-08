@@ -5,7 +5,7 @@
 
 <div class="">
 
-    <div class="border border-black/10 dark:border-white/10 p-5 flex justify-center items-center rounded-md">
+    <div class="flex items-center rounded bg-lightyellow/50 dark:bg-lightyellow p-3 text-black/80 dark:text-black p-5 flex justify-center items-center rounded-md ">
         <div>
             <?= nl2br(esc($message)) ?>
         </div>
