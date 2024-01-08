@@ -18,21 +18,9 @@
             <li class="nav-item" data-hover="" id="contact">
                 <a href="<?= base_url('coimbatore') ?>"><span>Home</span></a>
             </li>
-            <li class="nav-item has-dropdown" data-hover="">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>About</span></a>
-                <ul class="dropdown-menu">
-                    <li class="nav-item">
-                        <a href="<?= base_url('aboutus') ?>"><span>About Us</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('chairman') ?>"><span>About Founder</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="<?= base_url('board-director') ?>"><span>About Management</span></a>
-                    </li>
-                </ul>
+            <li class="nav-item" data-hover="" id="contact">
+                <a href="<?= base_url('aboutus') ?>"><span>About Us</span></a>
             </li>
-
             <li class="nav-item has-dropdown" data-hover="">
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>specialities</span></a>
                 <ul class="dropdown-menu">
@@ -80,25 +68,25 @@
                 <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Doctors</span></a>
                 <ul class="dropdown-menu">
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Coimbatore</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Coimbatore</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Chennai - Perungudi</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Chennai - Perungudi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Chennai - Aminjikarai</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Chennai - Aminjikarai</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Tiruppur</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Tiruppur</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Pondicherry</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapura') ?>m"><span>Pondicherry</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Erode</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Erode</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://gem-dev.verse.net.in/doctors-list/Coimbatore-Ramanathapuram"><span>Thrissur</span></a>
+                        <a href="<?= base_url('doctors-list/Coimbatore-Ramanathapuram') ?>"><span>Thrissur</span></a>
                     </li>
                 </ul>
             </li>

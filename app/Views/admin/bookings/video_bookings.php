@@ -9,6 +9,10 @@
         overflow: hidden;
         max-width: 600px !important;
     }
+    .nice-select.open .list{
+        max-height: 50vh;
+        overflow-y: auto;
+    }
 </style>
 <link rel="stylesheet" type="text/css" media="screen" href=" <?= base_url("admin/assets/css/select2.css") ?>" />
 <?= $this->endSection() ?>
