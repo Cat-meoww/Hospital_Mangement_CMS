@@ -630,10 +630,14 @@ class Home extends BaseController
                 $payment = $Payments->select('booking_id')->where('order_id', $razorpay_order_id)->first();
                 if ($query) {
                     $VideoBookings = new \App\Models\VideoBookings();
+                    $VideoBookingDoctors = new \App\Models\VideoBookingDoctors();
+                    $Doctors = new \App\Models\Doctors();
                     $ReservedSlots = new \App\Models\ReservedSlots();
                     $booking = $VideoBookings->find($payment->booking_id);
                     $Services = new \App\Models\Services();
                     $ServiceName = $Services->select('name')->where('id', $booking->service)->first()->name ?? "miscellaneous";
+                    $VideoDoctorid = $VideoBookingDoctors->find($booking->doctor)->doctor ?? 0;
+                    $Doctorname = $Doctors->find($VideoDoctorid)->name ?? "Doctor name";
 
                     $ReservedSlots->insert([
                         'doctor_id' => $booking->doctor,
@@ -646,11 +650,13 @@ class Home extends BaseController
                         'booking_id' =>  $booking->id,
                         'name' =>  $booking->firstname,
                         'phno' =>  $booking->phone,
-                        'branch' => "Branch name",
                         'service' => $ServiceName,
+                        'doctor_name' => $Doctorname,
+                        'start_time' => analogueFormate($booking->start_time),
+                        'end_time' => analogueFormate($booking->end_time),
                         'booking_date' => $booking->booking_date,
                     ];
-                    $this->send_mail($booking->email, "Video Appointment", view('layout/templates/email_general_booking', $populate));
+                    $this->send_mail($booking->email, "Video Appointment", view('layout/templates/email_video_booking', $populate));
 
                     return redirect()
                         ->with('booking_id', $booking->id)
