@@ -52,7 +52,10 @@ class RolePermission implements FilterInterface
 
             throw new Exception('Access Denied to this role please contact admin');
         } catch (\Exception $e) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound($e->getMessage());
+            $handler = new \App\Controllers\admin\admin();
+            echo $handler->admin_exception($e);
+            exit(404);
+            //throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound($e->getMessage());
         }
     }
 

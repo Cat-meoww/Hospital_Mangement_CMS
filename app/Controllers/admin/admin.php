@@ -78,7 +78,7 @@ class admin extends General
 
         $this->data['dataset'] = $DATASET;
     }
-    
+
     public function profile()
     {
         $userModel = new UserModel();
@@ -86,5 +86,13 @@ class admin extends General
         $this->data['title'] = "Profile";
         $this->data['user'] = $allUserData;
         return view('admin/profile', $this->data);
+    }
+    
+    public function admin_exception(\Throwable $e)
+    {
+
+        $this->data['message'] = $e->getMessage();
+        $this->data['title'] = $e->getMessage();
+        return view('errors/html/admin_exception', $this->data);
     }
 }
