@@ -70,13 +70,13 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="team-member" data-hover="">
                         <div class="team-member-holder">
-                            <div class="team-img"><a class="link" href="doctors-standard.html"></a><img src="<?= base_url("uploads/doctors/" . $doctor->image) ?>" alt="team member" />
+                            <div class="team-img"><a class="link" href="javascript:void(0)"></a><img src="<?= base_url("uploads/doctors/" . $doctor->image) ?>" alt="team member" />
 
                             </div>
                             <!-- End .team-img-->
                             <div class="team-content">
                                 <div class="team-title">
-                                    <h4><a href="doctors-standard.html"><?= $doctor->name ?></a></h4>
+                                    <h4><a href="javascript:void(0)"><?= $doctor->name ?></a></h4>
                                 </div>
                                 <div class="team-cat"><a href="javascript:void(0)"><?= $doctor->education ?><span class="mx-2">|</span> <?= $doctor->experience ?> years exp</a></a></div>
                                 <div class="team-desc">

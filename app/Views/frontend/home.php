@@ -523,13 +523,13 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/jaundice.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/multi-organ-transplant') ?>">Jaundice</a></h4>
+                                <h4><a href="#">Jaundice</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>Gem hospital provides the most comprehensive jaundice care involving surgeons and physicians
                                     Usage of advanced gadgets like endoscopic ultrasound , Spyglass to aid better treatment and care</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed " href="<?= base_url('services/multi-organ-transplant') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed " href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -546,12 +546,12 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/gallbladder.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/esophago-gastric-surgery') ?>">Gall Bladder</a></h4>
+                                <h4><a href="#">Gall Bladder</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>We understand the emotional toll of Gallbladder. Our friendly staff provides unwavering support and guidance throughout your journey.</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/esophago-gastric-surgery') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -567,12 +567,12 @@
                         <div class="service-content">
                             <div class="service-icon"><img src="<?= base_url('frontend/assets/images/logo/anal-fissure.png') ?>" alt="background" /> </div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/medical-gastroenterology') ?>">Fissure</a></h4>
+                                <h4><a href="#">Fissure</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>Gem hospital & its doctors have performed the largest numbers of ligation of intersphincteric fistula tract(LIFT) surgery in the country</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/medical-gastroenterology') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -588,12 +588,12 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/Piles.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/digestive-cancer-care') ?>">Piles</a></h4>
+                                <h4><a href="#">Piles</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>Gem Hospital provides advanced treatments for piles, combining expertise and innovation for effective and lasting relief.</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/digestive-cancer-care') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -609,14 +609,14 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/liver.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/colorectal-surgery') ?>">Pancreatic Cancer</a></h4>
+                                <h4><a href="#">Pancreatic Cancer</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>It is first exclusive department in India to provide both Robotic &
                                     Laparoscopic surgeries
                                 </p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/colorectal-surgery') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -632,12 +632,12 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/nep.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/liver-pancreas') ?>">urology</a></h4>
+                                <h4><a href="#">urology</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>Our team of experienced urologists is dedicated to providing personalized care, tailored to your unique needs</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/liver-pancreas') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
@@ -653,12 +653,12 @@
                         <div class="service-content">
                             <div class="service-icon"> <img src="<?= base_url('frontend/assets/images/logo/hernia.png') ?>" alt="background" /></div>
                             <div class="service-title">
-                                <h4><a href="<?= base_url('services/endogynecology') ?>">Hernia</a></h4>
+                                <h4><a href="#">Hernia</a></h4>
                             </div>
                             <div class="service-desc">
                                 <p>Embrace cutting-edge hernia surgery at GEM Hospital, where advanced, scar-free techniques prioritize your aesthetic satisfaction</p>
                             </div>
-                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="<?= base_url('services/endogynecology') ?>"> <span class="line">
+                            <div class="service-more"><a class="btn btn--white btn-line btn-line-before btn-line-inversed" href="#"> <span class="line">
                                         <span></span></span><span>read more</span></a></div>
                         </div>
 
