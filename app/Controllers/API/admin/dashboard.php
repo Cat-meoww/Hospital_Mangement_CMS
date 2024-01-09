@@ -32,7 +32,11 @@ class dashboard extends General
             if ($this->validate($rules)) {
                 $date_type = $this->request->getPost('date_type');
                 $column = $date_type == 'entry' ? 'created_on' : 'booking_date';
-
+                // $branch = $this->session->branch_id;
+                // $Followed_Branch = "";
+                // if ($branch) {
+                //     $Followed_Branch = "AND branch =$branch ";
+                // }
 
                 $startDate = new DateTime('first day of 11 months ago');
                 $endDate = new DateTime('last day of this month');
