@@ -114,9 +114,10 @@ class Login extends BaseController
             'email' => $data['email'],
             'user_role' => $data['user_role'],
             'user_id' => $data['id'],
+            'branch_id' => (int)$data['branch'],
             'login' => true,
             'token' => $usertoken,
-            'sub_role'=> $data['sub_role'],
+            'sub_role' => $data['sub_role'],
         );
         $this->session->set($userdata);
     }
