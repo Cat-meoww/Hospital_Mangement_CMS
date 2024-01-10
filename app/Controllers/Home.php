@@ -495,7 +495,11 @@ class Home extends BaseController
                 if ($insertID) {
                     $payment_init = $this->payment_handler(1000, $transaction_id, $insertID);
 
-
+                    if (!$payment_init) {
+                        $VideoBookings->delete($insertID);
+                        throw new Exception("payment failed to initiate");
+                    }
+                    
                     //Need to make readlock of 8 mintues
                     return redirect()->to("payment/checkout/$transaction_id");
 
