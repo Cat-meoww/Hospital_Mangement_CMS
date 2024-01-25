@@ -135,6 +135,14 @@ $routes->group('auth', function ($routes) {
     // Redirect to a named route
     $routes->addRedirect('/', 'login');
 });
+$routes->group('oauth', function ($routes) {
+    $routes->group('github', function ($routes) {
+        $routes->get('login', 'GitHubAuth::login');
+        $routes->get('callback', 'GitHubAuth::callback');
+    });
+});
+
+
 
 $routes->get('redirect-to-dashboard', 'Login::user_dashboard');
 
@@ -170,7 +178,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         });
     });
     $routes->group('management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
-        $routes->get('users', 'UserMangement::index',['as' => 'users.index']);
+        $routes->get('users', 'UserMangement::index', ['as' => 'users.index']);
     });
     $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->get('departments', 'branch_management::departments');

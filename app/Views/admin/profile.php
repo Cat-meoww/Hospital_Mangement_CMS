@@ -150,7 +150,7 @@
                         </div>
                         <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10 dark:border-white/10">
                             <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Re-type Password</label>
-                            <input type="password" name="passconf" autocomplete="off"  required class="form-input" />
+                            <input type="password" name="passconf" autocomplete="off" required class="form-input" />
                         </div>
                         <div class="mt-3 flex justify-end">
                             <button type="submit" class="btn ">Save</button>
@@ -160,6 +160,18 @@
                         </div>
                         <input type="hidden" name="id" value="<?= $user['id'] ?>">
                     </form>
+                </div>
+                <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
+                    <h2 class="text-sm font-semibold mb-4">Connect Accounts</h2>
+                    <div class="flex">
+                        <a href="<?= $GithubAuthorizationUrl ?? "" ?>" role="button" class="btn py-2 px-5 text-sm font-semibold flex items-center gap-4 ">
+                            <img src="assets/images/github.svg" alt="images" class="flex-none">
+                            <div>
+                                <p class="text-sm font-semibold">Github</p>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
