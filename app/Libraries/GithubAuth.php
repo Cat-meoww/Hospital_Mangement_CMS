@@ -9,7 +9,7 @@ class GithubAuth
     private $urlAuthorize = "";
     private $redirect_uri = "";
     private $state = false;
-    private $scope = "read:user";
+    private $scope = "read:user,user:email";
     private $token = "";
 
     function __construct()

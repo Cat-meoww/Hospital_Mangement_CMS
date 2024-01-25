@@ -28,7 +28,6 @@ class GithubApi
         ];
 
         $this->client  = \Config\Services::curlrequest();
-       
     }
 
 
@@ -37,14 +36,19 @@ class GithubApi
     {
 
         try {
-           
-            $response = $this->client->request('GET',"/user", $this->options);
+            $response = $this->client->request('GET', "/user", $this->options);
+            $getBody = $response->getBody();
 
+            return json_decode($getBody);
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+    public function GetUserEmail()
+    {
 
-
-
-
-
+        try {
+            $response = $this->client->request('GET', "/user/emails", $this->options);
             $getBody = $response->getBody();
 
             return json_decode($getBody);

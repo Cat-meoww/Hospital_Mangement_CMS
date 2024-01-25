@@ -54,7 +54,12 @@ class GitHubAuth extends BaseController
 
             $GitApi = new \App\Libraries\GithubApi($accessToken);
             $user = $GitApi->GetUser();
+
+            $emails=$GitApi->GetUserEmail();
+            d($emails);
             dd($user);
+
+            
 
 
 
