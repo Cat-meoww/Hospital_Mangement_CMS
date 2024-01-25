@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2023 at 10:29 AM
+-- Generation Time: Jan 25, 2024 at 06:30 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -70,35 +70,6 @@ CREATE TABLE `booking_actions` (
   `created_on` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_on` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `booking_actions`
---
-
-INSERT INTO `booking_actions` (`id`, `booking_id`, `action`, `comments`, `created_by`, `created_on`, `updated_on`) VALUES
-(1, 60, 2, 'ccc', 1, '2023-12-14 20:33:07', '2023-12-14 20:33:07'),
-(2, 60, 2, 'saasas', 1, '2023-12-14 20:34:55', '2023-12-14 20:34:55'),
-(3, 60, 2, 'sdsdsd', 1, '2023-12-14 20:38:51', '2023-12-14 20:38:51'),
-(4, 60, 2, 'sdfdsf', 1, '2023-12-14 20:41:30', '2023-12-14 20:41:30'),
-(5, 60, 2, 'sdsd', 1, '2023-12-14 20:42:37', '2023-12-14 20:42:37'),
-(6, 60, 2, 'sdsd', 1, '2023-12-14 20:43:35', '2023-12-14 20:43:35'),
-(7, 60, 2, 'Sddsdsf', 1, '2023-12-14 20:44:50', '2023-12-14 20:44:50'),
-(8, 60, 2, 'aasas', 1, '2023-12-14 20:49:53', '2023-12-14 20:49:53'),
-(9, 60, 2, 'aas', 1, '2023-12-14 20:57:55', '2023-12-14 20:57:55'),
-(10, 60, 2, 'sddsf', 1, '2023-12-14 21:19:13', '2023-12-14 21:19:13'),
-(11, 60, 2, 'asas', 1, '2023-12-14 21:20:16', '2023-12-14 21:20:16'),
-(12, 60, 2, 'dsfdsf', 1, '2023-12-14 21:20:47', '2023-12-14 21:20:47'),
-(13, 60, 3, 'CCC', 1, '2023-12-14 21:21:08', '2023-12-14 21:21:08'),
-(14, 40, 2, 'GGG', 1, '2023-12-14 21:22:07', '2023-12-14 21:22:07'),
-(15, 40, 2, 'aas', 1, '2023-12-14 21:27:16', '2023-12-14 21:27:16'),
-(16, 39, 2, 'asas', 1, '2023-12-14 21:27:32', '2023-12-14 21:27:32'),
-(17, 15, 4, 'I don\'t like it', 1, '2023-12-14 21:39:02', '2023-12-14 21:39:02'),
-(18, 50, 3, 'cccc', 1, '2023-12-14 21:47:33', '2023-12-14 21:47:33'),
-(19, 49, 2, 'VDD', 1, '2023-12-14 21:47:51', '2023-12-14 21:47:51'),
-(20, 14, 3, 'ccc', 1, '2023-12-14 22:11:13', '2023-12-14 22:11:13'),
-(21, 59, 3, 'fgfg', 1, '2023-12-15 11:24:09', '2023-12-15 11:24:09'),
-(22, 58, 2, 'asdsadsad', 1, '2023-12-17 10:01:13', '2023-12-17 10:01:13'),
-(23, 54, 4, 'Turned off', 1, '2023-12-17 10:10:33', '2023-12-17 10:10:33');
 
 -- --------------------------------------------------------
 
@@ -1897,69 +1868,8 @@ CREATE TABLE `general_bookings` (
 --
 
 INSERT INTO `general_bookings` (`id`, `branch`, `service`, `name`, `age`, `message`, `phone`, `email`, `booking_date`, `status`, `follow_date`, `revenue`, `created_on`, `updated_on`) VALUES
-(2, 3, 18, 'asad', 12, 'assad', '6309757242', '0', '2023-11-22', 1, NULL, 0, '2023-11-22 05:43:15', '2023-11-22 05:43:15'),
-(3, 3, 18, 'lakshman', 21, 'sfdsf', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-22 06:04:04', '2023-11-22 06:04:04'),
-(4, 3, 18, 'lakshman', 21, 'Note', '6309757242', 'superadmin@mail.com', '2023-11-29', 1, NULL, 0, '2023-10-27 13:18:41', '2023-11-27 13:18:41'),
-(5, 3, 18, 'lakshman', 21, 'CC', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:55:58', '2023-11-28 10:55:58'),
-(6, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:58:57', '2023-11-28 10:58:57'),
-(7, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 10:59:15', '2023-11-28 10:59:15'),
-(8, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:00:02', '2023-11-28 11:00:02'),
-(9, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:02:15', '2023-11-28 11:02:15'),
-(10, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:03:24', '2023-11-28 11:03:24'),
-(11, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:05:37', '2023-11-28 11:05:37'),
-(12, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:05:56', '2023-11-28 11:05:56'),
-(13, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:06:43', '2023-11-28 11:06:43'),
-(14, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 3, NULL, 3500, '2023-11-28 11:06:54', '2023-12-14 22:11:13'),
-(15, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 4, NULL, 0, '2023-11-28 11:07:06', '2023-12-14 21:39:02'),
-(16, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:07:23', '2023-11-28 11:07:23'),
-(17, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:08:30', '2023-11-28 11:08:30'),
-(18, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:09:23', '2023-11-28 11:09:23'),
-(19, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:10:13', '2023-11-28 11:10:13'),
-(20, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:11:05', '2023-11-28 11:11:05'),
-(21, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:11:32', '2023-11-28 11:11:32'),
-(22, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:13:30', '2023-11-28 11:13:30'),
-(23, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:16:26', '2023-11-28 11:16:26'),
-(24, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:19:47', '2023-11-28 11:19:47'),
-(25, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:20:31', '2023-11-28 11:20:31'),
-(26, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:23:29', '2023-11-28 11:23:29'),
-(27, 3, 18, 'Aminjikarai', 21, 'adad', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:25:45', '2023-11-28 11:25:45'),
-(28, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:30:42', '2023-11-28 11:30:42'),
-(29, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:31:37', '2023-11-28 11:31:37'),
-(30, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:32:02', '2023-11-28 11:32:02'),
-(31, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:32:46', '2023-11-28 11:32:46'),
-(32, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:35:07', '2023-11-28 11:35:07'),
-(33, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:42:25', '2023-11-28 11:42:25'),
-(34, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:48:35', '2023-11-28 11:48:35'),
-(35, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:49:20', '2023-11-28 11:49:20'),
-(36, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:49:32', '2023-11-28 11:49:32'),
-(37, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:50:17', '2023-11-28 11:50:17'),
-(38, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 11:52:38', '2023-11-28 11:52:38'),
-(39, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-22', 0, '2023-11-28 11:53:28', '2023-12-14 21:27:32'),
-(40, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-16', 0, '2023-11-28 11:55:01', '2023-12-14 21:27:16'),
-(41, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:02:55', '2023-11-28 12:02:55'),
-(42, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:06:35', '2023-11-28 12:06:35'),
-(43, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:07:07', '2023-11-28 12:07:07'),
-(44, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:07:50', '2023-11-28 12:07:50'),
-(45, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:17:04', '2023-11-28 12:17:04'),
-(46, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:20:39', '2023-11-28 12:20:39'),
-(47, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:22:06', '2023-11-28 12:22:06'),
-(48, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 1, NULL, 0, '2023-11-28 12:23:35', '2023-11-28 12:23:35'),
-(49, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 2, '2023-12-22', 0, '2023-11-28 12:24:05', '2023-12-14 21:47:51'),
-(50, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'naveen@insakal.in', '2023-11-30', 3, NULL, 3000, '2023-11-28 12:29:53', '2023-12-14 21:47:33'),
-(51, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 12:34:42', '2023-11-28 12:34:42'),
-(52, 3, 18, 'lakshman', 41, 'jkkk', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 12:36:13', '2023-11-28 12:36:13'),
-(53, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', 1, NULL, 0, '2023-10-28 13:16:51', '2023-11-28 13:16:51'),
-(54, 4, 28, 'lakshman', 23, 'Donate $50 dollars ', '1234567890', 'sivarkamuthi@gmail.com', '2023-11-29', 4, NULL, 0, '2023-10-28 13:17:17', '2023-12-17 10:10:33'),
-(55, 6, 25, 'lakshman', 31, 'asasasdas', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-28 13:21:27', '2023-11-28 13:21:27'),
-(56, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-29 12:38:19', '2023-11-29 12:38:19'),
-(57, 3, 18, 'Billa', 12, 'asdasd', '6309757242', 'pidugunaveensetty@gmail.com', '2023-11-30', 1, NULL, 0, '2023-11-29 12:39:15', '2023-11-29 12:39:15'),
-(58, 3, 18, 'lakshman', 21, 'asadsad', '6309757242', 'naveen@insakal.in', '2023-12-30', 2, '2023-12-20', 0, '2023-12-13 19:36:40', '2023-12-17 10:01:13'),
-(59, 3, 18, 'naveen', 21, 'sadsad', '6309757242', 'superadmin@mail.com', '2023-12-30', 3, NULL, 400, '2023-12-13 19:45:34', '2023-12-15 11:24:09'),
-(60, 3, 18, 'naveen', 21, 'awsadasd', '6309757242', 'naveen@insakal.in', '2023-12-16', 3, '2023-12-29', 2900, '2023-12-14 17:39:56', '2023-12-14 21:21:08'),
-(61, 4, 21, 'Shiva', 23, 'adasdasd', '6309757242', 'naveen@insakal.in', '2023-12-30', 1, NULL, 0, '2023-12-15 11:38:44', '2023-12-15 11:38:44'),
-(62, 7, 19, 'lakshman', 31, 'Hello world', '6309757242', 'superadmin@mail.com', '2024-01-24', 1, NULL, 0, '2023-12-16 08:48:48', '2023-12-16 08:48:48'),
-(63, 4, 30, 'DODD', 21, '1212', '6309757242', 'superadmin@mail.com', '2023-12-31', 1, NULL, 0, '2023-12-18 10:35:48', '2023-12-18 10:35:48'),
-(64, 7, 20, 'Naveen', 12, 'sdfdsfdsf', '6309757242', 'naveen@insakal.in', '2023-12-20', 1, NULL, 0, '2023-12-18 11:06:32', '2023-12-18 11:06:32');
+(65, 3, 18, 'lakshman', 21, 'sdfdsf', '6309757242', 'superadmin@mail.com', '2024-01-31', 1, NULL, 0, '2024-01-09 10:37:38', '2024-01-09 10:37:38'),
+(66, 4, 26, 'Aminjikarai', 21, 'saas', '6309757242', 'admin@gmail.com', '2024-01-30', 1, NULL, 0, '2024-01-09 10:40:28', '2024-01-09 10:40:28');
 
 -- --------------------------------------------------------
 
@@ -2039,14 +1949,7 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`id`, `booking_id`, `transaction_id`, `amount`, `status`, `order_id`, `payment_id`, `verify_signature`, `method`, `created_on`, `updated_on`, `expired_on`) VALUES
-(4, 23, '7386a133-c40e-46a8-87c8-accbe88a1d49', 1000, 'SUCCESS', 'order_NAwZ1G4Rm3Levt', 'pay_NAwZWb4jnhlXcB', '52e3b26680be7f885a8b4418c2e964af48f8f9daffdd91b9f70e9dd030762cda', '', '2023-12-11 06:43:54', '2023-12-11 06:44:36', '2023-12-12 15:52:36'),
-(5, 24, '04f011ca-228b-41bd-b14b-4b71d88bc707', 1000, 'SUCCESS', 'order_NB0C3X5xkEvNDP', 'pay_NB0ZetTQuuJSpc', '8573f37b0ce5561d065a5bc178019428d69dc0e5cab4a994e00ab219fe30dab2', '', '2023-12-11 10:16:56', '2023-12-11 10:39:27', '2023-12-12 15:52:36'),
-(6, 25, '46396794-3fc1-4e86-b514-5772df4a377e', 1000, 'SUCCESS', 'order_NB0pEj1mN9Mzl4', 'pay_NB0psywl4l0kZD', '25293fc8d1eb5c6933188c4353c894f8e2d59f7a510b1bb9b9d31756a3487396', NULL, '2023-12-11 10:54:01', '2023-12-11 10:54:47', '2023-12-12 15:52:36'),
-(7, 26, '89d38a89-ff0b-4c27-9feb-7c6291ade22e', 1000, 'SUCCESS', 'order_NB0slUpubxOZiC', 'pay_NB0ugdGIZTtI5L', '7edc6047023f0be1b892b3637fbe87425356cadb98675b0a53335b64eb556332', 'upi', '2023-12-11 10:57:21', '2023-12-11 10:59:20', '2023-12-12 15:52:36'),
-(13, 32, '9d4f48a2-b64d-4e89-a3d3-e8d27c9cea5a', 1000, 'SUCCESS', 'order_NCtIjqZfpJwLBE', 'pay_NCtJCFdU2CpidS', 'f8ee1270cab7f14753e4974edc4c456d639926cc8d89592edf06dfdccf892c5a', NULL, '2023-12-16 10:20:24', '2023-12-16 10:20:59', '2023-12-16 10:30:24'),
-(15, 34, '681149eb-bdac-4fa8-be72-a0d3df07c644', 1000, 'SUCCESS', 'order_NDho2BSLOQ9Sfi', 'pay_NDhoK1TdyQPlR3', '37874d5711fd07cafa79f578db1a808e93603978f2e0578061daa0b0230969ee', NULL, '2023-12-18 11:44:43', '2023-12-18 11:45:08', '2023-12-18 11:54:43'),
-(16, 35, 'f923666c-6a1b-4093-b0bd-b4c731f7532b', 1000, 'SUCCESS', 'order_NDijHgPWgTTb64', 'pay_NDimLb8n73KFq4', '8ab972a9edbcd6e4ba932dc9e04a7af5063e68c9d22407576fb246f51de5e010', NULL, '2023-12-18 12:38:54', '2023-12-18 12:41:57', '2023-12-18 12:48:54'),
-(17, 36, '809ae6af-183c-40d6-aabc-e9ddc9f23f5b', 1000, 'SUCCESS', 'order_NDindM6tyzFwTT', 'pay_NDio1UdPHon4LD', 'bfb0ee2c0168acde59eae310a91d8840bec4fcb855c4c3f800a6db78bc772858', NULL, '2023-12-18 12:43:01', '2023-12-18 12:43:37', '2023-12-18 12:53:01');
+(19, 38, '67101561-a43b-418a-859a-e004f4a2a7b3', 1000, 'SUCCESS', 'order_NMOQMywr1kJeT2', 'pay_NMOQg1p89REM5s', '0a5b12d7d78cdbaf1a1269d9d536a3281d1049c38bd18d559c15fd7f5f410f49', NULL, '2024-01-09 10:38:08', '2024-01-09 10:38:41', '2024-01-09 10:48:08');
 
 -- --------------------------------------------------------
 
@@ -2069,14 +1972,7 @@ CREATE TABLE `reserved_slots` (
 --
 
 INSERT INTO `reserved_slots` (`id`, `doctor_id`, `booking_date`, `slot_id`, `booking_id`, `created_on`, `updated_on`) VALUES
-(4, 6, '2023-12-11', 9, 23, '2023-12-11 06:44:36', '2023-12-11 06:44:36'),
-(5, 6, '2023-12-30', 7, 24, '2023-12-11 10:39:27', '2023-12-11 10:39:27'),
-(6, 6, '2023-12-11', 10, 25, '2023-12-11 10:54:47', '2023-12-11 10:54:47'),
-(7, 5, '2023-12-23', 15, 26, '2023-12-11 10:59:20', '2023-12-11 10:59:20'),
-(8, 6, '2024-01-12', 7, 32, '2023-12-16 10:20:59', '2023-12-16 10:20:59'),
-(9, 5, '2024-01-24', 13, 34, '2023-12-18 11:45:08', '2023-12-18 11:45:08'),
-(10, 8, '2023-12-29', 20, 35, '2023-12-18 12:41:57', '2023-12-18 12:41:57'),
-(11, 5, '2024-01-23', 13, 36, '2023-12-18 12:43:37', '2023-12-18 12:43:37');
+(12, 5, '2024-01-20', 7, 38, '2024-01-09 10:38:34', '2024-01-09 10:38:34');
 
 -- --------------------------------------------------------
 
@@ -2125,29 +2021,57 @@ CREATE TABLE `routes` (
 --
 
 INSERT INTO `routes` (`id`, `method`, `route`, `name`, `handler`, `created_on`, `updated_on`) VALUES
-(1, 'GET', 'admin/dashboard', 'admin.dashboard', '\\App\\Controllers\\admin\\admin::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(2, 'GET', 'admin/profile', NULL, '\\App\\Controllers\\admin\\admin::profile', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(3, 'GET', 'admin/all-master/locations', NULL, '\\App\\Controllers\\admin\\master\\location::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(4, 'GET', 'admin/all-master/services', NULL, '\\App\\Controllers\\admin\\master\\services::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(5, 'GET', 'admin/all-master/departments', NULL, '\\App\\Controllers\\admin\\master\\departments::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(6, 'GET', 'admin/all-master/branches', NULL, '\\App\\Controllers\\admin\\master\\branches::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(7, 'GET', 'admin/all-master/doctors/roles', NULL, '\\App\\Controllers\\admin\\master\\doctors_role::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(8, 'GET', 'admin/all-master/doctors/list', 'doctor.list', '\\App\\Controllers\\admin\\master\\doctors::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(9, 'GET', 'admin/cms-page/doctor/([0-9]+)', NULL, '\\App\\Controllers\\admin\\cms\\pages::doctor/$1', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(10, 'GET', 'admin/management/agent_management', NULL, '\\App\\Controllers\\admin\\admin::agent_management', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(11, 'GET', 'admin/management/client_management', NULL, '\\App\\Controllers\\admin\\admin::client_management', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(12, 'GET', 'admin/branch-management/departments', NULL, '\\App\\Controllers\\admin\\master\\branch_management::departments', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(13, 'GET', 'admin/branch-management/services', NULL, '\\App\\Controllers\\admin\\master\\branch_management::services', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(14, 'GET', 'admin/branch-management/doctors', NULL, '\\App\\Controllers\\admin\\master\\branch_management::doctors', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(15, 'GET', 'admin/booking-management/video/doctors', NULL, '\\App\\Controllers\\admin\\master\\bookings\\video_management::doctors', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(16, 'GET', 'admin/booking-management/video/time-slots', NULL, '\\App\\Controllers\\admin\\master\\bookings\\time_slots::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(17, 'GET', 'admin/cms/faq', NULL, '\\App\\Controllers\\admin\\cms\\faq::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(18, 'GET', 'admin/cms/ads', NULL, '\\App\\Controllers\\admin\\cms\\ads::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(19, 'GET', 'admin/cms/best-deals', NULL, '\\App\\Controllers\\admin\\cms\\best_deals::index', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(20, 'GET', 'admin/enquiries/faq', NULL, '\\App\\Controllers\\admin\\enquiries::faq', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(21, 'GET', 'admin/enquiries/contact-us', NULL, '\\App\\Controllers\\admin\\enquiries::contact_us', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(22, 'GET', 'admin/bookings/general', NULL, '\\App\\Controllers\\admin\\bookings::general_bookings', '2023-12-19 16:57:01', '2023-12-19 16:59:18'),
-(23, 'GET', 'admin/bookings/video', NULL, '\\App\\Controllers\\admin\\bookings::video_bookings', '2023-12-19 16:57:01', '2023-12-19 16:59:18');
+(1, 'GET', 'admin/dashboard', 'admin.dashboard', '\\App\\Controllers\\admin\\admin::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(2, 'GET', 'admin/profile', NULL, '\\App\\Controllers\\admin\\admin::profile', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(3, 'GET', 'admin/all-master/locations', NULL, '\\App\\Controllers\\admin\\master\\location::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(4, 'GET', 'admin/all-master/services', NULL, '\\App\\Controllers\\admin\\master\\services::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(5, 'GET', 'admin/all-master/departments', NULL, '\\App\\Controllers\\admin\\master\\departments::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(6, 'GET', 'admin/all-master/branches', NULL, '\\App\\Controllers\\admin\\master\\branches::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(7, 'GET', 'admin/all-master/role-permissions/([0-9]+)', NULL, '\\App\\Controllers\\admin\\master\\RolePermissions::index/$1', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(8, 'GET', 'admin/all-master/sub-roles', 'subroles.index', '\\App\\Controllers\\admin\\master\\subroles::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(9, 'GET', 'admin/all-master/sub-roles/create', 'subroles.new', '\\App\\Controllers\\admin\\master\\subroles::new', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(10, 'GET', 'admin/all-master/sub-roles/update/([0-9]+)', 'subroles.edit', '\\App\\Controllers\\admin\\master\\subroles::edit/$1', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(11, 'GET', 'admin/all-master/doctors/roles', NULL, '\\App\\Controllers\\admin\\master\\doctors_role::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(12, 'GET', 'admin/all-master/doctors/list', 'doctor.list', '\\App\\Controllers\\admin\\master\\doctors::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(13, 'GET', 'admin/cms-page/doctor/([0-9]+)', NULL, '\\App\\Controllers\\admin\\cms\\pages::doctor/$1', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(14, 'GET', 'admin/cms-page/blog', 'blog.index', '\\App\\Controllers\\admin\\cms\\blog::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(15, 'GET', 'admin/cms-page/blog/create', 'blog.create', '\\App\\Controllers\\admin\\cms\\blog::create', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(16, 'GET', 'admin/cms-page/blog/update/([0-9]+)', 'blog.update', '\\App\\Controllers\\admin\\cms\\blog::update/$1', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(17, 'GET', 'admin/management/users', 'users.index', '\\App\\Controllers\\admin\\master\\UserMangement::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(18, 'GET', 'admin/branch-management/departments', NULL, '\\App\\Controllers\\admin\\master\\branch_management::departments', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(19, 'GET', 'admin/branch-management/services', NULL, '\\App\\Controllers\\admin\\master\\branch_management::services', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(20, 'GET', 'admin/branch-management/doctors', NULL, '\\App\\Controllers\\admin\\master\\branch_management::doctors', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(21, 'GET', 'admin/booking-management/video/doctors', NULL, '\\App\\Controllers\\admin\\master\\bookings\\video_management::doctors', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(22, 'GET', 'admin/booking-management/video/time-slots', NULL, '\\App\\Controllers\\admin\\master\\bookings\\time_slots::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(23, 'GET', 'admin/cms/faq', NULL, '\\App\\Controllers\\admin\\cms\\faq::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(24, 'GET', 'admin/cms/ads', NULL, '\\App\\Controllers\\admin\\cms\\ads::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(25, 'GET', 'admin/cms/best-deals', NULL, '\\App\\Controllers\\admin\\cms\\best_deals::index', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(26, 'GET', 'admin/enquiries/faq', NULL, '\\App\\Controllers\\admin\\enquiries::faq', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(27, 'GET', 'admin/enquiries/contact-us', NULL, '\\App\\Controllers\\admin\\enquiries::contact_us', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(28, 'GET', 'admin/bookings/general', NULL, '\\App\\Controllers\\admin\\bookings::general_bookings', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(29, 'GET', 'admin/bookings/video', NULL, '\\App\\Controllers\\admin\\bookings::video_bookings', '2024-01-06 12:05:52', '2024-01-09 10:34:09'),
+(30, 'GET', 'admin/bookings/service', NULL, '\\App\\Controllers\\admin\\bookings::service_bookings', '2024-01-06 12:05:52', '2024-01-09 10:34:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `route_permissions`
+--
+
+CREATE TABLE `route_permissions` (
+  `id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `route_id` int(11) NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `route_permissions`
+--
+
+INSERT INTO `route_permissions` (`id`, `role_id`, `route_id`, `created_on`, `updated_on`) VALUES
+(24, 4, 1, '2024-01-06 11:37:35', '2024-01-06 11:37:35');
 
 -- --------------------------------------------------------
 
@@ -7313,6 +7237,29 @@ INSERT INTO `states` (`id`, `name`, `country_id`, `country_code`, `fips_code`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sub_roles`
+--
+
+CREATE TABLE `sub_roles` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `created_on` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_on` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sub_roles`
+--
+
+INSERT INTO `sub_roles` (`id`, `name`, `description`, `created_on`, `updated_on`) VALUES
+(1, 'Super admin', 'Super admin', '2024-01-04 11:36:33', '2024-01-04 11:36:21'),
+(2, 'Default roles', 'Default  assiged to new registered user', '2024-01-04 17:43:04', '2024-01-04 17:59:34'),
+(4, 'Accountant', 'Accountant', '2024-01-04 18:02:43', '2024-01-06 11:33:39');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `time_slots`
 --
 
@@ -7367,11 +7314,12 @@ CREATE TABLE `users` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `usertype` enum('Others','Builders','Owner','Dealer') NOT NULL DEFAULT 'Others',
   `telephone` varchar(10) NOT NULL,
   `country_id` int(5) NOT NULL,
   `password` varchar(255) NOT NULL,
   `user_role` int(12) NOT NULL,
+  `sub_role` int(11) NOT NULL DEFAULT 2,
+  `branch` int(11) NOT NULL DEFAULT 0,
   `about` text DEFAULT NULL,
   `location` mediumtext DEFAULT NULL,
   `profile_url` tinytext DEFAULT NULL,
@@ -7388,11 +7336,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `usertype`, `telephone`, `country_id`, `password`, `user_role`, `about`, `location`, `profile_url`, `extras`, `is_logged`, `updated_on`, `created_on`, `token`, `conn_id`, `in_active`) VALUES
-(1, 'admin', 'Admin ', 'AC', 'admin@gmail.com', 'Others', '6309757242', 0, '21232f297a57a5a743894a0e4a801fc3', 1, NULL, NULL, NULL, NULL, 1, '2023-12-21 11:52:38', '2022-05-17 09:25:00', '338d34ab482bb765f0d7c81f0547ce11', '', 0),
-(2, 'employee', 'Naruto', 'Uztumaki', 'agent@gmail.com', 'Builders', '6309757241', 0, 'b33aed8f3134996703dc39f9a7c95783', 2, 'Nothing About Me', 'PONDI TAMIL NADU', '1695386878_dd691ada3de7b24efde8.jpg', NULL, 1, '2023-10-27 12:01:36', '2022-05-17 09:25:00', 'bc068bd06d4b88ead00fe6096591fe16', '', 0),
-(3, 'Yash', 'Yash', 'P', 'pro_kgf@123.com', 'Others', '0', 0, 'kgf123', 3, NULL, NULL, NULL, NULL, 0, '2022-10-19 12:14:58', '2022-05-17 09:25:00', '', '222', 0),
-(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'pidugunaveensetty@gmail.com', 'Owner', '1234567890', 0, '827ccb0eea8a706c4c34a16891f84e7b', 2, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2023-12-16 22:40:45', '2023-10-11 17:51:22', '16800f5ceeee057699e30fd881aa1462', NULL, 0);
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `telephone`, `country_id`, `password`, `user_role`, `sub_role`, `branch`, `about`, `location`, `profile_url`, `extras`, `is_logged`, `updated_on`, `created_on`, `token`, `conn_id`, `in_active`) VALUES
+(1, 'admin', 'Admin ', 'AC', 'admin@gmail.com', '6309757242', 0, '21232f297a57a5a743894a0e4a801fc3', 1, 1, 0, NULL, NULL, NULL, NULL, 1, '2024-01-24 15:10:31', '2022-05-17 09:25:00', '13862a2a02c6f881a5ee0df1f7eb375d', '', 0),
+(2, 'employee', 'Naruto', 'Uztumaki', 'agent@gmail.com', '6309757241', 0, 'b33aed8f3134996703dc39f9a7c95783', 2, 2, 0, 'Nothing About Me', 'PONDI TAMIL NADU', '1695386878_dd691ada3de7b24efde8.jpg', NULL, 1, '2023-10-27 12:01:36', '2022-05-17 09:25:00', 'bc068bd06d4b88ead00fe6096591fe16', '', 0),
+(3, 'Yash', 'Yash', 'P', 'pro_kgf@123.com', '0', 0, 'kgf123', 3, 2, 0, NULL, NULL, NULL, NULL, 0, '2022-10-19 12:14:58', '2022-05-17 09:25:00', '', '222', 0),
+(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'pidugunaveensetty@gmail.com', '1234567890', 0, '827ccb0eea8a706c4c34a16891f84e7b', 2, 2, 8, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2024-01-06 11:42:44', '2023-10-11 17:51:22', '16800f5ceeee057699e30fd881aa1462', NULL, 0),
+(22, 'tester', 'tester', 'tester', 'tester@gmail.com', '1234867895', 0, '8c3fe1ad25e6d5f47512ea7365419966', 1, 4, 3, NULL, NULL, NULL, NULL, 1, '2024-01-09 10:41:04', '2024-01-06 11:43:42', 'c3d885b07b9d7390f81c71835c1d22bf', NULL, 0),
+(23, 'mojito', 'mojito', 'mojito', 'mojito@gmail.com', '6234567890', 0, 'a98d59d024e78616ea00f9f6d33750fb', 1, 2, 0, NULL, NULL, NULL, NULL, 0, '2024-01-06 11:52:04', '2024-01-06 11:51:54', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -7447,14 +7397,8 @@ CREATE TABLE `video_bookings` (
 --
 
 INSERT INTO `video_bookings` (`id`, `firstname`, `lastname`, `phone`, `email`, `service`, `doctor`, `booking_date`, `slot_id`, `start_time`, `end_time`, `message`, `transaction_id`, `created_on`, `updated_on`) VALUES
-(23, 'RAJ', 'GOD', '6309757242', 'naveen@insakal.in', 18, 6, '2023-12-11', 9, '10:30:00', '10:45:00', 'Nothing', '7386a133-c40e-46a8-87c8-accbe88a1d49', '2023-12-11 06:43:53', '2023-12-11 06:43:53'),
-(24, 'Naveen', 'Happy', '6309757242', 'Staff1@123.com', 19, 6, '2023-12-30', 7, '10:00:00', '10:15:00', 'asas', '04f011ca-228b-41bd-b14b-4b71d88bc707', '2023-12-11 10:16:53', '2023-12-11 10:16:53'),
-(25, 'Naveen', 'Happy', '6309757242', 'superadmin@mail.com', 19, 6, '2023-12-11', 10, '10:45:00', '11:00:00', 'dzfdfdfsdf', '46396794-3fc1-4e86-b514-5772df4a377e', '2023-12-11 10:53:59', '2023-12-11 10:53:59'),
-(26, 'Naveen', 'Happy', '6309757242', 'agent@gmail.com', 18, 5, '2023-12-23', 15, '12:00:00', '12:15:00', 'test', '89d38a89-ff0b-4c27-9feb-7c6291ade22e', '2023-12-11 10:57:19', '2023-12-11 10:57:19'),
-(32, 'Naveen', 'Happy', '6309757242', 'naveen@insakal.in', 19, 6, '2024-01-12', 7, '10:00:00', '10:15:00', 'ssd', '9d4f48a2-b64d-4e89-a3d3-e8d27c9cea5a', '2023-12-16 10:20:22', '2023-12-16 10:20:22'),
-(34, 'Naveen', 'Happy', '6309757242', 'pidugunaveensetty@gmail.com', 18, 5, '2024-01-24', 13, '11:30:00', '11:45:00', 'zxcsxzc', '681149eb-bdac-4fa8-be72-a0d3df07c644', '2023-12-18 11:44:41', '2023-12-18 11:44:41'),
-(35, 'Naveen', 'Happy', '6309757242', 'superadmin@mail.com', 20, 8, '2023-12-29', 20, '13:15:00', '13:30:00', 'Go to hell', 'f923666c-6a1b-4093-b0bd-b4c731f7532b', '2023-12-18 12:38:53', '2023-12-18 12:38:53'),
-(36, 'Groot', 'jack', '1234567894', 'groot@gmail.com', 18, 5, '2024-01-23', 13, '11:30:00', '11:45:00', 'asdsad', '809ae6af-183c-40d6-aabc-e9ddc9f23f5b', '2023-12-18 12:43:00', '2023-12-18 12:43:00');
+(38, 'Naveen', 'Happy', '6309757242', 'superadmin@mail.com', 18, 5, '2024-01-20', 7, '10:00:00', '10:15:00', 'dfdfsdf', '67101561-a43b-418a-859a-e004f4a2a7b3', '2024-01-09 10:38:06', '2024-01-09 10:38:06'),
+(40, 'Tester', 'Happy', '6309757242', 'superadmin@mail.com', 18, 5, '2024-01-26', 7, '10:00:00', '10:15:00', 'sdfdsf', 'fafe190a-35ae-45c8-8b5d-920c4cb74f68', '2024-01-10 12:25:23', '2024-01-10 12:25:23');
 
 -- --------------------------------------------------------
 
@@ -7618,6 +7562,14 @@ ALTER TABLE `routes`
   ADD UNIQUE KEY `method` (`method`,`route`) USING HASH;
 
 --
+-- Indexes for table `route_permissions`
+--
+ALTER TABLE `route_permissions`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `role_id` (`role_id`,`route_id`),
+  ADD KEY `route_id` (`route_id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -7630,6 +7582,12 @@ ALTER TABLE `services`
 ALTER TABLE `states`
   ADD PRIMARY KEY (`id`),
   ADD KEY `country_region` (`country_id`);
+
+--
+-- Indexes for table `sub_roles`
+--
+ALTER TABLE `sub_roles`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `time_slots`
@@ -7747,7 +7705,7 @@ ALTER TABLE `faq_enquiries`
 -- AUTO_INCREMENT for table `general_bookings`
 --
 ALTER TABLE `general_bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `general_booking_status`
@@ -7765,13 +7723,13 @@ ALTER TABLE `locations`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `reserved_slots`
 --
 ALTER TABLE `reserved_slots`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `reset_password`
@@ -7783,7 +7741,13 @@ ALTER TABLE `reset_password`
 -- AUTO_INCREMENT for table `routes`
 --
 ALTER TABLE `routes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `route_permissions`
+--
+ALTER TABLE `route_permissions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -7798,6 +7762,12 @@ ALTER TABLE `states`
   MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5225;
 
 --
+-- AUTO_INCREMENT for table `sub_roles`
+--
+ALTER TABLE `sub_roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `time_slots`
 --
 ALTER TABLE `time_slots`
@@ -7807,7 +7777,7 @@ ALTER TABLE `time_slots`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `user_role`
@@ -7819,7 +7789,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `video_bookings`
 --
 ALTER TABLE `video_bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `video_booking_doctors`
@@ -7861,6 +7831,13 @@ ALTER TABLE `payments`
 --
 ALTER TABLE `reserved_slots`
   ADD CONSTRAINT `reserved_slots_ibfk_1` FOREIGN KEY (`booking_id`) REFERENCES `video_bookings` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `route_permissions`
+--
+ALTER TABLE `route_permissions`
+  ADD CONSTRAINT `route_permissions_ibfk_1` FOREIGN KEY (`route_id`) REFERENCES `routes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `route_permissions_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `sub_roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `services`
