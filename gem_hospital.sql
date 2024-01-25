@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2024 at 06:30 AM
+-- Generation Time: Jan 25, 2024 at 05:29 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -2071,7 +2071,10 @@ CREATE TABLE `route_permissions` (
 --
 
 INSERT INTO `route_permissions` (`id`, `role_id`, `route_id`, `created_on`, `updated_on`) VALUES
-(24, 4, 1, '2024-01-06 11:37:35', '2024-01-06 11:37:35');
+(24, 4, 1, '2024-01-06 11:37:35', '2024-01-06 11:37:35'),
+(25, 2, 2, '2024-01-25 21:51:28', '2024-01-25 21:51:28'),
+(26, 1, 2, '2024-01-25 21:53:34', '2024-01-25 21:53:34'),
+(27, 4, 2, '2024-01-25 21:55:22', '2024-01-25 21:55:22');
 
 -- --------------------------------------------------------
 
@@ -7329,6 +7332,7 @@ CREATE TABLE `users` (
   `created_on` datetime NOT NULL,
   `token` text DEFAULT NULL,
   `conn_id` text DEFAULT NULL,
+  `authenticator_secret` varchar(500) DEFAULT NULL,
   `in_active` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -7336,13 +7340,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `telephone`, `country_id`, `password`, `user_role`, `sub_role`, `branch`, `about`, `location`, `profile_url`, `extras`, `is_logged`, `updated_on`, `created_on`, `token`, `conn_id`, `in_active`) VALUES
-(1, 'admin', 'Admin ', 'AC', 'admin@gmail.com', '6309757242', 0, '21232f297a57a5a743894a0e4a801fc3', 1, 1, 0, NULL, NULL, NULL, NULL, 1, '2024-01-24 15:10:31', '2022-05-17 09:25:00', '13862a2a02c6f881a5ee0df1f7eb375d', '', 0),
-(2, 'employee', 'Naruto', 'Uztumaki', 'agent@gmail.com', '6309757241', 0, 'b33aed8f3134996703dc39f9a7c95783', 2, 2, 0, 'Nothing About Me', 'PONDI TAMIL NADU', '1695386878_dd691ada3de7b24efde8.jpg', NULL, 1, '2023-10-27 12:01:36', '2022-05-17 09:25:00', 'bc068bd06d4b88ead00fe6096591fe16', '', 0),
-(3, 'Yash', 'Yash', 'P', 'pro_kgf@123.com', '0', 0, 'kgf123', 3, 2, 0, NULL, NULL, NULL, NULL, 0, '2022-10-19 12:14:58', '2022-05-17 09:25:00', '', '222', 0),
-(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'pidugunaveensetty@gmail.com', '1234567890', 0, '827ccb0eea8a706c4c34a16891f84e7b', 2, 2, 8, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2024-01-06 11:42:44', '2023-10-11 17:51:22', '16800f5ceeee057699e30fd881aa1462', NULL, 0),
-(22, 'tester', 'tester', 'tester', 'tester@gmail.com', '1234867895', 0, '8c3fe1ad25e6d5f47512ea7365419966', 1, 4, 3, NULL, NULL, NULL, NULL, 1, '2024-01-09 10:41:04', '2024-01-06 11:43:42', 'c3d885b07b9d7390f81c71835c1d22bf', NULL, 0),
-(23, 'mojito', 'mojito', 'mojito', 'mojito@gmail.com', '6234567890', 0, 'a98d59d024e78616ea00f9f6d33750fb', 1, 2, 0, NULL, NULL, NULL, NULL, 0, '2024-01-06 11:52:04', '2024-01-06 11:51:54', NULL, NULL, 0);
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `telephone`, `country_id`, `password`, `user_role`, `sub_role`, `branch`, `about`, `location`, `profile_url`, `extras`, `is_logged`, `updated_on`, `created_on`, `token`, `conn_id`, `authenticator_secret`, `in_active`) VALUES
+(1, 'admin', 'Admin ', 'AC', 'admin@gmail.com', '6309757242', 0, '21232f297a57a5a743894a0e4a801fc3', 1, 1, 0, NULL, NULL, NULL, NULL, 1, '2024-01-25 21:55:08', '2022-05-17 09:25:00', '2052b23914f12436cb609992147de789', '', 'IFLZWNXYR2A2JL6US3ODRQ6MJTFIWVVJMFP4DUCRV3AYYEVYVO2FEMMPBXPBKJYEFJ7J2EBHUTFHFJMWWWB7JN5WIMZSIWKTFFZRABI', 0),
+(2, 'employee', 'Naruto', 'Uztumaki', 'agent@gmail.com', '6309757241', 0, 'b33aed8f3134996703dc39f9a7c95783', 2, 2, 0, 'Nothing About Me', 'PONDI TAMIL NADU', '1695386878_dd691ada3de7b24efde8.jpg', NULL, 1, '2023-10-27 12:01:36', '2022-05-17 09:25:00', 'bc068bd06d4b88ead00fe6096591fe16', '', NULL, 0),
+(3, 'Yash', 'Yash', 'P', 'pro_kgf@123.com', '0', 0, 'kgf123', 3, 2, 0, NULL, NULL, NULL, NULL, 0, '2022-10-19 12:14:58', '2022-05-17 09:25:00', '', '222', NULL, 0),
+(21, 'Arjun Reddy', 'Arjun', 'Reddy', 'pidugunaveensetty@gmail.com', '1234567890', 0, '827ccb0eea8a706c4c34a16891f84e7b', 2, 2, 8, 'Updated Feb. 28, 2022\r\n\r\nConsuming great writing is like listening to a singer. If the performer makes an emotional connection with me – even though they miss a few notes – I eagerly lock into the rest of the song and anticipate the next performance.\r\n\r\nYour words must be powerful and effective as well if you want to captivate as many of your readers as possible.\r\n\r\nContent writing isn’t an easy task. Whether you craft words for B2B or B2C audiences, the challenges can be many. I’ve created a diverse set of tips, tools, and resources to aid in shaping and modifying your work. It’s not an exhaustive collection. Some ideas may seem familiar. Others will be fresh.', 'Chennai', NULL, '{}', 1, '2024-01-06 11:42:44', '2023-10-11 17:51:22', '16800f5ceeee057699e30fd881aa1462', NULL, NULL, 0),
+(22, 'tester', 'tester', 'tester', 'tester@gmail.com', '1234867895', 0, '8c3fe1ad25e6d5f47512ea7365419966', 1, 4, 3, NULL, NULL, NULL, NULL, 0, '2024-01-25 21:59:14', '2024-01-06 11:43:42', '', NULL, 'CJV2DBV5FXRL2Y2QIODOFYMMLCOBS7IDWMQOYHCZZPAKSL4A5O63BQHBTGLO7KX7MQZLEHOREZGL3KTLRFOAXZVNY2LBXZRH2WCVFVA', 0),
+(23, 'mojito', 'mojito', 'mojito', 'mojito@gmail.com', '6234567890', 0, 'a98d59d024e78616ea00f9f6d33750fb', 1, 2, 0, NULL, NULL, NULL, NULL, 0, '2024-01-06 11:52:04', '2024-01-06 11:51:54', NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -7747,7 +7751,7 @@ ALTER TABLE `routes`
 -- AUTO_INCREMENT for table `route_permissions`
 --
 ALTER TABLE `route_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `services`

@@ -2,8 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Services;
 use App\Models\UserModel;
-
+use PDO;
 
 class Login extends BaseController
 {
@@ -45,8 +46,85 @@ class Login extends BaseController
             $email = $this->request->getGetPost('email');
             $this->usermodel = new UserModel();
             $data = $this->usermodel->where('email', $email)->first();
+            //Check 2FA 
+            if ($data['authenticator_secret']) {
+                return $this->init2FA($data);
+            }
+
             $this->set_userdata($data);
             setcookie("controller", "12345", time() + 3600);
+            return $this->user_dashboard();
+        }
+    }
+
+    private function init2FA(&$data)
+    {
+        $token = uniqid("2FA");
+        $user_id = $data['id'];
+        $secret = md5("$token-$user_id");
+
+        $this->session->set('TFA_SECRET', $secret);
+        $this->session->set('TFA_user_id', $user_id);
+        return redirect()->to("auth/verify2FA/$token");
+    }
+    public function verify2FA($token)
+    {
+        helper('form');
+        $this->data['title'] = "2FA";
+        $this->data['token'] = $token;
+        $this->data['user_id'] = $this->session->TFA_user_id ?? "";
+
+        return view('auth/verify_2fa', $this->data);
+    }
+    public function auth_check_2FA()
+    {
+
+        $rules = [
+            'token'    => [
+                'label' => "Accesstoken",
+                "rules" => 'required',
+            ],
+            'user_id' => [
+                'label' => "Accesstoken",
+                "rules" => 'required',
+            ],
+            'totp' => [
+                'label' => "OTP",
+                "rules" => 'required|exact_length[6]|integer',
+            ],
+        ];
+
+        if (!$this->validate($rules)) {
+
+
+
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        } else {
+            $token = $this->request->getPost('token');
+            $user_id = $this->request->getPost('user_id');
+            $totp = $this->request->getPost('totp');
+            $secret = md5("$token-$user_id");
+
+            if ($secret !== $this->session->get('TFA_SECRET')) {
+                $this->session->setFlashdata('_ci_validation_errors', ["totp" => "Invalid Session"]);
+                return redirect()->to('auth/login');
+            }
+
+
+            $user = $this->usermodel->find($user_id);
+            $Authenicator = \Config\Services::Authenticator();
+            if (!$Authenicator->verifyOTP($user, $totp)) {
+
+                $this->session->setFlashdata('_ci_validation_errors', ["totp" => "Invalid Code"]);
+                return redirect()->back();
+            }
+
+            $this->session->remove('TFA_SECRET');
+            $this->session->remove('TFA_user_id');
+
+
+
+            $this->set_userdata($user);
             return $this->user_dashboard();
         }
     }
@@ -102,7 +180,7 @@ class Login extends BaseController
     }
 
 
-    private function set_userdata($data)
+    private function set_userdata(&$data)
     {
         $usertoken = md5(uniqid("auth", true));
         $update = ['is_logged' => 1, 'token' => $usertoken];

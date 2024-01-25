@@ -11,6 +11,9 @@
                 <button @click="activeTab = 'settings'" :class="activeTab === 'settings' ? 'border-black text-black font-semibold dark:border-lightpurple-200 dark:text-lightpurple-200' : 'border-transparent text-black/40 hover:text-black hover:font-semibold dark:text-white/40 dark:hover:text-lightpurple-200'" class="border-b-2 mx-2 my-1 font-normal">
                     Edit Profile
                 </button>
+                <button @click="activeTab = 'security'" :class="activeTab === 'security' ? 'border-black text-black font-semibold dark:border-lightpurple-200 dark:text-lightpurple-200' : 'border-transparent text-black/40 hover:text-black hover:font-semibold dark:text-white/40 dark:hover:text-lightpurple-200'" class="border-b-2 mx-2 my-1 font-normal">
+                    Security
+                </button>
 
 
             </div>
@@ -140,6 +143,34 @@
                         <input type="hidden" name="id" value="<?= $user['id'] ?>">
                     </form>
                 </div>
+                
+
+            </div>
+            <div x-show="activeTab === 'security'" class="flex flex-col gap-7">
+                <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
+                    <h2 class="text-lg font-semibold mb-4">Sign-in Method</h2>
+                    <div class="bg-lightpurple-100/50 dark:bg-white/5 rounded-lg p-4 flex items-start gap-1">
+                        <div class="flex-none">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00135 17.9611C8.00135 17.9611 8.8251 18.3957 9.59934 18.6529C9.59934 18.6529 9.99999 18.797 10.4006 18.6529C10.4006 18.6529 11.1749 18.3957 11.9987 17.9611C11.9987 17.9611 13.3229 17.2625 14.3744 16.2949C14.3744 16.2949 17.5 13.4184 17.5 8.96094V4.375C17.5 4.375 17.5 3.85723 17.1339 3.49112C17.1339 3.49112 16.7678 3.125 16.25 3.125H3.75C3.75 3.125 3.23223 3.125 2.86612 3.49112C2.86612 3.49112 2.5 3.85723 2.5 4.375V8.96094C2.5 8.96094 2.5 13.4184 5.6256 16.2949C5.6256 16.2949 6.6771 17.2625 8.00135 17.9611ZM11.4154 16.8555C11.4154 16.8555 10.6794 17.2438 10 17.4688C10 17.4688 9.32065 17.2438 8.58459 16.8555C8.58459 16.8555 7.40402 16.2327 6.47206 15.3751C6.47206 15.3751 3.75 12.87 3.75 8.96094V4.375H16.25V8.96094C16.25 8.96094 16.25 12.87 13.5279 15.3751C13.5279 15.3751 12.596 16.2327 11.4154 16.8555Z" fill="currentcolor"></path>
+                                <path d="M6.9943 9.86065C6.87801 9.74952 6.72335 9.6875 6.5625 9.6875C6.56237 9.6875 6.54832 9.68766 6.54832 9.68766C6.38261 9.69142 6.22517 9.76086 6.11065 9.8807C5.99952 9.99699 5.9375 10.1516 5.9375 10.3125L5.93766 10.3267C5.94142 10.4924 6.01086 10.6498 6.1307 10.7644L8.41976 12.9519C8.66119 13.1826 9.04135 13.1827 9.28298 12.9522L13.8688 8.57737C13.9887 8.46295 14.0584 8.30542 14.0623 8.13971C14.0626 8.1297 14.0626 8.11969 14.0623 8.10968C14.0585 7.95435 13.997 7.806 13.8897 7.69358C13.7718 7.56995 13.6084 7.5 13.4375 7.5L13.4199 7.50025C13.2653 7.50461 13.1179 7.56608 13.0061 7.67278L8.85193 11.6359L6.9943 9.86065Z" fill="currentcolor"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-1 items-start justify-between gap-4">
+                            <div class="flex-1">
+                                <h3 class="text-sm">Secure Your Account</h3>
+                                <p class="text-xs text-black/40 dark:text-white/40">Two-factor
+                                    authentication adds an extra layer of security to your account. To
+                                    log in, in addition you'll need to provide a 6 digit code.</p>
+                            </div>
+                            <?php if ($user['authenticator_secret']) : ?>
+                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn flex-none text-xs px-2 py-[5px]">Enabled</a>
+                            <?php else : ?>
+                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn flex-none text-xs px-2 py-[5px]">Enable</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
                 <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
                     <h2 class="text-lg font-semibold mb-4">Change Password</h2>
                     <form method="post" data-reload="true" action="<?= base_url('api/admin/profile/update/pwd') ?>" class="max-w-[540px] grid grid-flow-row gap-4 fetch-form">
@@ -150,7 +181,7 @@
                         </div>
                         <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10 dark:border-white/10">
                             <label class="block text-xs text-black/40 dark:text-white/40 mb-1">Re-type Password</label>
-                            <input type="password" name="passconf" autocomplete="off"  required class="form-input" />
+                            <input type="password" name="passconf" autocomplete="off" required class="form-input" />
                         </div>
                         <div class="mt-3 flex justify-end">
                             <button type="submit" class="btn ">Save</button>

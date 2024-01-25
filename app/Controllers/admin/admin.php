@@ -5,7 +5,9 @@ namespace App\Controllers\admin;
 use App\Controllers\General;
 use App\Models\UserModel;
 use App\Models\PropertyType;
+use App\Models\Services;
 use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\I18n\Time;
 use DateTime;
 
 class admin extends General
@@ -87,12 +89,25 @@ class admin extends General
         $this->data['user'] = $allUserData;
         return view('admin/profile', $this->data);
     }
-    
+
     public function admin_exception(\Throwable $e)
     {
 
         $this->data['message'] = $e->getMessage();
         $this->data['title'] = $e->getMessage();
         return view('errors/html/admin_exception', $this->data);
+    }
+
+    public function enable2FactorAuth()
+    {
+        $this->data['title'] = "Enable Two-factor authentication";
+        $user = $this->usermodel->find($this->session->user_id);
+
+
+        $provisioningUrl = \Config\Services::Authenticator()->sendOTP($user);
+
+        $this->data['ProvisionalUrl'] = 'https://chart.googleapis.com/chart?chs=300x300&chld=M|0&cht=qr&chl=' . urlencode($provisioningUrl);
+
+        return view('admin/twofactorauth', $this->data);
     }
 }

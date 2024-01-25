@@ -28,6 +28,7 @@ class General extends BaseController
         }
 
         $this->data['user_id'] = $this->session->user_id;
+        $this->data['title'] = "";
 
         $this->db = db_connect();
     }

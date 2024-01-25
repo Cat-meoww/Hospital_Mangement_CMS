@@ -132,6 +132,9 @@ $routes->group('auth', function ($routes) {
     $routes->post('password_reset/check', 'Login::forgot_pwd_check');
     $routes->get('password_reset/(:uuid)', 'Login::password_reset_view/$1');
     $routes->get('password_verify/(:uuid)', 'Login::password_verify/$1');
+
+    $routes->get('verify2FA/(:any)', 'Login::verify2FA/$1/$2');
+    $routes->post('verify2FA/check', 'Login::auth_check_2FA');
     // Redirect to a named route
     $routes->addRedirect('/', 'login');
 });
@@ -160,7 +163,9 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
             $routes->get('list', 'doctors::index', ['as' => "doctor.list"]);
         });
     });
-
+    $routes->group('security', static function ($routes) {
+        $routes->get('enable2FactorAuth', 'admin::enable2FactorAuth', ['as' => 'admin.users.2factorAuth']);
+    });
     $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
         $routes->get('doctor/(:num)', 'pages::doctor/$1');
         $routes->group('blog', static function ($routes) {
@@ -170,7 +175,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
         });
     });
     $routes->group('management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
-        $routes->get('users', 'UserMangement::index',['as' => 'users.index']);
+        $routes->get('users', 'UserMangement::index', ['as' => 'users.index']);
     });
     $routes->group('branch-management', ['namespace' => 'App\Controllers\admin\master'], static function ($routes) {
         $routes->get('departments', 'branch_management::departments');

@@ -14,7 +14,7 @@ class UserModel extends Model
     protected $returnType     = 'array';
 
 
-    protected $allowedFields = ['username', 'firstname', 'lastname', 'telephone', 'about', "location", 'profile_url', 'email', 'password', 'user_role','sub_role', 'in_active', 'branch', 'is_logged', 'token', 'conn_id'];
+    protected $allowedFields = ['username', 'firstname', 'lastname', 'telephone', 'about', "location", 'profile_url', 'email', 'password', 'user_role','sub_role', 'in_active', 'branch', 'is_logged', 'token', 'conn_id','authenticator_secret'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_on';
