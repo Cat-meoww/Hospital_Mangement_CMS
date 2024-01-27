@@ -111,6 +111,11 @@ $routes->group('payment', function ($routes) {
     $routes->post('verify', 'Home::payment_verify');
     $routes->post('webhook', 'Payments::webhook_handler');
 });
+$routes->group('webhook', function ($routes) {
+    $routes->group('telegram', function ($routes) {
+        $routes->post('bot-hook', 'Telegram::webhook');
+    });
+});
 
 $routes->group('appointment', function ($routes) {
     $routes->get('book-appointment', 'Home::general_booking');
