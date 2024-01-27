@@ -12,6 +12,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
+        "longman/telegram-bot": "^0.82.0",
         "ramsey/uuid": "^4.7",
         "razorpay/razorpay": "2.*",
         "spomky-labs/otphp": "^11.2"
