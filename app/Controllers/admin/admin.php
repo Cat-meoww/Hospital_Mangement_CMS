@@ -110,4 +110,14 @@ class admin extends General
 
         return view('admin/twofactorauth', $this->data);
     }
+    public function passkeys()
+    {
+        $this->data['title'] = "Passkeys";
+        $user = $this->usermodel->find($this->session->user_id);
+
+
+        
+
+        return view('admin/security/passkeys', $this->data);
+    }
 }

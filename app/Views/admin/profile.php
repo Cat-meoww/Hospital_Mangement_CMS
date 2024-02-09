@@ -143,12 +143,12 @@
                         <input type="hidden" name="id" value="<?= $user['id'] ?>">
                     </form>
                 </div>
-                
+
 
             </div>
             <div x-show="activeTab === 'security'" class="flex flex-col gap-7">
                 <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
-                    <h2 class="text-lg font-semibold mb-4">Sign-in Method</h2>
+                    <h2 class="text-sm font-semibold mb-4">Sign-in Method</h2>
                     <div class="bg-lightpurple-100/50 dark:bg-white/5 rounded-lg p-4 flex items-start gap-1">
                         <div class="flex-none">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,23 +156,68 @@
                                 <path d="M6.9943 9.86065C6.87801 9.74952 6.72335 9.6875 6.5625 9.6875C6.56237 9.6875 6.54832 9.68766 6.54832 9.68766C6.38261 9.69142 6.22517 9.76086 6.11065 9.8807C5.99952 9.99699 5.9375 10.1516 5.9375 10.3125L5.93766 10.3267C5.94142 10.4924 6.01086 10.6498 6.1307 10.7644L8.41976 12.9519C8.66119 13.1826 9.04135 13.1827 9.28298 12.9522L13.8688 8.57737C13.9887 8.46295 14.0584 8.30542 14.0623 8.13971C14.0626 8.1297 14.0626 8.11969 14.0623 8.10968C14.0585 7.95435 13.997 7.806 13.8897 7.69358C13.7718 7.56995 13.6084 7.5 13.4375 7.5L13.4199 7.50025C13.2653 7.50461 13.1179 7.56608 13.0061 7.67278L8.85193 11.6359L6.9943 9.86065Z" fill="currentcolor"></path>
                             </svg>
                         </div>
-                        <div class="flex flex-1 items-start justify-between gap-4">
-                            <div class="flex-1">
-                                <h3 class="text-sm">Secure Your Account</h3>
-                                <p class="text-xs text-black/40 dark:text-white/40">Two-factor
-                                    authentication adds an extra layer of security to your account. To
-                                    log in, in addition you'll need to provide a 6 digit code.</p>
-                            </div>
-                            <?php if ($user['authenticator_secret']) : ?>
-                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn flex-none text-xs px-2 py-[5px]">Enabled</a>
-                            <?php else : ?>
-                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn flex-none text-xs px-2 py-[5px]">Enable</a>
-                            <?php endif; ?>
-                        </div>
+                        <p class="text-xs text-black/40 dark:text-white/40">
+                            Two-factor authentication adds an extra layer of security to your account.
+                            To log in, in you'll need to provide a 4 digit amazing code.
+                            <a href="javaScript:;" class="text-lightpurple-300">Learn More</a>
+                        </p>
                     </div>
+
+                    <div class="grid grid-flow-row divide-y divide-black/10 dark:divide-white/10">
+                        <div class="flex items-center gap-4 py-4">
+                            <div class="flex-none">
+                                <div class=" text-black dark:text-white flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                                        <path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16Zm8,200a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h96a8,8,0,0,1,8,8ZM140,60a12,12,0,1,1-12-12A12,12,0,0,1,140,60Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="flex-1 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-semibold">Secure Your Account </p>
+                                    <p class="text-xs text-black/40 dark:text-white/40">Two-factor authentication adds an extra layer of security to your account. To log in, in addition you'll need to provide a 6 digit code.</p>
+                                </div>
+                                <div class="togglebutton inline-block">
+                                    <label for="toggleG" class="flex items-center cursor-pointer">
+                                        <div class="relative">
+                                            <?php if ($user['authenticator_secret']) : ?>
+                                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn text-xs px-2 py-[5px]  ">Enabled</a>
+                                            <?php else : ?>
+                                                <a href="<?= base_url('admin/security/enable2FactorAuth') ?>" class="btn  text-xs px-2 py-[5px]">Enable</a>
+                                            <?php endif; ?>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 py-4">
+                            <div class=" text-black dark:text-white flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M72,128a134.63,134.63,0,0,1-14.16,60.47,8,8,0,1,1-14.32-7.12A118.8,118.8,0,0,0,56,128,71.73,71.73,0,0,1,83,71.8,8,8,0,1,1,93,84.29,55.76,55.76,0,0,0,72,128Zm56-8a8,8,0,0,0-8,8,184.12,184.12,0,0,1-23,89.1,8,8,0,0,0,14,7.76A200.19,200.19,0,0,0,136,128,8,8,0,0,0,128,120Zm0-32a40,40,0,0,0-40,40,8,8,0,0,0,16,0,24,24,0,0,1,48,0,214.09,214.09,0,0,1-20.51,92A8,8,0,1,0,146,226.83,230,230,0,0,0,168,128,40,40,0,0,0,128,88Zm0-64A104.11,104.11,0,0,0,24,128a87.76,87.76,0,0,1-5,29.33,8,8,0,0,0,15.09,5.33A103.9,103.9,0,0,0,40,128a88,88,0,0,1,176,0,282.24,282.24,0,0,1-5.29,54.45,8,8,0,0,0,6.3,9.4,8.22,8.22,0,0,0,1.55.15,8,8,0,0,0,7.84-6.45A298.37,298.37,0,0,0,232,128,104.12,104.12,0,0,0,128,24ZM94.4,152.17A8,8,0,0,0,85,158.42a151,151,0,0,1-17.21,45.44,8,8,0,0,0,13.86,8,166.67,166.67,0,0,0,19-50.25A8,8,0,0,0,94.4,152.17ZM128,56a72.85,72.85,0,0,0-9,.56,8,8,0,0,0,2,15.87A56.08,56.08,0,0,1,184,128a252.12,252.12,0,0,1-1.92,31A8,8,0,0,0,189,168a8.39,8.39,0,0,0,1,.06,8,8,0,0,0,7.92-7,266.48,266.48,0,0,0,2-33A72.08,72.08,0,0,0,128,56Zm57.93,128.25a8,8,0,0,0-9.75,5.75c-1.46,5.69-3.15,11.4-5,17a8,8,0,0,0,5,10.13,7.88,7.88,0,0,0,2.55.42,8,8,0,0,0,7.58-5.46c2-5.92,3.79-12,5.35-18.05A8,8,0,0,0,185.94,184.26Z"></path>
+                                </svg>
+                            </div>
+
+                            <div class="flex-1 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-sm font-semibold">Passkeys</p>
+                                    <p class="text-xs text-black/40  dark:text-white/40">With passkeys you can now use your fingerprint, face, or screen lock to verify it’s really you</p>
+                                </div>
+                                <div class="togglebutton inline-block">
+                                    <label for="toggleGi" class="flex items-center cursor-pointer">
+                                        <a href="<?= base_url('admin/security/passkeys') ?>" class="btn  text-xs  py-[5px]">
+                                           Start using
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
                 <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
-                    <h2 class="text-lg font-semibold mb-4">Change Password</h2>
+                    <h2 class="text-sm font-semibold mb-4">Change Password</h2>
                     <form method="post" data-reload="true" action="<?= base_url('api/admin/profile/update/pwd') ?>" class="max-w-[540px] grid grid-flow-row gap-4 fetch-form">
 
                         <div class="relative bg-white dark:bg-white/5 py-4 px-5 rounded-lg border border-black/10 dark:border-white/10">

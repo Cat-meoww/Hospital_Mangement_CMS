@@ -165,6 +165,7 @@ $routes->group('admin', ['namespace' => 'App\Controllers\admin'], static functio
     });
     $routes->group('security', static function ($routes) {
         $routes->get('enable2FactorAuth', 'admin::enable2FactorAuth', ['as' => 'admin.users.2factorAuth']);
+        $routes->get('passkeys', 'admin::passkeys', ['as' => 'admin.users.passkeys']);
     });
     $routes->group('cms-page', ['namespace' => 'App\Controllers\admin\cms'], static function ($routes) {
         $routes->get('doctor/(:num)', 'pages::doctor/$1');
@@ -338,6 +339,13 @@ $routes->group('api', static function ($routes) {
                 $routes->post('create', 'blog::create');
                 $routes->post('update', 'blog::update');
                 $routes->post('delete', 'blog::delete');
+            });
+        });
+
+        $routes->group('security', static function ($routes) {
+            $routes->group('webauthn', static function ($routes) {
+                $routes->post('register', 'webauthnio::register');
+                $routes->post('response', 'webauthnio::response');
             });
         });
     });

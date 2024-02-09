@@ -124,7 +124,7 @@ class UserMangement extends General
                 $email = $this->request->getPost('email');
                 $branch = (int) $this->request->getPost('branch');
 
-
+                $uuid =  \Ramsey\Uuid\Uuid::uuid4();
                 $data = array(
                     'username' => $this->request->getPost('username'),
                     'firstname' =>  $this->request->getPost('firstname'),
@@ -135,6 +135,7 @@ class UserMangement extends General
                     'password' => md5((string)$email),
                     'branch' => $branch,
                     'sub_role' => $this->request->getPost('sub_role'),
+                    'uuid' => (string) $uuid,
                 );
 
                 $query = $UserModel->insert($data);
