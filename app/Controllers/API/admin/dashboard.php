@@ -173,6 +173,113 @@ class dashboard extends General
             return $this->handle_exception($e);
         }
     }
+    public function monthly_revenue()
+    {
+        try {
+
+            $startDate = new DateTime('first day of 11 months ago');
+            $endDate = new DateTime('last day of this month');
+
+
+            $datalabels = [];
+            $dataseries = [
+                'video' => [],
+                'general' => [],
+                'total' => [],
+            ];
+
+            $currentDate = clone $startDate;
+
+            $i = 0;
+            $hash_map = [];
+
+            while ($currentDate <= $endDate) {
+
+
+                $hash_map[$currentDate->format('M Y')] = $i;
+                $datalabels[] = $currentDate->format('M');
+                $dataseries['video'][] = 0;
+                $dataseries['general'][] = 0;
+                $dataseries['total'][] = 0;
+                $currentDate->modify('+1 month');
+                $i++;
+            }
+
+            $SQL = "SELECT
+                    YEAR(created_on) AS payment_year,
+                    MONTH(created_on) AS payment_month,
+                    DATE_FORMAT(created_on,'%b %Y') as month_year,
+                    SUM(amount) AS revenue
+                FROM
+                    payments
+                WHERE
+                    status = 'SUCCESS'
+                    AND created_on >= DATE_FORMAT(NOW() - INTERVAL 11 MONTH, '%Y-%m-01') 
+                    AND created_on < LAST_DAY(NOW()) 
+                GROUP BY
+                    payment_year, payment_month";
+            $query = $this->db->query($SQL);
+            
+            while ($row = $query->getUnbufferedRow()) {
+                $index = $hash_map[$row->month_year];
+                $dataseries['video'][$index] = (int) $row->revenue;
+                $dataseries['total'][$index] = (int) $row->revenue;
+            }
+
+            $SQL = "SELECT
+                    YEAR(created_on) AS booking_year,
+                    MONTH(created_on) AS booking_month,
+                    DATE_FORMAT(created_on,'%b %Y') as month_year,
+                    SUM(revenue) AS revenue
+                FROM
+                    general_bookings
+                WHERE
+                    status = '3'
+                    AND created_on >= DATE_FORMAT(NOW() - INTERVAL 11 MONTH, '%Y-%m-01') 
+                    AND created_on < LAST_DAY(NOW()) 
+                GROUP BY
+                    booking_year, booking_month";
+            $query = $this->db->query($SQL);
+            
+            while ($row = $query->getUnbufferedRow()) {
+                $index = $hash_map[$row->month_year];
+                $dataseries['general'][$index] = (int) $row->revenue;
+                $dataseries['total'][$index] += (int) $row->revenue;
+            }
+
+            
+
+
+
+            return $this->respond([
+                'status' => "success",
+                'data' => [
+                    'labels' => $datalabels,
+                    'series' => [
+                        [
+                            'name' => "Video Revenue",
+                            'data' => $dataseries['video'],
+                            'color' => '#59A8D4',
+
+                        ],
+                        [
+                            'name' => "General Revenue",
+                            'data' => $dataseries['general'],
+                            'color' => '#ffc555',
+                        ],
+                        [
+                            'name' => "Total Revenue",
+                            'data' => $dataseries['total'],
+                            'color' => '#A8C5DA',
+                        ],
+                    ],
+                ],
+
+            ]);
+        } catch (\Exception $e) {
+            return $this->handle_exception($e);
+        }
+    }
 
     public function general_branch_wise()
     {

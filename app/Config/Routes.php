@@ -317,8 +317,10 @@ $routes->group('api', static function ($routes) {
                 $routes->post('monthly', 'dashboard::general_monthly');
                 $routes->post('branch-wise', 'dashboard::general_branch_wise');
             });
+            $routes->post('bookings/monthly-revenue', 'dashboard::monthly_revenue');
             $routes->group('video', static function ($routes) {
                 $routes->post('monthly', 'dashboard::video_monthly');
+      
             });
         });
         $routes->group('profile', static function ($routes) {

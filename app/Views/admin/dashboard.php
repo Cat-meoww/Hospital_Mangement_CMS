@@ -236,6 +236,19 @@
             <div id="monthly-video-bookings"></div>
         </div>
     </div>
+    <div class="grid grid-cols-1">
+        <div class="bg-lightwhite dark:bg-white/5 rounded-2xl p-6">
+            <div class="flex gap-3">
+                <h2 class="text-sm font-semibold text-black dark:text-white mb-4 flex-1">Bookings Revenue</h2>
+
+                <div>
+                    <button class="btn py-1 px-3 text-[11.5px]" id="booking-revenue-reload">&#8635;</button>
+                </div>
+            </div>
+
+            <div id="booking-revenue"></div>
+        </div>
+    </div>
 </div>
 <?= $this->endSection() ?>
 
@@ -282,6 +295,63 @@
                 name: "This Year",
                 data: [],
             }, ],
+            xaxis: {
+                categories: [],
+                labels: {
+                    style: {
+                        fontSize: "12px",
+                        color: "rgb(55, 61, 63)",
+                    },
+                },
+            },
+            noData: {
+                text: 'Loading...'
+            }
+        },
+        line: {
+            chart: {
+                height: 236,
+                type: "area",
+                stacked: false,
+                events: {
+                    click: function(chart, w, e) {},
+                },
+                toolbar: {
+                    show: false,
+                },
+            },
+
+            plotOptions: {
+                bar: {
+                    columnWidth: "30%",
+                    distributed: true,
+                },
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            legend: {
+                show: false,
+            },
+            yaxis: {
+                tickAmount: 5,
+                labels: {
+                    offsetX: -10,
+                    offsetY: 0,
+                    style: {
+                        fontSize: "12px",
+                    },
+                },
+                opposite: false,
+            },
+            series: [{
+                name: "This Year",
+                data: [],
+            }, ],
+            stroke: {
+
+                width: 1,
+            },
             xaxis: {
                 categories: [],
                 labels: {
@@ -391,6 +461,9 @@
                 case 'donut':
                     config = chartConfig.donut
                     break;
+                case 'multi-bar':
+                    config = chartConfig.line
+                    break;
 
                 default:
                     config = chartConfig.bar
@@ -444,6 +517,11 @@
                             labels: res.data.labels
                         })
 
+                    } else if (data.chartType == "multi-bar") {
+                        await data.chart.updateSeries(res.data.series);
+                        data.chart.updateOptions({
+                            labels: res.data.labels
+                        })
                     } else {
                         data.chart.updateSeries([{
                             data: res.data
@@ -480,6 +558,14 @@
         chartType: 'bar',
         reloadButtonId: "#monthly-video-bookings-reload",
         url: '<?= base_url('api/admin/dashboard/video/monthly') ?>',
+        payload: {
+            date_type: $('#monthly-video-date')
+        },
+    })
+    ProChart.__init('#booking-revenue', {
+        chartType: 'multi-bar',
+        reloadButtonId: "#booking-revenue-reload",
+        url: '<?= base_url('api/admin/dashboard/bookings/monthly-revenue') ?>',
         payload: {
             date_type: $('#monthly-video-date')
         },
